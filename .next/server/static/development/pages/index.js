@@ -285,37 +285,51 @@ var Index =
 function (_Component) {
   _inherits(Index, _Component);
 
-  function Index() {
+  function Index(props) {
+    var _this;
+
     _classCallCheck(this, Index);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Index).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
+    _this.state = {};
+    _this.inputRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    return _this;
   }
 
   _createClass(Index, [{
+    key: "handleCapture",
+    value: function handleCapture(e) {
+      e.preventDefault();
+      var email = this.inputRef.current.value;
+      console.log(email);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Hero, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 118
         },
         __self: this
       }, "Sommelier | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 120
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -323,7 +337,7 @@ function (_Component) {
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 121
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -335,43 +349,46 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 122
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 123
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 125
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 126
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 128
         },
         __self: this
       }, "Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPaper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 131
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: function onSubmit(e) {
+          return _this2.handleCapture(e);
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 132
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
@@ -379,10 +396,11 @@ function (_Component) {
         label: "Business email",
         placeholder: "tkeller@thefrenchlaundry.com",
         type: "email",
+        inputRef: this.inputRef,
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 133
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
@@ -391,13 +409,13 @@ function (_Component) {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 140
         },
         __self: this
       }, "Get started now")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSpan, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 142
         },
         __self: this
       }, "Free forever \xB7 Cancel whenever \xB7 No credit card required"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -414,13 +432,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 148
         },
         __self: this
       }))));

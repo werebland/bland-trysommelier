@@ -99,6 +99,17 @@ const Demo = styled.div`
 `;
 
 class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.inputRef = React.createRef()
+  }
+
+  handleCapture(e) {
+    e.preventDefault()
+    const email = this.inputRef.current.value
+    console.log(email);
+  }
 
   render() {
     return (
@@ -118,8 +129,14 @@ class Index extends Component {
               Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights.
             </HeroCopy>
             <StyledPaper>
-              <form>
-                <StyledTextField variant="outlined" label="Business email" placeholder="tkeller@thefrenchlaundry.com" type="email" required/>
+              <form onSubmit={(e) => this.handleCapture(e)}>
+                <StyledTextField
+                  variant="outlined"
+                  label="Business email"
+                  placeholder="tkeller@thefrenchlaundry.com"
+                  type="email"
+                  inputRef={this.inputRef}
+                  required/>
                 <StyledButton variant="contained" size="large" type="submit">Get started now</StyledButton>
               </form>
               <HeroSpan>
