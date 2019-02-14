@@ -1,0 +1,31 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi node_modules/next/dist/client/next": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/i1tdnvh2Uog39~cm8i6gE/pages/_app.js": 2,
+      "static/i1tdnvh2Uog39~cm8i6gE/pages/_error.js": 3,
+      "static/i1tdnvh2Uog39~cm8i6gE/pages/index.js": 4,
+      "static/i1tdnvh2Uog39~cm8i6gE/pages/initiate.js": 5,
+      "static/runtime/main.js": 6
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+}
