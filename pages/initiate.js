@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import posed, { PoseGroup } from 'react-pose';
 import { ProgressBar, Step } from "react-step-progress-bar";
 import _ from 'lodash'
+import firebase from 'firebase'
+import base from '../config'
 
 import MenuAdder from '../components/MenuAdder'
 
@@ -45,6 +47,20 @@ class GetStarted extends Component {
       currentStep: 1,
       menus: []
     }
+  }
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+      } else {
+        // User is signed out.
+        // ...
+      }
+      // ...
+    });
   }
 
   handleDrop(accepted, rejected) {

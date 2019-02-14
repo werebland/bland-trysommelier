@@ -15,6 +15,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   padding: 16px;
   box-sizing: border-box;
+  z-index: 888;
 
   @media only screen and (min-width: 960px) {
     padding: 16px 120px;

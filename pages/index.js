@@ -5,8 +5,16 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
+import firebase from 'firebase'
+import base from '../config'
+import Router from 'next/router'
 
 import Navbar from '../components/Navbar'
+import Pricing from '../components/Pricing'
+
+const IndexWrapper = styled.div`
+
+`;
 
 const StyledPaper = styled(Paper)`
   border-radius: 8px !important;
@@ -109,46 +117,83 @@ class Index extends Component {
     e.preventDefault()
     const email = this.inputRef.current.value
     console.log(email);
+    const auth = base.initializedApp.auth
+    firebase.auth().signInAnonymously().catch(function(error) {
+      // Handle Errors here.
+      console.log(error);
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    })
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        console.log(user);
+        console.log(uid);
+        const data = {
+          owner: uid,
+          email,
+        }
+        base.addToCollection('restaurants', data)
+          .then(() => {
+            console.log('success');
+          }).catch(err => {
+          //handle error
+        });
+        Router.push('/initiate')
+        // ...
+      } else {
+        // User is signed out.
+        // ...
+      }
+      // ...
+    });
   }
 
   render() {
     return (
-      <Hero>
-        <Head>
-          <title>Sommelier | Your menu's personal assistant</title>
-        </Head>
-        <Navbar />
-        <Grid container spacing={16}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-            <HeroTitle>
-              Your restaurant deserves
-              <br/>
-              <span>a better menu</span>
-            </HeroTitle>
-            <HeroCopy>
-              Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights.
-            </HeroCopy>
-            <StyledPaper>
-              <form onSubmit={(e) => this.handleCapture(e)}>
-                <StyledTextField
-                  variant="outlined"
-                  label="Business email"
-                  placeholder="tkeller@thefrenchlaundry.com"
-                  type="email"
-                  inputRef={this.inputRef}
-                  required/>
-                <StyledButton variant="contained" size="large" type="submit">Get started now</StyledButton>
-              </form>
-              <HeroSpan>
-                Free forever · Cancel whenever · No credit card required
-              </HeroSpan>
-            </StyledPaper>
+      <IndexWrapper>
+        <Hero>
+          <Head>
+            <title>Sommelier | Your menu's personal assistant</title>
+          </Head>
+          <Navbar />
+          <Grid container spacing={16}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <HeroTitle>
+                Your restaurant deserves
+                <br/>
+                <span>a better menu</span>
+              </HeroTitle>
+              <HeroCopy>
+                Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights.
+              </HeroCopy>
+              <StyledPaper>
+                <form onSubmit={(e) => this.handleCapture(e)}>
+                  <StyledTextField
+                    variant="outlined"
+                    label="Business email"
+                    placeholder="tkeller@thefrenchlaundry.com"
+                    type="email"
+                    inputRef={this.inputRef}
+                    required/>
+                  <StyledButton variant="contained" size="large" type="submit">Get started now</StyledButton>
+                </form>
+                <HeroSpan>
+                  Free forever · Cancel whenever · No credit card required
+                </HeroSpan>
+              </StyledPaper>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+              <Demo />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-            <Demo />
-          </Grid>
-        </Grid>
-      </Hero>
+        </Hero>
+        <Pricing />
+      </IndexWrapper>
+
     );
   }
 
