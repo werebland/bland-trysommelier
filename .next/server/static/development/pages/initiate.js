@@ -124,7 +124,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysommelier/components/MenuAdder.jsx";
+var _jsxFileName = "/Users/Chris/trysomm/components/MenuAdder.jsx";
 
 
 
@@ -294,6 +294,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "firebase/firestore");
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_firestore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/auth */ "firebase/auth");
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_auth__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -314,9 +317,7 @@ if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
 }
 
 var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
-var settings = {
-  timestampsInSnapshots: true
-};
+var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
@@ -679,7 +680,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysommelier/pages/initiate.js";
+var _jsxFileName = "/Users/Chris/trysomm/pages/initiate.js";
 
 
 
@@ -855,7 +856,7 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Chris/trysommelier/pages/initiate.js */"./pages/initiate.js");
+module.exports = __webpack_require__(/*! /Users/Chris/trysomm/pages/initiate.js */"./pages/initiate.js");
 
 
 /***/ }),
@@ -967,6 +968,17 @@ module.exports = require("firebase");
 /***/ (function(module, exports) {
 
 module.exports = require("firebase/app");
+
+/***/ }),
+
+/***/ "firebase/auth":
+/*!********************************!*\
+  !*** external "firebase/auth" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/auth");
 
 /***/ }),
 

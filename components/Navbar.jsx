@@ -43,6 +43,9 @@ const NavbarItem = styled.li`
   display: inline-flex;
   list-style: none;
   margin-right: 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
 
   &:last-of-type {
     margin-right: 0;
@@ -55,6 +58,7 @@ const NavbarButton = styled.a`
   justify-content: center;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
   border-radius: 8px;
   background: #1f1f1f;
   color: #fff;
@@ -66,7 +70,7 @@ const NavbarButton = styled.a`
 const Navbar = ({}) => (
   <NavbarContainer>
     <NavbarBrand>
-      sommelier
+      Somm
     </NavbarBrand>
     <NavbarItems>
       <NavbarItem>

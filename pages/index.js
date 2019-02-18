@@ -5,7 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 import base from '../config'
 import Router from 'next/router'
 
@@ -29,6 +30,15 @@ const StyledTextField = styled(TextField)`
   margin-bottom: 16px !important;
   border-radius: 8px !important;
   font-family: 'Source Sans Pro', sans-serif !important;
+
+  & fieldset {
+    border-radius: 8px !important;
+  }
+
+  & input {
+    border-radius: 8px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+  }
 `;
 
 const StyledButton = styled(Button)`
@@ -157,7 +167,7 @@ class Index extends Component {
       <IndexWrapper>
         <Hero>
           <Head>
-            <title>Sommelier | Your menu's personal assistant</title>
+            <title>Somm | Your menu's personal assistant</title>
           </Head>
           <Navbar />
           <Grid container spacing={16}>
@@ -168,7 +178,7 @@ class Index extends Component {
                 <span>a better menu</span>
               </HeroTitle>
               <HeroCopy>
-                Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights.
+                Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights.
               </HeroCopy>
               <StyledPaper>
                 <form onSubmit={(e) => this.handleCapture(e)}>

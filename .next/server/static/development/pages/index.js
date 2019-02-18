@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Users/Chris/trysommelier/components/Navbar.jsx";
+var _jsxFileName = "/Users/Chris/trysomm/components/Navbar.jsx";
 
 
 
@@ -129,11 +129,11 @@ var NavbarItems = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.wi
 var NavbarItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.li.withConfig({
   displayName: "Navbar__NavbarItem",
   componentId: "sc-1kakccw-3"
-})(["display:inline-flex;list-style:none;margin-right:16px;&:last-of-type{margin-right:0;}"]);
+})(["display:inline-flex;list-style:none;margin-right:16px;font-weight:700;font-size:1rem;font-family:'Source Sans Pro',sans-serif;&:last-of-type{margin-right:0;}"]);
 var NavbarButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarButton",
   componentId: "sc-1kakccw-4"
-})(["display:inline-flex;align-items:center;justify-content:center;font-size:1rem;font-family:'Source Sans Pro',sans-serif;border-radius:8px;background:#1f1f1f;color:#fff;cursor:pointer;position:relative;padding:8px 16px;"]);
+})(["display:inline-flex;align-items:center;justify-content:center;font-size:1rem;font-family:'Source Sans Pro',sans-serif;font-weight:700;border-radius:8px;background:#1f1f1f;color:#fff;cursor:pointer;position:relative;padding:8px 16px;"]);
 
 var Navbar = function Navbar(_ref) {
   Object(_babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref);
@@ -141,50 +141,50 @@ var Navbar = function Navbar(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarBrand, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, "sommelier"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItems, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 72
     },
     __self: this
-  }, "Features"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
+  }, "Somm"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItems, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, "Features"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
   }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/initiate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 83
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
     },
     __self: this
   }, "Get Started")))));
@@ -211,18 +211,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Grid */ "@material-ui/core/Grid");
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Users/Chris/trysommelier/components/Pricing.jsx";
+var _jsxFileName = "/Users/Chris/trysomm/components/Pricing.jsx";
 
 
 
 var PricingWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.section.withConfig({
   displayName: "Pricing__PricingWrapper",
   componentId: "cp9je-0"
-})(["width:100%;"]);
+})(["width:100%;display:flex;flex-flow:column nowrap;align-items:center;padding:16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:16px 120px;}"]);
+var PricingTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h3.withConfig({
+  displayName: "Pricing__PricingTitle",
+  componentId: "cp9je-1"
+})(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;background:#f94343;margin:0 auto;display:inline-block;text-align:center;"]);
+var PricingSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h5.withConfig({
+  displayName: "Pricing__PricingSubtitle",
+  componentId: "cp9je-2"
+})(["font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#1f1f1f;margin:0 auto 24px;text-align:center;"]);
 var PricingGrid = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "Pricing__PricingGrid",
-  componentId: "cp9je-1"
-})([""]);
+  componentId: "cp9je-3"
+})(["width:100%;box-sizing:border-box;"]);
+var PricingCardContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.article.withConfig({
+  displayName: "Pricing__PricingCardContainer",
+  componentId: "cp9je-4"
+})(["width:100%;border:2px solid ", ";border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;"], function (props) {
+  return props.primary ? '#f94343' : '#1f1f1f';
+});
+var PricingCardTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h4.withConfig({
+  displayName: "Pricing__PricingCardTitle",
+  componentId: "cp9je-5"
+})(["font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:800;color:", ";margin:0 0 16px;"], function (props) {
+  return props.primary ? '#f94343' : '#1f1f1f';
+});
+var PricingCardPrice = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "Pricing__PricingCardPrice",
+  componentId: "cp9je-6"
+})(["font-family:'Montserrat',sans-serif;font-size:4rem;font-weight:800;color:#1f1f1f;position:relative;padding:0 16px;display:flex;align-items:flex-start;line-height:4rem;&::before{content:\"$\";position:absolute;top:0;left:0;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;}"]);
+var PricingCardPriceSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "Pricing__PricingCardPriceSubtitle",
+  componentId: "cp9je-7"
+})(["font-family:'Source Sans Pro',sans-serif;font-weight:400;color:#9f9f9f;font-size:1rem;"]);
 
 var Pricing = function Pricing(_ref) {
   Object(_babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref);
@@ -230,38 +258,146 @@ var Pricing = function Pricing(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 94
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
-    container: true,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 95
+    },
+    __self: this
+  }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, "Where guac is never extra"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
+    container: true,
+    spacing: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
+    xs: 12,
+    sm: 6,
+    md: 4,
+    lg: 4,
+    xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 101
     },
     __self: this
-  }, "Appetizer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103
+    },
+    __self: this
+  }, "Appetizer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, "0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }, "monthly"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
+    xs: 12,
+    sm: 6,
+    md: 4,
+    lg: 4,
+    xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 114
     },
     __self: this
-  }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
+    primary: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
+    primary: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: this
+  }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119
+    },
+    __self: this
+  }, "49"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122
+    },
+    __self: this
+  }, "monthly"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
+    xs: 12,
+    sm: 6,
+    md: 4,
+    lg: 4,
+    xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 127
     },
     __self: this
-  }, "Dessert")));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129
+    },
+    __self: this
+  }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132
+    },
+    __self: this
+  }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, "monthly")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Pricing);
@@ -283,6 +419,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "firebase/firestore");
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_firestore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/auth */ "firebase/auth");
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_auth__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -303,9 +442,7 @@ if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
 }
 
 var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
-var settings = {
-  timestampsInSnapshots: true
-};
+var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
@@ -1545,19 +1682,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! firebase */ "firebase");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
-/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! firebase/app */ "firebase/app");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! firebase/auth */ "firebase/auth");
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(firebase_auth__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
+/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
 
 
 
 
 
-var _jsxFileName = "/Users/Chris/trysommelier/pages/index.js";
+var _jsxFileName = "/Users/Chris/trysomm/pages/index.js";
+
 
 
 
@@ -1581,7 +1721,7 @@ var StyledPaper = styled_components__WEBPACK_IMPORTED_MODULE_11___default()(_mat
 var StyledTextField = styled_components__WEBPACK_IMPORTED_MODULE_11___default()(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a).withConfig({
   displayName: "pages__StyledTextField",
   componentId: "sc-1wbo52z-2"
-})(["width:100% !important;margin-bottom:16px !important;border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;"]);
+})(["width:100% !important;margin-bottom:16px !important;border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;& fieldset{border-radius:8px !important;}& input{border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;}"]);
 var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_11___default()(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_10___default.a).withConfig({
   displayName: "pages__StyledButton",
   componentId: "sc-1wbo52z-3"
@@ -1629,14 +1769,14 @@ function (_Component) {
       e.preventDefault();
       var email = this.inputRef.current.value;
       console.log(email);
-      var auth = _config__WEBPACK_IMPORTED_MODULE_13__["default"].initializedApp.auth;
-      firebase__WEBPACK_IMPORTED_MODULE_12___default.a.auth().signInAnonymously().catch(function (error) {
+      var auth = _config__WEBPACK_IMPORTED_MODULE_14__["default"].initializedApp.auth;
+      firebase_app__WEBPACK_IMPORTED_MODULE_12___default.a.auth().signInAnonymously().catch(function (error) {
         // Handle Errors here.
         console.log(error);
         var errorCode = error.code;
         var errorMessage = error.message; // ...
       });
-      firebase__WEBPACK_IMPORTED_MODULE_12___default.a.auth().onAuthStateChanged(function (user) {
+      firebase_app__WEBPACK_IMPORTED_MODULE_12___default.a.auth().onAuthStateChanged(function (user) {
         if (user) {
           // User is signed in.
           var isAnonymous = user.isAnonymous;
@@ -1647,11 +1787,11 @@ function (_Component) {
             owner: uid,
             email: email
           };
-          _config__WEBPACK_IMPORTED_MODULE_13__["default"].addToCollection('restaurants', data).then(function () {
+          _config__WEBPACK_IMPORTED_MODULE_14__["default"].addToCollection('restaurants', data).then(function () {
             console.log('success');
           }).catch(function (err) {//handle error
           });
-          next_router__WEBPACK_IMPORTED_MODULE_14___default.a.push('/initiate'); // ...
+          next_router__WEBPACK_IMPORTED_MODULE_15___default.a.push('/initiate'); // ...
         } else {} // User is signed out.
           // ...
           // ...
@@ -1666,31 +1806,31 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(IndexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 167
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Hero, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 168
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 169
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 170
         },
         __self: this
-      }, "Sommelier | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_15__["default"], {
+      }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 172
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1698,7 +1838,7 @@ function (_Component) {
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 173
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1710,37 +1850,37 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 174
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 175
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 177
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168
+          lineNumber: 178
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 180
         },
         __self: this
-      }, "Supercharge your business with Sommelier, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledPaper, {
+      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledPaper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 183
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -1749,7 +1889,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 184
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledTextField, {
@@ -1761,7 +1901,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 185
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledButton, {
@@ -1770,13 +1910,13 @@ function (_Component) {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 192
         },
         __self: this
       }, "Get started now")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroSpan, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 194
         },
         __self: this
       }, "Free forever \xB7 Cancel whenever \xB7 No credit card required"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1793,19 +1933,19 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 199
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 200
         },
         __self: this
-      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 204
         },
         __self: this
       }));
@@ -1826,7 +1966,7 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Chris/trysommelier/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/Chris/trysomm/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -1974,17 +2114,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 
 /***/ }),
 
-/***/ "firebase":
-/*!***************************!*\
-  !*** external "firebase" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase");
-
-/***/ }),
-
 /***/ "firebase/app":
 /*!*******************************!*\
   !*** external "firebase/app" ***!
@@ -1993,6 +2122,17 @@ module.exports = require("firebase");
 /***/ (function(module, exports) {
 
 module.exports = require("firebase/app");
+
+/***/ }),
+
+/***/ "firebase/auth":
+/*!********************************!*\
+  !*** external "firebase/auth" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/auth");
 
 /***/ }),
 

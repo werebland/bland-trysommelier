@@ -1,6 +1,7 @@
 import Rebase from 're-base';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth'
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
@@ -16,7 +17,7 @@ if (!firebase.apps.length) {
 }
 
 var db = firebase.firestore(app);
-var settings = { timestampsInSnapshots: true };
+var settings = { };
 db.settings(settings);
 
 var base = Rebase.createClass(db);
