@@ -28,7 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysommelier/components/MenuAdder.jsx";
+var _jsxFileName = "/Users/Chris/trysomm/components/MenuAdder.jsx";
 
 
 
@@ -197,6 +197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "./node_modules/firebase/firestore/dist/index.esm.js");
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/auth */ "./node_modules/firebase/auth/dist/index.esm.js");
+
 
 
 
@@ -217,9 +219,7 @@ if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
 }
 
 var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
-var settings = {
-  timestampsInSnapshots: true
-};
+var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
@@ -64222,6 +64222,37 @@ module.exports = firebase;
 
 /***/ }),
 
+/***/ "./node_modules/firebase/auth/dist/index.esm.js":
+/*!******************************************************!*\
+  !*** ./node_modules/firebase/auth/dist/index.esm.js ***!
+  \******************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/auth */ "./node_modules/@firebase/auth/dist/auth.esm.js");
+
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/***/ }),
+
 /***/ "./node_modules/firebase/dist/index.cjs.js":
 /*!*************************************************!*\
   !*** ./node_modules/firebase/dist/index.cjs.js ***!
@@ -85777,10 +85808,10 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysommelier%2Fpages%2Finitiate.js!./":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysommelier%2Fpages%2Finitiate.js ***!
-  \**************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysomm%2Fpages%2Finitiate.js!./":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysomm%2Fpages%2Finitiate.js ***!
+  \*********************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -101061,7 +101092,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysommelier/pages/initiate.js";
+var _jsxFileName = "/Users/Chris/trysomm/pages/initiate.js";
 
 
 
@@ -101231,13 +101262,13 @@ function (_Component) {
 /***/ }),
 
 /***/ 2:
-/*!******************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysommelier%2Fpages%2Finitiate.js ***!
-  \******************************************************************************************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysomm%2Fpages%2Finitiate.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysommelier%2Fpages%2Finitiate.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysommelier%2Fpages%2Finitiate.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysomm%2Fpages%2Finitiate.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Finitiate&absolutePagePath=%2FUsers%2FChris%2Ftrysomm%2Fpages%2Finitiate.js!./");
 
 
 /***/ }),
