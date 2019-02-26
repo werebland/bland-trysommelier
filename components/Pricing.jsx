@@ -90,6 +90,45 @@ const PricingCardPriceSubtitle = styled.span`
   font-size: 1rem;
 `;
 
+const PricingCardItems = styled.ul`
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+const PricingCardItem = styled.li`
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: ${props => props.active ? '#1f1f1f' : '#9f9f9f'};
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+`
+
+const PricingAlert = styled.span`
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f1f1f;
+  position: relative;
+  margin-bottom: 16px;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: #f94343;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 4px;
+    z-index: -1;
+  }
+`;
+
 const Pricing = ({}) => (
   <PricingWrapper>
     <PricingTitle>
@@ -97,6 +136,7 @@ const Pricing = ({}) => (
     </PricingTitle>
     <br/>
     <PricingSubtitle>Where guac is never extra</PricingSubtitle>
+    <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
     <PricingGrid container spacing={8}>
       <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
         <PricingCardContainer>
@@ -109,6 +149,19 @@ const Pricing = ({}) => (
           <PricingCardPriceSubtitle>
             monthly
           </PricingCardPriceSubtitle>
+          <PricingCardItems>
+            <PricingCardItem>
+              <PricingCardItem active>
+                Complimentary setup
+              </PricingCardItem>
+              <PricingCardItem active>
+                Minimal code integration
+              </PricingCardItem>
+              <PricingCardItem active>
+                50 dishes
+              </PricingCardItem>
+            </PricingCardItem>
+          </PricingCardItems>
         </PricingCardContainer>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
@@ -117,7 +170,7 @@ const Pricing = ({}) => (
             Entree
           </PricingCardTitle>
           <PricingCardPrice>
-            49
+            29
           </PricingCardPrice>
           <PricingCardPriceSubtitle>
             monthly
