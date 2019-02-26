@@ -14,7 +14,8 @@ import Navbar from '../components/Navbar'
 import Pricing from '../components/Pricing'
 
 const IndexWrapper = styled.div`
-
+  box-sizing: border-box;
+  border: 10px solid #1f1f1f;
 `;
 
 const StyledPaper = styled(Paper)`
@@ -32,11 +33,12 @@ const StyledTextField = styled(TextField)`
   font-family: 'Source Sans Pro', sans-serif !important;
 
   & fieldset {
-    border-radius: 8px !important;
+    border-radius: 0 !important;
+    border: 4px solid #1f1f1f !important;
   }
 
   & input {
-    border-radius: 8px !important;
+    border-radius: 0 !important;
     font-family: 'Source Sans Pro', sans-serif !important;
   }
 `;
@@ -49,19 +51,32 @@ const StyledButton = styled(Button)`
   font-size: 1.25rem !important;
   font-weight: 700 !important;
   background: #1f1f1f !important;
-  border-radius: 8px !important;
+  border-radius: 0px !important;
   text-transform: none !important;
   margin-bottom: 8px !important;
   box-shadow: none !important;
+  position: relative !important;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    background: #f94343;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+  }
 `;
 
 const Hero = styled.section`
   width: 100%;
-  padding: 80px 16px 16px;
+  padding: 156px 16px 16px;
   box-sizing: border-box;
 
   @media only screen and (min-width: 960px) {
-    padding: 80px 120px 16px;
+    padding: 156px 120px 16px;
   }
 `;
 
@@ -180,21 +195,19 @@ class Index extends Component {
               <HeroCopy>
                 Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights.
               </HeroCopy>
-              <StyledPaper>
-                <form onSubmit={(e) => this.handleCapture(e)}>
-                  <StyledTextField
-                    variant="outlined"
-                    label="Business email"
-                    placeholder="tkeller@thefrenchlaundry.com"
-                    type="email"
-                    inputRef={this.inputRef}
-                    required/>
-                  <StyledButton variant="contained" size="large" type="submit">Get started now</StyledButton>
-                </form>
+              <form onSubmit={(e) => this.handleCapture(e)}>
+                <StyledTextField
+                  variant="outlined"
+                  label="Business email"
+                  placeholder="tkeller@thefrenchlaundry.com"
+                  type="email"
+                  inputRef={this.inputRef}
+                  required/>
+                <StyledButton variant="contained" size="large" type="submit">Get early access</StyledButton>
                 <HeroSpan>
                   Free forever · Cancel whenever · No credit card required
                 </HeroSpan>
-              </StyledPaper>
+              </form>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
               <Demo />

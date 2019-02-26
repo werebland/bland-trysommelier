@@ -42,8 +42,8 @@ const PricingGrid = styled(Grid)`
 
 const PricingCardContainer = styled.article`
   width: 100%;
-  border: 2px solid ${props => props.primary ? '#f94343' : '#1f1f1f'};
-  border-radius: 8px;
+  border: 4px solid ${props => props.primary ? '#f94343' : '#1f1f1f'};
+  border-radius: 0;
   padding: 16px;
   box-sizing: border-box;
   text-align: center;

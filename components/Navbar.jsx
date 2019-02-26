@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import Link from 'next/link'
 
 const NavbarContainer = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: #fff;
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 140px;
+  background: #f94343;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,6 +45,7 @@ const NavbarItem = styled.li`
   font-weight: 700;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
 
   &:last-of-type {
     margin-right: 0;
@@ -59,12 +59,24 @@ const NavbarButton = styled.a`
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  border-radius: 8px;
+  border-radius: 0;
   background: #1f1f1f;
   color: #fff;
   cursor: pointer;
   position: relative;
   padding: 8px 16px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 100%;
+    background: #fff;
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+  }
 `;
 
 const Navbar = ({}) => (
@@ -82,7 +94,7 @@ const Navbar = ({}) => (
       <NavbarItem>
         <Link href="/initiate">
           <NavbarButton>
-            Get Started
+            Get access
           </NavbarButton>
         </Link>
       </NavbarItem>
