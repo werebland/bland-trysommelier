@@ -17,34 +17,19 @@
   },
   "chunks": {
     "byName": {
-      "static/rrxJokiliyhQ7XARR664Q/pages/_app.js": 0,
-      "static/rrxJokiliyhQ7XARR664Q/pages/_document.js": 1,
-      "static/rrxJokiliyhQ7XARR664Q/pages/_error.js": 2,
-      "static/rrxJokiliyhQ7XARR664Q/pages/index.js": 3,
-      "static/rrxJokiliyhQ7XARR664Q/pages/initiate.js": 4,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/_app.js": 5,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/_document.js": 6,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/_error.js": 7,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/index.js": 8,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/initiate.js": 9,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/_app.js": 0,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/_document.js": 1,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/_error.js": 2,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/index.js": 3,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/initiate.js": 4,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/_app.js": 5,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/_document.js": 6,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/_error.js": 7,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/index.js": 8,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/initiate.js": 9
+      "static/21csjFRzaKbtcvIb76brE/pages/_app.js": 0,
+      "static/21csjFRzaKbtcvIb76brE/pages/_document.js": 1,
+      "static/21csjFRzaKbtcvIb76brE/pages/_error.js": 2,
+      "static/21csjFRzaKbtcvIb76brE/pages/index.js": 3,
+      "static/21csjFRzaKbtcvIb76brE/pages/initiate.js": 4
     },
     "bySource": {},
     "usedIds": [
-      5,
-      6,
-      7,
-      8,
-      9
+      0,
+      1,
+      2,
+      3,
+      4
     ]
   }
 }

@@ -11,33 +11,21 @@
     "byName": {
       "commons": 0,
       "static/runtime/webpack.js": 1,
-      "static/rrxJokiliyhQ7XARR664Q/pages/_app.js": 2,
-      "static/rrxJokiliyhQ7XARR664Q/pages/_error.js": 3,
-      "static/rrxJokiliyhQ7XARR664Q/pages/index.js": 4,
-      "static/rrxJokiliyhQ7XARR664Q/pages/initiate.js": 5,
-      "static/runtime/main.js": 6,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/_app.js": 7,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/_error.js": 8,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/index.js": 9,
-      "static/~gJ5HVmFtmqvqqXTc0Gcr/pages/initiate.js": 10,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/_app.js": 2,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/_error.js": 3,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/index.js": 4,
-      "static/wUX2Yp99Haj6Cjz7yIrgu/pages/initiate.js": 5,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/_app.js": 7,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/_error.js": 8,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/index.js": 9,
-      "static/Yt_rctQc_t3n6u0rZqgNG/pages/initiate.js": 10
+      "static/21csjFRzaKbtcvIb76brE/pages/_app.js": 2,
+      "static/21csjFRzaKbtcvIb76brE/pages/_error.js": 3,
+      "static/21csjFRzaKbtcvIb76brE/pages/index.js": 4,
+      "static/21csjFRzaKbtcvIb76brE/pages/initiate.js": 5,
+      "static/runtime/main.js": 6
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      10,
-      6,
-      7,
-      8,
-      9
+      2,
+      3,
+      4,
+      5,
+      6
     ]
   }
 }
