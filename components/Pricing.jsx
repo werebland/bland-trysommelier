@@ -150,7 +150,6 @@ const Pricing = ({}) => (
             monthly
           </PricingCardPriceSubtitle>
           <PricingCardItems>
-            <PricingCardItem>
               <PricingCardItem active>
                 Complimentary setup
               </PricingCardItem>
@@ -160,7 +159,6 @@ const Pricing = ({}) => (
               <PricingCardItem active>
                 50 dishes
               </PricingCardItem>
-            </PricingCardItem>
           </PricingCardItems>
         </PricingCardContainer>
       </Grid>

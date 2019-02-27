@@ -118,10 +118,10 @@ var NavbarContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.d
   displayName: "Navbar__NavbarContainer",
   componentId: "sc-1kakccw-0"
 })(["width:calc(100% - 20px);position:absolute;top:10px;left:10px;height:140px;background:#f94343;display:flex;align-items:center;justify-content:space-between;padding:16px;box-sizing:border-box;z-index:888;@media only screen and (min-width:960px){padding:16px 120px;}"]);
-var NavbarBrand = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+var NavbarBrand = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarBrand",
   componentId: "sc-1kakccw-1"
-})(["font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;background:#f94343;margin:0;"]);
+})(["font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;background:#f94343;margin:0;cursor:pointer;"]);
 var NavbarItems = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.withConfig({
   displayName: "Navbar__NavbarItems",
   componentId: "sc-1kakccw-2"
@@ -141,50 +141,57 @@ var Navbar = function Navbar(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarBrand, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 86
     },
     __self: this
-  }, "Somm"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItems, {
+  }, "Somm")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 91
     },
     __self: this
   }, "Features"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 94
     },
     __self: this
   }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/initiate",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 99
     },
     __self: this
   }, "Get access")))));
@@ -350,33 +357,27 @@ var Pricing = function Pricing(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 153
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 153
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 156
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 159
     },
     __self: this
-  }, "50 dishes"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, "50 dishes")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
     xs: 12,
     sm: 6,
@@ -385,33 +386,33 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 165
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 167
     },
     __self: this
   }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 170
     },
     __self: this
   }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 173
     },
     __self: this
   }, "monthly"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -423,31 +424,31 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 178
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 179
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 180
     },
     __self: this
   }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 183
     },
     __self: this
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 186
     },
     __self: this
   }, "monthly")))));
@@ -481,7 +482,7 @@ __webpack_require__.r(__webpack_exports__);
 
 if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
   var app = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializeApp({
-    apiKey: process.env.FIREBASE_API,
+    apiKey: 'AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg',
     authDomain: "bland-sommelier.firebaseapp.com",
     databaseURL: "https://bland-sommelier.firebaseio.com",
     projectId: "bland-sommelier",

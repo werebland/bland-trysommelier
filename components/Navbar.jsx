@@ -21,13 +21,14 @@ const NavbarContainer = styled.div`
   }
 `;
 
-const NavbarBrand = styled.span`
+const NavbarBrand = styled.a`
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
   color: #fff;
   background: #f94343;
   margin: 0;
+  cursor: pointer;
 `;
 
 const NavbarItems = styled.ul`
@@ -81,9 +82,11 @@ const NavbarButton = styled.a`
 
 const Navbar = ({}) => (
   <NavbarContainer>
-    <NavbarBrand>
-      Somm
-    </NavbarBrand>
+    <Link href="/">
+      <NavbarBrand>
+        Somm
+      </NavbarBrand>
+    </Link>
     <NavbarItems>
       <NavbarItem>
         Features

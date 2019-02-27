@@ -5,12 +5,50 @@ import { ProgressBar, Step } from "react-step-progress-bar";
 import _ from 'lodash'
 import firebase from 'firebase'
 import base from '../config'
+import Head from 'next/head'
+import Button from '@material-ui/core/Button';
 
 import MenuAdder from '../components/MenuAdder'
+import Navbar from '../components/Navbar'
 
 const PageWrapper = styled.div`
-  padding: 64px 24px 24px;
+  padding: 156px 24px 24px;
   box-sizing: border-box;
+  border: 10px solid #1f1f1f;
+  min-height: 100vh;
+
+  @media only screen and (min-width: 960px) {
+    padding: 156px 16px 16px;
+  }
+`;
+
+const StyledButton = styled(Button)`
+  height: 56px !important;
+  color: #fff !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  background: ${props => props.disabled ? '#dfdfdf' : '#1f1f1f'}!important;
+  border-radius: 0px !important;
+  text-transform: none !important;
+  margin-bottom: 8px !important;
+  box-shadow: none !important;
+  position: relative !important;
+  border: 0 !important;
+  transition: 0.2s ease-out all;
+  padding: 0 24px !important;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    background: ${props => props.disabled ? '#1f1f1f' : '#f94343'};
+    z-index: -1;
+    top: 4px;
+    left: 4px;
+  }
 `;
 
 const PosedPageTitle = posed.h1({
@@ -27,17 +65,43 @@ const PosedPageTitle = posed.h1({
 const PageTitle = styled((props) => <PosedPageTitle {...props} />)`
   font-size: 2rem;
   font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
   color: #1f1f1f;
-  margin-bottom: 16px;
-  text-align: center;
+  position: relative;
+  margin: 0 auto 16px;
+  display: inline-flex;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: #f94343;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 4px;
+    z-index: -1;
+  }
 `;
 
 const GetStartedFormProgress = styled.div`
 
 `;
 
-const GetStartedForm = styled.div`
+const InitiateForm = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+`;
 
+const InitiateFormButtons = styled.div`
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-direction: ${props => props.currentStep === 1 ? 'row-reverse' : 'row'};
 `;
 
 class GetStarted extends Component {
@@ -88,28 +152,55 @@ class GetStarted extends Component {
     })
   }
 
-  handleName(i, value) {
+  handleName(value, i) {
     const { menus } = this.state
-    let menu = menus[i]
-    menu.title = value
+    menus[i].name = value
+    this.setState({
+      menus
+    })
   }
 
   render() {
     return (
       <PageWrapper className="getStarted">
-        <PoseGroup preEnterPose='preEnter'>
-          {this.state.currentStep == "1" &&
-            <PageTitle key="1">
-              Add your menu
-            </PageTitle>
-          }
-          {this.state.currentStep == "2" &&
-            <PageTitle key="2">
-              Choose your plan
-            </PageTitle>
-          }
-        </PoseGroup>
-        <MenuAdder menus={this.state.menus} handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)} handleRemove={(i) => this.handleRemove(i)}/>
+        <Head>
+          <title>Initiate | Somm | Your menu's personal assistant</title>
+        </Head>
+        <Navbar />
+        <InitiateForm>
+          <PoseGroup preEnterPose='preEnter'>
+            {this.state.currentStep == "1" &&
+              <PageTitle key="1">
+                Add your menu
+              </PageTitle>
+            }
+            {this.state.currentStep == "2" &&
+              <PageTitle key="2">
+                Choose your plan
+              </PageTitle>
+            }
+          </PoseGroup>
+          <MenuAdder files={this.state.menus} handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)} handleRemove={(i) => this.handleRemove(i)} handleName={(value, i) => this.handleName(value, i)}/>
+          <InitiateFormButtons currentStep={this.state.currentStep}>
+            {this.state.currentStep !== 1 &&
+              <StyledButton
+                variant="contained"
+                size="medium"
+                disabled={this.state.menus.length === 0}
+                onClick={() => this.setState({ currentStep: this.state.currentStep -= 1})}>
+                Back
+              </StyledButton>
+            }
+            <StyledButton
+              variant="contained"
+              size="medium"
+              disabled={this.state.menus.length === 0}
+              onClick={() => this.setState({ currentStep: this.state.currentStep += 1})}>
+              Next
+            </StyledButton>
+          </InitiateFormButtons>
+
+        </InitiateForm>
       </PageWrapper>
     );
   }
