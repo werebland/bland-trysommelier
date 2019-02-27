@@ -4,12 +4,17 @@ import posed, { PoseGroup } from 'react-pose';
 import { ProgressBar, Step } from "react-step-progress-bar";
 import _ from 'lodash'
 import firebase from 'firebase'
+import 'firebase/storage'
 import base from '../config'
 import Head from 'next/head'
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 import MenuAdder from '../components/MenuAdder'
 import Navbar from '../components/Navbar'
+
+const storage = firebase.storage()
+const storageRef = storage.ref()
 
 const PageWrapper = styled.div`
   padding: 156px 24px 24px;
@@ -19,6 +24,24 @@ const PageWrapper = styled.div`
 
   @media only screen and (min-width: 960px) {
     padding: 156px 16px 16px;
+  }
+`;
+
+const StyledTextField = styled(TextField)`
+  width: 100% !important;
+  max-width: 360px !important;
+  margin-bottom: 16px !important;
+  border-radius: 8px !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+
+  & fieldset {
+    border-radius: 0 !important;
+    border: 4px solid #1f1f1f !important;
+  }
+
+  & input {
+    border-radius: 0 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
   }
 `;
 
@@ -101,7 +124,7 @@ const InitiateFormButtons = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  flex-direction: ${props => props.currentStep === 1 ? 'row-reverse' : 'row'};
+  flex-direction: ${props => props.currentStep <= 1 ? 'row-reverse' : 'row'};
 `;
 
 class GetStarted extends Component {
@@ -119,12 +142,17 @@ class GetStarted extends Component {
         // User is signed in.
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
+        console.log(uid);
       } else {
         // User is signed out.
         // ...
+        console.log('Signed out');
+        this.setState({
+          currentStep: 0
+        })
       }
       // ...
-    });
+    }.bind(this)).bind(this);
   }
 
   handleDrop(accepted, rejected) {
@@ -133,13 +161,24 @@ class GetStarted extends Component {
     _.forEach(accepted, function(file) {
       let menu = {
         name: file.name,
-        file
+        file,
+        progress: 0,
       }
       menus.push(menu)
     })
     console.log(menus);
     this.setState({
       menus: menus
+    })
+  }
+
+  handleUpload() {
+    const { menus, uid } = this.state
+    _.forEach(menus, function(menu) {
+      const metaData = {
+        type: menu.file.type
+      }
+      const menuRef = storageRef.child('menus/' + uid + '/' + menu.name)
     })
   }
 
@@ -169,6 +208,11 @@ class GetStarted extends Component {
         <Navbar />
         <InitiateForm>
           <PoseGroup preEnterPose='preEnter'>
+            {this.state.currentStep == "0" &&
+              <PageTitle key="0">
+                Get started
+              </PageTitle>
+            }
             {this.state.currentStep == "1" &&
               <PageTitle key="1">
                 Add your menu
@@ -180,13 +224,21 @@ class GetStarted extends Component {
               </PageTitle>
             }
           </PoseGroup>
-          <MenuAdder files={this.state.menus} handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)} handleRemove={(i) => this.handleRemove(i)} handleName={(value, i) => this.handleName(value, i)}/>
+          {this.state.currentStep === 0 &&
+            <StyledTextField variant="outlined" label="Business email" type="email" required autoFocus/>
+          }
+          {this.state.currentStep === 1 &&
+            <MenuAdder
+              files={this.state.menus}
+              handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)}
+              handleRemove={(i) => this.handleRemove(i)}
+              handleName={(value, i) => this.handleName(value, i)}/>
+          }
           <InitiateFormButtons currentStep={this.state.currentStep}>
-            {this.state.currentStep !== 1 &&
+            {this.state.currentStep > 1 &&
               <StyledButton
                 variant="contained"
                 size="medium"
-                disabled={this.state.menus.length === 0}
                 onClick={() => this.setState({ currentStep: this.state.currentStep -= 1})}>
                 Back
               </StyledButton>
@@ -194,12 +246,11 @@ class GetStarted extends Component {
             <StyledButton
               variant="contained"
               size="medium"
-              disabled={this.state.menus.length === 0}
+              disabled={this.state.currentStep === 1 && this.state.menus.length === 0}
               onClick={() => this.setState({ currentStep: this.state.currentStep += 1})}>
               Next
             </StyledButton>
           </InitiateFormButtons>
-
         </InitiateForm>
       </PageWrapper>
     );

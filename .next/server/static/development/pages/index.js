@@ -377,7 +377,14 @@ var Pricing = function Pricing(_ref) {
       lineNumber: 159
     },
     __self: this
-  }, "50 dishes")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, "35 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: this
+  }, "Single menu")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
     xs: 12,
     sm: 6,
@@ -386,36 +393,70 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 168
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 169
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     primary: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 167
-    },
-    __self: this
-  }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 170
     },
     __self: this
-  }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
+  }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 173
     },
     __self: this
-  }, "monthly"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 179
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 180
+    },
+    __self: this
+  }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 183
+    },
+    __self: this
+  }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 186
+    },
+    __self: this
+  }, "100 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 189
+    },
+    __self: this
+  }, "Multiple menus")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
     xs: 12,
     sm: 6,
@@ -424,34 +465,68 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 195
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 196
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 197
     },
     __self: this
   }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 200
     },
     __self: this
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 203
     },
     __self: this
-  }, "monthly")))));
+  }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 206
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 207
+    },
+    __self: this
+  }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 210
+    },
+    __self: this
+  }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 213
+    },
+    __self: this
+  }, "Unlimited dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 216
+    },
+    __self: this
+  }, "Multiple locations"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Pricing);
@@ -482,7 +557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
   var app = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializeApp({
-    apiKey: 'AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg',
+    apiKey: process.env.FIREBASE_API,
     authDomain: "bland-sommelier.firebaseapp.com",
     databaseURL: "https://bland-sommelier.firebaseio.com",
     projectId: "bland-sommelier",

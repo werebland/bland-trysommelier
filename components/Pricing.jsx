@@ -157,7 +157,10 @@ const Pricing = ({}) => (
                 Minimal code integration
               </PricingCardItem>
               <PricingCardItem active>
-                50 dishes
+                35 dishes
+              </PricingCardItem>
+              <PricingCardItem active>
+                Single menu
               </PricingCardItem>
           </PricingCardItems>
         </PricingCardContainer>
@@ -173,6 +176,20 @@ const Pricing = ({}) => (
           <PricingCardPriceSubtitle>
             monthly
           </PricingCardPriceSubtitle>
+          <PricingCardItems>
+              <PricingCardItem active>
+                Complimentary setup
+              </PricingCardItem>
+              <PricingCardItem active>
+                Minimal code integration
+              </PricingCardItem>
+              <PricingCardItem active>
+                100 dishes
+              </PricingCardItem>
+              <PricingCardItem active>
+                Multiple menus
+              </PricingCardItem>
+          </PricingCardItems>
         </PricingCardContainer>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
@@ -186,6 +203,20 @@ const Pricing = ({}) => (
           <PricingCardPriceSubtitle>
             monthly
           </PricingCardPriceSubtitle>
+          <PricingCardItems>
+              <PricingCardItem active>
+                Complimentary setup
+              </PricingCardItem>
+              <PricingCardItem active>
+                Minimal code integration
+              </PricingCardItem>
+              <PricingCardItem active>
+                Unlimited dishes
+              </PricingCardItem>
+              <PricingCardItem active>
+                Multiple locations
+              </PricingCardItem>
+          </PricingCardItems>
         </PricingCardContainer>
       </Grid>
     </PricingGrid>
