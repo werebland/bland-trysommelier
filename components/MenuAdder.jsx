@@ -74,15 +74,15 @@ const FilesContainer = styled((props) => <PosedFilesContainer {...props} />)`
 
 const PosedFile = posed.div({
   enter: {
-    y: 0,
+    y: "0",
     opacity: 1,
   },
   exit: {
-    y: 32,
+    y: "32px",
     opacity: 0,
   },
   preEnter: {
-    y: 32,
+    y: "32px",
     opacity: 0,
   }
 })
@@ -96,6 +96,8 @@ const File = styled((props) => <PosedFile {...props} />)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  opacity: 0;
+  transform: translate(0,32px);
 
   &:last-of-type {
     margin-bottom: 0;
@@ -106,47 +108,42 @@ const FileRemove = styled.span`
   padding: 16px;
 `;
 
-class MenuAdder extends Component {
 
-  render() {
-    return (
-      <MenuAdderContainer>
-          <Dropzone onDrop={(accepted,rejected) => this.props.handleDrop(accepted, rejected)}>
-            {({getRootProps, getInputProps, isDragActive}) => {
-              return (
-                <DropzoneContainer
-                  {...getRootProps()}
-                  className="initiate-dropzone"
-                  active={isDragActive}
-                >
-                  <input {...getInputProps()} />
-                  {
-                    isDragActive ?
-                      <p>Drop files here...</p> :
-                      <p>Try dropping some files here, or click to select files to upload.</p>
-                  }
-                </DropzoneContainer>
-              )
-            }}
-          </Dropzone>
-        <FilesContainer>
-          <PoseGroup preEnterPose="preEnter">
-            {this.props.files.map((file, i) =>
-              <File key={i}>
-                <StyledTextField
-                  label='Menu name'
-                  variant="outlined"
-                  onChange={(e) => this.props.handleName(e.target.value, i)}
-                  value={file.name}/>
-                <FileRemove onClick={() => this.props.handleRemove(i)}>X</FileRemove>
-              </File>
-            )}
-          </PoseGroup>
-        </FilesContainer>
-      </MenuAdderContainer>
-    );
-  }
-
-}
+const MenuAdder = ({handleDrop, files, handleName, handleRemove}) => (
+  <MenuAdderContainer>
+      <Dropzone onDrop={(accepted,rejected) => handleDrop(accepted, rejected)}>
+        {({getRootProps, getInputProps, isDragActive}) => {
+          return (
+            <DropzoneContainer
+              {...getRootProps({ refKey: 'innerRef' })}
+              className="initiate-dropzone"
+              active={isDragActive}
+            >
+              <input {...getInputProps()} />
+              {
+                isDragActive ?
+                  <p>Drop files here...</p> :
+                  <p>Try dropping some files here, or click to select files to upload.</p>
+              }
+            </DropzoneContainer>
+          )
+        }}
+      </Dropzone>
+    <FilesContainer>
+        {files.map((file, i) =>
+          <File key={i}>
+            <StyledTextField
+              label='Menu name'
+              variant="outlined"
+              onChange={(e) => handleName(e.target.value, i)}
+              value={file.name}/>
+            <FileRemove onClick={() => handleRemove(i)}>
+              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+            </FileRemove>
+          </File>
+        )}
+    </FilesContainer>
+  </MenuAdderContainer>
+);
 
 export default MenuAdder;

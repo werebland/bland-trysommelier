@@ -557,7 +557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
   var app = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializeApp({
-    apiKey: process.env.FIREBASE_API,
+    apiKey: undefined,
     authDomain: "bland-sommelier.firebaseapp.com",
     databaseURL: "https://bland-sommelier.firebaseio.com",
     projectId: "bland-sommelier",
