@@ -22,4 +22,9 @@ db.settings(settings);
 
 var base = Rebase.createClass(db);
 
+console.log(process.env.FIREBASE_API);
+console.log(process.env.REPOSITORY_URL);
+console.log(process.env);
+
+
 export default base

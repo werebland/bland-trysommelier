@@ -574,6 +574,9 @@ var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
+console.log(undefined);
+console.log(process.env.REPOSITORY_URL);
+console.log(process.env);
 /* harmony default export */ __webpack_exports__["default"] = (base);
 
 /***/ }),

@@ -447,7 +447,7 @@ var Pricing = function Pricing(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! re-base */ "./node_modules/re-base/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! re-base */ "./node_modules/re-base/index.js");
 /* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(re_base__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_1__);
@@ -477,7 +477,11 @@ var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
+console.log(undefined);
+console.log(process.env.REPOSITORY_URL);
+console.log(process.env);
 /* harmony default export */ __webpack_exports__["default"] = (base);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
