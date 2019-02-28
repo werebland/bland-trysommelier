@@ -138,6 +138,10 @@ class Index extends Component {
     this.inputRef = React.createRef()
   }
 
+  componentDidMount() {
+    console.log(process);
+  }
+
   handleCapture(e) {
     e.preventDefault()
     const email = this.inputRef.current.value

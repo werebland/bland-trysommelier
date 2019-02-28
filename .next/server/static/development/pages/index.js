@@ -574,9 +574,6 @@ var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
-console.log(undefined);
-console.log(process.env.REPOSITORY_URL);
-console.log(process.env);
 /* harmony default export */ __webpack_exports__["default"] = (base);
 
 /***/ }),
@@ -1896,6 +1893,11 @@ function (_Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Index, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log(process);
+    }
+  }, {
     key: "handleCapture",
     value: function handleCapture(e) {
       e.preventDefault();
@@ -1938,31 +1940,31 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(IndexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 186
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Hero, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 187
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 188
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 189
         },
         __self: this
       }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 191
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1970,7 +1972,7 @@ function (_Component) {
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 192
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -1982,31 +1984,31 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 193
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 194
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 196
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 197
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 199
         },
         __self: this
       }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -2015,7 +2017,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 198
+          lineNumber: 202
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledTextField, {
@@ -2027,7 +2029,7 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199
+          lineNumber: 203
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledButton, {
@@ -2036,13 +2038,13 @@ function (_Component) {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 210
         },
         __self: this
       }, "Get early access"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroSpan, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 211
         },
         __self: this
       }, "Free forever \xB7 Cancel whenever \xB7 No credit card required"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -2059,19 +2061,19 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 216
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 217
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 221
         },
         __self: this
       }));
