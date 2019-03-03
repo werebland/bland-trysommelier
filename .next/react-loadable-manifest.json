@@ -845,7 +845,7 @@
       "publicPath": "static/chunks/commons.b4b799646302ca6b99f5.js"
     }
   ],
-  "../../modules/_core": [
+  "../modules/_core": [
     {
       "id": "WEpk",
       "name": "./node_modules/core-js/library/modules/_core.js",

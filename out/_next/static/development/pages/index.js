@@ -559,7 +559,7 @@ var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
 console.log("development");
-console.log(undefined);
+console.log("AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg");
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
 
@@ -2638,7 +2638,7 @@ _firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.INTERNAL.registerService("a
 
 //# sourceMappingURL=auth.esm.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -27914,7 +27914,7 @@ var src_5 = src.XhrIoPool;
 /* harmony default export */ __webpack_exports__["default"] = (src);
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -51047,7 +51047,7 @@ exports['default'] = function (str) {
 
   return CSS.escape(str);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -51166,7 +51166,7 @@ if (global[ns] == null) global[ns] = 0;
 // we use a counter. Also it is more accurate, because user can manually reevaluate
 // the module.
 exports['default'] = global[ns]++;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -53340,6 +53340,85 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
+/*!************************************************************************************************************************!*\
+  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/next/node_modules/webpack/buildin/global.js");
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js":
+/*!*******************************************!*\
+  !*** (webpack)/buildin/harmony-module.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(originalModule) {
+	if (!originalModule.webpackPolyfill) {
+		var module = Object.create(originalModule);
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		Object.defineProperty(module, "exports", {
+			enumerable: true
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/webpack/buildin/module.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/next/router.js":
 /*!*************************************!*\
   !*** ./node_modules/next/router.js ***!
@@ -53879,18 +53958,18 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/module.js */ "./node_modules/next/node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7b9265c061e07b49bd43 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -54711,7 +54790,7 @@ if (!globalNS.Promise) {
   globalNS.Promise = Promise;
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../timers-browserify/main.js */ "./node_modules/timers-browserify/main.js").setImmediate, __webpack_require__(/*! ./../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -54806,12 +54885,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7b9265c061e07b49bd43 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -55419,12 +55498,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7b9265c061e07b49bd43 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -57133,12 +57212,12 @@ module.exports = __webpack_require__(/*! ./dist/bundle.js */ "./node_modules/re-
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7b9265c061e07b49bd43 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -58790,12 +58869,12 @@ exports.classNamesShape = classNamesShape;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7b9265c061e07b49bd43 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa */ "dll-reference dll_5d2e8a47bb91086adeaa"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -60007,7 +60086,7 @@ if (hadRuntime) {
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -63561,7 +63640,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../next/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/next/node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -63667,7 +63746,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -64727,85 +64806,6 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_7b9265c061e07b49bd43 ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_7b9265c061e07b49bd43 */ "dll-reference dll_7b9265c061e07b49bd43"))("./node_modules/webpack/buildin/global.js");
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/harmony-module.js":
-/*!*******************************************!*\
-  !*** (webpack)/buildin/harmony-module.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(originalModule) {
-	if (!originalModule.webpackPolyfill) {
-		var module = Object.create(originalModule);
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		Object.defineProperty(module, "exports", {
-			enumerable: true
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/whatwg-fetch/fetch.js":
 /*!********************************************!*\
   !*** ./node_modules/whatwg-fetch/fetch.js ***!
@@ -65398,7 +65398,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log("development");
-      console.log(undefined);
+      console.log("AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg");
     }
   }, {
     key: "handleCapture",
@@ -65612,14 +65612,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_7b9265c061e07b49bd43":
+/***/ "dll-reference dll_5d2e8a47bb91086adeaa":
 /*!*******************************************!*\
-  !*** external "dll_7b9265c061e07b49bd43" ***!
+  !*** external "dll_5d2e8a47bb91086adeaa" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7b9265c061e07b49bd43;
+module.exports = dll_5d2e8a47bb91086adeaa;
 
 /***/ })
 

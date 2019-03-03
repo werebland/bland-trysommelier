@@ -657,7 +657,7 @@ var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
 console.log("development");
-console.log(undefined);
+console.log("AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg");
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
 
@@ -1985,7 +1985,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log("development");
-      console.log(undefined);
+      console.log("AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg");
     }
   }, {
     key: "handleCapture",
