@@ -1,5 +1,87 @@
 ((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/AccessForm.jsx":
+/*!***********************************!*\
+  !*** ./components/AccessForm.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/TextField/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/Chris/trysomm/components/AccessForm.jsx";
+
+
+
+
+var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_2___default.a).withConfig({
+  displayName: "AccessForm__StyledTextField",
+  componentId: "sc-1n3u86u-0"
+})(["width:100% !important;margin-bottom:16px !important;border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;& fieldset{border-radius:0 !important;border:4px solid #1f1f1f !important;}& input{border-radius:0 !important;font-family:'Source Sans Pro',sans-serif !important;}"]);
+var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
+  displayName: "AccessForm__StyledButton",
+  componentId: "sc-1n3u86u-1"
+})(["width:100% !important;height:56px !important;color:#fff !important;font-family:'Source Sans Pro',sans-serif !important;font-size:1.25rem !important;font-weight:700 !important;background:#1f1f1f !important;border-radius:0px !important;text-transform:none !important;margin-bottom:8px !important;box-shadow:none !important;position:relative !important;&:after{content:\"\";display:block;position:absolute;height:56px;width:100%;background:#f94343;z-index:-1;top:4px;left:4px;}"]);
+var AccessFormContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form.withConfig({
+  displayName: "AccessForm__AccessFormContainer",
+  componentId: "sc-1n3u86u-2"
+})([""]);
+
+var AccessForm = function AccessForm(_ref) {
+  var handleAccess = _ref.handleAccess,
+      email = _ref.email,
+      handleEmail = _ref.handleEmail;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormContainer, {
+    onSubmit: function onSubmit(e) {
+      return handleAccess(e);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
+    type: "email",
+    name: "email",
+    onChange: function onChange(e) {
+      return handleEmail(e.target.value);
+    },
+    value: email,
+    required: true,
+    variant: "outlined",
+    label: "Business email",
+    InputLabelProps: {
+      className: 'textfield__label'
+    },
+    placeholder: "tkeller@thefrenchlaundry.com",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
+    variant: "contained",
+    size: "large",
+    type: "submit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, "Get access"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AccessForm);
+
+/***/ }),
+
 /***/ "./components/Navbar.jsx":
 /*!*******************************!*\
   !*** ./components/Navbar.jsx ***!
@@ -88,7 +170,7 @@ var Navbar = function Navbar(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/initiate",
+    href: "/get-access",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 98
@@ -460,7 +542,7 @@ __webpack_require__.r(__webpack_exports__);
 
 if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
   var app = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializeApp({
-    apiKey: undefined,
+    apiKey: "development",
     authDomain: "bland-sommelier.firebaseapp.com",
     databaseURL: "https://bland-sommelier.firebaseio.com",
     projectId: "bland-sommelier",
@@ -476,6 +558,8 @@ if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
 var db = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.firestore(app);
 var settings = {};
 db.settings(settings);
+console.log("development");
+console.log(undefined);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
 
@@ -65208,7 +65292,7 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
@@ -65234,12 +65318,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
 /* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
+/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
 
 
 
 
 
 var _jsxFileName = "/Users/Chris/trysomm/pages/index.js";
+
 
 
 
@@ -65301,7 +65387,9 @@ function (_Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Index);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Index).call(this, props));
-    _this.state = {};
+    _this.state = {
+      accessSuccess: false
+    };
     _this.inputRef = react__WEBPACK_IMPORTED_MODULE_5___default.a.createRef();
     return _this;
   }
@@ -65309,7 +65397,8 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Index, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(process);
+      console.log("development");
+      console.log(undefined);
     }
   }, {
     key: "handleCapture",
@@ -65347,6 +65436,36 @@ function (_Component) {
       });
     }
   }, {
+    key: "handleAccess",
+    value: function handleAccess(e) {
+      e.preventDefault();
+      var email = this.state.email;
+      var actionCodeSettings = {
+        // URL you want to redirect back to. The domain (www.example.com) for this
+        // URL must be whitelisted in the Firebase Console.
+        url: 'https://trysomm.werebland.com/initiate',
+        // This must be true.
+        handleCodeInApp: true,
+        iOS: {
+          bundleId: 'com.example.ios'
+        },
+        android: {
+          packageName: 'com.example.android',
+          installApp: true,
+          minimumVersion: '12'
+        }
+      };
+      console.log(email);
+      firebase_app__WEBPACK_IMPORTED_MODULE_12___default.a.auth().sendSignInLinkToEmail(email, actionCodeSettings).then(function () {
+        // The link was successfully sent. Inform the user.
+        // Save the email locally so you don't need to ask the user for it again
+        // if they open the link on the same device.
+        window.localStorage.setItem('emailForSignIn', email);
+      }).catch(function (error) {
+        console.log(error.code); // Some error occurred, you can inspect the code: error.code
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -65354,31 +65473,31 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(IndexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 222
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Hero, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 223
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 224
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 225
         },
         __self: this
       }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 227
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -65386,7 +65505,7 @@ function (_Component) {
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 228
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -65398,70 +65517,50 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 229
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 230
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 232
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197
+          lineNumber: 233
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199
+          lineNumber: 235
         },
         __self: this
-      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
-        onSubmit: function onSubmit(e) {
-          return _this2.handleCapture(e);
+      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_18__["default"], {
+        handleAccess: function handleAccess(e) {
+          return _this2.handleAccess(e);
         },
+        email: this.state.email,
+        handleEmail: function handleEmail(email) {
+          return _this2.setState({
+            email: email
+          });
+        },
+        accessSuccess: this.state.accessSuccess,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202
+          lineNumber: 238
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledTextField, {
-        variant: "outlined",
-        label: "Business email",
-        placeholder: "tkeller@thefrenchlaundry.com",
-        type: "email",
-        inputRef: this.inputRef,
-        required: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 203
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(StyledButton, {
-        variant: "contained",
-        size: "large",
-        type: "submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 210
-        },
-        __self: this
-      }, "Get early access"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(HeroSpan, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 211
-        },
-        __self: this
-      }, "Free forever \xB7 Cancel whenever \xB7 No credit card required"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8___default.a, {
         item: true,
         xs: 12,
         sm: 12,
@@ -65475,19 +65574,19 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 244
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 245
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
+          lineNumber: 249
         },
         __self: this
       }));
@@ -65498,7 +65597,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

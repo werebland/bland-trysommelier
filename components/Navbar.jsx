@@ -95,7 +95,7 @@ const Navbar = ({}) => (
         Pricing
       </NavbarItem>
       <NavbarItem>
-        <Link href="/initiate">
+        <Link href="/get-access">
           <NavbarButton>
             Get access
           </NavbarButton>

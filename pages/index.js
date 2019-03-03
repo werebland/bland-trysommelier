@@ -12,6 +12,7 @@ import Router from 'next/router'
 
 import Navbar from '../components/Navbar'
 import Pricing from '../components/Pricing'
+import AccessForm from '../components/AccessForm'
 
 const IndexWrapper = styled.div`
   box-sizing: border-box;
@@ -134,12 +135,15 @@ const Demo = styled.div`
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      accessSuccess: false,
+    };
     this.inputRef = React.createRef()
   }
 
   componentDidMount() {
-    console.log(process);
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.FIREBASE_API);
   }
 
   handleCapture(e) {
@@ -181,6 +185,38 @@ class Index extends Component {
     });
   }
 
+  handleAccess(e) {
+    e.preventDefault()
+    const { email } = this.state
+    const actionCodeSettings = {
+      // URL you want to redirect back to. The domain (www.example.com) for this
+      // URL must be whitelisted in the Firebase Console.
+      url: 'https://trysomm.werebland.com/initiate',
+      // This must be true.
+      handleCodeInApp: true,
+      iOS: {
+        bundleId: 'com.example.ios'
+      },
+      android: {
+        packageName: 'com.example.android',
+        installApp: true,
+        minimumVersion: '12'
+      },
+    };
+    console.log(email);
+    firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
+    .then(function() {
+      // The link was successfully sent. Inform the user.
+      // Save the email locally so you don't need to ask the user for it again
+      // if they open the link on the same device.
+      window.localStorage.setItem('emailForSignIn', email);
+    })
+    .catch(function(error) {
+      console.log(error.code);
+      // Some error occurred, you can inspect the code: error.code
+    });
+  }
+
   render() {
     return (
       <IndexWrapper>
@@ -199,19 +235,11 @@ class Index extends Component {
               <HeroCopy>
                 Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights.
               </HeroCopy>
-              <form onSubmit={(e) => this.handleCapture(e)}>
-                <StyledTextField
-                  variant="outlined"
-                  label="Business email"
-                  placeholder="tkeller@thefrenchlaundry.com"
-                  type="email"
-                  inputRef={this.inputRef}
-                  required/>
-                <StyledButton variant="contained" size="large" type="submit">Get early access</StyledButton>
-                <HeroSpan>
-                  Free forever · Cancel whenever · No credit card required
-                </HeroSpan>
-              </form>
+              <AccessForm
+                handleAccess={(e) => this.handleAccess(e)}
+                email={this.state.email}
+                handleEmail={(email) => this.setState({ email })}
+                accessSuccess={this.state.accessSuccess}/>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
               <Demo />
