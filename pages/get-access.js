@@ -60,7 +60,7 @@ class GetAccess extends Component {
     return (
       <PageWrapper>
         <Head>
-          <title>Get access | Somm | </title>
+          <title>Get access | Somm | Your menu's personal assistant</title>
         </Head>
         <Navbar />
         <PageTitle>

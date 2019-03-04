@@ -11,6 +11,7 @@ import base from '../config'
 import Router from 'next/router'
 
 import Navbar from '../components/Navbar'
+import Features from '../components/Features'
 import Pricing from '../components/Pricing'
 import AccessForm from '../components/AccessForm'
 
@@ -191,7 +192,7 @@ class Index extends Component {
     const actionCodeSettings = {
       // URL you want to redirect back to. The domain (www.example.com) for this
       // URL must be whitelisted in the Firebase Console.
-      url: 'https://trysomm.werebland.com/initiate',
+      url: 'https://trysomm.werebland.com/dashboard',
       // This must be true.
       handleCodeInApp: true,
       iOS: {
@@ -246,6 +247,7 @@ class Index extends Component {
             </Grid>
           </Grid>
         </Hero>
+        <Features />
         <Pricing />
       </IndexWrapper>
 
