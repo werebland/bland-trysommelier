@@ -5,10 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import base from '../config'
-import Router from 'next/router'
+import _ from 'lodash'
+import axios from 'axios';
 
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
@@ -137,84 +135,49 @@ class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      accessSuccess: false,
+      accessStatus: null,
+      email: "",
+      name: "",
     };
-    this.inputRef = React.createRef()
-  }
-
-  componentDidMount() {
-    console.log(process.env.NODE_ENV);
-    console.log(process.env.FIREBASE_API);
-  }
-
-  handleCapture(e) {
-    e.preventDefault()
-    const email = this.inputRef.current.value
-    console.log(email);
-    const auth = base.initializedApp.auth
-    firebase.auth().signInAnonymously().catch(function(error) {
-      // Handle Errors here.
-      console.log(error);
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    })
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        var isAnonymous = user.isAnonymous;
-        var uid = user.uid;
-        console.log(user);
-        console.log(uid);
-        const data = {
-          owner: uid,
-          email,
-        }
-        base.addToCollection('restaurants', data)
-          .then(() => {
-            console.log('success');
-          }).catch(err => {
-          //handle error
-        });
-        Router.push('/initiate')
-        // ...
-      } else {
-        // User is signed out.
-        // ...
-      }
-      // ...
-    });
   }
 
   handleAccess(e) {
-    e.preventDefault()
-    const { email } = this.state
-    const actionCodeSettings = {
-      // URL you want to redirect back to. The domain (www.example.com) for this
-      // URL must be whitelisted in the Firebase Console.
-      url: 'https://trysomm.werebland.com/dashboard',
-      // This must be true.
-      handleCodeInApp: true,
-      iOS: {
-        bundleId: 'com.example.ios'
-      },
-      android: {
-        packageName: 'com.example.android',
-        installApp: true,
-        minimumVersion: '12'
-      },
-    };
-    console.log(email);
-    firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
-    .then(function() {
-      // The link was successfully sent. Inform the user.
-      // Save the email locally so you don't need to ask the user for it again
-      // if they open the link on the same device.
-      window.localStorage.setItem('emailForSignIn', email);
+    e.preventDefault();
+    const { email, name } = this.state
+    const names = _.split(name, ' ', 2)
+    const firstName = names[0]
+    const lastName = names[1]
+
+    const data = {
+      email,
+      firstName,
+      lastName
+    }
+
+    const formattedData = JSON.stringify(data)
+    console.log(formattedData);
+
+    axios({
+      method: 'post',
+      url: 'https://wt-2c136a182f9df0f639eceee9aa700a3d-0.sandbox.auth0-extend.com/somm-mailchimp',
+      data: formattedData,
+      headers: {
+        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Expose-Headers': 'x-auth0-proxy-stats, x-auth0-stats, x-wt-response-source, location',
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => {
+      console.log(response);
+      this.setState({
+        accessStatus: 'success'
+      })
     })
-    .catch(function(error) {
-      console.log(error.code);
-      // Some error occurred, you can inspect the code: error.code
+    .catch((error) => {
+      console.log(error.response.data);
+      this.setState({
+        accessStatus: error.response.data.details.title
+      })
     });
   }
 
@@ -240,7 +203,10 @@ class Index extends Component {
                 handleAccess={(e) => this.handleAccess(e)}
                 email={this.state.email}
                 handleEmail={(email) => this.setState({ email })}
-                accessSuccess={this.state.accessSuccess}/>
+                name={this.state.name}
+                handleName={(name) => this.setState({ name })}
+                accessStatus={this.state.accessStatus}
+                handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
               <Demo />

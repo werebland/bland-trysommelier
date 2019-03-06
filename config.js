@@ -5,7 +5,7 @@ import 'firebase/auth'
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
-      apiKey: process.env.NODE_ENV,
+      apiKey: 'AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg',
       authDomain: "bland-sommelier.firebaseapp.com",
       databaseURL: "https://bland-sommelier.firebaseio.com",
       projectId: "bland-sommelier",
@@ -19,9 +19,6 @@ if (!firebase.apps.length) {
 var db = firebase.firestore(app);
 var settings = { };
 db.settings(settings);
-
-console.log(process.env.NODE_ENV);
-console.log(process.env.FIREBASE_API);
 
 var base = Rebase.createClass(db);
 

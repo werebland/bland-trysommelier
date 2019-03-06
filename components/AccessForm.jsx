@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import posed, {PoseGroup} from 'react-pose'
 
 const StyledTextField = styled(TextField)`
   width: 100% !important;
@@ -51,21 +52,67 @@ const AccessFormContainer = styled.form`
 
 `;
 
-const AccessForm = ({handleAccess, email, handleEmail}) => (
+const PosedContainer = posed.div({
+  enter: {
+    scale: 1,
+    opacity: 1,
+  },
+  exit: {
+    scale: 0,
+    opacity: 0,
+  }
+})
+
+const AccessForm = ({handleAccess, email, handleEmail, name, handleName, accessStatus, handleClear}) => (
   <AccessFormContainer onSubmit={(e) => handleAccess(e)}>
-    <StyledTextField
-      type="email"
-      name="email"
-      onChange={(e) => handleEmail(e.target.value)}
-      value={email}
-      required
-      variant="outlined"
-      label="Business email"
-      InputLabelProps={{className: 'textfield__label'}}
-      placeholder="tkeller@thefrenchlaundry.com"/>
-    <StyledButton variant="contained" size="large" type="submit">
-      Get access
-    </StyledButton>
+    <PoseGroup>
+      {accessStatus
+        ?
+        <PosedContainer key="0">
+          {accessStatus === "success"
+            ?
+            <div>
+              You're on our list!
+            </div>
+            :
+            <div>
+              Whoops! Something went wrong. Here's what we know:
+              <span>{accessStatus}</span>
+              <StyledButton variant="contained" onClick={() => handleClear()}>
+                Try again
+              </StyledButton>
+            </div>
+          }
+        </PosedContainer>
+        :
+        <PosedContainer key="1">
+          <StyledTextField
+            type="name"
+            name="name"
+            onChange={(e) => handleName(e.target.value)}
+            value={name}
+            required
+            variant="outlined"
+            label="Name"
+            InputLabelProps={{className: 'textfield__label'}}
+            placeholder="Thomas Keller"
+          />
+          <StyledTextField
+            type="email"
+            name="email"
+            onChange={(e) => handleEmail(e.target.value)}
+            value={email}
+            required
+            variant="outlined"
+            label="Business email"
+            InputLabelProps={{className: 'textfield__label'}}
+            placeholder="tkeller@thefrenchlaundry.com"/>
+          <StyledButton variant="contained" size="large" type="submit">
+            Get access
+          </StyledButton>
+        </PosedContainer>
+      }
+    </PoseGroup>
   </AccessFormContainer>
 );
 

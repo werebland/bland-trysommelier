@@ -29,6 +29,16 @@ const NavbarBrand = styled.a`
   background: #f94343;
   margin: 0;
   cursor: pointer;
+  position: relative;
+`;
+
+const NavbarLogo = styled.div`
+  height: 32px;
+  width: 120px;
+  background-image: url('/static/Somm-Logo.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
 `;
 
 const NavbarItems = styled.ul`
@@ -84,7 +94,7 @@ const Navbar = ({}) => (
   <NavbarContainer>
     <Link href="/">
       <NavbarBrand>
-        Somm
+        <NavbarLogo />
       </NavbarBrand>
     </Link>
     <NavbarItems>

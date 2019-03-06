@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head'
+import axios from 'axios'
 
 import AccessForm from '../components/AccessForm'
 import Navbar from '../components/Navbar'
@@ -45,15 +46,50 @@ class GetAccess extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      accessStatus: null,
       email: "",
-      accessSuccess: false,
-    }
+      name: "",
+    };
   }
 
   handleAccess(e) {
-    e.preventDefault()
-    const { email } = this.state
-    console.log(email);
+    e.preventDefault();
+    const { email, name } = this.state
+    const names = _.split(name, ' ', 2)
+    const firstName = names[0]
+    const lastName = names[1]
+
+    const data = {
+      email,
+      firstName,
+      lastName
+    }
+
+    const formattedData = JSON.stringify(data)
+    console.log(formattedData);
+
+    axios({
+      method: 'post',
+      url: 'https://wt-2c136a182f9df0f639eceee9aa700a3d-0.sandbox.auth0-extend.com/somm-mailchimp',
+      data: formattedData,
+      headers: {
+        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Expose-Headers': 'x-auth0-proxy-stats, x-auth0-stats, x-wt-response-source, location',
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => {
+      console.log(response);
+      this.setState({
+        accessStatus: 'success'
+      })
+    })
+    .catch((error) => {
+      console.log(error.response.data);
+      this.setState({
+        accessStatus: error.response.data.details.title
+      })
+    });
   }
 
   render() {
@@ -70,7 +106,10 @@ class GetAccess extends Component {
           handleAccess={(e) => this.handleAccess(e)}
           email={this.state.email}
           handleEmail={(email) => this.setState({ email })}
-          accessSuccess={this.state.accessSuccess}/>
+          name={this.state.name}
+          handleName={(name) => this.setState({ name })}
+          accessStatus={this.state.accessStatus}
+          handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
       </PageWrapper>
     );
   }
