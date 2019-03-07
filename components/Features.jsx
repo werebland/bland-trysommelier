@@ -4,14 +4,16 @@ import Grid from '@material-ui/core/Grid';
 
 const FeaturesContainer = styled.section`
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 16px;
+  padding: 136px 16px 16px;
   box-sizing: border-box;
 
   @media only screen and (min-width: 960px) {
-    padding: 16px 120px;
+    padding: 136px 120px 16px;
   }
 `;
 
@@ -48,7 +50,7 @@ const SectionSubtitle = styled.h3`
   font-size: 2.5rem;
   font-weight: 800;
   color: #1f1f1f;
-  margin: 0 auto;
+  margin: 0 auto 136px;
   display: inline-block;
   text-align: center;
 
@@ -69,7 +71,7 @@ const ComparisonGrid = styled(Grid)`
   width: 100%;
   max-width: 720px;
   padding: 16px 0;
-  margin-bottom: 16px;
+  margin-bottom: 136px !important;
 `;
 
 const ComparisonCard = styled.article`
@@ -78,12 +80,14 @@ const ComparisonCard = styled.article`
   align-items: center;
   justify-content: flex-start;
   flex-flow: column nowrap;
+  padding: 32px 0;
+  border-radius: 8px;
 `;
 
 const ComparisonCardTitle = styled.h5`
   font-size: 2rem;
   font-weight: 700;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #1f1f1f;
   position: relative;
   margin: 0 0 8px;
@@ -134,13 +138,14 @@ const FeatureCard = styled.article`
   justify-content: flex-start;
   flex-flow: column nowrap;
   position: relative;
+  margin-bottom: 68px;
 `;
 
 const FeatureCardTitle = styled.h5`
   display: inline-flex;
   font-size: 1.5rem;
-  font-weight: 900;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
   color: #1f1f1f;
   margin: 0 0 4px;
   position: relative;
@@ -188,8 +193,8 @@ const Features = ({}) => (
     <SectionTitle>
       Your menu converts browsers to diners.
     </SectionTitle>
-    <SectionSubtitle>So make the most of it.</SectionSubtitle>
-    <ComparisonGrid container>
+    <SectionSubtitle>Supercharge it with Somm.</SectionSubtitle>
+    <ComparisonGrid container spacing={16}>
       <Grid item sm={12} md={6} lg={6} xl={6}>
         <ComparisonCard>
           <ComparisonCardTitle>
@@ -224,7 +229,7 @@ const Features = ({}) => (
         </ComparisonCard>
       </Grid>
       <Grid item sm={12} md={6} lg={6} xl={6}>
-        <ComparisonCard>
+        <ComparisonCard style={{border: '2px solid #f94343'}}>
           <ComparisonCardTitle>
             Now
           </ComparisonCardTitle>
@@ -257,7 +262,7 @@ const Features = ({}) => (
         </ComparisonCard>
       </Grid>
     </ComparisonGrid>
-    <Grid container spacing={16}>
+    <Grid container spacing={16} style={{marginBottom: '68px'}}>
       <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
         <FeatureCard>
           <FeatureCardIcon>

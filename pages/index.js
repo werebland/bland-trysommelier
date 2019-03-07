@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import NoSsr from '@material-ui/core/NoSsr';
 import styled from 'styled-components';
 import _ from 'lodash'
 import axios from 'axios';
@@ -12,6 +13,7 @@ import Navbar from '../components/Navbar'
 import Features from '../components/Features'
 import Pricing from '../components/Pricing'
 import AccessForm from '../components/AccessForm'
+import SommWidget from '../components/SommWidget'
 
 const IndexWrapper = styled.div`
   box-sizing: border-box;
@@ -149,8 +151,7 @@ const HeroBackground = styled.div`
   z-index: -1;
 
   & svg {
-    width: 1440px;
-    height: 100vh;
+    width: 100vw;
   }
 `;
 
@@ -219,11 +220,14 @@ class Index extends Component {
   render() {
     return (
       <IndexWrapper>
+        <Head>
+          <title>Somm | Your menu's personal assistant</title>
+        </Head>
+        <Navbar />
+        <NoSsr>
+          <SommWidget username="xoh" iconColor="#f94343" backgroundColor="#fff" position="right" />
+        </NoSsr>
         <Hero>
-          <Head>
-            <title>Somm | Your menu's personal assistant</title>
-          </Head>
-          <Navbar />
           <Grid container spacing={16}>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <HeroTitle>

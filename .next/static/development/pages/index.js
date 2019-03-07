@@ -202,7 +202,7 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Features.jsx";
 var FeaturesContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section.withConfig({
   displayName: "Features__FeaturesContainer",
   componentId: "sc-1m4jecs-0"
-})(["width:100%;display:flex;flex-flow:column nowrap;align-items:center;padding:16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:16px 120px;}"]);
+})(["width:100%;height:100%;min-height:100vh;display:flex;flex-flow:column nowrap;align-items:center;padding:136px 16px 16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:136px 120px 16px;}"]);
 var SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.withConfig({
   displayName: "Features__SectionTitle",
   componentId: "sc-1m4jecs-1"
@@ -210,19 +210,19 @@ var SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.
 var SectionSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.withConfig({
   displayName: "Features__SectionSubtitle",
   componentId: "sc-1m4jecs-2"
-})(["position:relative;font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#1f1f1f;margin:0 auto;display:inline-block;text-align:center;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
+})(["position:relative;font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#1f1f1f;margin:0 auto 136px;display:inline-block;text-align:center;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
 var ComparisonGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "Features__ComparisonGrid",
   componentId: "sc-1m4jecs-3"
-})(["width:100%;max-width:720px;padding:16px 0;margin-bottom:16px;"]);
+})(["width:100%;max-width:720px;padding:16px 0;margin-bottom:136px !important;"]);
 var ComparisonCard = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Features__ComparisonCard",
   componentId: "sc-1m4jecs-4"
-})(["width:100%;display:flex;align-items:center;justify-content:flex-start;flex-flow:column nowrap;"]);
+})(["width:100%;display:flex;align-items:center;justify-content:flex-start;flex-flow:column nowrap;padding:32px 0;border-radius:8px;"]);
 var ComparisonCardTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h5.withConfig({
   displayName: "Features__ComparisonCardTitle",
   componentId: "sc-1m4jecs-5"
-})(["font-size:2rem;font-weight:700;font-family:'Source Sans Pro',sans-serif;color:#1f1f1f;position:relative;margin:0 0 8px;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:2px;left:4px;z-index:-1;}"]);
+})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin:0 0 8px;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:2px;left:4px;z-index:-1;}"]);
 var ComparisonCardSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span.withConfig({
   displayName: "Features__ComparisonCardSubtitle",
   componentId: "sc-1m4jecs-6"
@@ -238,11 +238,11 @@ var ComparisonCardItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default
 var FeatureCard = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Features__FeatureCard",
   componentId: "sc-1m4jecs-9"
-})(["width:100%;display:flex;align-items:center;justify-content:flex-start;flex-flow:column nowrap;position:relative;"]);
+})(["width:100%;display:flex;align-items:center;justify-content:flex-start;flex-flow:column nowrap;position:relative;margin-bottom:68px;"]);
 var FeatureCardTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h5.withConfig({
   displayName: "Features__FeatureCardTitle",
   componentId: "sc-1m4jecs-10"
-})(["display:inline-flex;font-size:1.5rem;font-weight:900;font-family:'Source Sans Pro',sans-serif;color:#1f1f1f;margin:0 0 4px;position:relative;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0;left:4px;z-index:-1;}"]);
+})(["display:inline-flex;font-size:1.5rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;margin:0 0 4px;position:relative;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0;left:4px;z-index:-1;}"]);
 var FeatureCardCopy = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].p.withConfig({
   displayName: "Features__FeatureCardCopy",
   componentId: "sc-1m4jecs-11"
@@ -258,26 +258,27 @@ var Features = function Features(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeaturesContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 192
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SectionTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 193
     },
     __self: this
   }, "Your menu converts browsers to diners."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SectionSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 196
     },
     __self: this
-  }, "So make the most of it."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonGrid, {
+  }, "Supercharge it with Somm."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonGrid, {
     container: true,
+    spacing: 16,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 197
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -288,73 +289,73 @@ var Features = function Features(_ref) {
     xl: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 198
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 199
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 200
     },
     __self: this
   }, "Then"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 203
     },
     __self: this
   }, "without somm"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 206
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 207
     },
     __self: this
   }, "Static PDF, JPEG, or HTML"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 210
     },
     __self: this
   }, "Buried in menus"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 213
     },
     __self: this
   }, "Not searchable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 216
     },
     __self: this
   }, "Not sortable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 219
     },
     __self: this
   }, "Not filterable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 222
     },
     __self: this
   }, "Not sharable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 225
     },
     __self: this
   }, "No insights")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -365,81 +366,87 @@ var Features = function Features(_ref) {
     xl: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 231
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCard, {
+    style: {
+      border: '2px solid #f94343'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 232
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 233
     },
     __self: this
   }, "Now"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 236
     },
     __self: this
   }, "with somm"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 239
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 240
     },
     __self: this
   }, "Dynamic JS"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 243
     },
     __self: this
   }, "Embedded in your home page"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 246
     },
     __self: this
   }, "Searchable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 249
     },
     __self: this
   }, "Sortable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 252
     },
     __self: this
   }, "Filterable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250
+      lineNumber: 255
     },
     __self: this
   }, "Sharable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ComparisonCardItem, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 258
     },
     __self: this
   }, "Valuable insights"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     container: true,
     spacing: 16,
+    style: {
+      marginBottom: '68px'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 265
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -451,19 +458,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
+      lineNumber: 266
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 267
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 268
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -472,7 +479,7 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 269
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -480,26 +487,26 @@ var Features = function Features(_ref) {
     d: "M0 0h24v24H0V0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 269
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 264
+      lineNumber: 269
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 271
     },
     __self: this
   }, "Simple"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 274
     },
     __self: this
   }, "With a single line of code, you can have Somm up and running on your website. No plugins or code bases to manage, upgrading your menu with Somm is as simple as copy and paste."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -511,19 +518,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 279
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 280
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 281
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -532,7 +539,7 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 282
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -540,14 +547,14 @@ var Features = function Features(_ref) {
     fill: "none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 282
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 282
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -555,19 +562,19 @@ var Features = function Features(_ref) {
     fill: "none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 282
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279
+      lineNumber: 284
     },
     __self: this
   }, "Feature-rich"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282
+      lineNumber: 287
     },
     __self: this
   }, "From instantly searchable and sortable menu items to powerful filters and thoughtful design, Sommelier has been designed from the ground up to offer your diners with the most features to find exactly what they\u2019re looking for in your menu."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -579,19 +586,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 292
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 293
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 294
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -600,14 +607,14 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 295
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 295
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -615,19 +622,19 @@ var Features = function Features(_ref) {
     fill: "none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 295
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 297
     },
     __self: this
   }, "Insightful"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295
+      lineNumber: 300
     },
     __self: this
   }, "See exactly what your diners are interested in like never before. Every item click and share are stored, so you can see what is engaging your diners and what you can focus your attention on."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -639,19 +646,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 305
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 306
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 307
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -660,7 +667,7 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 308
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -668,26 +675,26 @@ var Features = function Features(_ref) {
     fill: "none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 308
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 308
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 310
     },
     __self: this
   }, "Engaging"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 313
     },
     __self: this
   }, "Sommelier encourages your diners to engage with your website. This helps lead to more bookings and a larger social media participation, helping you reach your business goals."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -699,19 +706,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 318
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 319
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 320
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -720,7 +727,7 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 321
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -728,26 +735,26 @@ var Features = function Features(_ref) {
     d: "M0 0h24v24H0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 321
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M12 2.02c-5.51 0-9.98 4.47-9.98 9.98s4.47 9.98 9.98 9.98 9.98-4.47 9.98-9.98S17.51 2.02 12 2.02zM11.48 20v-6.26H8L13 4v6.26h3.35L11.48 20z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316
+      lineNumber: 321
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 318
+      lineNumber: 323
     },
     __self: this
   }, "Dynamic"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 326
     },
     __self: this
   }, "As your menu changes, so does Sommelier. Add specials, item options, and multiple menus, supercharging your menu to do what it does best: convert potential diners."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -759,19 +766,19 @@ var Features = function Features(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 326
+      lineNumber: 331
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCard, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 332
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardIcon, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 333
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -780,14 +787,14 @@ var Features = function Features(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 334
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     d: "M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 334
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -795,19 +802,19 @@ var Features = function Features(_ref) {
     fill: "none",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 334
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 336
     },
     __self: this
   }, "Valuable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FeatureCardCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 334
+      lineNumber: 339
     },
     __self: this
   }, "For less than a coffee a day, Sommelier can provide your diners with a feature-rich and engaging experience while offering your business valuable insights and time-saving simplicity.")))));
@@ -949,8 +956,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/Grid/index.js");
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Pricing.jsx";
+
+
 
 
 
@@ -958,52 +971,58 @@ var PricingWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].s
   displayName: "Pricing__PricingWrapper",
   componentId: "cp9je-0"
 })(["width:100%;display:flex;flex-flow:column nowrap;align-items:center;padding:16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:16px 120px;}"]);
+var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a).withConfig({
+  displayName: "Pricing__StyledButton",
+  componentId: "cp9je-1"
+})(["width:100% !important;height:56px !important;color:#fff !important;font-family:'Source Sans Pro',sans-serif !important;font-size:1.25rem !important;font-weight:700 !important;background:#1f1f1f !important;border-radius:8px !important;text-transform:none !important;margin-bottom:8px !important;box-shadow:none !important;position:relative !important;"]);
 var PricingTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.withConfig({
   displayName: "Pricing__PricingTitle",
-  componentId: "cp9je-1"
-})(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;background:#f94343;margin:0 auto;display:inline-block;text-align:center;"]);
+  componentId: "cp9je-2"
+})(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;background:#f94343;margin:0 auto;display:inline-block;text-align:center;padding:8px 16px;"]);
 var PricingSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h5.withConfig({
   displayName: "Pricing__PricingSubtitle",
-  componentId: "cp9je-2"
-})(["font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#1f1f1f;margin:0 auto 24px;text-align:center;"]);
+  componentId: "cp9je-3"
+})(["font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#1f1f1f;margin:0 auto 68px;text-align:center;"]);
 var PricingGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "Pricing__PricingGrid",
-  componentId: "cp9je-3"
-})(["width:100%;box-sizing:border-box;"]);
+  componentId: "cp9je-4"
+})(["width:100%;box-sizing:border-box;margin-bottom:136px !important;"]);
 var PricingCardContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Pricing__PricingCardContainer",
-  componentId: "cp9je-4"
-})(["width:100%;border:4px solid ", ";border-radius:0;padding:16px;box-sizing:border-box;text-align:center;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;"], function (props) {
+  componentId: "cp9je-5"
+})(["width:100%;border:2px solid ", ";border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;background:#fff;box-shadow:", ";margin:0 0 16px;"], function (props) {
   return props.primary ? '#f94343' : '#1f1f1f';
+}, function (props) {
+  return props.primary ? '0 2px 16px -2px rgba(31,31,31,0.32)' : 'none';
 });
 var PricingCardTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h4.withConfig({
   displayName: "Pricing__PricingCardTitle",
-  componentId: "cp9je-5"
+  componentId: "cp9je-6"
 })(["font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:800;color:", ";margin:0 0 16px;"], function (props) {
   return props.primary ? '#f94343' : '#1f1f1f';
 });
 var PricingCardPrice = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span.withConfig({
   displayName: "Pricing__PricingCardPrice",
-  componentId: "cp9je-6"
+  componentId: "cp9je-7"
 })(["font-family:'Montserrat',sans-serif;font-size:4rem;font-weight:800;color:#1f1f1f;position:relative;padding:0 16px;display:flex;align-items:flex-start;line-height:4rem;&::before{content:\"$\";position:absolute;top:0;left:0;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;}"]);
 var PricingCardPriceSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span.withConfig({
   displayName: "Pricing__PricingCardPriceSubtitle",
-  componentId: "cp9je-7"
-})(["font-family:'Source Sans Pro',sans-serif;font-weight:400;color:#9f9f9f;font-size:1rem;"]);
+  componentId: "cp9je-8"
+})(["font-family:'Source Sans Pro',sans-serif;font-weight:400;color:#9f9f9f;font-size:1rem;margin:0 0 16px;"]);
 var PricingCardItems = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul.withConfig({
   displayName: "Pricing__PricingCardItems",
-  componentId: "cp9je-8"
+  componentId: "cp9je-9"
 })(["padding:0;margin:0;display:flex;flex-flow:column nowrap;align-items:flex-start;justify-content:flex-start;"]);
 var PricingCardItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li.withConfig({
   displayName: "Pricing__PricingCardItem",
-  componentId: "cp9je-9"
+  componentId: "cp9je-10"
 })(["list-style:none;font-family:'Source Sans Pro',sans-serif;color:", ";font-size:1.25rem;font-weight:500;margin-bottom:8px;"], function (props) {
   return props.active ? '#1f1f1f' : '#9f9f9f';
 });
 var PricingAlert = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span.withConfig({
   displayName: "Pricing__PricingAlert",
-  componentId: "cp9je-10"
-})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin-bottom:16px;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
+  componentId: "cp9je-11"
+})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin-bottom:40px;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
 
 var Pricing = function Pricing(_ref) {
   Object(_babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref);
@@ -1011,39 +1030,39 @@ var Pricing = function Pricing(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 156
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 157
     },
     __self: this
   }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 160
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 161
     },
     __self: this
   }, "Where guac is never extra"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingAlert, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 162
     },
     __self: this
   }, "Early Access: Unlimited items, All features, No charge."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
     container: true,
-    spacing: 8,
+    spacing: 16,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 163
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1055,65 +1074,65 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 164
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 165
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 166
     },
     __self: this
   }, "Appetizer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 169
     },
     __self: this
   }, "0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 172
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 175
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 176
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 179
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 182
     },
     __self: this
   }, "35 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 185
     },
     __self: this
   }, "Single menu")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1125,70 +1144,83 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 191
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 192
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 193
     },
     __self: this
   }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 196
     },
     __self: this
   }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 199
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 202
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 180
+      lineNumber: 203
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 206
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 209
     },
     __self: this
   }, "100 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 212
     },
     __self: this
-  }, "Multiple menus")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, "Multiple menus"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/get-access",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 217
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218
+    },
+    __self: this
+  }, "Get early access"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
     item: true,
     xs: 12,
     sm: 6,
@@ -1197,71 +1229,457 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 223
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196
+      lineNumber: 224
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197
+      lineNumber: 225
     },
     __self: this
   }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 228
     },
     __self: this
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 231
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 234
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 235
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 238
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 241
     },
     __self: this
   }, "Unlimited dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 244
     },
     __self: this
   }, "Multiple locations"))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Pricing);
+
+/***/ }),
+
+/***/ "./components/SommWidget.jsx":
+/*!***********************************!*\
+  !*** ./components/SommWidget.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var vh_check__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vh-check */ "./node_modules/vh-check/dist/vh-check.js");
+/* harmony import */ var vh_check__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(vh_check__WEBPACK_IMPORTED_MODULE_10__);
+
+
+
+
+
+
+var _jsxFileName = "/Users/Chris/trysomm-mvp/components/SommWidget.jsx";
+
+
+
+
+
+var WidgetContainer = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
+  displayName: "SommWidget__WidgetContainer",
+  componentId: "i7qmkt-0"
+})(["position:fixed;", ":", ";bottom:16px;z-index:8;"], function (props) {
+  return props.position;
+}, function (props) {
+  return props.position == "left" ? '64px' : '16px';
+});
+var WidgetToggle = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
+  displayName: "SommWidget__WidgetToggle",
+  componentId: "i7qmkt-1"
+})(["width:48px;height:48px;background:", ";box-shadow:0 2px 16px -2px rgba(0,0,0,0.32);border-radius:8px;position:absolute;bottom:0;right:0;display:flex;align-items:center;justify-content:center;cursor:pointer;"], function (props) {
+  return props.background;
+});
+var WidgetFrame = react_pose__WEBPACK_IMPORTED_MODULE_8__["default"].div({
+  enter: {
+    scale: 1,
+    opacity: 1
+  },
+  exit: {
+    scale: 0,
+    opacity: 0
+  },
+  init: {
+    scale: 0,
+    opacity: 0
+  }
+});
+var StyledWidgetFrame = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["default"])(function (props) {
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(WidgetFrame, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_5__["default"])({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }));
+}).withConfig({
+  displayName: "SommWidget__StyledWidgetFrame",
+  componentId: "i7qmkt-2"
+})(["width:calc(100vw - 32px);max-width:360px;height:", ";max-height:600px;display:block;border:0;appearance:none;background:#FFFFFF;box-shadow:0 2px 16px -2px rgba(0,0,0,0.32);border-radius:8px;overflow:hidden;position:absolute;bottom:64px;", ":", ";scale:1;opacity:1;transform-origin:bottom ", ";"], function (props) {
+  return "calc(".concat(props.viewportHeight, "px - 32px - 64px)");
+}, function (props) {
+  return props.position;
+}, function (props) {
+  return props.position == "left" ? '-48px' : '0';
+}, function (props) {
+  return props.position;
+});
+var WidgetToggleIcon = react_pose__WEBPACK_IMPORTED_MODULE_8__["default"].div({
+  enter: {
+    scale: 1,
+    opacity: 1
+  },
+  exit: {
+    scale: 0,
+    opacity: 0
+  },
+  init: {
+    scale: 0,
+    opacity: 0
+  }
+});
+var StyledWidgetToggleIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["default"])(function (props) {
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(WidgetToggleIcon, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_5__["default"])({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }));
+}).withConfig({
+  displayName: "SommWidget__StyledWidgetToggleIcon",
+  componentId: "i7qmkt-3"
+})(["width:24px;height:24px;display:flex;align-items:center;justify-content:center;scale:1;opacity:1;"]);
+var spinnerAnimation = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["keyframes"])(["0%{top:28px;left:28px;width:0;height:0;opacity:1;}100%{top:-1px;left:-1px;width:58px;height:58px;opacity:0;}"]);
+var SpinnerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
+  displayName: "SommWidget__SpinnerWrapper",
+  componentId: "i7qmkt-4"
+})(["width:100%;height:100%;position:absolute;display:flex;align-items:center;justify-content:center;z-index:1;top:0;right:0;bottom:0;left:0;-webkit-overflow-scrolling:touch;overflow-y:scroll;border-radius:8px;& iframe{border-radius:8px;}"]);
+var Spinner = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
+  displayName: "SommWidget__Spinner",
+  componentId: "i7qmkt-5"
+})(["display:inline-flex;position:relative;width:64px;height:64px;& div{position:absolute;border:4px solid ", ";opacity:1;border-radius:50%;animation:", " 1.5s cubic-bezier(0,0.2,0.8,1) infinite}& div:nth-child(2){animation-delay:-0.5s;}"], function (props) {
+  return props.color;
+}, spinnerAnimation);
+
+var Widget =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Widget, _Component);
+
+  function Widget(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Widget);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Widget).call(this, props));
+    _this.state = {
+      open: false,
+      hasOpened: false
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Widget, [{
+    key: "handleToggle",
+    value: function handleToggle() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var test = vh_check__WEBPACK_IMPORTED_MODULE_10___default()();
+      console.log(test);
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(WidgetContainer, {
+        position: this.props.position,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 166
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_8__["PoseGroup"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 167
+        },
+        __self: this
+      }, this.state.open && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledWidgetFrame, {
+        key: "0",
+        viewportHeight: test.windowHeight,
+        position: this.props.position,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 169
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SpinnerWrapper, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 170
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("iframe", {
+        style: {
+          zIndex: 8,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          background: 'transparent',
+          display: 'block'
+        },
+        src: "https://bland-sommelier.herokuapp.com/".concat(this.props.username),
+        sandbox: "allow-same-origin allow-scripts allow-popups allow-top-navigation",
+        width: "100%",
+        height: "100%",
+        frameBorder: "0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 171
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Spinner, {
+        color: this.props.iconColor,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 181
+        },
+        __self: this
+      }))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(WidgetToggle, {
+        background: this.props.backgroundColor,
+        onClick: function onClick() {
+          return _this2.setState({
+            open: !_this2.state.open,
+            hasOpened: true
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 188
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_8__["PoseGroup"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 189
+        },
+        __self: this
+      }, this.state.open ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledWidgetToggleIcon, {
+        key: "0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 192
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
+        fill: this.props.iconColor,
+        width: "18px",
+        height: "18px",
+        viewBox: "0 0 16 16",
+        version: "1.1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 193
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Page-4",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 194
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Search",
+        transform: "translate(-46.000000, -45.000000)",
+        fill: this.props.iconColor,
+        fillRule: "nonzero",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 195
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Group",
+        transform: "translate(32.000000, 32.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 196
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Group-2",
+        transform: "translate(14.000000, 11.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 197
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
+        id: "Shape",
+        points: "15.5555556 3.56666667 13.9888889 2 7.77777778 8.21111111 1.56666667 2 0 3.56666667 6.21111111 9.77777778 0 15.9888889 1.56666667 17.5555556 7.77777778 11.3444444 13.9888889 17.5555556 15.5555556 15.9888889 9.34444444 9.77777778",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 198
+        },
+        __self: this
+      }))))))) : react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledWidgetToggleIcon, {
+        key: "1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 206
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
+        width: "22px",
+        height: "20px",
+        viewBox: "0 0 22 20",
+        version: "1.1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 207
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Page-3",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 208
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Desktop-HD",
+        transform: "translate(-1379.000000, -720.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 209
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Group-10",
+        transform: "translate(1054.000000, 90.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 210
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "Group-9",
+        transform: "translate(312.000000, 616.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 211
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
+        id: "round-restaurant_menu-24px",
+        transform: "translate(12.000000, 12.000000)",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 212
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
+        id: "Shape",
+        points: "0 0 24 0 24 24 0 24",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 213
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
+        d: "M7.0394622,13.5010047 L10.2283461,10.3121208 L3.25336682,3.34840963 C2.71249606,2.80753886 1.77724035,2.95402469 1.43919612,3.65264944 C0.639158114,5.33160244 0.93212978,7.39367224 2.31811112,8.79092173 L7.0394622,13.5010047 Z M14.6792618,11.4614711 C16.4032874,12.2615092 18.8259377,11.6981021 20.6175721,9.90646768 C22.769787,7.75425276 23.1867082,4.66678213 21.5302915,3.0103654 C19.8851429,1.36521682 16.7976723,1.77086989 14.6341892,3.92308482 C12.8425548,5.71471924 12.2791478,8.13736955 13.0791858,9.86139512 L2.87025003,20.0703309 C2.43079253,20.5097884 2.43079253,21.2196812 2.87025003,21.6591387 C3.30970753,22.0985962 4.01960041,22.0985962 4.45905791,21.6591387 L11.4340372,14.7066957 L18.3977483,21.6704069 C18.8372058,22.1098644 19.5470987,22.1098644 19.9865562,21.6704069 C20.4260137,21.2309494 20.4260137,20.5210565 19.9865562,20.081599 L13.0228451,13.1178879 L14.6792618,11.4614711 Z",
+        id: "Shape",
+        fill: this.props.iconColor,
+        fillRule: "nonzero",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 214
+        },
+        __self: this
+      })))))))))));
+    }
+  }]);
+
+  return Widget;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Widget);
 
 /***/ }),
 
@@ -1704,6 +2122,39 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -61508,6 +61959,214 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/vh-check/dist/vh-check.js":
+/*!************************************************!*\
+  !*** ./node_modules/vh-check/dist/vh-check.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+     true ? module.exports = factory() :
+    undefined;
+}(this, (function () { 'use strict';
+
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation. All rights reserved.
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+    this file except in compliance with the License. You may obtain a copy of the
+    License at http://www.apache.org/licenses/LICENSE-2.0
+
+    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+    MERCHANTABLITY OR NON-INFRINGEMENT.
+
+    See the Apache Version 2.0 License for specific language governing permissions
+    and limitations under the License.
+    ***************************************************************************** */
+
+    var __assign = function() {
+        __assign = Object.assign || function __assign(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+
+    // don't know a better way to get the size of a CSS 100vh…
+    function createTestElement() {
+        var testElement = document.createElement('div');
+        testElement.style.cssText =
+            'position: fixed; top: 0; height: 100vh; pointer-events: none;';
+        document.documentElement.insertBefore(testElement, document.documentElement.firstChild);
+        return testElement;
+    }
+    function removeTestElement(element) {
+        document.documentElement.removeChild(element);
+    }
+    //  in some browsers this will be bigger than window.innerHeight
+    function checkSizes() {
+        var vhTest = createTestElement();
+        var windowHeight = window.innerHeight;
+        var vh = vhTest.offsetHeight;
+        var offset = vh - windowHeight;
+        removeTestElement(vhTest);
+        return {
+            vh: vh,
+            windowHeight: windowHeight,
+            offset: offset,
+            isNeeded: offset !== 0,
+            value: 0,
+        };
+    }
+    // export
+    function noop() { }
+    function computeDifference() {
+        var sizes = checkSizes();
+        sizes.value = sizes.offset;
+        return sizes;
+    }
+    function redefineVhUnit() {
+        var sizes = checkSizes();
+        sizes.value = sizes.windowHeight * 0.01;
+        return sizes;
+    }
+
+    var methods = /*#__PURE__*/Object.freeze({
+        noop: noop,
+        computeDifference: computeDifference,
+        redefineVhUnit: redefineVhUnit
+    });
+
+    function isString(text) {
+        return typeof text === "string" && text.length > 0;
+    }
+    function isFunction(f) {
+        return typeof f === "function";
+    }
+    var defaultOptions = Object.freeze({
+        cssVarName: 'vh-offset',
+        redefineVh: false,
+        method: computeDifference,
+        force: false,
+        bind: true,
+        updateOnTouch: false,
+        onUpdate: noop,
+    });
+    function getOptions(options) {
+        // old options handling: only redefine the CSS var name
+        if (isString(options)) {
+            return __assign({}, defaultOptions, { cssVarName: options });
+        }
+        // be sure to have a configuration object
+        if (typeof options !== 'object')
+            return defaultOptions;
+        // make sure we have the right options to start with
+        var finalOptions = {
+            force: options.force === true,
+            bind: options.bind !== false,
+            updateOnTouch: options.updateOnTouch === true,
+            onUpdate: isFunction(options.onUpdate) ? options.onUpdate : noop,
+        };
+        // method change
+        var redefineVh = options.redefineVh === true;
+        finalOptions.method =
+            methods[redefineVh ? 'redefineVhUnit' : 'computeDifference'];
+        finalOptions.cssVarName = isString(options.cssVarName)
+            ? options.cssVarName
+            : redefineVh
+                ? /*
+                  when redefining vh unit we follow this article name convention
+                  https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+                */
+                    'vh'
+                : defaultOptions.cssVarName;
+        return finalOptions;
+    }
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support
+    var passiveSupported = false;
+    var eventListeners = [];
+    /* istanbul ignore next */
+    try {
+        var options = Object.defineProperty({}, "passive", {
+            get: function () {
+                passiveSupported = true;
+            },
+        });
+        window.addEventListener("test", options, options);
+        window.removeEventListener("test", options, options);
+    }
+    catch (err) {
+        passiveSupported = false;
+    }
+    function addListener(eventName, callback) {
+        eventListeners.push({
+            eventName: eventName,
+            callback: callback,
+        });
+        window.addEventListener(eventName, callback, 
+        /* istanbul ignore next */
+        passiveSupported ? { passive: true } : false);
+    }
+    function removeAll() {
+        eventListeners.forEach(function (config) {
+            window.removeEventListener(config.eventName, config.callback);
+        });
+        eventListeners = [];
+    }
+
+    function updateCssVar(cssVarName, result) {
+        document.documentElement.style.setProperty("--" + cssVarName, result.value + "px");
+    }
+    function formatResult(sizes, options) {
+        return __assign({}, sizes, { unbind: removeAll, recompute: options.method });
+    }
+    function vhCheck(options) {
+        var config = Object.freeze(getOptions(options));
+        var result = formatResult(config.method(), config);
+        // usefulness check
+        if (!result.isNeeded && !config.force) {
+            return result;
+        }
+        updateCssVar(config.cssVarName, result);
+        config.onUpdate(result);
+        // enabled by default
+        if (!config.bind)
+            return result;
+        function onWindowChange() {
+            window.requestAnimationFrame(function () {
+                var sizes = config.method();
+                updateCssVar(config.cssVarName, sizes);
+                config.onUpdate(formatResult(sizes, config));
+            });
+        }
+        // be sure we don't duplicates events listeners
+        result.unbind();
+        // listen for orientation change
+        // - this can't be configured
+        // - because it's convenient and not a real performance bottleneck
+        addListener('orientationchange', onWindowChange);
+        // listen to touch move for scrolling
+        // – disabled by default
+        // - listening to scrolling can be expansive…
+        if (config.updateOnTouch) {
+            addListener('touchmove', onWindowChange);
+        }
+        return result;
+    }
+
+    return vhCheck;
+
+})));
+
+
+/***/ }),
+
 /***/ "./node_modules/warning/warning.js":
 /*!*****************************************!*\
   !*** ./node_modules/warning/warning.js ***!
@@ -61610,15 +62269,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
-/* harmony import */ var _components_Features__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Features */ "./components/Features.jsx");
-/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
-/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/NoSsr */ "./node_modules/@material-ui/core/NoSsr/index.js");
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
+/* harmony import */ var _components_Features__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Features */ "./components/Features.jsx");
+/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
+/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
+/* harmony import */ var _components_SommWidget__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/SommWidget */ "./components/SommWidget.jsx");
 
 
 
@@ -61639,43 +62301,45 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/pages/index.js";
 
 
 
-var IndexWrapper = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].div.withConfig({
+
+
+var IndexWrapper = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].div.withConfig({
   displayName: "pages__IndexWrapper",
   componentId: "sc-1wbo52z-0"
 })(["box-sizing:border-box;border:10px solid #1f1f1f;&:before{content:\"\";width:100vw;height:10px;position:absolute;top:0;left:0;right:0;background:#1f1f1f;z-index:999;}"]);
-var StyledPaper = Object(styled_components__WEBPACK_IMPORTED_MODULE_12__["default"])(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a).withConfig({
+var StyledPaper = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["default"])(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a).withConfig({
   displayName: "pages__StyledPaper",
   componentId: "sc-1wbo52z-1"
 })(["border-radius:8px !important;padding:16px !important;box-sizing:border-box !important;background:#FFFFFF !important;box-shadow:0 2px 16px -2px rgba(31,31,31,0.32) !important;"]);
-var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_12__["default"])(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a).withConfig({
+var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["default"])(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a).withConfig({
   displayName: "pages__StyledTextField",
   componentId: "sc-1wbo52z-2"
 })(["width:100% !important;margin-bottom:16px !important;border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;& fieldset{border-radius:0 !important;border:4px solid #1f1f1f !important;}& input{border-radius:0 !important;font-family:'Source Sans Pro',sans-serif !important;}"]);
-var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_12__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default.a).withConfig({
+var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_13__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default.a).withConfig({
   displayName: "pages__StyledButton",
   componentId: "sc-1wbo52z-3"
 })(["width:100% !important;height:56px !important;color:#fff !important;font-family:'Source Sans Pro',sans-serif !important;font-size:1.25rem !important;font-weight:700 !important;background:#1f1f1f !important;border-radius:0px !important;text-transform:none !important;margin-bottom:8px !important;box-shadow:none !important;position:relative !important;&:after{content:\"\";display:block;position:absolute;height:56px;width:100%;background:#f94343;z-index:-1;top:4px;left:4px;}"]);
-var Hero = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].section.withConfig({
+var Hero = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].section.withConfig({
   displayName: "pages__Hero",
   componentId: "sc-1wbo52z-4"
 })(["width:100%;height:100%;min-height:100vh;padding:96px 16px 16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:96px 120px 16px;}"]);
-var HeroTitle = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].h1.withConfig({
+var HeroTitle = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].h1.withConfig({
   displayName: "pages__HeroTitle",
   componentId: "sc-1wbo52z-5"
 })(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;margin:0 0 24px;text-align:center;max-width:528px;box-sizing:border-box;& span{margin-top:8px;text-transform:uppercase;background:#fff;color:#f94343;font-size:3.25rem;padding:16px 8px;box-sizing:border-box;display:block;max-width:528px;box-sizing:border-box;}"]);
-var HeroCopy = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].p.withConfig({
+var HeroCopy = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].p.withConfig({
   displayName: "pages__HeroCopy",
   componentId: "sc-1wbo52z-6"
 })(["font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.75rem;color:#fff;padding:0;margin:0 0 24px;max-width:528px;"]);
-var HeroSpan = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].span.withConfig({
+var HeroSpan = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].span.withConfig({
   displayName: "pages__HeroSpan",
   componentId: "sc-1wbo52z-7"
 })(["font-size:1rem;font-weight:500;color:#9f9f9f;width:100%;text-align:center;display:flex;justify-content:center;align-items:center;"]);
-var HeroBackground = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].div.withConfig({
+var HeroBackground = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].div.withConfig({
   displayName: "pages__HeroBackground",
   componentId: "sc-1wbo52z-8"
-})(["width:100vw;height:100vh;position:absolute;top:90px;left:0;right:0;z-index:-1;& svg{width:1440px;height:100vh;}"]);
-var Demo = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].div.withConfig({
+})(["width:100vw;height:100vh;position:absolute;top:90px;left:0;right:0;z-index:-1;& svg{width:100vw;}"]);
+var Demo = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].div.withConfig({
   displayName: "pages__Demo",
   componentId: "sc-1wbo52z-9"
 })(["width:100%;max-width:360px;height:600px;display:block;box-shadow:0 2px 16px -2px rgba(31,31,31,0.32) !important;border-radius:8px;background-image:url('/static/demo.png');background-size:cover;background-position:center;"]);
@@ -61709,7 +62373,7 @@ function (_Component) {
           email = _this$state.email,
           name = _this$state.name;
 
-      var names = lodash__WEBPACK_IMPORTED_MODULE_13___default.a.split(name, ' ', 2);
+      var names = lodash__WEBPACK_IMPORTED_MODULE_14___default.a.split(name, ' ', 2);
 
       var firstName = names[0];
       var lastName = names[1];
@@ -61722,7 +62386,7 @@ function (_Component) {
       var formattedData = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(data);
 
       console.log(formattedData);
-      axios__WEBPACK_IMPORTED_MODULE_14___default()({
+      axios__WEBPACK_IMPORTED_MODULE_15___default()({
         method: 'post',
         url: 'https://wt-2c136a182f9df0f639eceee9aa700a3d-0.sandbox.auth0-extend.com/somm-mailchimp',
         data: formattedData,
@@ -61754,12 +62418,6 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(IndexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 221
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Hero, {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 222
         },
         __self: this
@@ -61775,18 +62433,40 @@ function (_Component) {
           lineNumber: 224
         },
         __self: this
-      }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_15__["default"], {
+      }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 226
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_12___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 227
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_SommWidget__WEBPACK_IMPORTED_MODULE_20__["default"], {
+        username: "xoh",
+        iconColor: "#f94343",
+        backgroundColor: "#fff",
+        position: "right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 228
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Hero, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 230
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
         container: true,
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 227
+          lineNumber: 231
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -61798,34 +62478,34 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 228
+          lineNumber: 232
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 233
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 235
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 236
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 238
         },
         __self: this
-      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_19__["default"], {
         handleAccess: function handleAccess(e) {
           return _this3.handleAccess(e);
         },
@@ -61851,7 +62531,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 241
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -61868,26 +62548,26 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 246
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 247
+          lineNumber: 251
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroBackground, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 254
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
         viewBox: "0 0 1440 770",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 255
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -61898,7 +62578,7 @@ function (_Component) {
         fillRule: "evenodd",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 256
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -61907,7 +62587,7 @@ function (_Component) {
         fill: "#F94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 257
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
@@ -61915,19 +62595,19 @@ function (_Component) {
         points: "0 769 1440 95 0 95",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 258
         },
         __self: this
-      })))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Features__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      })))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Features__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 264
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_18__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 261
+          lineNumber: 265
         },
         __self: this
       }));
