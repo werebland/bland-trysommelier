@@ -5,7 +5,7 @@ import 'firebase/auth'
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
-      apiKey: process.ENV.FIREBASE_API,
+      apiKey: process.env.FIREBASE_API,
       authDomain: "bland-sommelier.firebaseapp.com",
       databaseURL: "https://bland-sommelier.firebaseio.com",
       projectId: "bland-sommelier",

@@ -231,7 +231,7 @@
       "publicPath": "static/chunks/commons.45d0997f38197d15e07f.js"
     }
   ],
-  "./../../process/browser.js": [
+  "./node_modules/process/browser.js": [
     {
       "id": "8oxB",
       "name": "./node_modules/process/browser.js",
@@ -853,7 +853,7 @@
       "publicPath": "static/chunks/commons.45d0997f38197d15e07f.js"
     }
   ],
-  "../../modules/_core": [
+  "../modules/_core": [
     {
       "id": "WEpk",
       "name": "./node_modules/core-js/library/modules/_core.js",

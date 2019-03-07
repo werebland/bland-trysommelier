@@ -16,6 +16,18 @@ import AccessForm from '../components/AccessForm'
 const IndexWrapper = styled.div`
   box-sizing: border-box;
   border: 10px solid #1f1f1f;
+
+  &:before {
+    content: "";
+    width: 100vw;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1f1f1f;
+    z-index: 999;
+  }
 `;
 
 const StyledPaper = styled(Paper)`
@@ -72,11 +84,13 @@ const StyledButton = styled(Button)`
 
 const Hero = styled.section`
   width: 100%;
-  padding: 156px 16px 16px;
+  height: 100%;
+  min-height: 100vh;
+  padding: 96px 16px 16px;
   box-sizing: border-box;
 
   @media only screen and (min-width: 960px) {
-    padding: 156px 120px 16px;
+    padding: 96px 120px 16px;
   }
 `;
 
@@ -84,28 +98,34 @@ const HeroTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1f1f1f;
+  color: #fff;
   margin: 0 0 24px;
   text-align: center;
+  max-width: 528px;
+  box-sizing: border-box;
 
   & span {
+    margin-top: 8px;
     text-transform: uppercase;
-    background: #f94343;
-    color: #fff;
-    font-size: 4rem;
-    padding: 0 8px;
+    background: #fff;
+    color: #f94343;
+    font-size: 3.25rem;
+    padding: 16px 8px;
     box-sizing: border-box;
     display: block;
+    max-width: 528px;
+    box-sizing: border-box;
   }
 `;
 
 const HeroCopy = styled.p`
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.75rem;
-  color: #1f1f1f;
+  color: #fff;
   padding: 0;
   margin: 0 0 24px;
+  max-width: 528px;
 `;
 
 const HeroSpan = styled.span`
@@ -117,6 +137,21 @@ const HeroSpan = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const HeroBackground = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  & svg {
+    width: 1440px;
+    height: 100vh;
+  }
 `;
 
 const Demo = styled.div`
@@ -212,6 +247,15 @@ class Index extends Component {
               <Demo />
             </Grid>
           </Grid>
+          <HeroBackground>
+            <svg viewBox="0 0 1440 770">
+                <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                    <g id="Desktop-HD" transform="translate(0.000000, -95.000000)" fill="#F94343">
+                        <polygon id="Path-2" points="0 769 1440 95 0 95"></polygon>
+                    </g>
+                </g>
+            </svg>
+          </HeroBackground>
         </Hero>
         <Features />
         <Pricing />

@@ -4,17 +4,17 @@ import Link from 'next/link'
 
 const NavbarContainer = styled.div`
   width: calc(100% - 20px);
-  position: absolute;
-  top: 10px;
+  position: fixed;
+  top: 0px;
   left: 10px;
-  height: 140px;
+  height: 90px;
   background: #f94343;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px;
   box-sizing: border-box;
-  z-index: 888;
+  z-index: 8;
 
   @media only screen and (min-width: 960px) {
     padding: 16px 120px;
@@ -70,24 +70,12 @@ const NavbarButton = styled.a`
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  border-radius: 0;
+  border-radius: 8px;
   background: #1f1f1f;
   color: #fff;
   cursor: pointer;
   position: relative;
   padding: 8px 16px;
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 36px;
-    width: 100%;
-    background: #fff;
-    z-index: -1;
-    top: 4px;
-    left: 4px;
-  }
 `;
 
 const Navbar = ({}) => (
