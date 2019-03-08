@@ -3057,11 +3057,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
-/* harmony import */ var _components_Features__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Features */ "./components/Features.jsx");
-/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
-/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
-/* harmony import */ var _components_SommWidget__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/SommWidget */ "./components/SommWidget.jsx");
+/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-hotjar */ "react-hotjar");
+/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(react_hotjar__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Navbar */ "./components/Navbar.jsx");
+/* harmony import */ var _components_Features__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/Features */ "./components/Features.jsx");
+/* harmony import */ var _components_Pricing__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/Pricing */ "./components/Pricing.jsx");
+/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
+/* harmony import */ var _components_SommWidget__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/SommWidget */ "./components/SommWidget.jsx");
 
 
 
@@ -3084,10 +3086,11 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/pages/index.js";
 
 
 
+
 var IndexWrapper = styled_components__WEBPACK_IMPORTED_MODULE_13___default.a.div.withConfig({
   displayName: "pages__IndexWrapper",
   componentId: "sc-1wbo52z-0"
-})(["box-sizing:border-box;border:10px solid #1f1f1f;&:before{content:\"\";width:100vw;height:10px;position:absolute;top:0;left:0;right:0;background:#1f1f1f;z-index:999;}"]);
+})(["box-sizing:border-box;border:10px solid #1f1f1f;overflow-x:hidden;&:before{content:\"\";height:10px;position:absolute;top:0;left:0;right:0;background:#1f1f1f;z-index:999;}"]);
 var StyledPaper = styled_components__WEBPACK_IMPORTED_MODULE_13___default()(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a).withConfig({
   displayName: "pages__StyledPaper",
   componentId: "sc-1wbo52z-1"
@@ -3145,6 +3148,13 @@ function (_Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var hjid = "1229544";
+      var hjsv = "6";
+      react_hotjar__WEBPACK_IMPORTED_MODULE_16__["hotjar"].initialize(hjid, hjsv);
+    }
+  }, {
     key: "handleAccess",
     value: function handleAccess(e) {
       var _this2 = this;
@@ -3199,47 +3209,47 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(IndexWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 228
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 229
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 230
         },
         __self: this
-      }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }, "Somm | Your menu's personal assistant")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_17__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 226
+          lineNumber: 232
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_12___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 227
+          lineNumber: 233
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_SommWidget__WEBPACK_IMPORTED_MODULE_20__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_SommWidget__WEBPACK_IMPORTED_MODULE_21__["default"], {
         username: "xoh",
         iconColor: "#f94343",
         backgroundColor: "#fff",
         position: "right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 228
+          lineNumber: 234
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Hero, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 236
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -3247,7 +3257,7 @@ function (_Component) {
         spacing: 16,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 237
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -3259,34 +3269,34 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 238
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 239
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 241
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 236
+          lineNumber: 242
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 238
+          lineNumber: 244
         },
         __self: this
-      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      }, "Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_20__["default"], {
         handleAccess: function handleAccess(e) {
           return _this3.handleAccess(e);
         },
@@ -3312,7 +3322,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 247
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -3329,26 +3339,26 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 256
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Demo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 257
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeroBackground, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
         viewBox: "0 0 1440 770",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 255
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -3359,7 +3369,7 @@ function (_Component) {
         fillRule: "evenodd",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 256
+          lineNumber: 262
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -3368,7 +3378,7 @@ function (_Component) {
         fill: "#F94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 257
+          lineNumber: 263
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
@@ -3376,19 +3386,19 @@ function (_Component) {
         points: "0 769 1440 95 0 95",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 258
-        },
-        __self: this
-      })))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Features__WEBPACK_IMPORTED_MODULE_17__["default"], {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 264
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      })))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Features__WEBPACK_IMPORTED_MODULE_18__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 270
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Pricing__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 271
         },
         __self: this
       }));
@@ -3653,6 +3663,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-hotjar":
+/*!*******************************!*\
+  !*** external "react-hotjar" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-hotjar");
 
 /***/ }),
 

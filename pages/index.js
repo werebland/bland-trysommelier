@@ -8,6 +8,7 @@ import NoSsr from '@material-ui/core/NoSsr';
 import styled from 'styled-components';
 import _ from 'lodash'
 import axios from 'axios';
+import { hotjar } from 'react-hotjar';
 
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
@@ -18,10 +19,10 @@ import SommWidget from '../components/SommWidget'
 const IndexWrapper = styled.div`
   box-sizing: border-box;
   border: 10px solid #1f1f1f;
+  overflow-x: hidden;
 
   &:before {
     content: "";
-    width: 100vw;
     height: 10px;
     position: absolute;
     top: 0;
@@ -175,6 +176,11 @@ class Index extends Component {
       email: "",
       name: "",
     };
+  }
+  componentDidMount() {
+    const hjid = "1229544"
+    const hjsv = "6"
+    hotjar.initialize(hjid, hjsv);
   }
 
   handleAccess(e) {
