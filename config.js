@@ -2,6 +2,14 @@ import Rebase from 're-base';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth'
+import getConfig from 'next/config'
+
+const {publicRuntimeConfig} = getConfig()
+const {FIREBASE_API} = publicRuntimeConfig
+
+console.log({publicRuntimeConfig});
+
+console.log(FIREBASE_API);
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
