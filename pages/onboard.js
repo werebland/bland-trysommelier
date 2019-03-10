@@ -144,6 +144,7 @@ class Onboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: {},
       restaurant: {},
       menus: [],
       activeStep: 0,
@@ -162,12 +163,18 @@ class Onboard extends Component {
     const { email } = vars
     console.log(email);
     if (email) {
-      this.setState({
-        restaurant: {
-          email
-        }
+      base.get('users', {
+        context: this,
+        query: (ref) => ref.where('email', '==', email),
+      }).then(data => {
+        this.setState({
+          user: data[0]
+        })
+      }).catch(err => {
+        //handle error
       })
     }
+
   }
 
   handleAccess(e) {
@@ -259,7 +266,7 @@ class Onboard extends Component {
   render() {
     const { classes } = this.props;
     const steps = ['Tell us about your restaurant', 'Upload your menus', 'Customize your widget']
-    const { activeStep, restaurant, menus } = this.state;
+    const { activeStep, restaurant, menus, user } = this.state;
     const { email, firstName, lastName, name } = restaurant
 
     return (
@@ -269,7 +276,7 @@ class Onboard extends Component {
             Onboard | Somm
           </title>
         </Head>
-        {Object.keys(restaurant).length > 0
+        {Object.keys(user).length > 0
           ?
           <OnboardContent>
             <PageTitle>

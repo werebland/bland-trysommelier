@@ -2097,7 +2097,7 @@
       "publicPath": "static/chunks/commons.43a5069504d79f08e9ca.js"
     }
   ],
-  "../StyleSheet": [
+  "./StyleSheet": [
     {
       "id": "XY0u",
       "name": "./node_modules/jss/lib/StyleSheet.js",
