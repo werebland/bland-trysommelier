@@ -5366,7 +5366,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 exports.HeadManagerContext = React.createContext(null);
 
@@ -5438,7 +5438,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
@@ -7551,7 +7551,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var ErrorBoundary =
 /*#__PURE__*/
@@ -7759,7 +7759,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
 
@@ -8384,7 +8384,7 @@ function () {
 
                       case 2:
                         return _context3.abrupt("return", new _promise.default(function (resolve) {
-                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(58723).concat("/"));
+                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(49261).concat("/"));
 
                           ws.onopen = function () {
                             return resolve();
@@ -9143,7 +9143,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
@@ -16859,7 +16859,7 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react/index.js":
+/***/ "./node_modules/react/index.js?f399":
 /*!*******************************************************************************************!*\
   !*** delegated ./node_modules/react/index.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \*******************************************************************************************/

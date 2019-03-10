@@ -10,9 +10,12 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import _ from 'lodash'
 
 import AccessForm from '../components/AccessForm'
+import MenuUploader from '../components/MenuUploader'
 
 const StyledButton = styled(Button)`
   text-transform: none !important;
@@ -20,6 +23,22 @@ const StyledButton = styled(Button)`
   background: ${props => props.variant === "contained" ? '#54a0ff' : 'transparent'} !important;
   box-shadow: ${props => props.variant === "contained" ? '0 2px 16px -2px rgba(31,31,31,0.32)' : 'none'} !important;
   color: ${props => props.variant === "contained" ? '#fff' : '#1f1f1f'} !important;
+`;
+
+const StyledTextField = styled(TextField)`
+  width: 100% !important;
+  border-radius: 8px !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  box-sizing; border-box !important;
+
+  & fieldset {
+    border: 2px solid #1f1f1f !important;
+    border-radius: 8px !important;
+  }
+
+  & input {
+    font-family: 'Source Sans Pro', sans-serif !important;
+  }
 `;
 
 const PageWrapper = styled.div`
@@ -41,6 +60,8 @@ const OnboardContent= styled.div`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 `;
 
 const PageTitle = styled.h1`
@@ -80,7 +101,7 @@ const OnboardBackground = styled.div`
 `;
 
 const OnboardStepper = styled.div`
-
+  width: 100%;
 `;
 
 const PosedOnboardStepperContent = posed.div({
@@ -89,7 +110,7 @@ const PosedOnboardStepperContent = posed.div({
     opacity: 1,
   },
   exit: {
-    x: ({ activeStep, step }) => activeStep <= step ? 200 : -200,
+    x: ({ activeStep, step }) => activeStep <= step ? 300 : -300,
     opacity: 0,
   }
 })
@@ -204,10 +225,42 @@ class Onboard extends Component {
     });
   };
 
+  handleDrop = (accepted, rejected) => {
+    let { menus } = this.state
+    _.forEach(accepted, function(file) {
+      const menu = {
+        name: file.name,
+        file
+      }
+      menus.push(menu)
+    })
+    this.setState({
+      menus
+    })
+  };
+
+  handleRemove = (i) => {
+    const { menus } = this.state
+    console.log('removed' + i);
+    menus.splice(i, 1)
+    this.setState({
+      menus
+    });
+  };
+
+  handleMenuName = (value, i) => {
+    let { menus } = this.state
+    menus[i].name = value
+    this.setState({
+      menus
+    })
+  }
+
   render() {
     const { classes } = this.props;
     const steps = ['Tell us about your restaurant', 'Upload your menus', 'Customize your widget']
-    const { activeStep } = this.state;
+    const { activeStep, restaurant, menus } = this.state;
+    const { email, firstName, lastName, name } = restaurant
 
     return (
       <PageWrapper>
@@ -216,7 +269,7 @@ class Onboard extends Component {
             Onboard | Somm
           </title>
         </Head>
-        {Object.keys(this.state.restaurant).length > 0
+        {Object.keys(restaurant).length > 0
           ?
           <OnboardContent>
             <PageTitle>
@@ -230,15 +283,32 @@ class Onboard extends Component {
                   </Step>
                 ))}
               </Stepper>
-              <PoseGroup activeStep={activeStep}>
+              <PoseGroup activeStep={activeStep} preEnterPose="preEnter">
                 {activeStep === 0 &&
                   <OnboardStepperContent key="0" step={0}>
-                    Restaurant form
+                    <Grid container spacing={16}>
+                      <Grid item sm={12} md={12} lg={6} xl={6}>
+                        <StyledTextField variant="outlined" label="First name" value={firstName} onChange={(e) => this.setState({ email: e.target.value })}/>
+                      </Grid>
+                      <Grid item sm={12} md={12} lg={6} xl={6}>
+                        <StyledTextField variant="outlined" label="Last name" value={lastName} onChange={(e) => this.setState({ email: e.target.value })}/>
+                      </Grid>
+                      <Grid item sm={12} md={12} lg={12} xl={12}>
+                        <StyledTextField variant="outlined" label="Email" value={email} onChange={(e) => this.setState({ [restaurant.email]: e.target.value })}/>
+                      </Grid>
+                      <Grid item sm={12} md={12} lg={12} xl={12}>
+                        <StyledTextField variant="outlined" label="Restaurant name" value={name} onChange={(e) => this.setState({ [restaurant.email]: e.target.value })}/>
+                      </Grid>
+                    </Grid>
                   </OnboardStepperContent>
                 }
                 {activeStep === 1 &&
                   <OnboardStepperContent key="1" step={1}>
-                    Menu uploader
+                    <MenuUploader
+                      files={this.state.menus}
+                      handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)}
+                      handleRemove={(i) => this.handleRemove(i)}
+                      handleMenuName={(value, i) => this.handleMenuName(value, i)}/>
                   </OnboardStepperContent>
                 }
                 {activeStep === 2 &&

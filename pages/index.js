@@ -9,6 +9,8 @@ import styled from 'styled-components';
 import _ from 'lodash'
 import axios from 'axios';
 import { hotjar } from 'react-hotjar';
+import ReactPixel from 'react-facebook-pixel';
+import ReactGA from 'react-ga';
 
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
@@ -91,6 +93,8 @@ const Hero = styled.section`
   min-height: 100vh;
   padding: 96px 16px 16px;
   box-sizing: border-box;
+  background: #f94343;
+  position: relative;
 
   @media only screen and (min-width: 960px) {
     padding: 96px 120px 16px;
@@ -143,17 +147,14 @@ const HeroSpan = styled.span`
 `;
 
 const HeroBackground = styled.div`
-  width: 100vw;
-  height: 100vh;
   position: absolute;
-  top: 90px;
-  left: 0;
+  top: 0;
   right: 0;
-  z-index: -1;
-
-  & svg {
-    width: 100vw;
-  }
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(117deg, #fff 45%, #f94343 35%);
+  min-height: 400px;
 `;
 
 const Demo = styled.div`
@@ -166,6 +167,26 @@ const Demo = styled.div`
   background-image: url('/static/demo.png');
   background-size: cover;
   background-position: center;
+`;
+
+const WidgetCallout = styled.div`
+  position: fixed;
+  bottom: 8px;
+  right: 16px;
+  z-index: 7;
+  height: 64px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px -2px rgba(31,31,31,0.32) !important;
+  padding: 16px 72px 16px 8px;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1f1f1f;
+  font-size: 1rem;
+
 `;
 
 class Index extends Component {
@@ -181,6 +202,10 @@ class Index extends Component {
     const hjid = "1229544"
     const hjsv = "6"
     hotjar.initialize(hjid, hjsv);
+    ReactPixel.init('263524987898901');
+    ReactPixel.pageView();
+    ReactGA.initialize('UA-125819564-2');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   handleAccess(e) {
@@ -231,10 +256,13 @@ class Index extends Component {
         </Head>
         <Navbar />
         <NoSsr>
-          <SommWidget username="xoh" iconColor="#f94343" backgroundColor="#fff" position="right" />
+          <WidgetCallout>
+            Try out Somm now
+          </WidgetCallout>
+          <SommWidget username="xoh" iconColor="#fff" backgroundColor="#f94343" position="right" />
         </NoSsr>
         <Hero>
-          <Grid container spacing={16}>
+          <Grid container spacing={16} style={{ zIndex: 5, position: 'relative' }}>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <HeroTitle>
                 Your restaurant deserves
@@ -257,15 +285,7 @@ class Index extends Component {
               <Demo />
             </Grid>
           </Grid>
-          <HeroBackground>
-            <svg viewBox="0 0 1440 770">
-                <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                    <g id="Desktop-HD" transform="translate(0.000000, -95.000000)" fill="#F94343">
-                        <polygon id="Path-2" points="0 769 1440 95 0 95"></polygon>
-                    </g>
-                </g>
-            </svg>
-          </HeroBackground>
+          <HeroBackground />
         </Hero>
         <Features />
         <Pricing />

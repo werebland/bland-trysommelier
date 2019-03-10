@@ -3485,7 +3485,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 exports.HeadManagerContext = React.createContext(null);
 
@@ -3515,7 +3515,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var side_effect_1 = __importDefault(__webpack_require__(/*! ./side-effect */ "./node_modules/next-server/dist/lib/side-effect.js"));
 
@@ -3670,7 +3670,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js?f399");
 
 var isServer = typeof window === 'undefined';
 
@@ -3815,7 +3815,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js?f399"));
 
 var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
@@ -4553,7 +4553,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5d2e8a47bb91086adeaa
 
 /***/ }),
 
-/***/ "./node_modules/react/index.js":
+/***/ "./node_modules/react/index.js?f399":
 /*!*******************************************************************************************!*\
   !*** delegated ./node_modules/react/index.js from dll-reference dll_5d2e8a47bb91086adeaa ***!
   \*******************************************************************************************/

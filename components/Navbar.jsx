@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 
 const NavbarContainer = styled.div`
   width: calc(100% - 20px);
@@ -87,10 +88,14 @@ const Navbar = ({}) => (
     </Link>
     <NavbarItems>
       <NavbarItem>
-        Features
+        <ScrollLink to="features" smooth={true} duration={500}>
+          Features
+        </ScrollLink>
       </NavbarItem>
       <NavbarItem>
-        Pricing
+        <ScrollLink to="pricing" smooth={true} duration={500} offset={-96}>
+          Pricing
+        </ScrollLink>
       </NavbarItem>
       <NavbarItem>
         <Link href="/get-access">

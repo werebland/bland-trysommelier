@@ -6,7 +6,7 @@ import vhCheck from 'vh-check'
 
 const WidgetContainer = styled.div`
   position: fixed;
-  ${props => props.position}: ${props => props.position == "left" ? '64px' : '16px'};
+  ${props => props.position}: ${props => props.position == "left" ? '64px' : '26px'};
   bottom: 16px;
   z-index: 8;
 `;

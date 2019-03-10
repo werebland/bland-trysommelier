@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link'
+import { Element } from 'react-scroll'
 
 const PricingWrapper = styled.section`
   width: 100%;
@@ -153,102 +154,105 @@ const PricingAlert = styled.span`
 `;
 
 const Pricing = ({}) => (
-  <PricingWrapper>
-    <PricingTitle>
-      Pricing
-    </PricingTitle>
-    <br/>
-    <PricingSubtitle>Where guac is never extra</PricingSubtitle>
-    <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
-    <PricingGrid container spacing={16}>
-      <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-        <PricingCardContainer>
-          <PricingCardTitle>
-            Appetizer
-          </PricingCardTitle>
-          <PricingCardPrice>
-            0
-          </PricingCardPrice>
-          <PricingCardPriceSubtitle>
-            monthly
-          </PricingCardPriceSubtitle>
-          <PricingCardItems>
-              <PricingCardItem active>
-                Complimentary setup
-              </PricingCardItem>
-              <PricingCardItem active>
-                Minimal code integration
-              </PricingCardItem>
-              <PricingCardItem active>
-                35 dishes
-              </PricingCardItem>
-              <PricingCardItem active>
-                Single menu
-              </PricingCardItem>
-          </PricingCardItems>
-        </PricingCardContainer>
-      </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-        <PricingCardContainer primary>
-          <PricingCardTitle primary>
-            Entree
-          </PricingCardTitle>
-          <PricingCardPrice>
-            29
-          </PricingCardPrice>
-          <PricingCardPriceSubtitle>
-            monthly
-          </PricingCardPriceSubtitle>
-          <PricingCardItems>
-              <PricingCardItem active>
-                Complimentary setup
-              </PricingCardItem>
-              <PricingCardItem active>
-                Minimal code integration
-              </PricingCardItem>
-              <PricingCardItem active>
-                100 dishes
-              </PricingCardItem>
-              <PricingCardItem active>
-                Multiple menus
-              </PricingCardItem>
-          </PricingCardItems>
-        </PricingCardContainer>
-        <Link href="/get-access">
-          <StyledButton>
-            Get early access
-          </StyledButton>
-        </Link>
-      </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-        <PricingCardContainer>
-          <PricingCardTitle>
-            Dessert
-          </PricingCardTitle>
-          <PricingCardPrice>
-            Contact
-          </PricingCardPrice>
-          <PricingCardPriceSubtitle>
-            monthly
-          </PricingCardPriceSubtitle>
-          <PricingCardItems>
-              <PricingCardItem active>
-                Complimentary setup
-              </PricingCardItem>
-              <PricingCardItem active>
-                Minimal code integration
-              </PricingCardItem>
-              <PricingCardItem active>
-                Unlimited dishes
-              </PricingCardItem>
-              <PricingCardItem active>
-                Multiple locations
-              </PricingCardItem>
-          </PricingCardItems>
-        </PricingCardContainer>
-      </Grid>
-    </PricingGrid>
-  </PricingWrapper>
+  <Element name="pricing">
+    <PricingWrapper>
+      <PricingTitle>
+        Pricing
+      </PricingTitle>
+      <br/>
+      <PricingSubtitle>Where guac is never extra</PricingSubtitle>
+      <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
+      <PricingGrid container spacing={16}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <PricingCardContainer>
+            <PricingCardTitle>
+              Appetizer
+            </PricingCardTitle>
+            <PricingCardPrice>
+              0
+            </PricingCardPrice>
+            <PricingCardPriceSubtitle>
+              monthly
+            </PricingCardPriceSubtitle>
+            <PricingCardItems>
+                <PricingCardItem active>
+                  Complimentary setup
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Minimal code integration
+                </PricingCardItem>
+                <PricingCardItem active>
+                  35 dishes
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Single menu
+                </PricingCardItem>
+            </PricingCardItems>
+          </PricingCardContainer>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <PricingCardContainer primary>
+            <PricingCardTitle primary>
+              Entree
+            </PricingCardTitle>
+            <PricingCardPrice>
+              29
+            </PricingCardPrice>
+            <PricingCardPriceSubtitle>
+              monthly
+            </PricingCardPriceSubtitle>
+            <PricingCardItems>
+                <PricingCardItem active>
+                  Complimentary setup
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Minimal code integration
+                </PricingCardItem>
+                <PricingCardItem active>
+                  100 dishes
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Multiple menus
+                </PricingCardItem>
+            </PricingCardItems>
+          </PricingCardContainer>
+          <Link href="/get-access">
+            <StyledButton>
+              Get early access
+            </StyledButton>
+          </Link>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <PricingCardContainer>
+            <PricingCardTitle>
+              Dessert
+            </PricingCardTitle>
+            <PricingCardPrice>
+              Contact
+            </PricingCardPrice>
+            <PricingCardPriceSubtitle>
+              monthly
+            </PricingCardPriceSubtitle>
+            <PricingCardItems>
+                <PricingCardItem active>
+                  Complimentary setup
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Minimal code integration
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Unlimited dishes
+                </PricingCardItem>
+                <PricingCardItem active>
+                  Multiple locations
+                </PricingCardItem>
+            </PricingCardItems>
+          </PricingCardContainer>
+        </Grid>
+      </PricingGrid>
+    </PricingWrapper>
+  </Element>
+
 );
 
 export default Pricing;
