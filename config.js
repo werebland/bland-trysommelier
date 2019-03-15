@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth'
 
-import FIREBASE_API from '/etc/secrets/api.js'
+import FIREBASE_API from './etc/secrets/api.js'
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
