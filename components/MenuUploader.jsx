@@ -23,10 +23,22 @@ const MenuUploaderContainer = styled.div`
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  background: #fff;
+  position: relative;
+  z-index: 3;
 `;
 
 const MenuUploaderDropzone = styled.div`
-
+  width: 100%;
+  height: 172px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #dcdcdc;
+  border-radius: 8px;
+  margin-bottom: 16px;
 `;
 
 const MenuUploaderFiles = styled.ul`
@@ -75,18 +87,14 @@ const MenuUploaderFileRemove = styled.div`
 
 const MenuUploader = ({ files, handleDrop, handleRemove, handleMenuName }) => (
   <MenuUploaderContainer>
-    <MenuUploaderDropzone>
-      <Dropzone onDrop={(accepted, rejected) => handleDrop(accepted, rejected)}>
-        {({getRootProps, getInputProps}) => (
-          <section>
-            <div {...getRootProps()}>
-              <input {...getInputProps()} />
-              <p>Drag 'n' drop some files here, or click to select files</p>
-            </div>
-          </section>
-        )}
-      </Dropzone>
-    </MenuUploaderDropzone>
+    <Dropzone onDrop={(accepted, rejected) => handleDrop(accepted, rejected)}>
+      {({getRootProps, getInputProps}) => (
+        <MenuUploaderDropzone {...getRootProps({ refKey: 'innerRef' })}>
+          <input {...getInputProps()} />
+          <p>Drag 'n' drop some files here, or click to select files</p>
+        </MenuUploaderDropzone>
+      )}
+    </Dropzone>
     <MenuUploaderFiles>
       {files.map((file, i) =>
         <MenuUploaderFile key={file.name} >

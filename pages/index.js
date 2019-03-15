@@ -11,6 +11,9 @@ import axios from 'axios';
 import { hotjar } from 'react-hotjar';
 import ReactPixel from 'react-facebook-pixel';
 import ReactGA from 'react-ga';
+import voucher_codes from 'voucher-code-generator'
+import firebase from 'firebase/app'
+import base from '../config'
 
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
@@ -196,6 +199,8 @@ class Index extends Component {
       accessStatus: null,
       email: "",
       name: "",
+      firstName: "",
+      referral: "",
     };
   }
   componentDidMount() {
@@ -206,6 +211,10 @@ class Index extends Component {
     ReactPixel.pageView();
     ReactGA.initialize('UA-125819564-2');
     ReactGA.pageview(window.location.pathname + window.location.search);
+    const referral = this.props.url.query.r
+    if (referral) {
+
+    }
   }
 
   handleAccess(e) {
@@ -214,6 +223,11 @@ class Index extends Component {
     const names = _.split(name, ' ', 2)
     const firstName = names[0]
     const lastName = names[1]
+    const referral = voucher_codes.generate({
+        length: 8,
+        count: 1,
+        prefix: 'R-'
+    })[0];
 
     const data = {
       email,
@@ -236,9 +250,21 @@ class Index extends Component {
       }
     }).then((response) => {
       console.log(response);
-      this.setState({
-        accessStatus: 'success'
-      })
+      const user = {
+        ...data,
+        referral,
+        status: 'requested'
+      }
+      base.addToCollection('users', user)
+        .then(() => {
+          this.setState({
+            accessStatus: 'success',
+            firstName,
+            referral,
+          })
+        }).catch(err => {
+        //handle error
+      });
     })
     .catch((error) => {
       console.log(error.response.data);
@@ -253,12 +279,18 @@ class Index extends Component {
       <IndexWrapper>
         <Head>
           <title>Somm | Your menu's personal assistant</title>
+          <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png"/>
+          <link rel="manifest" href="/static/site.webmanifest"/>
+          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#f94343"/>
+          <link rel="shortcut icon" href="/static/favicon.ico"/>
+          <meta name="msapplication-TileColor" content="#ffffff"/>
+          <meta name="msapplication-config" content="/static/browserconfig.xml"/>
+          <meta name="theme-color" content="#ffffff"/>
         </Head>
         <Navbar />
         <NoSsr>
-          <WidgetCallout>
-            Try out Somm now
-          </WidgetCallout>
           <SommWidget username="xoh" iconColor="#fff" backgroundColor="#f94343" position="right" />
         </NoSsr>
         <Hero>
@@ -270,7 +302,7 @@ class Index extends Component {
                 <span>a better menu</span>
               </HeroTitle>
               <HeroCopy>
-                Supercharge your business with Somm, a personal assistant for your menu with powerful features and valuable insights.
+                Supercharge your restaurant with Somm, a personal assistant for your menu with powerful features and valuable insights.
               </HeroCopy>
               <AccessForm
                 handleAccess={(e) => this.handleAccess(e)}
@@ -279,6 +311,8 @@ class Index extends Component {
                 name={this.state.name}
                 handleName={(name) => this.setState({ name })}
                 accessStatus={this.state.accessStatus}
+                firstName={this.state.firstName}
+                referral={this.state.referral}
                 handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>

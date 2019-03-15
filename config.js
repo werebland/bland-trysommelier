@@ -2,18 +2,12 @@ import Rebase from 're-base';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth'
-import getConfig from 'next/config'
 
-const {publicRuntimeConfig} = getConfig()
-const {FIREBASE_API} = publicRuntimeConfig
-
-console.log({publicRuntimeConfig});
-
-console.log(FIREBASE_API);
+import FIREBASE_API from '/etc/secrets/api.js'
 
 if (!firebase.apps.length) {
   var app = firebase.initializeApp({
-      apiKey: process.env.FIREBASE_API,
+      apiKey: FIREBASE_API,
       authDomain: "bland-sommelier.firebaseapp.com",
       databaseURL: "https://bland-sommelier.firebaseio.com",
       projectId: "bland-sommelier",
@@ -23,6 +17,8 @@ if (!firebase.apps.length) {
 } else {
   var app = firebase
 }
+
+console.log(FIREBASE_API);
 
 var db = firebase.firestore(app);
 var settings = { };

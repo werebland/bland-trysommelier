@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/storage'
 import base from '../config'
 import styled from 'styled-components';
 import posed, {PoseGroup} from 'react-pose'
@@ -9,13 +10,30 @@ import Head from 'next/head'
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import StepIcon from '@material-ui/core/StepIcon';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import _ from 'lodash'
+import PlacesAutocomplete from 'react-places-autocomplete';
+import {
+  geocodeByAddress,
+  geocodeByPlaceId,
+  getLatLng,
+} from 'react-places-autocomplete';
+
 
 import AccessForm from '../components/AccessForm'
 import MenuUploader from '../components/MenuUploader'
+
+var storage = firebase.storage();
+var storageRef = storage.ref();
+var menusRef = storageRef.child('menus')
 
 const StyledButton = styled(Button)`
   text-transform: none !important;
@@ -41,6 +59,31 @@ const StyledTextField = styled(TextField)`
   }
 `;
 
+const StyledFormControl = styled(FormControl)`
+  width: 100%;
+`;
+
+const StyledOutlinedInput = styled(OutlinedInput)`
+  & fieldset {
+      border: 2px solid #1f1f1f !important;
+      border-radius: 8px !important;
+  }
+
+  & div svg {
+    right: 4px !important;
+  }
+`;
+
+const StyledInputLabel = styled(InputLabel)`
+  color: ${props => props.focused ? '#1f1f1f' : '#9f9f9f'} !important;
+`;
+
+const StyledStep = styled(Step)`
+  &.completed span span svg {
+    color: #1f1f1f !important;
+  }
+`;
+
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -59,7 +102,7 @@ const OnboardContent= styled.div`
   flex: .4;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   position: relative;
 `;
@@ -138,6 +181,12 @@ const StepperButtons = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   flex-direction: ${props => props.activeStep === 0 ? 'row-reverse' : 'row'};
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 16px;
+  box-sizing: border-box;
 `;
 
 class Onboard extends Component {
@@ -145,11 +194,25 @@ class Onboard extends Component {
     super(props);
     this.state = {
       user: {},
-      restaurant: {},
+      restaurant: {
+        username: "",
+        name: "",
+        address: {
+          street: "",
+          city: "",
+          country: "",
+        },
+        price: "",
+        cuisine: "",
+        owner: "",
+      },
       menus: [],
       activeStep: 0,
       email: "",
       name: "",
+      labelWidth: 0,
+      isLoading: true,
+      addressTerm: ''
     }
   }
 
@@ -159,22 +222,25 @@ class Onboard extends Component {
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
     });
-    console.log(vars);
     const { email } = vars
-    console.log(email);
     if (email) {
       base.get('users', {
         context: this,
+        withIds: true,
         query: (ref) => ref.where('email', '==', email),
       }).then(data => {
         this.setState({
-          user: data[0]
+          user: data[0],
+          isLoading: false,
         })
       }).catch(err => {
-        //handle error
+        console.log(err);
+        this.setState({
+          user: {},
+          isLoading: false,
+        })
       })
     }
-
   }
 
   handleAccess(e) {
@@ -215,9 +281,14 @@ class Onboard extends Component {
   }
 
   handleNext = () => {
-    this.setState(state => ({
-      activeStep: state.activeStep + 1,
-    }));
+    const { activeStep } = this.state
+    if (activeStep === 2) {
+      this.handleComplete()
+    } else {
+      this.setState({
+        activeStep: activeStep + 1
+      })
+    }
   };
 
   handleBack = () => {
@@ -263,101 +334,314 @@ class Onboard extends Component {
     })
   }
 
+  handleRestaurantName = (value) => {
+    let { restaurant } = this.state
+    restaurant.name = value
+    this.setState({
+      restaurant
+    })
+  }
+
+  handleRestaurantCuisine = (value) => {
+    let { restaurant } = this.state
+    restaurant.cuisine = value
+    this.setState({
+      restaurant
+    })
+  }
+
+  handleRestaurantPrice = (event) => {
+    const { value } = event.target
+    let { restaurant } = this.state
+    restaurant.price = value
+    this.setState({
+      restaurant
+    })
+  }
+
+  handleRestaurantUsername = (value) => {
+    let { restaurant } = this.state
+    restaurant.username = value
+    this.setState({
+      restaurant
+    })
+  }
+
+  handleChange = address => {
+    this.setState({ addressTerm: address });
+    console.log(address);
+  };
+
+  handleSelect = address => {
+    geocodeByAddress(address)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => console.log('Success', latLng))
+      .catch(error => console.error('Error', error));
+  };
+
+  handleComplete() {
+    this.createRestaurant()
+    this.uploadMenus()
+  }
+
+  createRestaurant() {
+    const { restaurant, user, activeStep } = this.state
+    restaurant.owner = user.id
+    console.log(user);
+    const data = restaurant
+    console.log(data);
+    base.addToCollection('restaurants', data)
+      .then(() => {
+
+      }).catch(err => {
+      //handle error
+    });
+  }
+
+  uploadMenus() {
+    const { files } = this.state
+    _.forEach(files, function(data) {
+      const { name, file } = data
+      var metadata = {
+        contentType: file.type
+      };
+      var uploadTask = storageRef.child('menus/' + file.name).put(file, metadata);
+      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        function(snapshot) {
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log('Upload is ' + progress + '% done');
+          switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
+              console.log('Upload is paused');
+              break;
+            case firebase.storage.TaskState.RUNNING: // or 'running'
+              console.log('Upload is running');
+              break;
+          }
+        }, function(error) {
+
+        // A full list of error codes is available at
+        // https://firebase.google.com/docs/storage/web/handle-errors
+        switch (error.code) {
+          case 'storage/unauthorized':
+            // User doesn't have permission to access the object
+            break;
+
+          case 'storage/canceled':
+            // User canceled the upload
+            break;
+
+          case 'storage/unknown':
+            // Unknown error occurred, inspect error.serverResponse
+            break;
+        }
+      }, function() {
+        // Upload completed successfully, now we can get the download URL
+        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+          console.log('File available at', downloadURL);
+        });
+      });
+    })
+  }
+
   render() {
     const { classes } = this.props;
     const steps = ['Tell us about your restaurant', 'Upload your menus', 'Customize your widget']
-    const { activeStep, restaurant, menus, user } = this.state;
-    const { email, firstName, lastName, name } = restaurant
+    const { activeStep, restaurant, menus, user, addressTerm } = this.state;
+    const { email, firstName, lastName } = user
+    const { restaurantName, location, price, cuisine, address, username } = restaurant
 
     return (
       <PageWrapper>
         <Head>
           <title>
-            Onboard | Somm
+            Onboard | Somm | Your menu's personal assistant
           </title>
+          <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png"/>
+          <link rel="manifest" href="/static/site.webmanifest"/>
+          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#f94343"/>
+          <link rel="shortcut icon" href="/static/favicon.ico"/>
+          <meta name="msapplication-TileColor" content="#ffffff"/>
+          <meta name="msapplication-config" content="/static/browserconfig.xml"/>
+          <meta name="theme-color" content="#ffffff"/>
+          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
         </Head>
-        {Object.keys(user).length > 0
+        {this.state.isLoading
           ?
           <OnboardContent>
-            <PageTitle>
-              Hop onboard
-            </PageTitle>
-            <OnboardStepper>
-              <Stepper activeStep={activeStep} alternativeLabel>
-                {steps.map(label => (
-                  <Step key={label}>
-                    <StepLabel>{label}</StepLabel>
-                  </Step>
-                ))}
-              </Stepper>
-              <PoseGroup activeStep={activeStep} preEnterPose="preEnter">
-                {activeStep === 0 &&
-                  <OnboardStepperContent key="0" step={0}>
-                    <Grid container spacing={16}>
-                      <Grid item sm={12} md={12} lg={6} xl={6}>
-                        <StyledTextField variant="outlined" label="First name" value={firstName} onChange={(e) => this.setState({ email: e.target.value })}/>
-                      </Grid>
-                      <Grid item sm={12} md={12} lg={6} xl={6}>
-                        <StyledTextField variant="outlined" label="Last name" value={lastName} onChange={(e) => this.setState({ email: e.target.value })}/>
-                      </Grid>
-                      <Grid item sm={12} md={12} lg={12} xl={12}>
-                        <StyledTextField variant="outlined" label="Email" value={email} onChange={(e) => this.setState({ [restaurant.email]: e.target.value })}/>
-                      </Grid>
-                      <Grid item sm={12} md={12} lg={12} xl={12}>
-                        <StyledTextField variant="outlined" label="Restaurant name" value={name} onChange={(e) => this.setState({ [restaurant.email]: e.target.value })}/>
-                      </Grid>
-                    </Grid>
-                  </OnboardStepperContent>
-                }
-                {activeStep === 1 &&
-                  <OnboardStepperContent key="1" step={1}>
-                    <MenuUploader
-                      files={this.state.menus}
-                      handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)}
-                      handleRemove={(i) => this.handleRemove(i)}
-                      handleMenuName={(value, i) => this.handleMenuName(value, i)}/>
-                  </OnboardStepperContent>
-                }
-                {activeStep === 2 &&
-                  <OnboardStepperContent key="2" step={2}>
-                    Widget customizer
-                  </OnboardStepperContent>
-                }
-              </PoseGroup>
-              <StepperButtons activeStep={activeStep}>
-                {this.state.activeStep > 0 &&
-                  <StyledButton onClick={this.handleBack}>
-                    Back
-                  </StyledButton>
-                }
-                <StyledButton variant="contained" onClick={this.handleNext}>
-                  {activeStep === 2
-                    ?
-                    "Finish"
-                    :
-                    "Next"
-                  }
-                </StyledButton>
-              </StepperButtons>
-            </OnboardStepper>
           </OnboardContent>
           :
-          <OnboardContent>
-            <PageTitle>
-              Whoops!
-            </PageTitle>
-            It doesn't look like you're part of our early access program yet.
-            <AccessForm
-              handleAccess={(e) => this.handleAccess(e)}
-              email={this.state.email}
-              handleEmail={(email) => this.setState({ email })}
-              name={this.state.name}
-              handleName={(name) => this.setState({ name })}
-              accessStatus={this.state.accessStatus}
-              handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
-          </OnboardContent>
+          <React.Fragment>
+            {Object.keys(user).length > 0
+              ?
+              <OnboardContent>
+                <PageTitle>
+                  Hop onboard
+                </PageTitle>
+                <OnboardStepper>
+                  <Stepper activeStep={activeStep} alternativeLabel>
+                    {steps.map((label, i) => (
+                      <StyledStep key={label} classes={{ root: 'step', completed: 'completed' }}>
+                        <StepLabel>{label}</StepLabel>
+                      </StyledStep>
+                    ))}
+                  </Stepper>
+                  <PoseGroup activeStep={activeStep} preEnterPose="preEnter">
+                    {activeStep === 0 &&
+                      <OnboardStepperContent key="0" step={0}>
+                        <Grid container spacing={16} style={{ position: 'relative', zIndex: '2', background: '#fff', }}>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledTextField variant="outlined" label="First name" value={firstName} onChange={(e) => this.setState({ email: e.target.value })}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledTextField variant="outlined" label="Last name" value={lastName} onChange={(e) => this.setState({ email: e.target.value })}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={12} xl={12}>
+                            <StyledTextField variant="outlined" label="Email" value={email} onChange={(e) => this.handleEmail(e.target.value)}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledTextField variant="outlined" label="Username" value={username} onChange={(e) => this.handleRestaurantUsername(e.target.value)}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledTextField variant="outlined" label="Restaurant name" value={restaurantName} onChange={(e) => this.handleRestaurantName(e.target.value)}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={12} xl={12}>
+                          <PlacesAutocomplete
+                            value={addressTerm}
+                            onChange={this.handleChange}
+                            onSelect={this.handleSelect}
+                          >
+                            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                              <div>
+                                <StyledFormControl>
+                                  <StyledTextField
+                                    variant="outlined"
+                                    label="Location"
+                                    id="places-autocomplete"
+                                    {...getInputProps({
+                                      placeholder: 'Search Places ...',
+                                      className: 'location-search-input',
+                                    })}/>
+                                </StyledFormControl>
+                                <div className="autocomplete-dropdown-container">
+                                  {loading && <div>Loading...</div>}
+                                  {suggestions.map(suggestion => {
+                                    const className = suggestion.active
+                                      ? 'suggestion-item--active'
+                                      : 'suggestion-item';
+                                    // inline style for demonstration purpose
+                                    const style = suggestion.active
+                                      ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                                      : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                                    return (
+                                      <div
+                                        {...getSuggestionItemProps(suggestion, {
+                                          className,
+                                          style,
+                                        })}
+                                      >
+                                        <span>{suggestion.description}</span>
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            )}
+                          </PlacesAutocomplete>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledTextField variant="outlined" label="Cuisine" value={cuisine} onChange={(e) => this.handleRestaurantCuisine(e.target.value)}/>
+                          </Grid>
+                          <Grid item sm={12} md={12} lg={6} xl={6}>
+                            <StyledFormControl variant="outlined">
+                              <StyledInputLabel
+                                htmlFor="outlined-age-simple"
+                              >
+                                Price
+                              </StyledInputLabel>
+                              <Select
+                                value={price}
+                                onChange={this.handleRestaurantPrice}
+                                input={
+                                  <StyledOutlinedInput
+                                    labelWidth={38}
+                                    name="price"
+                                    id="outlined-price-simple"
+                                    classes={{ root: 'label', focused: 'focused' }}
+                                  />
+                                }
+                              >
+                                <MenuItem value="">
+                                  <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={'$'}>$</MenuItem>
+                                <MenuItem value={'$-$$'}>$-$$</MenuItem>
+                                <MenuItem value={'$$'}>$$</MenuItem>
+                                <MenuItem value={'$$-$$$'}>$$-$$$</MenuItem>
+                                <MenuItem value={'$$$'}>$$$</MenuItem>
+                                <MenuItem value={'$-$$$'}>$-$$$</MenuItem>
+                              </Select>
+                            </StyledFormControl>
+                          </Grid>
+                        </Grid>
+                      </OnboardStepperContent>
+                    }
+                    {activeStep === 1 &&
+                      <OnboardStepperContent key="1" step={1} style={{ position: 'relative', zIndex: '3', background: '#fff', }}>
+                        <MenuUploader
+                          files={this.state.menus}
+                          handleDrop={(accepted, rejected) => this.handleDrop(accepted, rejected)}
+                          handleRemove={(i) => this.handleRemove(i)}
+                          handleMenuName={(value, i) => this.handleMenuName(value, i)}/>
+                      </OnboardStepperContent>
+                    }
+                    {activeStep === 2 &&
+                      <OnboardStepperContent key="2" step={2}>
+                        Widget customizer
+                      </OnboardStepperContent>
+                    }
+                  </PoseGroup>
+                  <StepperButtons activeStep={activeStep}>
+                    {this.state.activeStep > 0 &&
+                      <StyledButton onClick={this.handleBack} size="large">
+                        Back
+                      </StyledButton>
+                    }
+                    <StyledButton
+                      variant="contained"
+                      onClick={this.handleNext}
+                      size="large">
+                      {activeStep === 2
+                        ?
+                        "Finish"
+                        :
+                        "Next"
+                      }
+                    </StyledButton>
+                  </StepperButtons>
+                </OnboardStepper>
+              </OnboardContent>
+              :
+              <OnboardContent>
+                <PageTitle>
+                  Whoops!
+                </PageTitle>
+                It doesn't look like you're part of our early access program yet.
+                <AccessForm
+                  handleAccess={(e) => this.handleAccess(e)}
+                  email={this.state.email}
+                  handleEmail={(email) => this.setState({ email })}
+                  name={this.state.name}
+                  handleName={(name) => this.setState({ name })}
+                  accessStatus={this.state.accessStatus}
+                  handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
+              </OnboardContent>
+            }
+          </React.Fragment>
         }
-
         <OnboardBackground />
       </PageWrapper>
     );

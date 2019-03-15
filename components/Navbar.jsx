@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link'
 import { Link as ScrollLink } from 'react-scroll'
+import compose from 'recompose/compose';
+import Hidden from '@material-ui/core/Hidden';
+import withWidth from '@material-ui/core/withWidth';
 
 const NavbarContainer = styled.div`
   width: calc(100% - 20px);
@@ -87,16 +90,20 @@ const Navbar = ({}) => (
       </NavbarBrand>
     </Link>
     <NavbarItems>
-      <NavbarItem>
-        <ScrollLink to="features" smooth={true} duration={500}>
-          Features
-        </ScrollLink>
-      </NavbarItem>
-      <NavbarItem>
-        <ScrollLink to="pricing" smooth={true} duration={500} offset={-96}>
-          Pricing
-        </ScrollLink>
-      </NavbarItem>
+      <Hidden mdDown>
+        <NavbarItem>
+          <ScrollLink to="features" smooth={true} duration={500}>
+            Features
+          </ScrollLink>
+        </NavbarItem>
+      </Hidden>
+      <Hidden mdDown>
+        <NavbarItem>
+          <ScrollLink to="pricing" smooth={true} duration={500} offset={-96}>
+            Pricing
+          </ScrollLink>
+        </NavbarItem>
+      </Hidden>
       <NavbarItem>
         <Link href="/get-access">
           <NavbarButton>
@@ -108,4 +115,4 @@ const Navbar = ({}) => (
   </NavbarContainer>
 );
 
-export default Navbar;
+export default compose(withWidth())(Navbar);

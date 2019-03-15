@@ -55,7 +55,7 @@ const StyledWidgetFrame = styled(props => <WidgetFrame {...props} />)`
   overflow: hidden;
   position: absolute;
   bottom: 64px;
-  ${props => props.position}: ${props => props.position == "left" ? '-48px' : '0'};
+  ${props => props.position}: ${props => props.position == "left" ? '-48px' : '-10px'};
   scale: 1;
   opacity: 1;
   transform-origin: bottom ${props => props.position};
@@ -132,7 +132,7 @@ const Spinner = styled.div`
 
   & div {
     position: absolute;
-    border: 4px solid ${props => props.color};
+    border: 4px solid #f94343;
     opacity: 1;
     border-radius: 50%;
     animation: ${spinnerAnimation} 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite
@@ -143,6 +143,47 @@ const Spinner = styled.div`
   }
 `
 
+const PosedWidgetMessage = posed.div({
+  enter: {
+    scale: 1,
+    opacity: 1,
+    delay: 1000,
+  },
+  exit: {
+    scale: 0,
+    opacity: 0,
+  },
+  init: {
+    scale: 0,
+    opacity: 0,
+  }
+})
+
+const WidgetMessage = styled((props) => <PosedWidgetMessage {...props} />)`
+  width: 224px;
+  display: block;
+  border: 0;
+  appearance: none;
+  background: #FFFFFF;
+  box-shadow: 0 2px 16px -2px rgba(0,0,0,0.32);
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 64px;
+  right: 0;
+  scale: 1;
+  opacity: 1;
+  transform-origin: bottom right;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1f1f1f;
+  font-size: 1rem;
+`;
+
 class Widget extends Component {
 
   constructor(props) {
@@ -150,6 +191,7 @@ class Widget extends Component {
     this.state = {
       open: false,
       hasOpened: false,
+      messageVisible: true,
     }
   }
 
@@ -164,13 +206,20 @@ class Widget extends Component {
 
     return (
       <WidgetContainer position={this.props.position}>
+        <PoseGroup animateOnMount preEnterPose="init">
+          {this.state.messageVisible && !this.state.hasOpened &&
+            <WidgetMessage key="1">
+              Try out Somm now! 👇
+            </WidgetMessage>
+          }
+        </PoseGroup>
         <PoseGroup>
           {this.state.open &&
             <StyledWidgetFrame key="0" viewportHeight={test.windowHeight} position={this.props.position}>
               <SpinnerWrapper>
                 <iframe
                   style={{ zIndex: 8, position: 'absolute', top: 0, left: 0, background: 'transparent', display: 'block' }}
-                  src={`https://bland-sommelier.herokuapp.com/${this.props.username}`}
+                  src={`https://app.somm.ca/${this.props.username}`}
                   sandbox="allow-same-origin allow-scripts allow-popups allow-top-navigation"
                   width="100%"
                   height="100%"
@@ -181,11 +230,12 @@ class Widget extends Component {
                   <div></div>
                 </Spinner>
               </SpinnerWrapper>
-
             </StyledWidgetFrame>
           }
         </PoseGroup>
-        <WidgetToggle background={this.props.backgroundColor} onClick={() => this.setState({ open: !this.state.open, hasOpened: true })}>
+        <WidgetToggle
+            background={this.props.backgroundColor}
+            onClick={() => this.setState({ open: !this.state.open, hasOpened: true, messageVisible: false, })}>
           <PoseGroup>
             {this.state.open
               ?

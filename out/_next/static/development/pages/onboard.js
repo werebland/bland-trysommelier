@@ -52,6 +52,34 @@ var PosedContainer = react_pose__WEBPACK_IMPORTED_MODULE_5__["default"].div({
     opacity: 0
   }
 });
+var AccessFormStatus = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "AccessForm__AccessFormStatus",
+  componentId: "sc-1n3u86u-4"
+})(["display:flex;flex-flow:column nowrap;align-items:center;justify-content:center;"]);
+var AccessFormStatusEmoji = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].i.withConfig({
+  displayName: "AccessForm__AccessFormStatusEmoji",
+  componentId: "sc-1n3u86u-5"
+})(["text-transform:none;font-size:4rem;margin:0;"]);
+var AccessFormStatusTitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3.withConfig({
+  displayName: "AccessForm__AccessFormStatusTitle",
+  componentId: "sc-1n3u86u-6"
+})(["font-family:'Montserrat',sans-serif;font-weight:700;color:#1f1f1f;font-size:1.5rem;margin:0 0 8px;"]);
+var AccessFormStatusSubtitle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span.withConfig({
+  displayName: "AccessForm__AccessFormStatusSubtitle",
+  componentId: "sc-1n3u86u-7"
+})(["font-size:1.25rem;font-weight:400;margin:0 0 16px;text-align:center;"]);
+var AccessFormReferral = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "AccessForm__AccessFormReferral",
+  componentId: "sc-1n3u86u-8"
+})(["display:inline-flex;padding:2px;border:2px solid #1f1f1f;border-radius:8px;height:54px;"]);
+var AccessFormReferralCode = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span.withConfig({
+  displayName: "AccessForm__AccessFormReferralCode",
+  componentId: "sc-1n3u86u-9"
+})(["height:100%;display:inline-flex;flex:1;align-items:center;padding:0 16px;font-size:1.25rem;font-weight:700;color:#1f1f1f;"]);
+var AccessFormReferralCopy = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+  displayName: "AccessForm__AccessFormReferralCopy",
+  componentId: "sc-1n3u86u-10"
+})(["width:48px;height:100%;background:#1f1f1f;cursor:pointer;border-top-right-radius:4px;border-bottom-right-radius:4px;display:inline-flex;align-items:center;justify-content:center;& svg{fill:#fff;}"]);
 
 var AccessForm = function AccessForm(_ref) {
   var handleAccess = _ref.handleAccess,
@@ -60,12 +88,14 @@ var AccessForm = function AccessForm(_ref) {
       name = _ref.name,
       handleName = _ref.handleName,
       accessStatus = _ref.accessStatus,
+      firstName = _ref.firstName,
+      referral = _ref.referral,
       handleClear = _ref.handleClear;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPaper, {
     elevation: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 126
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormContainer, {
@@ -74,38 +104,104 @@ var AccessForm = function AccessForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_5__["PoseGroup"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 128
     },
     __self: this
   }, accessStatus ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PosedContainer, {
     key: "0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 131
     },
     __self: this
-  }, accessStatus === "success" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, accessStatus === "success" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatus, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 134
     },
     __self: this
-  }, "You're on our list!") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusEmoji, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 135
+    },
+    __self: this
+  }, "\uD83D\uDC4B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusTitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, firstName, ", you're on our list!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusSubtitle, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137
+    },
+    __self: this
+  }, "We'll get in touch when you get access.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 139
+    },
+    __self: this
+  }), "Share your referral link with friends to move up the list."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferral, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 142
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferralCode, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143
+    },
+    __self: this
+  }, "somm.ca/", referral), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferralCopy, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 147
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0V0z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M2 5c-.55 0-1 .45-1 1v15c0 1.1.9 2 2 2h15c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1-.45-1-1V6c0-.55-.45-1-1-1zm19-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-1 16H8c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149
+    },
+    __self: this
+  }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
     },
     __self: this
   }, "Whoops! Something went wrong. Here's what we know:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 157
     },
     __self: this
   }, accessStatus), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
@@ -115,14 +211,14 @@ var AccessForm = function AccessForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 158
     },
     __self: this
   }, "Try again"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PosedContainer, {
     key: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 165
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
@@ -141,7 +237,7 @@ var AccessForm = function AccessForm(_ref) {
     placeholder: "Thomas Keller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 166
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
@@ -160,7 +256,7 @@ var AccessForm = function AccessForm(_ref) {
     placeholder: "tkeller@thefrenchlaundry.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 177
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
@@ -169,7 +265,7 @@ var AccessForm = function AccessForm(_ref) {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 187
     },
     __self: this
   }, "Get early access")))));
@@ -210,11 +306,11 @@ var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["def
 var MenuUploaderContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "MenuUploader__MenuUploaderContainer",
   componentId: "i6fd0l-1"
-})(["width:100%;display:flex;flex-flow:column nowrap;"]);
+})(["width:100%;display:flex;flex-flow:column nowrap;background:#fff;position:relative;z-index:3;"]);
 var MenuUploaderDropzone = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "MenuUploader__MenuUploaderDropzone",
   componentId: "i6fd0l-2"
-})([""]);
+})(["width:100%;height:172px;padding:16px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px dashed #dcdcdc;border-radius:8px;margin-bottom:16px;"]);
 var MenuUploaderFiles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul.withConfig({
   displayName: "MenuUploader__MenuUploaderFiles",
   componentId: "i6fd0l-3"
@@ -238,7 +334,7 @@ var MenuUploaderFile = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["de
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PosedMenuUploaderFile, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 67
     },
     __self: this
   }));
@@ -259,13 +355,7 @@ var MenuUploader = function MenuUploader(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderDropzone, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_dropzone__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -274,41 +364,37 @@ var MenuUploader = function MenuUploader(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 90
     },
     __self: this
   }, function (_ref2) {
     var getRootProps = _ref2.getRootProps,
         getInputProps = _ref2.getInputProps;
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderDropzone, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, getRootProps({
+      refKey: 'innerRef'
+    }), {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, getRootProps(), {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 92
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, getInputProps(), {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 93
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 94
       },
       __self: this
-    }, "Drag 'n' drop some files here, or click to select files")));
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderFiles, {
+    }, "Drag 'n' drop some files here, or click to select files"));
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderFiles, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 98
     },
     __self: this
   }, files.map(function (file, i) {
@@ -316,7 +402,7 @@ var MenuUploader = function MenuUploader(_ref) {
       key: file.name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 100
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledTextField, {
@@ -328,7 +414,7 @@ var MenuUploader = function MenuUploader(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 101
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuUploaderFileRemove, {
@@ -337,7 +423,7 @@ var MenuUploader = function MenuUploader(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 102
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -346,7 +432,7 @@ var MenuUploader = function MenuUploader(_ref) {
       viewBox: "0 0 24 24",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 103
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
@@ -354,14 +440,14 @@ var MenuUploader = function MenuUploader(_ref) {
       d: "M0 0h24v24H0V0z",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 104
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
       d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v10zM18 4h-2.5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 105
       },
       __self: this
     }))));
@@ -381,32 +467,20 @@ var MenuUploader = function MenuUploader(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! re-base */ "./node_modules/re-base/index.js");
+/* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! re-base */ "./node_modules/re-base/index.js");
 /* harmony import */ var re_base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(re_base__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "./node_modules/firebase/firestore/dist/index.esm.js");
 /* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/auth */ "./node_modules/firebase/auth/dist/index.esm.js");
-/* harmony import */ var next_server_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-server/config */ "./node_modules/next-server/config.js");
-/* harmony import */ var next_server_config__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_server_config__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
-
-
-var _getConfig = next_server_config__WEBPACK_IMPORTED_MODULE_4___default()(),
-    publicRuntimeConfig = _getConfig.publicRuntimeConfig;
-
-var FIREBASE_API = publicRuntimeConfig.FIREBASE_API;
-console.log({
-  publicRuntimeConfig: publicRuntimeConfig
-});
-console.log(FIREBASE_API);
 
 if (!firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.apps.length) {
   var app = firebase_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializeApp({
-    apiKey: process.env.FIREBASE_API,
+    apiKey: 'AIzaSyCIfdRUUpKpNHv7I1-6JkuUJzg1NBWtfjg',
     authDomain: "bland-sommelier.firebaseapp.com",
     databaseURL: "https://bland-sommelier.firebaseio.com",
     projectId: "bland-sommelier",
@@ -424,7 +498,6 @@ var settings = {};
 db.settings(settings);
 var base = re_base__WEBPACK_IMPORTED_MODULE_0___default.a.createClass(db);
 /* harmony default export */ __webpack_exports__["default"] = (base);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -25521,6 +25594,3475 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 
 /***/ }),
 
+/***/ "./node_modules/@firebase/storage/dist/index.esm.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@firebase/storage/dist/index.esm.js ***!
+  \**********************************************************/
+/*! exports provided: registerStorage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerStorage", function() { return registerStorage; });
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/index.cjs.js");
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_firebase_app__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Constants used in the Firebase Storage library.
+ */
+/**
+ * Domain and scheme for API calls.
+ */
+var domainBase = 'https://firebasestorage.googleapis.com';
+/**
+ * Domain and scheme for object downloads.
+ */
+var downloadBase = 'https://firebasestorage.googleapis.com';
+/**
+ * Base URL for non-upload calls to the API.
+ */
+var apiBaseUrl = '/v0';
+/**
+ * Base URL for upload calls to the API.
+ */
+var apiUploadBaseUrl = '/v0';
+var configOption = 'storageBucket';
+/**
+ * 2 minutes
+ */
+var defaultMaxOperationRetryTime = 2 * 60 * 1000;
+/**
+ * 10 minutes
+ */
+var defaultMaxUploadRetryTime = 10 * 60 * 100;
+/**
+ * This is the value of Number.MIN_SAFE_INTEGER, which is not well supported
+ * enough for us to use it directly.
+ */
+var minSafeInteger = -9007199254740991;
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var FirebaseStorageError = /** @class */ (function () {
+    function FirebaseStorageError(code, message) {
+        this.code_ = prependCode(code);
+        this.message_ = 'Firebase Storage: ' + message;
+        this.serverResponse_ = null;
+        this.name_ = 'FirebaseError';
+    }
+    FirebaseStorageError.prototype.codeProp = function () {
+        return this.code;
+    };
+    FirebaseStorageError.prototype.codeEquals = function (code) {
+        return prependCode(code) === this.codeProp();
+    };
+    FirebaseStorageError.prototype.serverResponseProp = function () {
+        return this.serverResponse_;
+    };
+    FirebaseStorageError.prototype.setServerResponseProp = function (serverResponse) {
+        this.serverResponse_ = serverResponse;
+    };
+    Object.defineProperty(FirebaseStorageError.prototype, "name", {
+        get: function () {
+            return this.name_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FirebaseStorageError.prototype, "code", {
+        get: function () {
+            return this.code_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FirebaseStorageError.prototype, "message", {
+        get: function () {
+            return this.message_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FirebaseStorageError.prototype, "serverResponse", {
+        get: function () {
+            return this.serverResponse_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return FirebaseStorageError;
+}());
+var Code = {
+    // Shared between all platforms
+    UNKNOWN: 'unknown',
+    OBJECT_NOT_FOUND: 'object-not-found',
+    BUCKET_NOT_FOUND: 'bucket-not-found',
+    PROJECT_NOT_FOUND: 'project-not-found',
+    QUOTA_EXCEEDED: 'quota-exceeded',
+    UNAUTHENTICATED: 'unauthenticated',
+    UNAUTHORIZED: 'unauthorized',
+    RETRY_LIMIT_EXCEEDED: 'retry-limit-exceeded',
+    INVALID_CHECKSUM: 'invalid-checksum',
+    CANCELED: 'canceled',
+    // JS specific
+    INVALID_EVENT_NAME: 'invalid-event-name',
+    INVALID_URL: 'invalid-url',
+    INVALID_DEFAULT_BUCKET: 'invalid-default-bucket',
+    NO_DEFAULT_BUCKET: 'no-default-bucket',
+    CANNOT_SLICE_BLOB: 'cannot-slice-blob',
+    SERVER_FILE_WRONG_SIZE: 'server-file-wrong-size',
+    NO_DOWNLOAD_URL: 'no-download-url',
+    INVALID_ARGUMENT: 'invalid-argument',
+    INVALID_ARGUMENT_COUNT: 'invalid-argument-count',
+    APP_DELETED: 'app-deleted',
+    INVALID_ROOT_OPERATION: 'invalid-root-operation',
+    INVALID_FORMAT: 'invalid-format',
+    INTERNAL_ERROR: 'internal-error'
+};
+function prependCode(code) {
+    return 'storage/' + code;
+}
+function unknown() {
+    var message = 'An unknown error occurred, please check the error payload for ' +
+        'server response.';
+    return new FirebaseStorageError(Code.UNKNOWN, message);
+}
+function objectNotFound(path) {
+    return new FirebaseStorageError(Code.OBJECT_NOT_FOUND, "Object '" + path + "' does not exist.");
+}
+function quotaExceeded(bucket) {
+    return new FirebaseStorageError(Code.QUOTA_EXCEEDED, "Quota for bucket '" +
+        bucket +
+        "' exceeded, please view quota on " +
+        'https://firebase.google.com/pricing/.');
+}
+function unauthenticated() {
+    var message = 'User is not authenticated, please authenticate using Firebase ' +
+        'Authentication and try again.';
+    return new FirebaseStorageError(Code.UNAUTHENTICATED, message);
+}
+function unauthorized(path) {
+    return new FirebaseStorageError(Code.UNAUTHORIZED, "User does not have permission to access '" + path + "'.");
+}
+function retryLimitExceeded() {
+    return new FirebaseStorageError(Code.RETRY_LIMIT_EXCEEDED, 'Max retry time for operation exceeded, please try again.');
+}
+function canceled() {
+    return new FirebaseStorageError(Code.CANCELED, 'User canceled the upload/download.');
+}
+function invalidUrl(url) {
+    return new FirebaseStorageError(Code.INVALID_URL, "Invalid URL '" + url + "'.");
+}
+function invalidDefaultBucket(bucket) {
+    return new FirebaseStorageError(Code.INVALID_DEFAULT_BUCKET, "Invalid default bucket '" + bucket + "'.");
+}
+function cannotSliceBlob() {
+    return new FirebaseStorageError(Code.CANNOT_SLICE_BLOB, 'Cannot slice blob for upload. Please retry the upload.');
+}
+function serverFileWrongSize() {
+    return new FirebaseStorageError(Code.SERVER_FILE_WRONG_SIZE, 'Server recorded incorrect upload file size, please retry the upload.');
+}
+function noDownloadURL() {
+    return new FirebaseStorageError(Code.NO_DOWNLOAD_URL, 'The given file does not have any download URLs.');
+}
+function invalidArgument(index, fnName, message) {
+    return new FirebaseStorageError(Code.INVALID_ARGUMENT, 'Invalid argument in `' + fnName + '` at index ' + index + ': ' + message);
+}
+function invalidArgumentCount(argMin, argMax, fnName, real) {
+    var countPart;
+    var plural;
+    if (argMin === argMax) {
+        countPart = argMin;
+        plural = argMin === 1 ? 'argument' : 'arguments';
+    }
+    else {
+        countPart = 'between ' + argMin + ' and ' + argMax;
+        plural = 'arguments';
+    }
+    return new FirebaseStorageError(Code.INVALID_ARGUMENT_COUNT, 'Invalid argument count in `' +
+        fnName +
+        '`: Expected ' +
+        countPart +
+        ' ' +
+        plural +
+        ', received ' +
+        real +
+        '.');
+}
+function appDeleted() {
+    return new FirebaseStorageError(Code.APP_DELETED, 'The Firebase app was deleted.');
+}
+/**
+ * @param name The name of the operation that was invalid.
+ */
+function invalidRootOperation(name) {
+    return new FirebaseStorageError(Code.INVALID_ROOT_OPERATION, "The operation '" +
+        name +
+        "' cannot be performed on a root reference, create a non-root " +
+        "reference using child, such as .child('file.png').");
+}
+/**
+ * @param format The format that was not valid.
+ * @param message A message describing the format violation.
+ */
+function invalidFormat(format, message) {
+    return new FirebaseStorageError(Code.INVALID_FORMAT, "String does not match format '" + format + "': " + message);
+}
+/**
+ * @param message A message describing the internal error.
+ */
+function internalError(message) {
+    throw new FirebaseStorageError(Code.INTERNAL_ERROR, 'Internal error: ' + message);
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var StringFormat = {
+    RAW: 'raw',
+    BASE64: 'base64',
+    BASE64URL: 'base64url',
+    DATA_URL: 'data_url'
+};
+function formatValidator(stringFormat) {
+    switch (stringFormat) {
+        case StringFormat.RAW:
+        case StringFormat.BASE64:
+        case StringFormat.BASE64URL:
+        case StringFormat.DATA_URL:
+            return;
+        default:
+            throw 'Expected one of the event types: [' +
+                StringFormat.RAW +
+                ', ' +
+                StringFormat.BASE64 +
+                ', ' +
+                StringFormat.BASE64URL +
+                ', ' +
+                StringFormat.DATA_URL +
+                '].';
+    }
+}
+/**
+ * @struct
+ */
+var StringData = /** @class */ (function () {
+    function StringData(data, opt_contentType) {
+        this.data = data;
+        this.contentType = opt_contentType || null;
+    }
+    return StringData;
+}());
+function dataFromString(format, string) {
+    switch (format) {
+        case StringFormat.RAW:
+            return new StringData(utf8Bytes_(string));
+        case StringFormat.BASE64:
+        case StringFormat.BASE64URL:
+            return new StringData(base64Bytes_(format, string));
+        case StringFormat.DATA_URL:
+            return new StringData(dataURLBytes_(string), dataURLContentType_(string));
+    }
+    // assert(false);
+    throw unknown();
+}
+function utf8Bytes_(string) {
+    var b = [];
+    for (var i = 0; i < string.length; i++) {
+        var c = string.charCodeAt(i);
+        if (c <= 127) {
+            b.push(c);
+        }
+        else {
+            if (c <= 2047) {
+                b.push(192 | (c >> 6), 128 | (c & 63));
+            }
+            else {
+                if ((c & 64512) == 55296) {
+                    // The start of a surrogate pair.
+                    var valid = i < string.length - 1 &&
+                        (string.charCodeAt(i + 1) & 64512) == 56320;
+                    if (!valid) {
+                        // The second surrogate wasn't there.
+                        b.push(239, 191, 189);
+                    }
+                    else {
+                        var hi = c;
+                        var lo = string.charCodeAt(++i);
+                        c = 65536 | ((hi & 1023) << 10) | (lo & 1023);
+                        b.push(240 | (c >> 18), 128 | ((c >> 12) & 63), 128 | ((c >> 6) & 63), 128 | (c & 63));
+                    }
+                }
+                else {
+                    if ((c & 64512) == 56320) {
+                        // Invalid low surrogate.
+                        b.push(239, 191, 189);
+                    }
+                    else {
+                        b.push(224 | (c >> 12), 128 | ((c >> 6) & 63), 128 | (c & 63));
+                    }
+                }
+            }
+        }
+    }
+    return new Uint8Array(b);
+}
+function percentEncodedBytes_(string) {
+    var decoded;
+    try {
+        decoded = decodeURIComponent(string);
+    }
+    catch (e) {
+        throw invalidFormat(StringFormat.DATA_URL, 'Malformed data URL.');
+    }
+    return utf8Bytes_(decoded);
+}
+function base64Bytes_(format, string) {
+    switch (format) {
+        case StringFormat.BASE64: {
+            var hasMinus = string.indexOf('-') !== -1;
+            var hasUnder = string.indexOf('_') !== -1;
+            if (hasMinus || hasUnder) {
+                var invalidChar = hasMinus ? '-' : '_';
+                throw invalidFormat(format, "Invalid character '" +
+                    invalidChar +
+                    "' found: is it base64url encoded?");
+            }
+            break;
+        }
+        case StringFormat.BASE64URL: {
+            var hasPlus = string.indexOf('+') !== -1;
+            var hasSlash = string.indexOf('/') !== -1;
+            if (hasPlus || hasSlash) {
+                var invalidChar = hasPlus ? '+' : '/';
+                throw invalidFormat(format, "Invalid character '" + invalidChar + "' found: is it base64 encoded?");
+            }
+            string = string.replace(/-/g, '+').replace(/_/g, '/');
+            break;
+        }
+    }
+    var bytes;
+    try {
+        bytes = atob(string);
+    }
+    catch (e) {
+        throw invalidFormat(format, 'Invalid character found');
+    }
+    var array = new Uint8Array(bytes.length);
+    for (var i = 0; i < bytes.length; i++) {
+        array[i] = bytes.charCodeAt(i);
+    }
+    return array;
+}
+/**
+ * @struct
+ */
+var DataURLParts = /** @class */ (function () {
+    function DataURLParts(dataURL) {
+        this.base64 = false;
+        this.contentType = null;
+        var matches = dataURL.match(/^data:([^,]+)?,/);
+        if (matches === null) {
+            throw invalidFormat(StringFormat.DATA_URL, "Must be formatted 'data:[<mediatype>][;base64],<data>");
+        }
+        var middle = matches[1] || null;
+        if (middle != null) {
+            this.base64 = endsWith(middle, ';base64');
+            this.contentType = this.base64
+                ? middle.substring(0, middle.length - ';base64'.length)
+                : middle;
+        }
+        this.rest = dataURL.substring(dataURL.indexOf(',') + 1);
+    }
+    return DataURLParts;
+}());
+function dataURLBytes_(string) {
+    var parts = new DataURLParts(string);
+    if (parts.base64) {
+        return base64Bytes_(StringFormat.BASE64, parts.rest);
+    }
+    else {
+        return percentEncodedBytes_(parts.rest);
+    }
+}
+function dataURLContentType_(string) {
+    var parts = new DataURLParts(string);
+    return parts.contentType;
+}
+function endsWith(s, end) {
+    var longEnough = s.length >= end.length;
+    if (!longEnough) {
+        return false;
+    }
+    return s.substring(s.length - end.length) === end;
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var TaskEvent = {
+    /** Triggered whenever the task changes or progress is updated. */
+    STATE_CHANGED: 'state_changed'
+};
+var InternalTaskState = {
+    RUNNING: 'running',
+    PAUSING: 'pausing',
+    PAUSED: 'paused',
+    SUCCESS: 'success',
+    CANCELING: 'canceling',
+    CANCELED: 'canceled',
+    ERROR: 'error'
+};
+var TaskState = {
+    /** The task is currently transferring data. */
+    RUNNING: 'running',
+    /** The task was paused by the user. */
+    PAUSED: 'paused',
+    /** The task completed successfully. */
+    SUCCESS: 'success',
+    /** The task was canceled. */
+    CANCELED: 'canceled',
+    /** The task failed with an error. */
+    ERROR: 'error'
+};
+function taskStateFromInternalTaskState(state) {
+    switch (state) {
+        case InternalTaskState.RUNNING:
+        case InternalTaskState.PAUSING:
+        case InternalTaskState.CANCELING:
+            return TaskState.RUNNING;
+        case InternalTaskState.PAUSED:
+            return TaskState.PAUSED;
+        case InternalTaskState.SUCCESS:
+            return TaskState.SUCCESS;
+        case InternalTaskState.CANCELED:
+            return TaskState.CANCELED;
+        case InternalTaskState.ERROR:
+            return TaskState.ERROR;
+        default:
+            // TODO(andysoto): assert(false);
+            return TaskState.ERROR;
+    }
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Contains methods for working with objects.
+ */
+function contains(obj, prop) {
+    return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+function forEach(obj, f) {
+    for (var key in obj) {
+        if (contains(obj, key)) {
+            f(key, obj[key]);
+        }
+    }
+}
+function clone(obj) {
+    if (obj == null) {
+        return {};
+    }
+    var c = {};
+    forEach(obj, function (key, val) {
+        c[key] = val;
+    });
+    return c;
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Implements the promise abstraction interface for external
+ * (public SDK) packaging, which just passes through to the firebase-app impl.
+ */
+/**
+ * @template T
+ * @param {function((function(T): void),
+ *                  (function(!Error): void))} resolver
+ */
+function make(resolver) {
+    return new Promise(resolver);
+}
+/**
+ * @template T
+ */
+function resolve(value) {
+    return Promise.resolve(value);
+}
+function reject(error) {
+    return Promise.reject(error);
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @return False if the object is undefined or null, true otherwise.
+ */
+function isDef(p) {
+    return p != null;
+}
+function isJustDef(p) {
+    return p !== void 0;
+}
+function isFunction(p) {
+    return typeof p === 'function';
+}
+function isObject(p) {
+    return typeof p === 'object';
+}
+function isNonNullObject(p) {
+    return isObject(p) && p !== null;
+}
+function isNonArrayObject(p) {
+    return isObject(p) && !Array.isArray(p);
+}
+function isString(p) {
+    return typeof p === 'string' || p instanceof String;
+}
+function isNumber(p) {
+    return typeof p === 'number' || p instanceof Number;
+}
+function isNativeBlob(p) {
+    return isNativeBlobDefined() && p instanceof Blob;
+}
+function isNativeBlobDefined() {
+    return typeof Blob !== 'undefined';
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @enum{number}
+ */
+var ErrorCode;
+(function (ErrorCode) {
+    ErrorCode[ErrorCode["NO_ERROR"] = 0] = "NO_ERROR";
+    ErrorCode[ErrorCode["NETWORK_ERROR"] = 1] = "NETWORK_ERROR";
+    ErrorCode[ErrorCode["ABORT"] = 2] = "ABORT";
+})(ErrorCode || (ErrorCode = {}));
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * We use this instead of goog.net.XhrIo because goog.net.XhrIo is hyuuuuge and
+ * doesn't work in React Native on Android.
+ */
+var NetworkXhrIo = /** @class */ (function () {
+    function NetworkXhrIo() {
+        var _this = this;
+        this.sent_ = false;
+        this.xhr_ = new XMLHttpRequest();
+        this.errorCode_ = ErrorCode.NO_ERROR;
+        this.sendPromise_ = make(function (resolve$$1, reject$$1) {
+            _this.xhr_.addEventListener('abort', function (event) {
+                _this.errorCode_ = ErrorCode.ABORT;
+                resolve$$1(_this);
+            });
+            _this.xhr_.addEventListener('error', function (event) {
+                _this.errorCode_ = ErrorCode.NETWORK_ERROR;
+                resolve$$1(_this);
+            });
+            _this.xhr_.addEventListener('load', function (event) {
+                resolve$$1(_this);
+            });
+        });
+    }
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.send = function (url, method, opt_body, opt_headers) {
+        var _this = this;
+        if (this.sent_) {
+            throw internalError('cannot .send() more than once');
+        }
+        this.sent_ = true;
+        this.xhr_.open(method, url, true);
+        if (isDef(opt_headers)) {
+            var headers = opt_headers;
+            forEach(headers, function (key, val) {
+                _this.xhr_.setRequestHeader(key, val.toString());
+            });
+        }
+        if (isDef(opt_body)) {
+            this.xhr_.send(opt_body);
+        }
+        else {
+            this.xhr_.send();
+        }
+        return this.sendPromise_;
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.getErrorCode = function () {
+        if (!this.sent_) {
+            throw internalError('cannot .getErrorCode() before sending');
+        }
+        return this.errorCode_;
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.getStatus = function () {
+        if (!this.sent_) {
+            throw internalError('cannot .getStatus() before sending');
+        }
+        try {
+            return this.xhr_.status;
+        }
+        catch (e) {
+            return -1;
+        }
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.getResponseText = function () {
+        if (!this.sent_) {
+            throw internalError('cannot .getResponseText() before sending');
+        }
+        return this.xhr_.responseText;
+    };
+    /**
+     * Aborts the request.
+     * @override
+     */
+    NetworkXhrIo.prototype.abort = function () {
+        this.xhr_.abort();
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.getResponseHeader = function (header) {
+        return this.xhr_.getResponseHeader(header);
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.addUploadProgressListener = function (listener) {
+        if (isDef(this.xhr_.upload)) {
+            this.xhr_.upload.addEventListener('progress', listener);
+        }
+    };
+    /**
+     * @override
+     */
+    NetworkXhrIo.prototype.removeUploadProgressListener = function (listener) {
+        if (isDef(this.xhr_.upload)) {
+            this.xhr_.upload.removeEventListener('progress', listener);
+        }
+    };
+    return NetworkXhrIo;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Factory-like class for creating XhrIo instances.
+ */
+var XhrIoPool = /** @class */ (function () {
+    function XhrIoPool() {
+    }
+    XhrIoPool.prototype.createXhrIo = function () {
+        return new NetworkXhrIo();
+    };
+    return XhrIoPool;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns the Object resulting from parsing the given JSON, or null if the
+ * given string does not represent a JSON object.
+ */
+function jsonObjectOrNull(s) {
+    var obj;
+    try {
+        obj = JSON.parse(s);
+    }
+    catch (e) {
+        return null;
+    }
+    if (isNonArrayObject(obj)) {
+        return obj;
+    }
+    else {
+        return null;
+    }
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @struct
+ */
+var Location = /** @class */ (function () {
+    function Location(bucket, path) {
+        this.bucket = bucket;
+        this.path_ = path;
+    }
+    Object.defineProperty(Location.prototype, "path", {
+        get: function () {
+            return this.path_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Location.prototype.fullServerUrl = function () {
+        var encode = encodeURIComponent;
+        return '/b/' + encode(this.bucket) + '/o/' + encode(this.path);
+    };
+    Location.prototype.bucketOnlyServerUrl = function () {
+        var encode = encodeURIComponent;
+        return '/b/' + encode(this.bucket) + '/o';
+    };
+    Location.makeFromBucketSpec = function (bucketString) {
+        var bucketLocation;
+        try {
+            bucketLocation = Location.makeFromUrl(bucketString);
+        }
+        catch (e) {
+            // Not valid URL, use as-is. This lets you put bare bucket names in
+            // config.
+            return new Location(bucketString, '');
+        }
+        if (bucketLocation.path === '') {
+            return bucketLocation;
+        }
+        else {
+            throw invalidDefaultBucket(bucketString);
+        }
+    };
+    Location.makeFromUrl = function (url) {
+        var location = null;
+        var bucketDomain = '([A-Za-z0-9.\\-_]+)';
+        function gsModify(loc) {
+            if (loc.path.charAt(loc.path.length - 1) === '/') {
+                loc.path_ = loc.path_.slice(0, -1);
+            }
+        }
+        var gsPath = '(/(.*))?$';
+        var path = '(/([^?#]*).*)?$';
+        var gsRegex = new RegExp('^gs://' + bucketDomain + gsPath, 'i');
+        var gsIndices = { bucket: 1, path: 3 };
+        function httpModify(loc) {
+            loc.path_ = decodeURIComponent(loc.path);
+        }
+        var version = 'v[A-Za-z0-9_]+';
+        var httpRegex = new RegExp('^https?://firebasestorage\\.googleapis\\.com/' +
+            version +
+            '/b/' +
+            bucketDomain +
+            '/o' +
+            path, 'i');
+        var httpIndices = { bucket: 1, path: 3 };
+        var groups = [
+            { regex: gsRegex, indices: gsIndices, postModify: gsModify },
+            { regex: httpRegex, indices: httpIndices, postModify: httpModify }
+        ];
+        for (var i = 0; i < groups.length; i++) {
+            var group = groups[i];
+            var captures = group.regex.exec(url);
+            if (captures) {
+                var bucketValue = captures[group.indices.bucket];
+                var pathValue = captures[group.indices.path];
+                if (!pathValue) {
+                    pathValue = '';
+                }
+                location = new Location(bucketValue, pathValue);
+                group.postModify(location);
+                break;
+            }
+        }
+        if (location == null) {
+            throw invalidUrl(url);
+        }
+        return location;
+    };
+    return Location;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @fileoverview Contains helper methods for manipulating paths.
+ */
+/**
+ * @return Null if the path is already at the root.
+ */
+function parent(path) {
+    if (path.length == 0) {
+        return null;
+    }
+    var index = path.lastIndexOf('/');
+    if (index === -1) {
+        return '';
+    }
+    var newPath = path.slice(0, index);
+    return newPath;
+}
+function child(path, childPath) {
+    var canonicalChildPath = childPath
+        .split('/')
+        .filter(function (component) {
+        return component.length > 0;
+    })
+        .join('/');
+    if (path.length === 0) {
+        return canonicalChildPath;
+    }
+    else {
+        return path + '/' + canonicalChildPath;
+    }
+}
+/**
+ * Returns the last component of a path.
+ * '/foo/bar' -> 'bar'
+ * '/foo/bar/baz/' -> 'baz/'
+ * '/a' -> 'a'
+ */
+function lastComponent(path) {
+    var index = path.lastIndexOf('/', path.length - 2);
+    if (index === -1) {
+        return path;
+    }
+    else {
+        return path.slice(index + 1);
+    }
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function makeNormalUrl(urlPart) {
+    return domainBase + apiBaseUrl + urlPart;
+}
+function makeDownloadUrl(urlPart) {
+    return downloadBase + apiBaseUrl + urlPart;
+}
+function makeUploadUrl(urlPart) {
+    return domainBase + apiUploadBaseUrl + urlPart;
+}
+function makeQueryString(params) {
+    var encode = encodeURIComponent;
+    var queryPart = '?';
+    forEach(params, function (key, val) {
+        var nextPart = encode(key) + '=' + encode(val);
+        queryPart = queryPart + nextPart + '&';
+    });
+    // Chop off the extra '&' or '?' on the end
+    queryPart = queryPart.slice(0, -1);
+    return queryPart;
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function noXform_(metadata, value) {
+    return value;
+}
+/**
+ * @struct
+ */
+var Mapping = /** @class */ (function () {
+    function Mapping(server, opt_local, opt_writable, opt_xform) {
+        this.server = server;
+        this.local = opt_local || server;
+        this.writable = !!opt_writable;
+        this.xform = opt_xform || noXform_;
+    }
+    return Mapping;
+}());
+var mappings_ = null;
+function xformPath(fullPath) {
+    var valid = isString(fullPath);
+    if (!valid || fullPath.length < 2) {
+        return fullPath;
+    }
+    else {
+        fullPath = fullPath;
+        return lastComponent(fullPath);
+    }
+}
+function getMappings() {
+    if (mappings_) {
+        return mappings_;
+    }
+    var mappings = [];
+    mappings.push(new Mapping('bucket'));
+    mappings.push(new Mapping('generation'));
+    mappings.push(new Mapping('metageneration'));
+    mappings.push(new Mapping('name', 'fullPath', true));
+    function mappingsXformPath(metadata, fullPath) {
+        return xformPath(fullPath);
+    }
+    var nameMapping = new Mapping('name');
+    nameMapping.xform = mappingsXformPath;
+    mappings.push(nameMapping);
+    /**
+     * Coerces the second param to a number, if it is defined.
+     */
+    function xformSize(metadata, size) {
+        if (isDef(size)) {
+            return +size;
+        }
+        else {
+            return size;
+        }
+    }
+    var sizeMapping = new Mapping('size');
+    sizeMapping.xform = xformSize;
+    mappings.push(sizeMapping);
+    mappings.push(new Mapping('timeCreated'));
+    mappings.push(new Mapping('updated'));
+    mappings.push(new Mapping('md5Hash', null, true));
+    mappings.push(new Mapping('cacheControl', null, true));
+    mappings.push(new Mapping('contentDisposition', null, true));
+    mappings.push(new Mapping('contentEncoding', null, true));
+    mappings.push(new Mapping('contentLanguage', null, true));
+    mappings.push(new Mapping('contentType', null, true));
+    mappings.push(new Mapping('metadata', 'customMetadata', true));
+    mappings_ = mappings;
+    return mappings_;
+}
+function addRef(metadata, authWrapper) {
+    function generateRef() {
+        var bucket = metadata['bucket'];
+        var path = metadata['fullPath'];
+        var loc = new Location(bucket, path);
+        return authWrapper.makeStorageReference(loc);
+    }
+    Object.defineProperty(metadata, 'ref', { get: generateRef });
+}
+function fromResource(authWrapper, resource, mappings) {
+    var metadata = {};
+    metadata['type'] = 'file';
+    var len = mappings.length;
+    for (var i = 0; i < len; i++) {
+        var mapping = mappings[i];
+        metadata[mapping.local] = mapping.xform(metadata, resource[mapping.server]);
+    }
+    addRef(metadata, authWrapper);
+    return metadata;
+}
+function fromResourceString(authWrapper, resourceString, mappings) {
+    var obj = jsonObjectOrNull(resourceString);
+    if (obj === null) {
+        return null;
+    }
+    var resource = obj;
+    return fromResource(authWrapper, resource, mappings);
+}
+function downloadUrlFromResourceString(metadata, resourceString) {
+    var obj = jsonObjectOrNull(resourceString);
+    if (obj === null) {
+        return null;
+    }
+    if (!isString(obj['downloadTokens'])) {
+        // This can happen if objects are uploaded through GCS and retrieved
+        // through list, so we don't want to throw an Error.
+        return null;
+    }
+    var tokens = obj['downloadTokens'];
+    if (tokens.length === 0) {
+        return null;
+    }
+    var encode = encodeURIComponent;
+    var tokensList = tokens.split(',');
+    var urls = tokensList.map(function (token) {
+        var bucket = metadata['bucket'];
+        var path = metadata['fullPath'];
+        var urlPart = '/b/' + encode(bucket) + '/o/' + encode(path);
+        var base = makeDownloadUrl(urlPart);
+        var queryString = makeQueryString({
+            alt: 'media',
+            token: token
+        });
+        return base + queryString;
+    });
+    return urls[0];
+}
+function toResourceString(metadata, mappings) {
+    var resource = {};
+    var len = mappings.length;
+    for (var i = 0; i < len; i++) {
+        var mapping = mappings[i];
+        if (mapping.writable) {
+            resource[mapping.server] = metadata[mapping.local];
+        }
+    }
+    return JSON.stringify(resource);
+}
+function metadataValidator(p) {
+    var validType = p && isObject(p);
+    if (!validType) {
+        throw 'Expected Metadata object.';
+    }
+    for (var key in p) {
+        var val = p[key];
+        if (key === 'customMetadata') {
+            if (!isObject(val)) {
+                throw 'Expected object for \'customMetadata\' mapping.';
+            }
+        }
+        else {
+            if (isNonNullObject(val)) {
+                throw "Mapping for '" + key + "' cannot be an object.";
+            }
+        }
+    }
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @param name Name of the function.
+ * @param specs Argument specs.
+ * @param passed The actual arguments passed to the function.
+ * @throws {fbs.Error} If the arguments are invalid.
+ */
+function validate(name, specs, passed) {
+    var minArgs = specs.length;
+    var maxArgs = specs.length;
+    for (var i = 0; i < specs.length; i++) {
+        if (specs[i].optional) {
+            minArgs = i;
+            break;
+        }
+    }
+    var validLength = minArgs <= passed.length && passed.length <= maxArgs;
+    if (!validLength) {
+        throw invalidArgumentCount(minArgs, maxArgs, name, passed.length);
+    }
+    for (var i = 0; i < passed.length; i++) {
+        try {
+            specs[i].validator(passed[i]);
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw invalidArgument(i, name, e.message);
+            }
+            else {
+                throw invalidArgument(i, name, e);
+            }
+        }
+    }
+}
+/**
+ * @struct
+ */
+var ArgSpec = /** @class */ (function () {
+    function ArgSpec(validator, opt_optional) {
+        var self = this;
+        this.validator = function (p) {
+            if (self.optional && !isJustDef(p)) {
+                return;
+            }
+            validator(p);
+        };
+        this.optional = !!opt_optional;
+    }
+    return ArgSpec;
+}());
+function and_(v1, v2) {
+    return function (p) {
+        v1(p);
+        v2(p);
+    };
+}
+function stringSpec(opt_validator, opt_optional) {
+    function stringValidator(p) {
+        if (!isString(p)) {
+            throw 'Expected string.';
+        }
+    }
+    var validator;
+    if (opt_validator) {
+        validator = and_(stringValidator, opt_validator);
+    }
+    else {
+        validator = stringValidator;
+    }
+    return new ArgSpec(validator, opt_optional);
+}
+function uploadDataSpec() {
+    function validator(p) {
+        var valid = p instanceof Uint8Array ||
+            p instanceof ArrayBuffer ||
+            (isNativeBlobDefined() && p instanceof Blob);
+        if (!valid) {
+            throw 'Expected Blob or File.';
+        }
+    }
+    return new ArgSpec(validator);
+}
+function metadataSpec(opt_optional) {
+    return new ArgSpec(metadataValidator, opt_optional);
+}
+function nonNegativeNumberSpec() {
+    function validator(p) {
+        var valid = isNumber(p) && p >= 0;
+        if (!valid) {
+            throw 'Expected a number 0 or greater.';
+        }
+    }
+    return new ArgSpec(validator);
+}
+function looseObjectSpec(opt_validator, opt_optional) {
+    function validator(p) {
+        var isLooseObject = p === null || (isDef(p) && p instanceof Object);
+        if (!isLooseObject) {
+            throw 'Expected an Object.';
+        }
+        if (opt_validator !== undefined && opt_validator !== null) {
+            opt_validator(p);
+        }
+    }
+    return new ArgSpec(validator, opt_optional);
+}
+function nullFunctionSpec(opt_optional) {
+    function validator(p) {
+        var valid = p === null || isFunction(p);
+        if (!valid) {
+            throw 'Expected a Function.';
+        }
+    }
+    return new ArgSpec(validator, opt_optional);
+}
+
+function getBlobBuilder() {
+    if (typeof BlobBuilder !== 'undefined') {
+        return BlobBuilder;
+    }
+    else if (typeof WebKitBlobBuilder !== 'undefined') {
+        return WebKitBlobBuilder;
+    }
+    else {
+        return undefined;
+    }
+}
+/**
+ * Concatenates one or more values together and converts them to a Blob.
+ *
+ * @param var_args The values that will make up the resulting blob.
+ * @return The blob.
+ */
+function getBlob() {
+    var var_args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        var_args[_i] = arguments[_i];
+    }
+    var BlobBuilder = getBlobBuilder();
+    if (BlobBuilder !== undefined) {
+        var bb = new BlobBuilder();
+        for (var i = 0; i < var_args.length; i++) {
+            bb.append(var_args[i]);
+        }
+        return bb.getBlob();
+    }
+    else {
+        if (isNativeBlobDefined()) {
+            return new Blob(var_args);
+        }
+        else {
+            throw Error("This browser doesn't seem to support creating Blobs");
+        }
+    }
+}
+/**
+ * Slices the blob. The returned blob contains data from the start byte
+ * (inclusive) till the end byte (exclusive). Negative indices cannot be used.
+ *
+ * @param blob The blob to be sliced.
+ * @param start Index of the starting byte.
+ * @param end Index of the ending byte.
+ * @return The blob slice or null if not supported.
+ */
+function sliceBlob(blob, start, end) {
+    if (blob.webkitSlice) {
+        return blob.webkitSlice(start, end);
+    }
+    else if (blob.mozSlice) {
+        return blob.mozSlice(start, end);
+    }
+    else if (blob.slice) {
+        return blob.slice(start, end);
+    }
+    return null;
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @param opt_elideCopy If true, doesn't copy mutable input data
+ *     (e.g. Uint8Arrays). Pass true only if you know the objects will not be
+ *     modified after this blob's construction.
+ */
+var FbsBlob = /** @class */ (function () {
+    function FbsBlob(data, opt_elideCopy) {
+        var size = 0;
+        var blobType = '';
+        if (isNativeBlob(data)) {
+            this.data_ = data;
+            size = data.size;
+            blobType = data.type;
+        }
+        else if (data instanceof ArrayBuffer) {
+            if (opt_elideCopy) {
+                this.data_ = new Uint8Array(data);
+            }
+            else {
+                this.data_ = new Uint8Array(data.byteLength);
+                this.data_.set(new Uint8Array(data));
+            }
+            size = this.data_.length;
+        }
+        else if (data instanceof Uint8Array) {
+            if (opt_elideCopy) {
+                this.data_ = data;
+            }
+            else {
+                this.data_ = new Uint8Array(data.length);
+                this.data_.set(data);
+            }
+            size = data.length;
+        }
+        this.size_ = size;
+        this.type_ = blobType;
+    }
+    FbsBlob.prototype.size = function () {
+        return this.size_;
+    };
+    FbsBlob.prototype.type = function () {
+        return this.type_;
+    };
+    FbsBlob.prototype.slice = function (startByte, endByte) {
+        if (isNativeBlob(this.data_)) {
+            var realBlob = this.data_;
+            var sliced = sliceBlob(realBlob, startByte, endByte);
+            if (sliced === null) {
+                return null;
+            }
+            return new FbsBlob(sliced);
+        }
+        else {
+            var slice = new Uint8Array(this.data_.buffer, startByte, endByte - startByte);
+            return new FbsBlob(slice, true);
+        }
+    };
+    FbsBlob.getBlob = function () {
+        var var_args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            var_args[_i] = arguments[_i];
+        }
+        if (isNativeBlobDefined()) {
+            var blobby = var_args.map(function (val) {
+                if (val instanceof FbsBlob) {
+                    return val.data_;
+                }
+                else {
+                    return val;
+                }
+            });
+            return new FbsBlob(getBlob.apply(null, blobby));
+        }
+        else {
+            var uint8Arrays = var_args.map(function (val) {
+                if (isString(val)) {
+                    return dataFromString(StringFormat.RAW, val).data;
+                }
+                else {
+                    // Blobs don't exist, so this has to be a Uint8Array.
+                    return val.data_;
+                }
+            });
+            var finalLength_1 = 0;
+            uint8Arrays.forEach(function (array) {
+                finalLength_1 += array.byteLength;
+            });
+            var merged_1 = new Uint8Array(finalLength_1);
+            var index_1 = 0;
+            uint8Arrays.forEach(function (array) {
+                for (var i = 0; i < array.length; i++) {
+                    merged_1[index_1++] = array[i];
+                }
+            });
+            return new FbsBlob(merged_1, true);
+        }
+    };
+    FbsBlob.prototype.uploadData = function () {
+        return this.data_;
+    };
+    return FbsBlob;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns true if the object is contained in the array (compared with ===).
+ * @template T
+ */
+function contains$1(array, elem) {
+    return array.indexOf(elem) !== -1;
+}
+/**
+ * Returns a shallow copy of the array or array-like object (e.g. arguments).
+ * @template T
+ */
+function clone$1(arraylike) {
+    return Array.prototype.slice.call(arraylike);
+}
+/**
+ * Removes the given element from the given array, if it is contained.
+ * Directly modifies the passed-in array.
+ * @template T
+ */
+function remove(array, elem) {
+    var i = array.indexOf(elem);
+    if (i !== -1) {
+        array.splice(i, 1);
+    }
+}
+
+var RequestInfo = /** @class */ (function () {
+    function RequestInfo(url, method, 
+    /**
+     * Returns the value with which to resolve the request's promise. Only called
+     * if the request is successful. Throw from this function to reject the
+     * returned Request's promise with the thrown error.
+     * Note: The XhrIo passed to this function may be reused after this callback
+     * returns. Do not keep a reference to it in any way.
+     */
+    handler, timeout) {
+        this.url = url;
+        this.method = method;
+        this.handler = handler;
+        this.timeout = timeout;
+        this.urlParams = {};
+        this.headers = {};
+        this.body = null;
+        this.errorHandler = null;
+        /**
+         * Called with the current number of bytes uploaded and total size (-1 if not
+         * computable) of the request body (i.e. used to report upload progress).
+         */
+        this.progressCallback = null;
+        this.successCodes = [200];
+        this.additionalRetryCodes = [];
+    }
+    return RequestInfo;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Throws the UNKNOWN FirebaseStorageError if cndn is false.
+ */
+function handlerCheck(cndn) {
+    if (!cndn) {
+        throw unknown();
+    }
+}
+function metadataHandler(authWrapper, mappings) {
+    function handler(xhr, text) {
+        var metadata = fromResourceString(authWrapper, text, mappings);
+        handlerCheck(metadata !== null);
+        return metadata;
+    }
+    return handler;
+}
+function downloadUrlHandler(authWrapper, mappings) {
+    function handler(xhr, text) {
+        var metadata = fromResourceString(authWrapper, text, mappings);
+        handlerCheck(metadata !== null);
+        return downloadUrlFromResourceString(metadata, text);
+    }
+    return handler;
+}
+function sharedErrorHandler(location) {
+    function errorHandler(xhr, err) {
+        var newErr;
+        if (xhr.getStatus() === 401) {
+            newErr = unauthenticated();
+        }
+        else {
+            if (xhr.getStatus() === 402) {
+                newErr = quotaExceeded(location.bucket);
+            }
+            else {
+                if (xhr.getStatus() === 403) {
+                    newErr = unauthorized(location.path);
+                }
+                else {
+                    newErr = err;
+                }
+            }
+        }
+        newErr.setServerResponseProp(err.serverResponseProp());
+        return newErr;
+    }
+    return errorHandler;
+}
+function objectErrorHandler(location) {
+    var shared = sharedErrorHandler(location);
+    function errorHandler(xhr, err) {
+        var newErr = shared(xhr, err);
+        if (xhr.getStatus() === 404) {
+            newErr = objectNotFound(location.path);
+        }
+        newErr.setServerResponseProp(err.serverResponseProp());
+        return newErr;
+    }
+    return errorHandler;
+}
+function getMetadata(authWrapper, location, mappings) {
+    var urlPart = location.fullServerUrl();
+    var url = makeNormalUrl(urlPart);
+    var method = 'GET';
+    var timeout = authWrapper.maxOperationRetryTime();
+    var requestInfo = new RequestInfo(url, method, metadataHandler(authWrapper, mappings), timeout);
+    requestInfo.errorHandler = objectErrorHandler(location);
+    return requestInfo;
+}
+function getDownloadUrl(authWrapper, location, mappings) {
+    var urlPart = location.fullServerUrl();
+    var url = makeNormalUrl(urlPart);
+    var method = 'GET';
+    var timeout = authWrapper.maxOperationRetryTime();
+    var requestInfo = new RequestInfo(url, method, downloadUrlHandler(authWrapper, mappings), timeout);
+    requestInfo.errorHandler = objectErrorHandler(location);
+    return requestInfo;
+}
+function updateMetadata(authWrapper, location, metadata, mappings) {
+    var urlPart = location.fullServerUrl();
+    var url = makeNormalUrl(urlPart);
+    var method = 'PATCH';
+    var body = toResourceString(metadata, mappings);
+    var headers = { 'Content-Type': 'application/json; charset=utf-8' };
+    var timeout = authWrapper.maxOperationRetryTime();
+    var requestInfo = new RequestInfo(url, method, metadataHandler(authWrapper, mappings), timeout);
+    requestInfo.headers = headers;
+    requestInfo.body = body;
+    requestInfo.errorHandler = objectErrorHandler(location);
+    return requestInfo;
+}
+function deleteObject(authWrapper, location) {
+    var urlPart = location.fullServerUrl();
+    var url = makeNormalUrl(urlPart);
+    var method = 'DELETE';
+    var timeout = authWrapper.maxOperationRetryTime();
+    function handler(xhr, text) { }
+    var requestInfo = new RequestInfo(url, method, handler, timeout);
+    requestInfo.successCodes = [200, 204];
+    requestInfo.errorHandler = objectErrorHandler(location);
+    return requestInfo;
+}
+function determineContentType_(metadata, blob) {
+    return ((metadata && metadata['contentType']) ||
+        (blob && blob.type()) ||
+        'application/octet-stream');
+}
+function metadataForUpload_(location, blob, opt_metadata) {
+    var metadata = clone(opt_metadata);
+    metadata['fullPath'] = location.path;
+    metadata['size'] = blob.size();
+    if (!metadata['contentType']) {
+        metadata['contentType'] = determineContentType_(null, blob);
+    }
+    return metadata;
+}
+function multipartUpload(authWrapper, location, mappings, blob, opt_metadata) {
+    var urlPart = location.bucketOnlyServerUrl();
+    var headers = {
+        'X-Goog-Upload-Protocol': 'multipart'
+    };
+    function genBoundary() {
+        var str = '';
+        for (var i = 0; i < 2; i++) {
+            str =
+                str +
+                    Math.random()
+                        .toString()
+                        .slice(2);
+        }
+        return str;
+    }
+    var boundary = genBoundary();
+    headers['Content-Type'] = 'multipart/related; boundary=' + boundary;
+    var metadata = metadataForUpload_(location, blob, opt_metadata);
+    var metadataString = toResourceString(metadata, mappings);
+    var preBlobPart = '--' +
+        boundary +
+        '\r\n' +
+        'Content-Type: application/json; charset=utf-8\r\n\r\n' +
+        metadataString +
+        '\r\n--' +
+        boundary +
+        '\r\n' +
+        'Content-Type: ' +
+        metadata['contentType'] +
+        '\r\n\r\n';
+    var postBlobPart = '\r\n--' + boundary + '--';
+    var body = FbsBlob.getBlob(preBlobPart, blob, postBlobPart);
+    if (body === null) {
+        throw cannotSliceBlob();
+    }
+    var urlParams = { name: metadata['fullPath'] };
+    var url = makeUploadUrl(urlPart);
+    var method = 'POST';
+    var timeout = authWrapper.maxUploadRetryTime();
+    var requestInfo = new RequestInfo(url, method, metadataHandler(authWrapper, mappings), timeout);
+    requestInfo.urlParams = urlParams;
+    requestInfo.headers = headers;
+    requestInfo.body = body.uploadData();
+    requestInfo.errorHandler = sharedErrorHandler(location);
+    return requestInfo;
+}
+/**
+ * @param current The number of bytes that have been uploaded so far.
+ * @param total The total number of bytes in the upload.
+ * @param opt_finalized True if the server has finished the upload.
+ * @param opt_metadata The upload metadata, should
+ *     only be passed if opt_finalized is true.
+ * @struct
+ */
+var ResumableUploadStatus = /** @class */ (function () {
+    function ResumableUploadStatus(current, total, finalized, metadata) {
+        this.current = current;
+        this.total = total;
+        this.finalized = !!finalized;
+        this.metadata = metadata || null;
+    }
+    return ResumableUploadStatus;
+}());
+function checkResumeHeader_(xhr, opt_allowed) {
+    var status;
+    try {
+        status = xhr.getResponseHeader('X-Goog-Upload-Status');
+    }
+    catch (e) {
+        handlerCheck(false);
+    }
+    var allowed = opt_allowed || ['active'];
+    handlerCheck(contains$1(allowed, status));
+    return status;
+}
+function createResumableUpload(authWrapper, location, mappings, blob, opt_metadata) {
+    var urlPart = location.bucketOnlyServerUrl();
+    var metadata = metadataForUpload_(location, blob, opt_metadata);
+    var urlParams = { name: metadata['fullPath'] };
+    var url = makeUploadUrl(urlPart);
+    var method = 'POST';
+    var headers = {
+        'X-Goog-Upload-Protocol': 'resumable',
+        'X-Goog-Upload-Command': 'start',
+        'X-Goog-Upload-Header-Content-Length': blob.size(),
+        'X-Goog-Upload-Header-Content-Type': metadata['contentType'],
+        'Content-Type': 'application/json; charset=utf-8'
+    };
+    var body = toResourceString(metadata, mappings);
+    var timeout = authWrapper.maxUploadRetryTime();
+    function handler(xhr, text) {
+        checkResumeHeader_(xhr);
+        var url;
+        try {
+            url = xhr.getResponseHeader('X-Goog-Upload-URL');
+        }
+        catch (e) {
+            handlerCheck(false);
+        }
+        handlerCheck(isString(url));
+        return url;
+    }
+    var requestInfo = new RequestInfo(url, method, handler, timeout);
+    requestInfo.urlParams = urlParams;
+    requestInfo.headers = headers;
+    requestInfo.body = body;
+    requestInfo.errorHandler = sharedErrorHandler(location);
+    return requestInfo;
+}
+/**
+ * @param url From a call to fbs.requests.createResumableUpload.
+ */
+function getResumableUploadStatus(authWrapper, location, url, blob) {
+    var headers = { 'X-Goog-Upload-Command': 'query' };
+    function handler(xhr, text) {
+        var status = checkResumeHeader_(xhr, ['active', 'final']);
+        var sizeString;
+        try {
+            sizeString = xhr.getResponseHeader('X-Goog-Upload-Size-Received');
+        }
+        catch (e) {
+            handlerCheck(false);
+        }
+        var size = parseInt(sizeString, 10);
+        handlerCheck(!isNaN(size));
+        return new ResumableUploadStatus(size, blob.size(), status === 'final');
+    }
+    var method = 'POST';
+    var timeout = authWrapper.maxUploadRetryTime();
+    var requestInfo = new RequestInfo(url, method, handler, timeout);
+    requestInfo.headers = headers;
+    requestInfo.errorHandler = sharedErrorHandler(location);
+    return requestInfo;
+}
+/**
+ * Any uploads via the resumable upload API must transfer a number of bytes
+ * that is a multiple of this number.
+ */
+var resumableUploadChunkSize = 256 * 1024;
+/**
+ * @param url From a call to fbs.requests.createResumableUpload.
+ * @param chunkSize Number of bytes to upload.
+ * @param opt_status The previous status.
+ *     If not passed or null, we start from the beginning.
+ * @throws fbs.Error If the upload is already complete, the passed in status
+ *     has a final size inconsistent with the blob, or the blob cannot be sliced
+ *     for upload.
+ */
+function continueResumableUpload(location, authWrapper, url, blob, chunkSize, mappings, opt_status, opt_progressCallback) {
+    // TODO(andysoto): standardize on internal asserts
+    // assert(!(opt_status && opt_status.finalized));
+    var status = new ResumableUploadStatus(0, 0);
+    if (opt_status) {
+        status.current = opt_status.current;
+        status.total = opt_status.total;
+    }
+    else {
+        status.current = 0;
+        status.total = blob.size();
+    }
+    if (blob.size() !== status.total) {
+        throw serverFileWrongSize();
+    }
+    var bytesLeft = status.total - status.current;
+    var bytesToUpload = bytesLeft;
+    if (chunkSize > 0) {
+        bytesToUpload = Math.min(bytesToUpload, chunkSize);
+    }
+    var startByte = status.current;
+    var endByte = startByte + bytesToUpload;
+    var uploadCommand = bytesToUpload === bytesLeft ? 'upload, finalize' : 'upload';
+    var headers = {
+        'X-Goog-Upload-Command': uploadCommand,
+        'X-Goog-Upload-Offset': status.current
+    };
+    var body = blob.slice(startByte, endByte);
+    if (body === null) {
+        throw cannotSliceBlob();
+    }
+    function handler(xhr, text) {
+        // TODO(andysoto): Verify the MD5 of each uploaded range:
+        // the 'x-range-md5' header comes back with status code 308 responses.
+        // We'll only be able to bail out though, because you can't re-upload a
+        // range that you previously uploaded.
+        var uploadStatus = checkResumeHeader_(xhr, ['active', 'final']);
+        var newCurrent = status.current + bytesToUpload;
+        var size = blob.size();
+        var metadata;
+        if (uploadStatus === 'final') {
+            metadata = metadataHandler(authWrapper, mappings)(xhr, text);
+        }
+        else {
+            metadata = null;
+        }
+        return new ResumableUploadStatus(newCurrent, size, uploadStatus === 'final', metadata);
+    }
+    var method = 'POST';
+    var timeout = authWrapper.maxUploadRetryTime();
+    var requestInfo = new RequestInfo(url, method, handler, timeout);
+    requestInfo.headers = headers;
+    requestInfo.body = body.uploadData();
+    requestInfo.progressCallback = opt_progressCallback || null;
+    requestInfo.errorHandler = sharedErrorHandler(location);
+    return requestInfo;
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @struct
+ */
+var Observer = /** @class */ (function () {
+    function Observer(nextOrObserver, opt_error, opt_complete) {
+        var asFunctions = isFunction(nextOrObserver) ||
+            isDef(opt_error) ||
+            isDef(opt_complete);
+        if (asFunctions) {
+            this.next = nextOrObserver;
+            this.error = opt_error || null;
+            this.complete = opt_complete || null;
+        }
+        else {
+            var observer = nextOrObserver;
+            this.next = observer.next || null;
+            this.error = observer.error || null;
+            this.complete = observer.complete || null;
+        }
+    }
+    return Observer;
+}());
+
+var UploadTaskSnapshot = /** @class */ (function () {
+    function UploadTaskSnapshot(bytesTransferred, totalBytes, state, metadata, task, ref) {
+        this.bytesTransferred = bytesTransferred;
+        this.totalBytes = totalBytes;
+        this.state = state;
+        this.metadata = metadata;
+        this.task = task;
+        this.ref = ref;
+    }
+    return UploadTaskSnapshot;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a function that invokes f with its arguments asynchronously as a
+ * microtask, i.e. as soon as possible after the current script returns back
+ * into browser code.
+ */
+function async(f) {
+    return function () {
+        var argsToForward = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            argsToForward[_i] = arguments[_i];
+        }
+        resolve(true).then(function () {
+            f.apply(null, argsToForward);
+        });
+    };
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Represents a blob being uploaded. Can be used to pause/resume/cancel the
+ * upload and manage callbacks for various events.
+ */
+var UploadTask = /** @class */ (function () {
+    /**
+     * @param ref The firebaseStorage.Reference object this task came
+     *     from, untyped to avoid cyclic dependencies.
+     * @param blob The blob to upload.
+     */
+    function UploadTask(ref, authWrapper, location, mappings, blob, metadata) {
+        if (metadata === void 0) { metadata = null; }
+        var _this = this;
+        this.transferred_ = 0;
+        this.needToFetchStatus_ = false;
+        this.needToFetchMetadata_ = false;
+        this.observers_ = [];
+        this.error_ = null;
+        this.uploadUrl_ = null;
+        this.request_ = null;
+        this.chunkMultiplier_ = 1;
+        this.resolve_ = null;
+        this.reject_ = null;
+        this.ref_ = ref;
+        this.authWrapper_ = authWrapper;
+        this.location_ = location;
+        this.blob_ = blob;
+        this.metadata_ = metadata;
+        this.mappings_ = mappings;
+        this.resumable_ = this.shouldDoResumable_(this.blob_);
+        this.state_ = InternalTaskState.RUNNING;
+        this.errorHandler_ = function (error) {
+            _this.request_ = null;
+            _this.chunkMultiplier_ = 1;
+            if (error.codeEquals(Code.CANCELED)) {
+                _this.needToFetchStatus_ = true;
+                _this.completeTransitions_();
+            }
+            else {
+                _this.error_ = error;
+                _this.transition_(InternalTaskState.ERROR);
+            }
+        };
+        this.metadataErrorHandler_ = function (error) {
+            _this.request_ = null;
+            if (error.codeEquals(Code.CANCELED)) {
+                _this.completeTransitions_();
+            }
+            else {
+                _this.error_ = error;
+                _this.transition_(InternalTaskState.ERROR);
+            }
+        };
+        this.promise_ = make(function (resolve$$1, reject$$1) {
+            _this.resolve_ = resolve$$1;
+            _this.reject_ = reject$$1;
+            _this.start_();
+        });
+        // Prevent uncaught rejections on the internal promise from bubbling out
+        // to the top level with a dummy handler.
+        this.promise_.then(null, function () { });
+    }
+    UploadTask.prototype.makeProgressCallback_ = function () {
+        var _this = this;
+        var sizeBefore = this.transferred_;
+        return function (loaded, total) {
+            _this.updateProgress_(sizeBefore + loaded);
+        };
+    };
+    UploadTask.prototype.shouldDoResumable_ = function (blob) {
+        return blob.size() > 256 * 1024;
+    };
+    UploadTask.prototype.start_ = function () {
+        if (this.state_ !== InternalTaskState.RUNNING) {
+            // This can happen if someone pauses us in a resume callback, for example.
+            return;
+        }
+        if (this.request_ !== null) {
+            return;
+        }
+        if (this.resumable_) {
+            if (this.uploadUrl_ === null) {
+                this.createResumable_();
+            }
+            else {
+                if (this.needToFetchStatus_) {
+                    this.fetchStatus_();
+                }
+                else {
+                    if (this.needToFetchMetadata_) {
+                        // Happens if we miss the metadata on upload completion.
+                        this.fetchMetadata_();
+                    }
+                    else {
+                        this.continueUpload_();
+                    }
+                }
+            }
+        }
+        else {
+            this.oneShotUpload_();
+        }
+    };
+    UploadTask.prototype.resolveToken_ = function (callback) {
+        var _this = this;
+        this.authWrapper_.getAuthToken().then(function (authToken) {
+            switch (_this.state_) {
+                case InternalTaskState.RUNNING:
+                    callback(authToken);
+                    break;
+                case InternalTaskState.CANCELING:
+                    _this.transition_(InternalTaskState.CANCELED);
+                    break;
+                case InternalTaskState.PAUSING:
+                    _this.transition_(InternalTaskState.PAUSED);
+                    break;
+                default:
+            }
+        });
+    };
+    // TODO(andysoto): assert false
+    UploadTask.prototype.createResumable_ = function () {
+        var _this = this;
+        this.resolveToken_(function (authToken) {
+            var requestInfo = createResumableUpload(_this.authWrapper_, _this.location_, _this.mappings_, _this.blob_, _this.metadata_);
+            var createRequest = _this.authWrapper_.makeRequest(requestInfo, authToken);
+            _this.request_ = createRequest;
+            createRequest.getPromise().then(function (url) {
+                _this.request_ = null;
+                _this.uploadUrl_ = url;
+                _this.needToFetchStatus_ = false;
+                _this.completeTransitions_();
+            }, _this.errorHandler_);
+        });
+    };
+    UploadTask.prototype.fetchStatus_ = function () {
+        var _this = this;
+        // TODO(andysoto): assert(this.uploadUrl_ !== null);
+        var url = this.uploadUrl_;
+        this.resolveToken_(function (authToken) {
+            var requestInfo = getResumableUploadStatus(_this.authWrapper_, _this.location_, url, _this.blob_);
+            var statusRequest = _this.authWrapper_.makeRequest(requestInfo, authToken);
+            _this.request_ = statusRequest;
+            statusRequest.getPromise().then(function (status) {
+                status = status;
+                _this.request_ = null;
+                _this.updateProgress_(status.current);
+                _this.needToFetchStatus_ = false;
+                if (status.finalized) {
+                    _this.needToFetchMetadata_ = true;
+                }
+                _this.completeTransitions_();
+            }, _this.errorHandler_);
+        });
+    };
+    UploadTask.prototype.continueUpload_ = function () {
+        var _this = this;
+        var chunkSize = resumableUploadChunkSize * this.chunkMultiplier_;
+        var status = new ResumableUploadStatus(this.transferred_, this.blob_.size());
+        // TODO(andysoto): assert(this.uploadUrl_ !== null);
+        var url = this.uploadUrl_;
+        this.resolveToken_(function (authToken) {
+            var requestInfo;
+            try {
+                requestInfo = continueResumableUpload(_this.location_, _this.authWrapper_, url, _this.blob_, chunkSize, _this.mappings_, status, _this.makeProgressCallback_());
+            }
+            catch (e) {
+                _this.error_ = e;
+                _this.transition_(InternalTaskState.ERROR);
+                return;
+            }
+            var uploadRequest = _this.authWrapper_.makeRequest(requestInfo, authToken);
+            _this.request_ = uploadRequest;
+            uploadRequest
+                .getPromise()
+                .then(function (newStatus) {
+                _this.increaseMultiplier_();
+                _this.request_ = null;
+                _this.updateProgress_(newStatus.current);
+                if (newStatus.finalized) {
+                    _this.metadata_ = newStatus.metadata;
+                    _this.transition_(InternalTaskState.SUCCESS);
+                }
+                else {
+                    _this.completeTransitions_();
+                }
+            }, _this.errorHandler_);
+        });
+    };
+    UploadTask.prototype.increaseMultiplier_ = function () {
+        var currentSize = resumableUploadChunkSize * this.chunkMultiplier_;
+        // Max chunk size is 32M.
+        if (currentSize < 32 * 1024 * 1024) {
+            this.chunkMultiplier_ *= 2;
+        }
+    };
+    UploadTask.prototype.fetchMetadata_ = function () {
+        var _this = this;
+        this.resolveToken_(function (authToken) {
+            var requestInfo = getMetadata(_this.authWrapper_, _this.location_, _this.mappings_);
+            var metadataRequest = _this.authWrapper_.makeRequest(requestInfo, authToken);
+            _this.request_ = metadataRequest;
+            metadataRequest.getPromise().then(function (metadata) {
+                _this.request_ = null;
+                _this.metadata_ = metadata;
+                _this.transition_(InternalTaskState.SUCCESS);
+            }, _this.metadataErrorHandler_);
+        });
+    };
+    UploadTask.prototype.oneShotUpload_ = function () {
+        var _this = this;
+        this.resolveToken_(function (authToken) {
+            var requestInfo = multipartUpload(_this.authWrapper_, _this.location_, _this.mappings_, _this.blob_, _this.metadata_);
+            var multipartRequest = _this.authWrapper_.makeRequest(requestInfo, authToken);
+            _this.request_ = multipartRequest;
+            multipartRequest.getPromise().then(function (metadata) {
+                _this.request_ = null;
+                _this.metadata_ = metadata;
+                _this.updateProgress_(_this.blob_.size());
+                _this.transition_(InternalTaskState.SUCCESS);
+            }, _this.errorHandler_);
+        });
+    };
+    UploadTask.prototype.updateProgress_ = function (transferred) {
+        var old = this.transferred_;
+        this.transferred_ = transferred;
+        // A progress update can make the "transferred" value smaller (e.g. a
+        // partial upload not completed by server, after which the "transferred"
+        // value may reset to the value at the beginning of the request).
+        if (this.transferred_ !== old) {
+            this.notifyObservers_();
+        }
+    };
+    UploadTask.prototype.transition_ = function (state) {
+        if (this.state_ === state) {
+            return;
+        }
+        switch (state) {
+            case InternalTaskState.CANCELING:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.RUNNING ||
+                //        this.state_ === InternalTaskState.PAUSING);
+                this.state_ = state;
+                if (this.request_ !== null) {
+                    this.request_.cancel();
+                }
+                break;
+            case InternalTaskState.PAUSING:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.RUNNING);
+                this.state_ = state;
+                if (this.request_ !== null) {
+                    this.request_.cancel();
+                }
+                break;
+            case InternalTaskState.RUNNING:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.PAUSED ||
+                //        this.state_ === InternalTaskState.PAUSING);
+                var wasPaused = this.state_ === InternalTaskState.PAUSED;
+                this.state_ = state;
+                if (wasPaused) {
+                    this.notifyObservers_();
+                    this.start_();
+                }
+                break;
+            case InternalTaskState.PAUSED:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.PAUSING);
+                this.state_ = state;
+                this.notifyObservers_();
+                break;
+            case InternalTaskState.CANCELED:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.PAUSED ||
+                //        this.state_ === InternalTaskState.CANCELING);
+                this.error_ = canceled();
+                this.state_ = state;
+                this.notifyObservers_();
+                break;
+            case InternalTaskState.ERROR:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.RUNNING ||
+                //        this.state_ === InternalTaskState.PAUSING ||
+                //        this.state_ === InternalTaskState.CANCELING);
+                this.state_ = state;
+                this.notifyObservers_();
+                break;
+            case InternalTaskState.SUCCESS:
+                // TODO(andysoto):
+                // assert(this.state_ === InternalTaskState.RUNNING ||
+                //        this.state_ === InternalTaskState.PAUSING ||
+                //        this.state_ === InternalTaskState.CANCELING);
+                this.state_ = state;
+                this.notifyObservers_();
+                break;
+        }
+    };
+    UploadTask.prototype.completeTransitions_ = function () {
+        switch (this.state_) {
+            case InternalTaskState.PAUSING:
+                this.transition_(InternalTaskState.PAUSED);
+                break;
+            case InternalTaskState.CANCELING:
+                this.transition_(InternalTaskState.CANCELED);
+                break;
+            case InternalTaskState.RUNNING:
+                this.start_();
+                break;
+            default:
+                // TODO(andysoto): assert(false);
+                break;
+        }
+    };
+    Object.defineProperty(UploadTask.prototype, "snapshot", {
+        get: function () {
+            var externalState = taskStateFromInternalTaskState(this.state_);
+            return new UploadTaskSnapshot(this.transferred_, this.blob_.size(), externalState, this.metadata_, this, this.ref_);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Adds a callback for an event.
+     * @param type The type of event to listen for.
+     */
+    UploadTask.prototype.on = function (type, nextOrObserver, error, completed) {
+        if (nextOrObserver === void 0) { nextOrObserver = undefined; }
+        if (error === void 0) { error = undefined; }
+        if (completed === void 0) { completed = undefined; }
+        function typeValidator(_p) {
+            if (type !== TaskEvent.STATE_CHANGED) {
+                throw "Expected one of the event types: [" + TaskEvent.STATE_CHANGED + "].";
+            }
+        }
+        var nextOrObserverMessage = 'Expected a function or an Object with one of ' +
+            '`next`, `error`, `complete` properties.';
+        var nextValidator = nullFunctionSpec(true).validator;
+        var observerValidator = looseObjectSpec(null, true).validator;
+        function nextOrObserverValidator(p) {
+            try {
+                nextValidator(p);
+                return;
+            }
+            catch (e) { }
+            try {
+                observerValidator(p);
+                var anyDefined = isJustDef(p['next']) ||
+                    isJustDef(p['error']) ||
+                    isJustDef(p['complete']);
+                if (!anyDefined) {
+                    throw '';
+                }
+                return;
+            }
+            catch (e) {
+                throw nextOrObserverMessage;
+            }
+        }
+        var specs = [
+            stringSpec(typeValidator),
+            looseObjectSpec(nextOrObserverValidator, true),
+            nullFunctionSpec(true),
+            nullFunctionSpec(true)
+        ];
+        validate('on', specs, arguments);
+        var self = this;
+        function makeBinder(specs) {
+            function binder(nextOrObserver, error, opt_complete) {
+                if (specs !== null) {
+                    validate('on', specs, arguments);
+                }
+                var observer = new Observer(nextOrObserver, error, completed);
+                self.addObserver_(observer);
+                return function () {
+                    self.removeObserver_(observer);
+                };
+            }
+            return binder;
+        }
+        function binderNextOrObserverValidator(p) {
+            if (p === null) {
+                throw nextOrObserverMessage;
+            }
+            nextOrObserverValidator(p);
+        }
+        var binderSpecs = [
+            looseObjectSpec(binderNextOrObserverValidator),
+            nullFunctionSpec(true),
+            nullFunctionSpec(true)
+        ];
+        var typeOnly = !(isJustDef(nextOrObserver) ||
+            isJustDef(error) ||
+            isJustDef(completed));
+        if (typeOnly) {
+            return makeBinder(binderSpecs);
+        }
+        else {
+            return makeBinder(null)(nextOrObserver, error, completed);
+        }
+    };
+    /**
+     * This object behaves like a Promise, and resolves with its snapshot data
+     * when the upload completes.
+     * @param onFulfilled The fulfillment callback. Promise chaining works as normal.
+     * @param onRejected The rejection callback.
+     */
+    UploadTask.prototype.then = function (onFulfilled, onRejected) {
+        // These casts are needed so that TypeScript can infer the types of the
+        // resulting Promise.
+        return this.promise_.then(onFulfilled, onRejected);
+    };
+    /**
+     * Equivalent to calling `then(null, onRejected)`.
+     */
+    UploadTask.prototype.catch = function (onRejected) {
+        return this.then(null, onRejected);
+    };
+    /**
+     * Adds the given observer.
+     */
+    UploadTask.prototype.addObserver_ = function (observer) {
+        this.observers_.push(observer);
+        this.notifyObserver_(observer);
+    };
+    /**
+     * Removes the given observer.
+     */
+    UploadTask.prototype.removeObserver_ = function (observer) {
+        remove(this.observers_, observer);
+    };
+    UploadTask.prototype.notifyObservers_ = function () {
+        var _this = this;
+        this.finishPromise_();
+        var observers = clone$1(this.observers_);
+        observers.forEach(function (observer) {
+            _this.notifyObserver_(observer);
+        });
+    };
+    UploadTask.prototype.finishPromise_ = function () {
+        if (this.resolve_ !== null) {
+            var triggered = true;
+            switch (taskStateFromInternalTaskState(this.state_)) {
+                case TaskState.SUCCESS:
+                    async(this.resolve_.bind(null, this.snapshot))();
+                    break;
+                case TaskState.CANCELED:
+                case TaskState.ERROR:
+                    var toCall = this.reject_;
+                    async(toCall.bind(null, this.error_))();
+                    break;
+                default:
+                    triggered = false;
+                    break;
+            }
+            if (triggered) {
+                this.resolve_ = null;
+                this.reject_ = null;
+            }
+        }
+    };
+    UploadTask.prototype.notifyObserver_ = function (observer) {
+        var externalState = taskStateFromInternalTaskState(this.state_);
+        switch (externalState) {
+            case TaskState.RUNNING:
+            case TaskState.PAUSED:
+                if (observer.next !== null) {
+                    async(observer.next.bind(observer, this.snapshot))();
+                }
+                break;
+            case TaskState.SUCCESS:
+                if (observer.complete !== null) {
+                    async(observer.complete.bind(observer))();
+                }
+                break;
+            case TaskState.CANCELED:
+            case TaskState.ERROR:
+                if (observer.error !== null) {
+                    async(observer.error.bind(observer, this.error_))();
+                }
+                break;
+            default:
+                // TODO(andysoto): assert(false);
+                if (observer.error !== null) {
+                    async(observer.error.bind(observer, this.error_))();
+                }
+        }
+    };
+    /**
+     * Resumes a paused task. Has no effect on a currently running or failed task.
+     * @return True if the operation took effect, false if ignored.
+     */
+    UploadTask.prototype.resume = function () {
+        validate('resume', [], arguments);
+        var valid = this.state_ === InternalTaskState.PAUSED ||
+            this.state_ === InternalTaskState.PAUSING;
+        if (valid) {
+            this.transition_(InternalTaskState.RUNNING);
+        }
+        return valid;
+    };
+    /**
+     * Pauses a currently running task. Has no effect on a paused or failed task.
+     * @return True if the operation took effect, false if ignored.
+     */
+    UploadTask.prototype.pause = function () {
+        validate('pause', [], arguments);
+        var valid = this.state_ === InternalTaskState.RUNNING;
+        if (valid) {
+            this.transition_(InternalTaskState.PAUSING);
+        }
+        return valid;
+    };
+    /**
+     * Cancels a currently running or paused task. Has no effect on a complete or
+     * failed task.
+     * @return True if the operation took effect, false if ignored.
+     */
+    UploadTask.prototype.cancel = function () {
+        validate('cancel', [], arguments);
+        var valid = this.state_ === InternalTaskState.RUNNING ||
+            this.state_ === InternalTaskState.PAUSING;
+        if (valid) {
+            this.transition_(InternalTaskState.CANCELING);
+        }
+        return valid;
+    };
+    return UploadTask;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Provides methods to interact with a bucket in the Firebase Storage service.
+ * @param location An fbs.location, or the URL at
+ *     which to base this object, in one of the following forms:
+ *         gs://<bucket>/<object-path>
+ *         http[s]://firebasestorage.googleapis.com/
+ *                     <api-version>/b/<bucket>/o/<object-path>
+ *     Any query or fragment strings will be ignored in the http[s]
+ *     format. If no value is passed, the storage object will use a URL based on
+ *     the project ID of the base firebase.App instance.
+ */
+var Reference = /** @class */ (function () {
+    function Reference(authWrapper, location) {
+        this.authWrapper = authWrapper;
+        if (location instanceof Location) {
+            this.location = location;
+        }
+        else {
+            this.location = Location.makeFromUrl(location);
+        }
+    }
+    /**
+     * @return The URL for the bucket and path this object references,
+     *     in the form gs://<bucket>/<object-path>
+     * @override
+     */
+    Reference.prototype.toString = function () {
+        validate('toString', [], arguments);
+        return 'gs://' + this.location.bucket + '/' + this.location.path;
+    };
+    Reference.prototype.newRef = function (authWrapper, location) {
+        return new Reference(authWrapper, location);
+    };
+    Reference.prototype.mappings = function () {
+        return getMappings();
+    };
+    /**
+     * @return A reference to the object obtained by
+     *     appending childPath, removing any duplicate, beginning, or trailing
+     *     slashes.
+     */
+    Reference.prototype.child = function (childPath) {
+        validate('child', [stringSpec()], arguments);
+        var newPath = child(this.location.path, childPath);
+        var location = new Location(this.location.bucket, newPath);
+        return this.newRef(this.authWrapper, location);
+    };
+    Object.defineProperty(Reference.prototype, "parent", {
+        /**
+         * @return A reference to the parent of the
+         *     current object, or null if the current object is the root.
+         */
+        get: function () {
+            var newPath = parent(this.location.path);
+            if (newPath === null) {
+                return null;
+            }
+            var location = new Location(this.location.bucket, newPath);
+            return this.newRef(this.authWrapper, location);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Reference.prototype, "root", {
+        /**
+         * @return An reference to the root of this
+         *     object's bucket.
+         */
+        get: function () {
+            var location = new Location(this.location.bucket, '');
+            return this.newRef(this.authWrapper, location);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Reference.prototype, "bucket", {
+        get: function () {
+            return this.location.bucket;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Reference.prototype, "fullPath", {
+        get: function () {
+            return this.location.path;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Reference.prototype, "name", {
+        get: function () {
+            return lastComponent(this.location.path);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Reference.prototype, "storage", {
+        get: function () {
+            return this.authWrapper.service();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Uploads a blob to this object's location.
+     * @param data The blob to upload.
+     * @return An UploadTask that lets you control and
+     *     observe the upload.
+     */
+    Reference.prototype.put = function (data, metadata) {
+        if (metadata === void 0) { metadata = null; }
+        validate('put', [uploadDataSpec(), metadataSpec(true)], arguments);
+        this.throwIfRoot_('put');
+        return new UploadTask(this, this.authWrapper, this.location, this.mappings(), new FbsBlob(data), metadata);
+    };
+    /**
+     * Uploads a string to this object's location.
+     * @param string The string to upload.
+     * @param opt_format The format of the string to upload.
+     * @return An UploadTask that lets you control and
+     *     observe the upload.
+     */
+    Reference.prototype.putString = function (string, format, opt_metadata) {
+        if (format === void 0) { format = StringFormat.RAW; }
+        validate('putString', [
+            stringSpec(),
+            stringSpec(formatValidator, true),
+            metadataSpec(true)
+        ], arguments);
+        this.throwIfRoot_('putString');
+        var data = dataFromString(format, string);
+        var metadata = clone(opt_metadata);
+        if (!isDef(metadata['contentType']) && isDef(data.contentType)) {
+            metadata['contentType'] = data.contentType;
+        }
+        return new UploadTask(this, this.authWrapper, this.location, this.mappings(), new FbsBlob(data.data, true), metadata);
+    };
+    /**
+     * Deletes the object at this location.
+     * @return A promise that resolves if the deletion succeeds.
+     */
+    Reference.prototype.delete = function () {
+        validate('delete', [], arguments);
+        this.throwIfRoot_('delete');
+        var self = this;
+        return this.authWrapper.getAuthToken().then(function (authToken) {
+            var requestInfo = deleteObject(self.authWrapper, self.location);
+            return self.authWrapper.makeRequest(requestInfo, authToken).getPromise();
+        });
+    };
+    /**
+     *     A promise that resolves with the metadata for this object. If this
+     *     object doesn't exist or metadata cannot be retreived, the promise is
+     *     rejected.
+     */
+    Reference.prototype.getMetadata = function () {
+        validate('getMetadata', [], arguments);
+        this.throwIfRoot_('getMetadata');
+        var self = this;
+        return this.authWrapper.getAuthToken().then(function (authToken) {
+            var requestInfo = getMetadata(self.authWrapper, self.location, self.mappings());
+            return self.authWrapper.makeRequest(requestInfo, authToken).getPromise();
+        });
+    };
+    /**
+     * Updates the metadata for this object.
+     * @param metadata The new metadata for the object.
+     *     Only values that have been explicitly set will be changed. Explicitly
+     *     setting a value to null will remove the metadata.
+     * @return A promise that resolves
+     *     with the new metadata for this object.
+     *     @see firebaseStorage.Reference.prototype.getMetadata
+     */
+    Reference.prototype.updateMetadata = function (metadata) {
+        validate('updateMetadata', [metadataSpec()], arguments);
+        this.throwIfRoot_('updateMetadata');
+        var self = this;
+        return this.authWrapper.getAuthToken().then(function (authToken) {
+            var requestInfo = updateMetadata(self.authWrapper, self.location, metadata, self.mappings());
+            return self.authWrapper.makeRequest(requestInfo, authToken).getPromise();
+        });
+    };
+    /**
+     * @return A promise that resolves with the download
+     *     URL for this object.
+     */
+    Reference.prototype.getDownloadURL = function () {
+        validate('getDownloadURL', [], arguments);
+        this.throwIfRoot_('getDownloadURL');
+        var self = this;
+        return this.authWrapper.getAuthToken().then(function (authToken) {
+            var requestInfo = getDownloadUrl(self.authWrapper, self.location, self.mappings());
+            return self.authWrapper
+                .makeRequest(requestInfo, authToken)
+                .getPromise()
+                .then(function (url) {
+                if (url === null) {
+                    throw noDownloadURL();
+                }
+                return url;
+            });
+        });
+    };
+    Reference.prototype.throwIfRoot_ = function (name) {
+        if (this.location.path === '') {
+            throw invalidRootOperation(name);
+        }
+    };
+    return Reference;
+}());
+
+/**
+ * A request whose promise always fails.
+ * @struct
+ * @template T
+ */
+var FailRequest = /** @class */ (function () {
+    function FailRequest(error) {
+        this.promise_ = reject(error);
+    }
+    /** @inheritDoc */
+    FailRequest.prototype.getPromise = function () {
+        return this.promise_;
+    };
+    /** @inheritDoc */
+    FailRequest.prototype.cancel = function (appDelete) {
+        if (appDelete === void 0) { appDelete = false; }
+    };
+    return FailRequest;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @struct
+ */
+var RequestMap = /** @class */ (function () {
+    function RequestMap() {
+        this.map_ = {};
+        this.id_ = minSafeInteger;
+    }
+    /**
+     * Registers the given request with this map.
+     * The request is unregistered when it completes.
+     * @param r The request to register.
+     */
+    RequestMap.prototype.addRequest = function (r) {
+        var id = this.id_;
+        this.id_++;
+        this.map_[id] = r;
+        var self = this;
+        function unmap() {
+            delete self.map_[id];
+        }
+        r.getPromise().then(unmap, unmap);
+    };
+    /**
+     * Cancels all registered requests.
+     */
+    RequestMap.prototype.clear = function () {
+        forEach(this.map_, function (key, val) {
+            if (val) {
+                val.cancel(true);
+            }
+        });
+        this.map_ = {};
+    };
+    return RequestMap;
+}());
+
+/**
+ * @param app If null, getAuthToken always resolves with null.
+ * @param service The storage service associated with this auth wrapper.
+ *     Untyped to avoid circular type dependencies.
+ * @struct
+ */
+var AuthWrapper = /** @class */ (function () {
+    function AuthWrapper(app, maker, requestMaker, service, pool) {
+        this.bucket_ = null;
+        this.deleted_ = false;
+        this.app_ = app;
+        if (this.app_ !== null) {
+            var options = this.app_.options;
+            if (isDef(options)) {
+                this.bucket_ = AuthWrapper.extractBucket_(options);
+            }
+        }
+        this.storageRefMaker_ = maker;
+        this.requestMaker_ = requestMaker;
+        this.pool_ = pool;
+        this.service_ = service;
+        this.maxOperationRetryTime_ = defaultMaxOperationRetryTime;
+        this.maxUploadRetryTime_ = defaultMaxUploadRetryTime;
+        this.requestMap_ = new RequestMap();
+    }
+    AuthWrapper.extractBucket_ = function (config) {
+        var bucketString = config[configOption] || null;
+        if (bucketString == null) {
+            return null;
+        }
+        var loc = Location.makeFromBucketSpec(bucketString);
+        return loc.bucket;
+    };
+    AuthWrapper.prototype.getAuthToken = function () {
+        // TODO(andysoto): remove ifDef checks after firebase-app implements stubs
+        // (b/28673818).
+        if (this.app_ !== null &&
+            isDef(this.app_.INTERNAL) &&
+            isDef(this.app_.INTERNAL.getToken)) {
+            return this.app_.INTERNAL.getToken().then(function (response) {
+                if (response !== null) {
+                    return response.accessToken;
+                }
+                else {
+                    return null;
+                }
+            }, function (_error) {
+                return null;
+            });
+        }
+        else {
+            return resolve(null);
+        }
+    };
+    AuthWrapper.prototype.bucket = function () {
+        if (this.deleted_) {
+            throw appDeleted();
+        }
+        else {
+            return this.bucket_;
+        }
+    };
+    /**
+     * The service associated with this auth wrapper. Untyped to avoid circular
+     * type dependencies.
+     */
+    AuthWrapper.prototype.service = function () {
+        return this.service_;
+    };
+    /**
+     * Returns a new firebaseStorage.Reference object referencing this AuthWrapper
+     * at the given Location.
+     * @param loc The Location.
+     * @return Actually a firebaseStorage.Reference, typing not allowed
+     *     because of circular dependency problems.
+     */
+    AuthWrapper.prototype.makeStorageReference = function (loc) {
+        return this.storageRefMaker_(this, loc);
+    };
+    AuthWrapper.prototype.makeRequest = function (requestInfo, authToken) {
+        if (!this.deleted_) {
+            var request = this.requestMaker_(requestInfo, authToken, this.pool_);
+            this.requestMap_.addRequest(request);
+            return request;
+        }
+        else {
+            return new FailRequest(appDeleted());
+        }
+    };
+    /**
+     * Stop running requests and prevent more from being created.
+     */
+    AuthWrapper.prototype.deleteApp = function () {
+        this.deleted_ = true;
+        this.app_ = null;
+        this.requestMap_.clear();
+    };
+    AuthWrapper.prototype.maxUploadRetryTime = function () {
+        return this.maxUploadRetryTime_;
+    };
+    AuthWrapper.prototype.setMaxUploadRetryTime = function (time) {
+        this.maxUploadRetryTime_ = time;
+    };
+    AuthWrapper.prototype.maxOperationRetryTime = function () {
+        return this.maxOperationRetryTime_;
+    };
+    AuthWrapper.prototype.setMaxOperationRetryTime = function (time) {
+        this.maxOperationRetryTime_ = time;
+    };
+    return AuthWrapper;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @param f May be invoked
+ *     before the function returns.
+ * @param callback Get all the arguments passed to the function
+ *     passed to f, including the initial boolean.
+ */
+function start(f, callback, timeout) {
+    // TODO(andysoto): make this code cleaner (probably refactor into an actual
+    // type instead of a bunch of functions with state shared in the closure)
+    var waitSeconds = 1;
+    // Would type this as "number" but that doesn't work for Node so ¯\_(ツ)_/¯
+    var timeoutId = null;
+    var hitTimeout = false;
+    var cancelState = 0;
+    function canceled() {
+        return cancelState === 2;
+    }
+    var triggeredCallback = false;
+    function triggerCallback() {
+        if (!triggeredCallback) {
+            triggeredCallback = true;
+            callback.apply(null, arguments);
+        }
+    }
+    function callWithDelay(millis) {
+        timeoutId = setTimeout(function () {
+            timeoutId = null;
+            f(handler, canceled());
+        }, millis);
+    }
+    function handler(success) {
+        var var_args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            var_args[_i - 1] = arguments[_i];
+        }
+        if (triggeredCallback) {
+            return;
+        }
+        if (success) {
+            triggerCallback.apply(null, arguments);
+            return;
+        }
+        var mustStop = canceled() || hitTimeout;
+        if (mustStop) {
+            triggerCallback.apply(null, arguments);
+            return;
+        }
+        if (waitSeconds < 64) {
+            /* TODO(andysoto): don't back off so quickly if we know we're offline. */
+            waitSeconds *= 2;
+        }
+        var waitMillis;
+        if (cancelState === 1) {
+            cancelState = 2;
+            waitMillis = 0;
+        }
+        else {
+            waitMillis = (waitSeconds + Math.random()) * 1000;
+        }
+        callWithDelay(waitMillis);
+    }
+    var stopped = false;
+    function stop(wasTimeout) {
+        if (stopped) {
+            return;
+        }
+        stopped = true;
+        if (triggeredCallback) {
+            return;
+        }
+        if (timeoutId !== null) {
+            if (!wasTimeout) {
+                cancelState = 2;
+            }
+            clearTimeout(timeoutId);
+            callWithDelay(0);
+        }
+        else {
+            if (!wasTimeout) {
+                cancelState = 1;
+            }
+        }
+    }
+    callWithDelay(0);
+    setTimeout(function () {
+        hitTimeout = true;
+        stop(true);
+    }, timeout);
+    return stop;
+}
+/**
+ * Stops the retry loop from repeating.
+ * If the function is currently "in between" retries, it is invoked immediately
+ * with the second parameter as "true". Otherwise, it will be invoked once more
+ * after the current invocation finishes iff the current invocation would have
+ * triggered another retry.
+ */
+function stop(id) {
+    id(false);
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * @struct
+ * @template T
+ */
+var NetworkRequest = /** @class */ (function () {
+    function NetworkRequest(url, method, headers, body, successCodes, additionalRetryCodes, callback, errorCallback, timeout, progressCallback, pool) {
+        this.pendingXhr_ = null;
+        this.backoffId_ = null;
+        this.resolve_ = null;
+        this.reject_ = null;
+        this.canceled_ = false;
+        this.appDelete_ = false;
+        this.url_ = url;
+        this.method_ = method;
+        this.headers_ = headers;
+        this.body_ = body;
+        this.successCodes_ = successCodes.slice();
+        this.additionalRetryCodes_ = additionalRetryCodes.slice();
+        this.callback_ = callback;
+        this.errorCallback_ = errorCallback;
+        this.progressCallback_ = progressCallback;
+        this.timeout_ = timeout;
+        this.pool_ = pool;
+        var self = this;
+        this.promise_ = make(function (resolve$$1, reject$$1) {
+            self.resolve_ = resolve$$1;
+            self.reject_ = reject$$1;
+            self.start_();
+        });
+    }
+    /**
+     * Actually starts the retry loop.
+     */
+    NetworkRequest.prototype.start_ = function () {
+        var self = this;
+        function doTheRequest(backoffCallback, canceled$$1) {
+            if (canceled$$1) {
+                backoffCallback(false, new RequestEndStatus(false, null, true));
+                return;
+            }
+            var xhr = self.pool_.createXhrIo();
+            self.pendingXhr_ = xhr;
+            function progressListener(progressEvent) {
+                var loaded = progressEvent.loaded;
+                var total = progressEvent.lengthComputable ? progressEvent.total : -1;
+                if (self.progressCallback_ !== null) {
+                    self.progressCallback_(loaded, total);
+                }
+            }
+            if (self.progressCallback_ !== null) {
+                xhr.addUploadProgressListener(progressListener);
+            }
+            xhr
+                .send(self.url_, self.method_, self.body_, self.headers_)
+                .then(function (xhr) {
+                if (self.progressCallback_ !== null) {
+                    xhr.removeUploadProgressListener(progressListener);
+                }
+                self.pendingXhr_ = null;
+                xhr = xhr;
+                var hitServer = xhr.getErrorCode() === ErrorCode.NO_ERROR;
+                var status = xhr.getStatus();
+                if (!hitServer || self.isRetryStatusCode_(status)) {
+                    var wasCanceled = xhr.getErrorCode() === ErrorCode.ABORT;
+                    backoffCallback(false, new RequestEndStatus(false, null, wasCanceled));
+                    return;
+                }
+                var successCode = contains$1(self.successCodes_, status);
+                backoffCallback(true, new RequestEndStatus(successCode, xhr));
+            });
+        }
+        /**
+         * @param requestWentThrough True if the request eventually went
+         *     through, false if it hit the retry limit or was canceled.
+         */
+        function backoffDone(requestWentThrough, status) {
+            var resolve$$1 = self.resolve_;
+            var reject$$1 = self.reject_;
+            var xhr = status.xhr;
+            if (status.wasSuccessCode) {
+                try {
+                    var result = self.callback_(xhr, xhr.getResponseText());
+                    if (isJustDef(result)) {
+                        resolve$$1(result);
+                    }
+                    else {
+                        resolve$$1();
+                    }
+                }
+                catch (e) {
+                    reject$$1(e);
+                }
+            }
+            else {
+                if (xhr !== null) {
+                    var err = unknown();
+                    err.setServerResponseProp(xhr.getResponseText());
+                    if (self.errorCallback_) {
+                        reject$$1(self.errorCallback_(xhr, err));
+                    }
+                    else {
+                        reject$$1(err);
+                    }
+                }
+                else {
+                    if (status.canceled) {
+                        var err = self.appDelete_
+                            ? appDeleted()
+                            : canceled();
+                        reject$$1(err);
+                    }
+                    else {
+                        var err = retryLimitExceeded();
+                        reject$$1(err);
+                    }
+                }
+            }
+        }
+        if (this.canceled_) {
+            backoffDone(false, new RequestEndStatus(false, null, true));
+        }
+        else {
+            this.backoffId_ = start(doTheRequest, backoffDone, this.timeout_);
+        }
+    };
+    /** @inheritDoc */
+    NetworkRequest.prototype.getPromise = function () {
+        return this.promise_;
+    };
+    /** @inheritDoc */
+    NetworkRequest.prototype.cancel = function (appDelete) {
+        this.canceled_ = true;
+        this.appDelete_ = appDelete || false;
+        if (this.backoffId_ !== null) {
+            stop(this.backoffId_);
+        }
+        if (this.pendingXhr_ !== null) {
+            this.pendingXhr_.abort();
+        }
+    };
+    NetworkRequest.prototype.isRetryStatusCode_ = function (status) {
+        // The codes for which to retry came from this page:
+        // https://cloud.google.com/storage/docs/exponential-backoff
+        var isFiveHundredCode = status >= 500 && status < 600;
+        var extraRetryCodes = [
+            // Request Timeout: web server didn't receive full request in time.
+            408,
+            // Too Many Requests: you're getting rate-limited, basically.
+            429
+        ];
+        var isExtraRetryCode = contains$1(extraRetryCodes, status);
+        var isRequestSpecificRetryCode = contains$1(this.additionalRetryCodes_, status);
+        return isFiveHundredCode || isExtraRetryCode || isRequestSpecificRetryCode;
+    };
+    return NetworkRequest;
+}());
+/**
+ * A collection of information about the result of a network request.
+ * @param opt_canceled Defaults to false.
+ * @struct
+ */
+var RequestEndStatus = /** @class */ (function () {
+    function RequestEndStatus(wasSuccessCode, xhr, opt_canceled) {
+        this.wasSuccessCode = wasSuccessCode;
+        this.xhr = xhr;
+        this.canceled = !!opt_canceled;
+    }
+    return RequestEndStatus;
+}());
+function addAuthHeader_(headers, authToken) {
+    if (authToken !== null && authToken.length > 0) {
+        headers['Authorization'] = 'Firebase ' + authToken;
+    }
+}
+function addVersionHeader_(headers) {
+    var number = typeof _firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a !== 'undefined' ? _firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.SDK_VERSION : 'AppManager';
+    headers['X-Firebase-Storage-Version'] = 'webjs/' + number;
+}
+/**
+ * @template T
+ */
+function makeRequest(requestInfo, authToken, pool) {
+    var queryPart = makeQueryString(requestInfo.urlParams);
+    var url = requestInfo.url + queryPart;
+    var headers = clone(requestInfo.headers);
+    addAuthHeader_(headers, authToken);
+    addVersionHeader_(headers);
+    return new NetworkRequest(url, requestInfo.method, headers, requestInfo.body, requestInfo.successCodes, requestInfo.additionalRetryCodes, requestInfo.handler, requestInfo.errorHandler, requestInfo.timeout, requestInfo.progressCallback, pool);
+}
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * A service that provides firebaseStorage.Reference instances.
+ * @param opt_url gs:// url to a custom Storage Bucket
+ *
+ * @struct
+ */
+var Service = /** @class */ (function () {
+    function Service(app, pool, url) {
+        this.bucket_ = null;
+        function maker(authWrapper, loc) {
+            return new Reference(authWrapper, loc);
+        }
+        this.authWrapper_ = new AuthWrapper(app, maker, makeRequest, this, pool);
+        this.app_ = app;
+        if (url != null) {
+            this.bucket_ = Location.makeFromBucketSpec(url);
+        }
+        else {
+            var authWrapperBucket = this.authWrapper_.bucket();
+            if (authWrapperBucket != null) {
+                this.bucket_ = new Location(authWrapperBucket, '');
+            }
+        }
+        this.internals_ = new ServiceInternals(this);
+    }
+    /**
+     * Returns a firebaseStorage.Reference for the given path in the default
+     * bucket.
+     */
+    Service.prototype.ref = function (path) {
+        function validator(path) {
+            if (/^[A-Za-z]+:\/\//.test(path)) {
+                throw 'Expected child path but got a URL, use refFromURL instead.';
+            }
+        }
+        validate('ref', [stringSpec(validator, true)], arguments);
+        if (this.bucket_ == null) {
+            throw new Error('No Storage Bucket defined in Firebase Options.');
+        }
+        var ref = new Reference(this.authWrapper_, this.bucket_);
+        if (path != null) {
+            return ref.child(path);
+        }
+        else {
+            return ref;
+        }
+    };
+    /**
+     * Returns a firebaseStorage.Reference object for the given absolute URL,
+     * which must be a gs:// or http[s]:// URL.
+     */
+    Service.prototype.refFromURL = function (url) {
+        function validator(p) {
+            if (!/^[A-Za-z]+:\/\//.test(p)) {
+                throw 'Expected full URL but got a child path, use ref instead.';
+            }
+            try {
+                Location.makeFromUrl(p);
+            }
+            catch (e) {
+                throw 'Expected valid full URL but got an invalid one.';
+            }
+        }
+        validate('refFromURL', [stringSpec(validator, false)], arguments);
+        return new Reference(this.authWrapper_, url);
+    };
+    Object.defineProperty(Service.prototype, "maxUploadRetryTime", {
+        get: function () {
+            return this.authWrapper_.maxUploadRetryTime();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Service.prototype.setMaxUploadRetryTime = function (time) {
+        validate('setMaxUploadRetryTime', [nonNegativeNumberSpec()], arguments);
+        this.authWrapper_.setMaxUploadRetryTime(time);
+    };
+    Object.defineProperty(Service.prototype, "maxOperationRetryTime", {
+        get: function () {
+            return this.authWrapper_.maxOperationRetryTime();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Service.prototype.setMaxOperationRetryTime = function (time) {
+        validate('setMaxOperationRetryTime', [nonNegativeNumberSpec()], arguments);
+        this.authWrapper_.setMaxOperationRetryTime(time);
+    };
+    Object.defineProperty(Service.prototype, "app", {
+        get: function () {
+            return this.app_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Service.prototype, "INTERNAL", {
+        get: function () {
+            return this.internals_;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Service;
+}());
+/**
+ * @struct
+ */
+var ServiceInternals = /** @class */ (function () {
+    function ServiceInternals(service) {
+        this.service_ = service;
+    }
+    /**
+     * Called when the associated app is deleted.
+     * @see {!fbs.AuthWrapper.prototype.deleteApp}
+     */
+    ServiceInternals.prototype.delete = function () {
+        this.service_.authWrapper_.deleteApp();
+        return resolve(undefined);
+    };
+    return ServiceInternals;
+}());
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Type constant for Firebase Storage.
+ */
+var STORAGE_TYPE = 'storage';
+function factory(app, unused, opt_url) {
+    return new Service(app, new XhrIoPool(), opt_url);
+}
+function registerStorage(instance) {
+    var namespaceExports = {
+        // no-inline
+        TaskState: TaskState,
+        TaskEvent: TaskEvent,
+        StringFormat: StringFormat,
+        Storage: Service,
+        Reference: Reference
+    };
+    instance.INTERNAL.registerService(STORAGE_TYPE, factory, namespaceExports, undefined, 
+    // Allow multiple storage instances per app.
+    true);
+}
+registerStorage(_firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@firebase/util/dist/index.cjs.js":
 /*!*******************************************************!*\
   !*** ./node_modules/@firebase/util/dist/index.cjs.js ***!
@@ -33349,6 +36891,403 @@ var _List = _interopRequireDefault(__webpack_require__(/*! ./List */ "./node_mod
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/ListItem/ListItem.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/core/ListItem/ListItem.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/@material-ui/core/node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _ButtonBase = _interopRequireDefault(__webpack_require__(/*! ../ButtonBase */ "./node_modules/@material-ui/core/ButtonBase/index.js"));
+
+var _reactHelpers = __webpack_require__(/*! ../utils/reactHelpers */ "./node_modules/@material-ui/core/utils/reactHelpers.js");
+
+var _MergeListContext = _interopRequireDefault(__webpack_require__(/*! ./MergeListContext */ "./node_modules/@material-ui/core/ListItem/MergeListContext.js"));
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the (normally root) `component` element. May be wrapped by a `container`. */
+    root: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      position: 'relative',
+      textDecoration: 'none',
+      width: '100%',
+      boxSizing: 'border-box',
+      textAlign: 'left',
+      paddingTop: 11,
+      // To use 10px in v4
+      paddingBottom: 11,
+      // To use 10px in v4
+      '&$selected, &$selected:hover, &$selected:focus': {
+        backgroundColor: theme.palette.action.selected
+      }
+    },
+
+    /* Styles applied to the `container` element if `children` includes `ListItemSecondaryAction`. */
+    container: {
+      position: 'relative'
+    },
+    // To remove in v4
+
+    /* Styles applied to the `component`'s `focusVisibleClassName` property if `button={true}`. */
+    focusVisible: {},
+
+    /* Legacy styles applied to the root element. Use `root` instead. */
+    default: {},
+
+    /* Styles applied to the `component` element if `dense={true}` or `children` includes `Avatar`. */
+    dense: {
+      paddingTop: 8,
+      paddingBottom: 8
+    },
+
+    /* Styles applied to the `component` element if `alignItems="flex-start"`. */
+    alignItemsFlexStart: {
+      alignItems: 'flex-start'
+    },
+
+    /* Styles applied to the inner `component` element if `disabled={true}`. */
+    disabled: {
+      opacity: 0.5
+    },
+
+    /* Styles applied to the inner `component` element if `divider={true}`. */
+    divider: {
+      borderBottom: "1px solid ".concat(theme.palette.divider),
+      backgroundClip: 'padding-box'
+    },
+
+    /* Styles applied to the inner `component` element if `disableGutters={false}`. */
+    gutters: {
+      paddingLeft: 16,
+      paddingRight: 16
+    },
+
+    /* Styles applied to the inner `component` element if `button={true}`. */
+    button: {
+      transition: theme.transitions.create('background-color', {
+        duration: theme.transitions.duration.shortest
+      }),
+      '&:hover': {
+        textDecoration: 'none',
+        backgroundColor: theme.palette.action.hover,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      },
+      '&:focus': {
+        backgroundColor: theme.palette.action.hover
+      }
+    },
+
+    /* Styles applied to the `component` element if `children` includes `ListItemSecondaryAction`. */
+    secondaryAction: {
+      // Add some space to avoid collision as `ListItemSecondaryAction`
+      // is absolutely positioned.
+      paddingRight: 32
+    },
+
+    /* Styles applied to the root element if `selected={true}`. */
+    selected: {}
+  };
+};
+/**
+ * Uses an additional container component if `ListItemSecondaryAction` is the last child.
+ */
+
+
+exports.styles = styles;
+
+function ListItem(props) {
+  var alignItems = props.alignItems,
+      button = props.button,
+      childrenProp = props.children,
+      classes = props.classes,
+      classNameProp = props.className,
+      componentProp = props.component,
+      ContainerComponent = props.ContainerComponent,
+      _props$ContainerProps = props.ContainerProps;
+  _props$ContainerProps = _props$ContainerProps === void 0 ? {} : _props$ContainerProps;
+  var ContainerClassName = _props$ContainerProps.className,
+      ContainerProps = (0, _objectWithoutProperties2.default)(_props$ContainerProps, ["className"]),
+      denseProp = props.dense,
+      disabled = props.disabled,
+      disableGutters = props.disableGutters,
+      divider = props.divider,
+      focusVisibleClassName = props.focusVisibleClassName,
+      selected = props.selected,
+      other = (0, _objectWithoutProperties2.default)(props, ["alignItems", "button", "children", "classes", "className", "component", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "divider", "focusVisibleClassName", "selected"]);
+  return _react.default.createElement(_MergeListContext.default, {
+    dense: denseProp,
+    alignItems: alignItems
+  }, function (_ref) {
+    var _classNames;
+
+    var dense = _ref.dense;
+
+    var children = _react.default.Children.toArray(childrenProp);
+
+    var hasAvatar = children.some(function (value) {
+      return (0, _reactHelpers.isMuiElement)(value, ['ListItemAvatar']);
+    });
+    var hasSecondaryAction = children.length && (0, _reactHelpers.isMuiElement)(children[children.length - 1], ['ListItemSecondaryAction']);
+    var className = (0, _classnames.default)(classes.root, classes.default, (_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.dense, dense || hasAvatar), (0, _defineProperty2.default)(_classNames, classes.gutters, !disableGutters), (0, _defineProperty2.default)(_classNames, classes.divider, divider), (0, _defineProperty2.default)(_classNames, classes.disabled, disabled), (0, _defineProperty2.default)(_classNames, classes.button, button), (0, _defineProperty2.default)(_classNames, classes.alignItemsFlexStart, alignItems === 'flex-start'), (0, _defineProperty2.default)(_classNames, classes.secondaryAction, hasSecondaryAction), (0, _defineProperty2.default)(_classNames, classes.selected, selected), _classNames), classNameProp);
+    var componentProps = (0, _extends2.default)({
+      className: className,
+      disabled: disabled
+    }, other);
+    var Component = componentProp || 'li';
+
+    if (button) {
+      componentProps.component = componentProp || 'div';
+      componentProps.focusVisibleClassName = (0, _classnames.default)(classes.focusVisible, focusVisibleClassName);
+      Component = _ButtonBase.default;
+    }
+
+    if (hasSecondaryAction) {
+      // Use div by default.
+      Component = !componentProps.component && !componentProp ? 'div' : Component; // Avoid nesting of li > li.
+
+      if (ContainerComponent === 'li') {
+        if (Component === 'li') {
+          Component = 'div';
+        } else if (componentProps.component === 'li') {
+          componentProps.component = 'div';
+        }
+      }
+
+      return _react.default.createElement(ContainerComponent, (0, _extends2.default)({
+        className: (0, _classnames.default)(classes.container, ContainerClassName)
+      }, ContainerProps), _react.default.createElement(Component, componentProps, children), children.pop());
+    }
+
+    return _react.default.createElement(Component, componentProps, children);
+  });
+}
+
+ true ? ListItem.propTypes = {
+  /**
+   * Defines the `align-items` style property.
+   */
+  alignItems: _propTypes.default.oneOf(['flex-start', 'center']),
+
+  /**
+   * If `true`, the list item will be a button (using `ButtonBase`).
+   */
+  button: _propTypes.default.bool,
+
+  /**
+   * The content of the component. If a `ListItemSecondaryAction` is used it must
+   * be the last child.
+   */
+  children: (0, _utils.chainPropTypes)(_propTypes.default.node, function (props) {
+    var children = _react.default.Children.toArray(props.children); // React.Children.toArray(props.children).findLastIndex(isListItemSecondaryAction)
+
+
+    var secondaryActionIndex = -1;
+
+    for (var i = children.length - 1; i >= 0; i -= 1) {
+      var child = children[i];
+
+      if ((0, _reactHelpers.isMuiElement)(child, ['ListItemSecondaryAction'])) {
+        secondaryActionIndex = i;
+        break;
+      }
+    } //  is ListItemSecondaryAction the last child of ListItem
+
+
+    if (secondaryActionIndex !== -1 && secondaryActionIndex !== children.length - 1) {
+      return new Error('Material-UI: you used an element after ListItemSecondaryAction. ' + 'For ListItem to detect that it has a secondary action ' + "you must pass it has the last children to ListItem.".concat( false ? undefined : ''));
+    }
+
+    return null;
+  }),
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a DOM element or a component.
+   * By default, it's a `li` when `button` is `false` and a `div` when `button` is `true`.
+   */
+  component: _utils.componentPropType,
+
+  /**
+   * The container component used when a `ListItemSecondaryAction` is the last child.
+   */
+  ContainerComponent: _utils.componentPropType,
+
+  /**
+   * Properties applied to the container component if used.
+   */
+  ContainerProps: _propTypes.default.object,
+
+  /**
+   * If `true`, compact vertical padding designed for keyboard and mouse input will be used.
+   */
+  dense: _propTypes.default.bool,
+
+  /**
+   * If `true`, the list item will be disabled.
+   */
+  disabled: _propTypes.default.bool,
+
+  /**
+   * If `true`, the left and right padding is removed.
+   */
+  disableGutters: _propTypes.default.bool,
+
+  /**
+   * If `true`, a 1px light border is added to the bottom of the list item.
+   */
+  divider: _propTypes.default.bool,
+
+  /**
+   * @ignore
+   */
+  focusVisibleClassName: _propTypes.default.string,
+
+  /**
+   * Use to apply selected styling.
+   */
+  selected: _propTypes.default.bool
+} : undefined;
+ListItem.defaultProps = {
+  alignItems: 'center',
+  button: false,
+  ContainerComponent: 'li',
+  dense: false,
+  disabled: false,
+  disableGutters: false,
+  divider: false,
+  selected: false
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiListItem'
+})(ListItem);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/ListItem/MergeListContext.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/ListItem/MergeListContext.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/@material-ui/core/node_modules/prop-types/index.js"));
+
+var _ListContext = _interopRequireDefault(__webpack_require__(/*! ../List/ListContext */ "./node_modules/@material-ui/core/List/ListContext.js"));
+
+/**
+ * @ignore - internal component.
+ *
+ * Consumes a context and passes that context merged with its props.
+ */
+function MergeListContext(props) {
+  var alignItems = props.alignItems,
+      children = props.children,
+      dense = props.dense;
+  return _react.default.createElement(_ListContext.default.Consumer, null, function (context) {
+    var childContext = {
+      dense: dense || context.dense || false,
+      alignItems: alignItems
+    };
+    return _react.default.createElement(_ListContext.default.Provider, {
+      value: childContext
+    }, children(childContext));
+  });
+}
+
+ true ? MergeListContext.propTypes = {
+  alignItems: _propTypes.default.oneOf(['flex-start', 'center']).isRequired,
+  children: _propTypes.default.func.isRequired,
+  dense: _propTypes.default.bool.isRequired
+} : undefined;
+var _default = MergeListContext;
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/ListItem/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/core/ListItem/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _ListItem.default;
+  }
+});
+
+var _ListItem = _interopRequireDefault(__webpack_require__(/*! ./ListItem */ "./node_modules/@material-ui/core/ListItem/ListItem.js"));
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/Menu/Menu.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@material-ui/core/Menu/Menu.js ***!
@@ -33644,6 +37583,166 @@ var _default = (0, _withStyles.default)(styles, {
 })(Menu);
 
 exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/MenuItem/MenuItem.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/core/MenuItem/MenuItem.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.styles = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/@material-ui/core/node_modules/prop-types/index.js"));
+
+var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var _utils = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/index.es.js");
+
+var _withStyles = _interopRequireDefault(__webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/styles/withStyles.js"));
+
+var _ListItem = _interopRequireDefault(__webpack_require__(/*! ../ListItem */ "./node_modules/@material-ui/core/ListItem/index.js"));
+
+// @inheritedComponent ListItem
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: (0, _extends2.default)({}, theme.typography.subheading, {
+      height: 24,
+      boxSizing: 'content-box',
+      width: 'auto',
+      overflow: 'hidden',
+      whiteSpace: 'nowrap',
+      '&$selected': {}
+    }),
+
+    /* Styles applied to the root element if `disableGutters={false}`. */
+    gutters: {
+      paddingLeft: 16,
+      paddingRight: 16
+    },
+
+    /* Styles applied to the root element if `selected={true}`. */
+    selected: {}
+  };
+};
+
+exports.styles = styles;
+
+function MenuItem(props) {
+  var _classNames;
+
+  var classes = props.classes,
+      className = props.className,
+      component = props.component,
+      disableGutters = props.disableGutters,
+      role = props.role,
+      selected = props.selected,
+      other = (0, _objectWithoutProperties2.default)(props, ["classes", "className", "component", "disableGutters", "role", "selected"]);
+  return _react.default.createElement(_ListItem.default, (0, _extends2.default)({
+    button: true,
+    role: role,
+    tabIndex: -1,
+    component: component,
+    selected: selected,
+    disableGutters: disableGutters,
+    className: (0, _classnames.default)(classes.root, (_classNames = {}, (0, _defineProperty2.default)(_classNames, classes.selected, selected), (0, _defineProperty2.default)(_classNames, classes.gutters, !disableGutters), _classNames), className)
+  }, other));
+}
+
+ true ? MenuItem.propTypes = {
+  /**
+   * Menu item contents.
+   */
+  children: _propTypes.default.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css-api) below for more details.
+   */
+  classes: _propTypes.default.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: _propTypes.default.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a DOM element or a component.
+   */
+  component: _utils.componentPropType,
+
+  /**
+   * If `true`, the left and right padding is removed.
+   */
+  disableGutters: _propTypes.default.bool,
+
+  /**
+   * @ignore
+   */
+  role: _propTypes.default.string,
+
+  /**
+   * @ignore
+   */
+  selected: _propTypes.default.bool
+} : undefined;
+MenuItem.defaultProps = {
+  component: 'li',
+  disableGutters: false,
+  role: 'menuitem'
+};
+
+var _default = (0, _withStyles.default)(styles, {
+  name: 'MuiMenuItem'
+})(MenuItem);
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/MenuItem/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@material-ui/core/MenuItem/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _MenuItem.default;
+  }
+});
+
+var _MenuItem = _interopRequireDefault(__webpack_require__(/*! ./MenuItem */ "./node_modules/@material-ui/core/MenuItem/MenuItem.js"));
 
 /***/ }),
 
@@ -50329,6 +54428,37 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/firebase/storage/dist/index.esm.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/firebase/storage/dist/index.esm.js ***!
+  \*********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _firebase_storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/storage */ "./node_modules/@firebase/storage/dist/index.esm.js");
+
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/***/ }),
+
 /***/ "./node_modules/framesync/dist/framesync.es.js":
 /*!*****************************************************!*\
   !*** ./node_modules/framesync/dist/framesync.es.js ***!
@@ -54570,6 +58700,395 @@ if (true) {
 
 module.exports = warning;
 
+
+/***/ }),
+
+/***/ "./node_modules/lodash.debounce/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash.debounce/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
+
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = debounce;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../next/node_modules/webpack/buildin/global.js */ "./node_modules/next/node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -71684,18 +76203,6 @@ module.exports = warning;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/config.js":
-/*!********************************************!*\
-  !*** ./node_modules/next-server/config.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! ./dist/lib/runtime-config */ "./node_modules/next-server/dist/lib/runtime-config.js")
-
-
-/***/ }),
-
 /***/ "./node_modules/next-server/dist/lib/head-manager-context.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/next-server/dist/lib/head-manager-context.js ***!
@@ -71873,33 +76380,6 @@ exports.default = Head;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/runtime-config.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/runtime-config.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var runtimeConfig;
-
-exports.default = function () {
-  return runtimeConfig;
-};
-
-function setConfig(configValue) {
-  runtimeConfig = configValue;
-}
-
-exports.setConfig = setConfig;
-
-/***/ }),
-
 /***/ "./node_modules/next-server/dist/lib/side-effect.js":
 /*!**********************************************************!*\
   !*** ./node_modules/next-server/dist/lib/side-effect.js ***!
@@ -72047,12 +76527,12 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
 /*!************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_b27d519beaee36114eaf ***!
+  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_aa6c01c1e5b4e4a8057c ***!
   \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b27d519beaee36114eaf */ "dll-reference dll_b27d519beaee36114eaf"))("./node_modules/next/node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aa6c01c1e5b4e4a8057c */ "dll-reference dll_aa6c01c1e5b4e4a8057c"))("./node_modules/next/node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -72126,12 +76606,12 @@ module.exports = function(module) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b27d519beaee36114eaf ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_aa6c01c1e5b4e4a8057c ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b27d519beaee36114eaf */ "dll-reference dll_b27d519beaee36114eaf"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aa6c01c1e5b4e4a8057c */ "dll-reference dll_aa6c01c1e5b4e4a8057c"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -75882,6 +80362,1029 @@ if (!globalNS.Promise) {
 
 /***/ }),
 
+/***/ "./node_modules/prop-types/checkPropTypes.js":
+/*!***************************************************!*\
+  !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var printWarning = function() {};
+
+if (true) {
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+  var loggedTypeFailures = {};
+  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (true) {
+    for (var typeSpecName in typeSpecs) {
+      if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          if (typeof typeSpecs[typeSpecName] !== 'function') {
+            var err = Error(
+              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+            );
+            err.name = 'Invariant Violation';
+            throw err;
+          }
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        if (error && !(error instanceof Error)) {
+          printWarning(
+            (componentName || 'React class') + ': type specification of ' +
+            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
+            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
+            'You may have forgotten to pass an argument to the type checker ' +
+            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
+            'shape all require an argument).'
+          );
+        }
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          printWarning(
+            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
+          );
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */
+checkPropTypes.resetWarningCache = function() {
+  if (true) {
+    loggedTypeFailures = {};
+  }
+}
+
+module.exports = checkPropTypes;
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/factoryWithTypeCheckers.js":
+/*!************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/prop-types/node_modules/react-is/index.js");
+var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
+
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
+var printWarning = function() {};
+
+if (true) {
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
+
+module.exports = function(isValidElement, throwOnDirectAccess) {
+  /* global Symbol */
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '<<anonymous>>';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    elementType: createElementTypeTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker,
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+
+  function createChainableTypeChecker(validate) {
+    if (true) {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          var err = new Error(
+            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+            'Use `PropTypes.checkPropTypes()` to call them. ' +
+            'Read more at http://fb.me/use-check-prop-types'
+          );
+          err.name = 'Invariant Violation';
+          throw err;
+        } else if ( true && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (
+            !manualPropTypeCallCache[cacheKey] &&
+            // Avoid spamming the console because they are often not actionable except for lib authors
+            manualPropTypeWarningCount < 3
+          ) {
+            printWarning(
+              'You are manually calling a React.PropTypes validation ' +
+              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'and will throw in the standalone `prop-types` package. ' +
+              'You may be seeing this warning due to a third-party PropTypes ' +
+              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
+            );
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+  }
+
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+  }
+
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!ReactIs.isValidElementType(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+      if (true) {
+        if (arguments.length > 1) {
+          printWarning(
+            'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
+            'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
+          );
+        } else {
+          printWarning('Invalid argument supplied to oneOf, expected an array.');
+        }
+      }
+      return emptyFunctionThatReturnsNull;
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+
+      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+        var type = getPreciseType(value);
+        if (type === 'symbol') {
+          return String(value);
+        }
+        return value;
+      });
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (has(propValue, key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : undefined;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        printWarning(
+          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
+          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
+        );
+        return emptyFunctionThatReturnsNull;
+      }
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError(
+            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+          );
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
+    return createChainableTypeChecker(validate);
+  }
+
+  function isNode(propValue) {
+    switch (typeof propValue) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    // falsy value can't be a Symbol
+    if (!propValue) {
+      return false;
+    }
+
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue;
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (true) {
+  var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/prop-types/node_modules/react-is/index.js");
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
+} else {}
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.4
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' ||
+  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var lowPriorityWarning = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarning = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarning$1 = lowPriorityWarning;
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+              default:
+                return $$typeof;
+            }
+        }
+      case REACT_LAZY_TYPE:
+      case REACT_MEMO_TYPE:
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+
+// AsyncMode is deprecated along with isAsyncMode
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+
+// AsyncMode should be deprecated
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true;
+      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.typeOf = typeOf;
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isValidElementType = isValidElementType;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/node_modules/react-is/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/prop-types/node_modules/react-is/index.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/re-base/dist/bundle.js":
 /*!*********************************************!*\
   !*** ./node_modules/re-base/dist/bundle.js ***!
@@ -77378,12 +82881,12 @@ module.exports = __webpack_require__(/*! ./dist/bundle.js */ "./node_modules/re-
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b27d519beaee36114eaf ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_aa6c01c1e5b4e4a8057c ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b27d519beaee36114eaf */ "dll-reference dll_b27d519beaee36114eaf"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aa6c01c1e5b4e4a8057c */ "dll-reference dll_aa6c01c1e5b4e4a8057c"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -80189,6 +85692,569 @@ function polyfill(Component) {
 
 /***/ }),
 
+/***/ "./node_modules/react-places-autocomplete/dist/PlacesAutocomplete.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/react-places-autocomplete/dist/PlacesAutocomplete.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _lodash = __webpack_require__(/*! lodash.debounce */ "./node_modules/lodash.debounce/index.js");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _helpers = __webpack_require__(/*! ./helpers */ "./node_modules/react-places-autocomplete/dist/helpers.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Copyright (c) 2016-present, Ken Hibino.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * Licensed under the MIT License (MIT).
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * See https://kenny-hibino.github.io/react-places-autocomplete
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+
+// transform snake_case to camelCase
+var formattedSuggestion = function formattedSuggestion(structured_formatting) {
+  return {
+    mainText: structured_formatting.main_text,
+    secondaryText: structured_formatting.secondary_text
+  };
+};
+
+var PlacesAutocomplete = function (_React$Component) {
+  _inherits(PlacesAutocomplete, _React$Component);
+
+  function PlacesAutocomplete(props) {
+    _classCallCheck(this, PlacesAutocomplete);
+
+    var _this = _possibleConstructorReturn(this, (PlacesAutocomplete.__proto__ || Object.getPrototypeOf(PlacesAutocomplete)).call(this, props));
+
+    _this.init = function () {
+      if (!window.google) {
+        throw new Error('[react-places-autocomplete]: Google Maps JavaScript API library must be loaded. See: https://github.com/kenny-hibino/react-places-autocomplete#load-google-library');
+      }
+
+      if (!window.google.maps.places) {
+        throw new Error('[react-places-autocomplete]: Google Maps Places library must be loaded. Please add `libraries=places` to the src URL. See: https://github.com/kenny-hibino/react-places-autocomplete#load-google-library');
+      }
+
+      _this.autocompleteService = new window.google.maps.places.AutocompleteService();
+      _this.autocompleteOK = window.google.maps.places.PlacesServiceStatus.OK;
+      _this.setState(function (state) {
+        if (state.ready) {
+          return null;
+        } else {
+          return { ready: true };
+        }
+      });
+    };
+
+    _this.autocompleteCallback = function (predictions, status) {
+      _this.setState({ loading: false });
+      if (status !== _this.autocompleteOK) {
+        _this.props.onError(status, _this.clearSuggestions);
+        return;
+      }
+      var highlightFirstSuggestion = _this.props.highlightFirstSuggestion;
+
+      _this.setState({
+        suggestions: predictions.map(function (p, idx) {
+          return {
+            id: p.id,
+            description: p.description,
+            placeId: p.place_id,
+            active: highlightFirstSuggestion && idx === 0 ? true : false,
+            index: idx,
+            formattedSuggestion: formattedSuggestion(p.structured_formatting),
+            matchedSubstrings: p.matched_substrings,
+            terms: p.terms,
+            types: p.types
+          };
+        })
+      });
+    };
+
+    _this.fetchPredictions = function () {
+      var value = _this.props.value;
+
+      if (value.length) {
+        _this.setState({ loading: true });
+        _this.autocompleteService.getPlacePredictions(_extends({}, _this.props.searchOptions, {
+          input: value
+        }), _this.autocompleteCallback);
+      }
+    };
+
+    _this.clearSuggestions = function () {
+      _this.setState({ suggestions: [] });
+    };
+
+    _this.clearActive = function () {
+      _this.setState({
+        suggestions: _this.state.suggestions.map(function (suggestion) {
+          return _extends({}, suggestion, {
+            active: false
+          });
+        })
+      });
+    };
+
+    _this.handleSelect = function (address, placeId) {
+      _this.clearSuggestions();
+      if (_this.props.onSelect) {
+        _this.props.onSelect(address, placeId);
+      } else {
+        _this.props.onChange(address);
+      }
+    };
+
+    _this.getActiveSuggestion = function () {
+      return _this.state.suggestions.find(function (suggestion) {
+        return suggestion.active;
+      });
+    };
+
+    _this.selectActiveAtIndex = function (index) {
+      var activeName = _this.state.suggestions.find(function (suggestion) {
+        return suggestion.index === index;
+      }).description;
+      _this.setActiveAtIndex(index);
+      _this.props.onChange(activeName);
+    };
+
+    _this.selectUserInputValue = function () {
+      _this.clearActive();
+      _this.props.onChange(_this.state.userInputValue);
+    };
+
+    _this.handleEnterKey = function () {
+      var activeSuggestion = _this.getActiveSuggestion();
+      if (activeSuggestion === undefined) {
+        _this.handleSelect(_this.props.value, null);
+      } else {
+        _this.handleSelect(activeSuggestion.description, activeSuggestion.placeId);
+      }
+    };
+
+    _this.handleDownKey = function () {
+      if (_this.state.suggestions.length === 0) {
+        return;
+      }
+
+      var activeSuggestion = _this.getActiveSuggestion();
+      if (activeSuggestion === undefined) {
+        _this.selectActiveAtIndex(0);
+      } else if (activeSuggestion.index === _this.state.suggestions.length - 1) {
+        _this.selectUserInputValue();
+      } else {
+        _this.selectActiveAtIndex(activeSuggestion.index + 1);
+      }
+    };
+
+    _this.handleUpKey = function () {
+      if (_this.state.suggestions.length === 0) {
+        return;
+      }
+
+      var activeSuggestion = _this.getActiveSuggestion();
+      if (activeSuggestion === undefined) {
+        _this.selectActiveAtIndex(_this.state.suggestions.length - 1);
+      } else if (activeSuggestion.index === 0) {
+        _this.selectUserInputValue();
+      } else {
+        _this.selectActiveAtIndex(activeSuggestion.index - 1);
+      }
+    };
+
+    _this.handleInputKeyDown = function (event) {
+      /* eslint-disable indent */
+      switch (event.key) {
+        case 'Enter':
+          event.preventDefault();
+          _this.handleEnterKey();
+          break;
+        case 'ArrowDown':
+          event.preventDefault(); // prevent the cursor from moving
+          _this.handleDownKey();
+          break;
+        case 'ArrowUp':
+          event.preventDefault(); // prevent the cursor from moving
+          _this.handleUpKey();
+          break;
+        case 'Escape':
+          _this.clearSuggestions();
+          break;
+      }
+      /* eslint-enable indent */
+    };
+
+    _this.setActiveAtIndex = function (index) {
+      _this.setState({
+        suggestions: _this.state.suggestions.map(function (suggestion, idx) {
+          if (idx === index) {
+            return _extends({}, suggestion, { active: true });
+          } else {
+            return _extends({}, suggestion, { active: false });
+          }
+        })
+      });
+    };
+
+    _this.handleInputChange = function (event) {
+      var value = event.target.value;
+
+      _this.props.onChange(value);
+      _this.setState({ userInputValue: value });
+      if (!value) {
+        _this.clearSuggestions();
+        return;
+      }
+      if (_this.props.shouldFetchSuggestions) {
+        _this.debouncedFetchPredictions();
+      }
+    };
+
+    _this.handleInputOnBlur = function () {
+      if (!_this.mousedownOnSuggestion) {
+        _this.clearSuggestions();
+      }
+    };
+
+    _this.getActiveSuggestionId = function () {
+      var activeSuggestion = _this.getActiveSuggestion();
+      return activeSuggestion ? 'PlacesAutocomplete__suggestion-' + activeSuggestion.placeId : undefined;
+    };
+
+    _this.getIsExpanded = function () {
+      return _this.state.suggestions.length > 0;
+    };
+
+    _this.getInputProps = function () {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      if (options.hasOwnProperty('value')) {
+        throw new Error('[react-places-autocomplete]: getInputProps does not accept `value`. Use `value` prop instead');
+      }
+
+      if (options.hasOwnProperty('onChange')) {
+        throw new Error('[react-places-autocomplete]: getInputProps does not accept `onChange`. Use `onChange` prop instead');
+      }
+
+      var defaultInputProps = {
+        type: 'text',
+        autoComplete: 'off',
+        role: 'combobox',
+        'aria-autocomplete': 'list',
+        'aria-expanded': _this.getIsExpanded(),
+        'aria-activedescendant': _this.getActiveSuggestionId(),
+        disabled: !_this.state.ready
+      };
+
+      return _extends({}, defaultInputProps, options, {
+        onKeyDown: (0, _helpers.compose)(_this.handleInputKeyDown, options.onKeyDown),
+        onBlur: (0, _helpers.compose)(_this.handleInputOnBlur, options.onBlur),
+        value: _this.props.value,
+        onChange: function onChange(event) {
+          _this.handleInputChange(event);
+        }
+      });
+    };
+
+    _this.getSuggestionItemProps = function (suggestion) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      var handleSuggestionMouseEnter = _this.handleSuggestionMouseEnter.bind(_this, suggestion.index);
+      var handleSuggestionClick = _this.handleSuggestionClick.bind(_this, suggestion);
+
+      return _extends({}, options, {
+        key: suggestion.id,
+        id: _this.getActiveSuggestionId(),
+        role: 'option',
+        onMouseEnter: (0, _helpers.compose)(handleSuggestionMouseEnter, options.onMouseEnter),
+        onMouseLeave: (0, _helpers.compose)(_this.handleSuggestionMouseLeave, options.onMouseLeave),
+        onMouseDown: (0, _helpers.compose)(_this.handleSuggestionMouseDown, options.onMouseDown),
+        onMouseUp: (0, _helpers.compose)(_this.handleSuggestionMouseUp, options.onMouseUp),
+        onTouchStart: (0, _helpers.compose)(_this.handleSuggestionTouchStart, options.onTouchStart),
+        onTouchEnd: (0, _helpers.compose)(_this.handleSuggestionMouseUp, options.onTouchEnd),
+        onClick: (0, _helpers.compose)(handleSuggestionClick, options.onClick)
+      });
+    };
+
+    _this.handleSuggestionMouseEnter = function (index) {
+      _this.setActiveAtIndex(index);
+    };
+
+    _this.handleSuggestionMouseLeave = function () {
+      _this.mousedownOnSuggestion = false;
+      _this.clearActive();
+    };
+
+    _this.handleSuggestionMouseDown = function (event) {
+      event.preventDefault();
+      _this.mousedownOnSuggestion = true;
+    };
+
+    _this.handleSuggestionTouchStart = function () {
+      _this.mousedownOnSuggestion = true;
+    };
+
+    _this.handleSuggestionMouseUp = function () {
+      _this.mousedownOnSuggestion = false;
+    };
+
+    _this.handleSuggestionClick = function (suggestion, event) {
+      if (event && event.preventDefault) {
+        event.preventDefault();
+      }
+      var description = suggestion.description,
+          placeId = suggestion.placeId;
+
+      _this.handleSelect(description, placeId);
+      setTimeout(function () {
+        _this.mousedownOnSuggestion = false;
+      });
+    };
+
+    _this.state = {
+      loading: false,
+      suggestions: [],
+      userInputValue: props.value,
+      ready: !props.googleCallbackName
+    };
+
+    _this.debouncedFetchPredictions = (0, _lodash2.default)(_this.fetchPredictions, _this.props.debounce);
+    return _this;
+  }
+
+  _createClass(PlacesAutocomplete, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var googleCallbackName = this.props.googleCallbackName;
+
+      if (googleCallbackName) {
+        if (!window.google) {
+          window[googleCallbackName] = this.init;
+        } else {
+          this.init();
+        }
+      } else {
+        this.init();
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      var googleCallbackName = this.props.googleCallbackName;
+
+      if (googleCallbackName && window[googleCallbackName]) {
+        delete window[googleCallbackName];
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return this.props.children({
+        getInputProps: this.getInputProps,
+        getSuggestionItemProps: this.getSuggestionItemProps,
+        loading: this.state.loading,
+        suggestions: this.state.suggestions
+      });
+    }
+  }]);
+
+  return PlacesAutocomplete;
+}(_react2.default.Component);
+
+PlacesAutocomplete.propTypes = {
+  onChange: _propTypes2.default.func.isRequired,
+  value: _propTypes2.default.string.isRequired,
+  children: _propTypes2.default.func.isRequired,
+  onError: _propTypes2.default.func,
+  onSelect: _propTypes2.default.func,
+  searchOptions: _propTypes2.default.shape({
+    bounds: _propTypes2.default.object,
+    componentRestrictions: _propTypes2.default.object,
+    location: _propTypes2.default.object,
+    offset: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+    radius: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+    types: _propTypes2.default.array
+  }),
+  debounce: _propTypes2.default.number,
+  highlightFirstSuggestion: _propTypes2.default.bool,
+  shouldFetchSuggestions: _propTypes2.default.bool,
+  googleCallbackName: _propTypes2.default.string
+};
+
+PlacesAutocomplete.defaultProps = {
+  /* eslint-disable no-unused-vars, no-console */
+  onError: function onError(status, _clearSuggestions) {
+    return console.error('[react-places-autocomplete]: error happened when fetching data from Google Maps API.\nPlease check the docs here (https://developers.google.com/maps/documentation/javascript/places#place_details_responses)\nStatus: ', status);
+  },
+  /* eslint-enable no-unused-vars, no-console */
+  searchOptions: {},
+  debounce: 200,
+  highlightFirstSuggestion: false,
+  shouldFetchSuggestions: true
+};
+
+exports.default = PlacesAutocomplete;
+
+/***/ }),
+
+/***/ "./node_modules/react-places-autocomplete/dist/helpers.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-places-autocomplete/dist/helpers.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var compose = exports.compose = function compose() {
+  for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {
+    fns[_key] = arguments[_key];
+  }
+
+  return function () {
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    fns.forEach(function (fn) {
+      return fn && fn.apply(undefined, args);
+    });
+  };
+};
+
+var pick = exports.pick = function pick(obj) {
+  for (var _len3 = arguments.length, props = Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+    props[_key3 - 1] = arguments[_key3];
+  }
+
+  return props.reduce(function (newObj, prop) {
+    if (obj.hasOwnProperty(prop)) {
+      newObj[prop] = obj[prop];
+    }
+    return newObj;
+  }, {});
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-places-autocomplete/dist/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-places-autocomplete/dist/index.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getLatLng = exports.geocodeByPlaceId = exports.geocodeByAddress = undefined;
+
+var _PlacesAutocomplete = __webpack_require__(/*! ./PlacesAutocomplete */ "./node_modules/react-places-autocomplete/dist/PlacesAutocomplete.js");
+
+var _PlacesAutocomplete2 = _interopRequireDefault(_PlacesAutocomplete);
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-places-autocomplete/dist/utils.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.geocodeByAddress = _utils.geocodeByAddress;
+exports.geocodeByPlaceId = _utils.geocodeByPlaceId;
+exports.getLatLng = _utils.getLatLng;
+exports.default = _PlacesAutocomplete2.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-places-autocomplete/dist/utils.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-places-autocomplete/dist/utils.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var geocodeByAddress = exports.geocodeByAddress = function geocodeByAddress(address) {
+  var geocoder = new window.google.maps.Geocoder();
+  var OK = window.google.maps.GeocoderStatus.OK;
+
+  return new Promise(function (resolve, reject) {
+    geocoder.geocode({ address: address }, function (results, status) {
+      if (status !== OK) {
+        reject(status);
+      }
+      resolve(results);
+    });
+  });
+};
+
+var getLatLng = exports.getLatLng = function getLatLng(result) {
+  return new Promise(function (resolve, reject) {
+    try {
+      var latLng = {
+        lat: result.geometry.location.lat(),
+        lng: result.geometry.location.lng()
+      };
+      resolve(latLng);
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
+
+var geocodeByPlaceId = exports.geocodeByPlaceId = function geocodeByPlaceId(placeId) {
+  var geocoder = new window.google.maps.Geocoder();
+  var OK = window.google.maps.GeocoderStatus.OK;
+
+  return new Promise(function (resolve, reject) {
+    geocoder.geocode({ placeId: placeId }, function (results, status) {
+      if (status !== OK) {
+        reject(status);
+      }
+      resolve(results);
+    });
+  });
+};
+
+/***/ }),
+
 /***/ "./node_modules/react-pose/dist/react-pose.es.js":
 /*!*******************************************************!*\
   !*** ./node_modules/react-pose/dist/react-pose.es.js ***!
@@ -82669,12 +88735,12 @@ exports.classNamesShape = classNamesShape;
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_b27d519beaee36114eaf ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_aa6c01c1e5b4e4a8057c ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_b27d519beaee36114eaf */ "dll-reference dll_b27d519beaee36114eaf"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_aa6c01c1e5b4e4a8057c */ "dll-reference dll_aa6c01c1e5b4e4a8057c"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -89081,29 +95147,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! firebase/auth */ "./node_modules/firebase/auth/dist/index.esm.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @material-ui/core/Stepper */ "./node_modules/@material-ui/core/Stepper/index.js");
-/* harmony import */ var _material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _material_ui_core_Step__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @material-ui/core/Step */ "./node_modules/@material-ui/core/Step/index.js");
-/* harmony import */ var _material_ui_core_Step__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Step__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @material-ui/core/StepLabel */ "./node_modules/@material-ui/core/StepLabel/index.js");
-/* harmony import */ var _material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/TextField/index.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/Grid/index.js");
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
-/* harmony import */ var _components_MenuUploader__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../components/MenuUploader */ "./components/MenuUploader.jsx");
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! next-server/head */ "./node_modules/next-server/head.js");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @material-ui/core/Stepper */ "./node_modules/@material-ui/core/Stepper/index.js");
+/* harmony import */ var _material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _material_ui_core_Step__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @material-ui/core/Step */ "./node_modules/@material-ui/core/Step/index.js");
+/* harmony import */ var _material_ui_core_Step__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Step__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @material-ui/core/StepLabel */ "./node_modules/@material-ui/core/StepLabel/index.js");
+/* harmony import */ var _material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _material_ui_core_StepIcon__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @material-ui/core/StepIcon */ "./node_modules/@material-ui/core/StepIcon/index.js");
+/* harmony import */ var _material_ui_core_StepIcon__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_StepIcon__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/Button/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/TextField/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/Grid/index.js");
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @material-ui/core/InputLabel */ "./node_modules/@material-ui/core/InputLabel/index.js");
+/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _material_ui_core_OutlinedInput__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @material-ui/core/OutlinedInput */ "./node_modules/@material-ui/core/OutlinedInput/index.js");
+/* harmony import */ var _material_ui_core_OutlinedInput__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_OutlinedInput__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/MenuItem/index.js");
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @material-ui/core/FormControl */ "./node_modules/@material-ui/core/FormControl/index.js");
+/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @material-ui/core/Select */ "./node_modules/@material-ui/core/Select/index.js");
+/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! react-places-autocomplete */ "./node_modules/react-places-autocomplete/dist/index.js");
+/* harmony import */ var react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var _components_AccessForm__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../components/AccessForm */ "./components/AccessForm.jsx");
+/* harmony import */ var _components_MenuUploader__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../components/MenuUploader */ "./components/MenuUploader.jsx");
 
 
 
@@ -89132,7 +95213,19 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/pages/onboard.js";
 
 
 
-var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_14__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_21___default.a).withConfig({
+
+
+
+
+
+
+
+
+
+var storage = firebase_app__WEBPACK_IMPORTED_MODULE_11___default.a.storage();
+var storageRef = storage.ref();
+var menusRef = storageRef.child('menus');
+var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_23___default.a).withConfig({
   displayName: "onboard__StyledButton",
   componentId: "sc-10n6sav-0"
 })(["text-transform:none !important;border-radius:8px !important;background:", " !important;box-shadow:", " !important;color:", " !important;"], function (props) {
@@ -89142,31 +95235,49 @@ var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_14__["defau
 }, function (props) {
   return props.variant === "contained" ? '#fff' : '#1f1f1f';
 });
-var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_14__["default"])(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_22___default.a).withConfig({
+var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_24___default.a).withConfig({
   displayName: "onboard__StyledTextField",
   componentId: "sc-10n6sav-1"
 })(["width:100% !important;border-radius:8px !important;font-family:'Source Sans Pro',sans-serif !important;box-sizing;border-box !important;& fieldset{border:2px solid #1f1f1f !important;border-radius:8px !important;}& input{font-family:'Source Sans Pro',sans-serif !important;}"]);
-var PageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].div.withConfig({
-  displayName: "onboard__PageWrapper",
+var StyledFormControl = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_29___default.a).withConfig({
+  displayName: "onboard__StyledFormControl",
   componentId: "sc-10n6sav-2"
-})(["width:100%;height:100%;min-height:100vh;display:flex;flex-flow:row nowrap;"]);
-var OnboardContent = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].div.withConfig({
-  displayName: "onboard__OnboardContent",
-  componentId: "sc-10n6sav-3"
-})(["height:100%;min-height:100vh;box-sizing:border-box;padding:16px;background:#fff;display:flex;flex:.4;flex-flow:column nowrap;align-items:center;justify-content:center;overflow:hidden;position:relative;"]);
-var PageTitle = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].h1.withConfig({
-  displayName: "onboard__PageTitle",
-  componentId: "sc-10n6sav-4"
-})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin:0 auto 16px;display:inline-flex;z-index:1;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
-var OnboardBackground = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].div.withConfig({
-  displayName: "onboard__OnboardBackground",
-  componentId: "sc-10n6sav-5"
-})(["width:77%;height:100%;min-height:100vh;background:aliceblue;background-image:url('https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80');background-position:center;background-size:cover;display:flex;flex:.6;"]);
-var OnboardStepper = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].div.withConfig({
-  displayName: "onboard__OnboardStepper",
-  componentId: "sc-10n6sav-6"
 })(["width:100%;"]);
-var PosedOnboardStepperContent = react_pose__WEBPACK_IMPORTED_MODULE_15__["default"].div({
+var StyledOutlinedInput = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_OutlinedInput__WEBPACK_IMPORTED_MODULE_27___default.a).withConfig({
+  displayName: "onboard__StyledOutlinedInput",
+  componentId: "sc-10n6sav-3"
+})(["& fieldset{border:2px solid #1f1f1f !important;border-radius:8px !important;}& div svg{right:4px !important;}"]);
+var StyledInputLabel = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_26___default.a).withConfig({
+  displayName: "onboard__StyledInputLabel",
+  componentId: "sc-10n6sav-4"
+})(["color:", " !important;"], function (props) {
+  return props.focused ? '#1f1f1f' : '#9f9f9f';
+});
+var StyledStep = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(_material_ui_core_Step__WEBPACK_IMPORTED_MODULE_20___default.a).withConfig({
+  displayName: "onboard__StyledStep",
+  componentId: "sc-10n6sav-5"
+})(["&.completed span span svg{color:#1f1f1f !important;}"]);
+var PageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div.withConfig({
+  displayName: "onboard__PageWrapper",
+  componentId: "sc-10n6sav-6"
+})(["width:100%;height:100%;min-height:100vh;display:flex;flex-flow:row nowrap;"]);
+var OnboardContent = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div.withConfig({
+  displayName: "onboard__OnboardContent",
+  componentId: "sc-10n6sav-7"
+})(["height:100%;min-height:100vh;box-sizing:border-box;padding:16px;background:#fff;display:flex;flex:.4;flex-flow:column nowrap;align-items:center;justify-content:flex-start;overflow:hidden;position:relative;"]);
+var PageTitle = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].h1.withConfig({
+  displayName: "onboard__PageTitle",
+  componentId: "sc-10n6sav-8"
+})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin:0 auto 16px;display:inline-flex;z-index:1;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
+var OnboardBackground = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div.withConfig({
+  displayName: "onboard__OnboardBackground",
+  componentId: "sc-10n6sav-9"
+})(["width:77%;height:100%;min-height:100vh;background:aliceblue;background-image:url('https://images.unsplash.com/photo-1550259114-ad7188f0a967?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80');background-position:center;background-size:cover;display:flex;flex:.6;"]);
+var OnboardStepper = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div.withConfig({
+  displayName: "onboard__OnboardStepper",
+  componentId: "sc-10n6sav-10"
+})(["width:100%;"]);
+var PosedOnboardStepperContent = react_pose__WEBPACK_IMPORTED_MODULE_16__["default"].div({
   enter: {
     x: 0,
     opacity: 1
@@ -89180,17 +95291,17 @@ var PosedOnboardStepperContent = react_pose__WEBPACK_IMPORTED_MODULE_15__["defau
     opacity: 0
   }
 });
-var OnboardStepperContent = Object(styled_components__WEBPACK_IMPORTED_MODULE_14__["default"])(function (props) {
+var OnboardStepperContent = Object(styled_components__WEBPACK_IMPORTED_MODULE_15__["default"])(function (props) {
   return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(PosedOnboardStepperContent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_9__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 161
     },
     __self: this
   }));
 }).withConfig({
   displayName: "onboard__OnboardStepperContent",
-  componentId: "sc-10n6sav-7"
+  componentId: "sc-10n6sav-11"
 })([""]);
 
 var styles = function styles(theme) {
@@ -89208,10 +95319,10 @@ var styles = function styles(theme) {
   };
 };
 
-var StepperButtons = styled_components__WEBPACK_IMPORTED_MODULE_14__["default"].div.withConfig({
+var StepperButtons = styled_components__WEBPACK_IMPORTED_MODULE_15__["default"].div.withConfig({
   displayName: "onboard__StepperButtons",
-  componentId: "sc-10n6sav-8"
-})(["width:100%;display:flex;flex-flow:row nowrap;justify-content:space-between;flex-direction:", ";"], function (props) {
+  componentId: "sc-10n6sav-12"
+})(["width:100%;display:flex;flex-flow:row nowrap;justify-content:space-between;flex-direction:", ";position:absolute;bottom:0;right:0;left:0;padding:16px;box-sizing:border-box;"], function (props) {
   return props.activeStep === 0 ? 'row-reverse' : 'row';
 });
 
@@ -89228,11 +95339,15 @@ function (_Component) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Onboard).call(this, props));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleNext", function () {
-      _this.setState(function (state) {
-        return {
-          activeStep: state.activeStep + 1
-        };
-      });
+      var activeStep = _this.state.activeStep;
+
+      if (activeStep === 2) {
+        _this.handleComplete();
+      } else {
+        _this.setState({
+          activeStep: activeStep + 1
+        });
+      }
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleBack", function () {
@@ -89252,7 +95367,7 @@ function (_Component) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleDrop", function (accepted, rejected) {
       var menus = _this.state.menus;
 
-      lodash__WEBPACK_IMPORTED_MODULE_24___default.a.forEach(accepted, function (file) {
+      lodash__WEBPACK_IMPORTED_MODULE_31___default.a.forEach(accepted, function (file) {
         var menu = {
           name: file.name,
           file: file
@@ -89284,13 +95399,82 @@ function (_Component) {
       });
     });
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleRestaurantName", function (value) {
+      var restaurant = _this.state.restaurant;
+      restaurant.name = value;
+
+      _this.setState({
+        restaurant: restaurant
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleRestaurantCuisine", function (value) {
+      var restaurant = _this.state.restaurant;
+      restaurant.cuisine = value;
+
+      _this.setState({
+        restaurant: restaurant
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleRestaurantPrice", function (event) {
+      var value = event.target.value;
+      var restaurant = _this.state.restaurant;
+      restaurant.price = value;
+
+      _this.setState({
+        restaurant: restaurant
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleRestaurantUsername", function (value) {
+      var restaurant = _this.state.restaurant;
+      restaurant.username = value;
+
+      _this.setState({
+        restaurant: restaurant
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleChange", function (address) {
+      _this.setState({
+        addressTerm: address
+      });
+
+      console.log(address);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this)), "handleSelect", function (address) {
+      Object(react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32__["geocodeByAddress"])(address).then(function (results) {
+        return Object(react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32__["getLatLng"])(results[0]);
+      }).then(function (latLng) {
+        return console.log('Success', latLng);
+      }).catch(function (error) {
+        return console.error('Error', error);
+      });
+    });
+
     _this.state = {
       user: {},
-      restaurant: {},
+      restaurant: {
+        username: "",
+        name: "",
+        address: {
+          street: "",
+          city: "",
+          country: ""
+        },
+        price: "",
+        cuisine: "",
+        owner: ""
+      },
       menus: [],
       activeStep: 0,
       email: "",
-      name: ""
+      name: "",
+      labelWidth: 0,
+      isLoading: true,
+      addressTerm: ''
     };
     return _this;
   }
@@ -89305,21 +95489,27 @@ function (_Component) {
       var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
         vars[key] = value;
       });
-      console.log(vars);
       var email = vars.email;
-      console.log(email);
 
       if (email) {
-        _config__WEBPACK_IMPORTED_MODULE_13__["default"].get('users', {
+        _config__WEBPACK_IMPORTED_MODULE_14__["default"].get('users', {
           context: this,
+          withIds: true,
           query: function query(ref) {
             return ref.where('email', '==', email);
           }
         }).then(function (data) {
           _this2.setState({
-            user: data[0]
+            user: data[0],
+            isLoading: false
           });
-        }).catch(function (err) {//handle error
+        }).catch(function (err) {
+          console.log(err);
+
+          _this2.setState({
+            user: {},
+            isLoading: false
+          });
         });
       }
     }
@@ -89333,7 +95523,7 @@ function (_Component) {
           email = _this$state.email,
           name = _this$state.name;
 
-      var names = lodash__WEBPACK_IMPORTED_MODULE_24___default.a.split(name, ' ', 2);
+      var names = lodash__WEBPACK_IMPORTED_MODULE_31___default.a.split(name, ' ', 2);
 
       var firstName = names[0];
       var lastName = names[1];
@@ -89346,7 +95536,7 @@ function (_Component) {
       var formattedData = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data);
 
       console.log(formattedData);
-      axios__WEBPACK_IMPORTED_MODULE_16___default()({
+      axios__WEBPACK_IMPORTED_MODULE_17___default()({
         method: 'post',
         url: 'https://wt-2c136a182f9df0f639eceee9aa700a3d-0.sandbox.auth0-extend.com/somm-mailchimp',
         data: formattedData,
@@ -89371,86 +95561,266 @@ function (_Component) {
       });
     }
   }, {
+    key: "handleComplete",
+    value: function handleComplete() {
+      this.createRestaurant();
+      this.uploadMenus();
+    }
+  }, {
+    key: "createRestaurant",
+    value: function createRestaurant() {
+      var _this$state2 = this.state,
+          restaurant = _this$state2.restaurant,
+          user = _this$state2.user,
+          activeStep = _this$state2.activeStep;
+      restaurant.owner = user.id;
+      console.log(user);
+      var data = restaurant;
+      console.log(data);
+      _config__WEBPACK_IMPORTED_MODULE_14__["default"].addToCollection('restaurants', data).then(function () {}).catch(function (err) {//handle error
+      });
+    }
+  }, {
+    key: "uploadMenus",
+    value: function uploadMenus() {
+      var files = this.state.files;
+
+      lodash__WEBPACK_IMPORTED_MODULE_31___default.a.forEach(files, function (data) {
+        var name = data.name,
+            file = data.file;
+        var metadata = {
+          contentType: file.type
+        };
+        var uploadTask = storageRef.child('menus/' + file.name).put(file, metadata);
+        uploadTask.on(firebase_app__WEBPACK_IMPORTED_MODULE_11___default.a.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+        function (snapshot) {
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          var progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+          console.log('Upload is ' + progress + '% done');
+
+          switch (snapshot.state) {
+            case firebase_app__WEBPACK_IMPORTED_MODULE_11___default.a.storage.TaskState.PAUSED:
+              // or 'paused'
+              console.log('Upload is paused');
+              break;
+
+            case firebase_app__WEBPACK_IMPORTED_MODULE_11___default.a.storage.TaskState.RUNNING:
+              // or 'running'
+              console.log('Upload is running');
+              break;
+          }
+        }, function (error) {
+          // A full list of error codes is available at
+          // https://firebase.google.com/docs/storage/web/handle-errors
+          switch (error.code) {
+            case 'storage/unauthorized':
+              // User doesn't have permission to access the object
+              break;
+
+            case 'storage/canceled':
+              // User canceled the upload
+              break;
+
+            case 'storage/unknown':
+              // Unknown error occurred, inspect error.serverResponse
+              break;
+          }
+        }, function () {
+          // Upload completed successfully, now we can get the download URL
+          uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+            console.log('File available at', downloadURL);
+          });
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this4 = this;
 
       var classes = this.props.classes;
       var steps = ['Tell us about your restaurant', 'Upload your menus', 'Customize your widget'];
-      var _this$state2 = this.state,
-          activeStep = _this$state2.activeStep,
-          restaurant = _this$state2.restaurant,
-          menus = _this$state2.menus,
-          user = _this$state2.user;
-      var email = restaurant.email,
-          firstName = restaurant.firstName,
-          lastName = restaurant.lastName,
-          name = restaurant.name;
+      var _this$state3 = this.state,
+          activeStep = _this$state3.activeStep,
+          restaurant = _this$state3.restaurant,
+          menus = _this$state3.menus,
+          user = _this$state3.user,
+          addressTerm = _this$state3.addressTerm;
+      var email = user.email,
+          firstName = user.firstName,
+          lastName = user.lastName;
+      var restaurantName = restaurant.restaurantName,
+          location = restaurant.location,
+          price = restaurant.price,
+          cuisine = restaurant.cuisine,
+          address = restaurant.address,
+          username = restaurant.username;
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(PageWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 456
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_17___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_18___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 274
+          lineNumber: 457
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 275
+          lineNumber: 458
         },
         __self: this
-      }, "Onboard | Somm")), _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(user).length > 0 ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardContent, {
+      }, "Onboard | Somm | Your menu's personal assistant"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/static/apple-touch-icon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 281
+          lineNumber: 461
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/static/favicon-32x32.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 462
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/static/favicon-16x16.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 463
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "manifest",
+        href: "/static/site.webmanifest",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 464
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "mask-icon",
+        href: "/static/safari-pinned-tab.svg",
+        color: "#f94343",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 465
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("link", {
+        rel: "shortcut icon",
+        href: "/static/favicon.ico",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 466
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("meta", {
+        name: "msapplication-TileColor",
+        content: "#ffffff",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 467
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("meta", {
+        name: "msapplication-config",
+        content: "/static/browserconfig.xml",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 468
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("meta", {
+        name: "theme-color",
+        content: "#ffffff",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 469
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("script", {
+        src: "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 470
+        },
+        __self: this
+      })), this.state.isLoading ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardContent, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 474
+        },
+        __self: this
+      }) : react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 477
+        },
+        __self: this
+      }, _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(user).length > 0 ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardContent, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 480
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(PageTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 282
+          lineNumber: 481
         },
         __self: this
       }, "Hop onboard"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardStepper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 285
+          lineNumber: 484
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_18___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Stepper__WEBPACK_IMPORTED_MODULE_19___default.a, {
         activeStep: activeStep,
         alternativeLabel: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 485
         },
         __self: this
-      }, steps.map(function (label) {
-        return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Step__WEBPACK_IMPORTED_MODULE_19___default.a, {
+      }, steps.map(function (label, i) {
+        return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledStep, {
           key: label,
+          classes: {
+            root: 'step',
+            completed: 'completed'
+          },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 288
+            lineNumber: 487
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_20___default.a, {
+        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_StepLabel__WEBPACK_IMPORTED_MODULE_21___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 289
+            lineNumber: 488
           },
           __self: this
         }, label));
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_15__["PoseGroup"], {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_16__["PoseGroup"], {
         activeStep: activeStep,
         preEnterPose: "preEnter",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 492
         },
         __self: this
       }, activeStep === 0 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardStepperContent, {
@@ -89458,18 +95828,23 @@ function (_Component) {
         step: 0,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 494
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
         container: true,
         spacing: 16,
+        style: {
+          position: 'relative',
+          zIndex: '2',
+          background: '#fff'
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 296
+          lineNumber: 495
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
         item: true,
         sm: 12,
         md: 12,
@@ -89477,7 +95852,7 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 297
+          lineNumber: 496
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
@@ -89491,10 +95866,10 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298
+          lineNumber: 497
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
         item: true,
         sm: 12,
         md: 12,
@@ -89502,7 +95877,7 @@ function (_Component) {
         xl: 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 499
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
@@ -89516,10 +95891,10 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 301
+          lineNumber: 500
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
         item: true,
         sm: 12,
         md: 12,
@@ -89527,7 +95902,7 @@ function (_Component) {
         xl: 12,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 303
+          lineNumber: 502
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
@@ -89535,14 +95910,60 @@ function (_Component) {
         label: "Email",
         value: email,
         onChange: function onChange(e) {
-          return _this4.setState(Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])({}, restaurant.email, e.target.value));
+          return _this4.handleEmail(e.target.value);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 304
+          lineNumber: 503
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_23___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
+        item: true,
+        sm: 12,
+        md: 12,
+        lg: 6,
+        xl: 6,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 505
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
+        variant: "outlined",
+        label: "Username",
+        value: username,
+        onChange: function onChange(e) {
+          return _this4.handleRestaurantUsername(e.target.value);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 506
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
+        item: true,
+        sm: 12,
+        md: 12,
+        lg: 6,
+        xl: 6,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 508
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
+        variant: "outlined",
+        label: "Restaurant name",
+        value: restaurantName,
+        onChange: function onChange(e) {
+          return _this4.handleRestaurantName(e.target.value);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 509
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
         item: true,
         sm: 12,
         md: 12,
@@ -89550,30 +95971,227 @@ function (_Component) {
         xl: 12,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 511
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react_places_autocomplete__WEBPACK_IMPORTED_MODULE_32___default.a, {
+        value: addressTerm,
+        onChange: this.handleChange,
+        onSelect: this.handleSelect,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 512
+        },
+        __self: this
+      }, function (_ref2) {
+        var getInputProps = _ref2.getInputProps,
+            suggestions = _ref2.suggestions,
+            getSuggestionItemProps = _ref2.getSuggestionItemProps,
+            loading = _ref2.loading;
+        return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 518
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledFormControl, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 519
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_9__["default"])({
+          variant: "outlined",
+          label: "Location",
+          id: "places-autocomplete"
+        }, getInputProps({
+          placeholder: 'Search Places ...',
+          className: 'location-search-input'
+        }), {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 520
+          },
+          __self: this
+        }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          className: "autocomplete-dropdown-container",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 529
+          },
+          __self: this
+        }, loading && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 530
+          },
+          __self: this
+        }, "Loading..."), suggestions.map(function (suggestion) {
+          var className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item'; // inline style for demonstration purpose
+
+          var style = suggestion.active ? {
+            backgroundColor: '#fafafa',
+            cursor: 'pointer'
+          } : {
+            backgroundColor: '#ffffff',
+            cursor: 'pointer'
+          };
+          return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_9__["default"])({}, getSuggestionItemProps(suggestion, {
+            className: className,
+            style: style
+          }), {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 540
+            },
+            __self: this
+          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("span", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 546
+            },
+            __self: this
+          }, suggestion.description));
+        })));
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
+        item: true,
+        sm: 12,
+        md: 12,
+        lg: 6,
+        xl: 6,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 555
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledTextField, {
         variant: "outlined",
-        label: "Restaurant name",
-        value: name,
+        label: "Cuisine",
+        value: cuisine,
         onChange: function onChange(e) {
-          return _this4.setState(Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])({}, restaurant.email, e.target.value));
+          return _this4.handleRestaurantCuisine(e.target.value);
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 556
         },
         __self: this
-      })))), activeStep === 1 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardStepperContent, {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_25___default.a, {
+        item: true,
+        sm: 12,
+        md: 12,
+        lg: 6,
+        xl: 6,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 558
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledFormControl, {
+        variant: "outlined",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 559
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledInputLabel, {
+        htmlFor: "outlined-age-simple",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 560
+        },
+        __self: this
+      }, "Price"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_30___default.a, {
+        value: price,
+        onChange: this.handleRestaurantPrice,
+        input: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledOutlinedInput, {
+          labelWidth: 38,
+          name: "price",
+          id: "outlined-price-simple",
+          classes: {
+            root: 'label',
+            focused: 'focused'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 569
+          },
+          __self: this
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 565
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 577
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("em", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 578
+        },
+        __self: this
+      }, "None")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 580
+        },
+        __self: this
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$-$$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 581
+        },
+        __self: this
+      }, "$-$$"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 582
+        },
+        __self: this
+      }, "$$"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$$-$$$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 583
+        },
+        __self: this
+      }, "$$-$$$"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$$$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 584
+        },
+        __self: this
+      }, "$$$"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_28___default.a, {
+        value: '$-$$$',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 585
+        },
+        __self: this
+      }, "$-$$$")))))), activeStep === 1 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardStepperContent, {
         key: "1",
         step: 1,
+        style: {
+          position: 'relative',
+          zIndex: '3',
+          background: '#fff'
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 313
+          lineNumber: 593
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_MenuUploader__WEBPACK_IMPORTED_MODULE_26__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_MenuUploader__WEBPACK_IMPORTED_MODULE_34__["default"], {
         files: this.state.menus,
         handleDrop: function handleDrop(accepted, rejected) {
           return _this4.handleDrop(accepted, rejected);
@@ -89586,7 +96204,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 594
         },
         __self: this
       })), activeStep === 2 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardStepperContent, {
@@ -89594,44 +96212,46 @@ function (_Component) {
         step: 2,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322
+          lineNumber: 602
         },
         __self: this
       }, "Widget customizer")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StepperButtons, {
         activeStep: activeStep,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 607
         },
         __self: this
       }, this.state.activeStep > 0 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledButton, {
         onClick: this.handleBack,
+        size: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 329
+          lineNumber: 609
         },
         __self: this
       }, "Back"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(StyledButton, {
         variant: "contained",
         onClick: this.handleNext,
+        size: "large",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 333
+          lineNumber: 613
         },
         __self: this
       }, activeStep === 2 ? "Finish" : "Next")))) : react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardContent, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 345
+          lineNumber: 628
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(PageTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 346
+          lineNumber: 629
         },
         __self: this
-      }, "Whoops!"), "It doesn't look like you're part of our early access program yet.", react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_25__["default"], {
+      }, "Whoops!"), "It doesn't look like you're part of our early access program yet.", react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AccessForm__WEBPACK_IMPORTED_MODULE_33__["default"], {
         handleAccess: function handleAccess(e) {
           return _this4.handleAccess(e);
         },
@@ -89657,13 +96277,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 350
+          lineNumber: 633
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardBackground, {
+      }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(OnboardBackground, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 361
+          lineNumber: 645
         },
         __self: this
       }));
@@ -89677,7 +96297,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!***************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fonboard&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Fonboard.js ***!
   \***************************************************************************************************************************/
@@ -89689,16 +96309,16 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fonboar
 
 /***/ }),
 
-/***/ "dll-reference dll_b27d519beaee36114eaf":
+/***/ "dll-reference dll_aa6c01c1e5b4e4a8057c":
 /*!*******************************************!*\
-  !*** external "dll_b27d519beaee36114eaf" ***!
+  !*** external "dll_aa6c01c1e5b4e4a8057c" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_b27d519beaee36114eaf;
+module.exports = dll_aa6c01c1e5b4e4a8057c;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=onboard.js.map

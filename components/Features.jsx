@@ -81,8 +81,10 @@ const ComparisonCard = styled.article`
   align-items: center;
   justify-content: flex-start;
   flex-flow: column nowrap;
-  padding: 32px 0;
+  padding: 32px 16px;
   border-radius: 8px;
+  margin: auto;
+  box-sizing: border-box;
 `;
 
 const ComparisonCardTitle = styled.h5`
@@ -197,7 +199,7 @@ const Features = ({}) => (
       </SectionTitle>
       <SectionSubtitle>Supercharge it with Somm.</SectionSubtitle>
       <ComparisonGrid container spacing={16}>
-        <Grid item sm={12} md={6} lg={6} xl={6}>
+        <Grid item sm={12} md={6} lg={6} xl={6} style={{ margin: 'auto' }}>
           <ComparisonCard>
             <ComparisonCardTitle>
               Then
@@ -210,27 +212,30 @@ const Features = ({}) => (
                 Static PDF, JPEG, or HTML
               </ComparisonCardItem>
               <ComparisonCardItem>
-                Buried in menus
+                Buried in pages
               </ComparisonCardItem>
               <ComparisonCardItem>
-                Not searchable
+                Just plain boring
               </ComparisonCardItem>
               <ComparisonCardItem>
-                Not sortable
+                -
               </ComparisonCardItem>
               <ComparisonCardItem>
-                Not filterable
+                -
               </ComparisonCardItem>
               <ComparisonCardItem>
-                Not sharable
+                -
               </ComparisonCardItem>
               <ComparisonCardItem>
-                No insights
+                -
+              </ComparisonCardItem>
+              <ComparisonCardItem>
+                -
               </ComparisonCardItem>
             </ComparisonCardItems>
           </ComparisonCard>
         </Grid>
-        <Grid item sm={12} md={6} lg={6} xl={6}>
+        <Grid item sm={12} md={6} lg={6} xl={6} style={{ margin: 'auto' }}>
           <ComparisonCard style={{border: '2px solid #f94343'}}>
             <ComparisonCardTitle>
               Now
@@ -244,6 +249,9 @@ const Features = ({}) => (
               </ComparisonCardItem>
               <ComparisonCardItem>
                 Embedded in your home page
+              </ComparisonCardItem>
+              <ComparisonCardItem>
+                The new hotness
               </ComparisonCardItem>
               <ComparisonCardItem>
                 Searchable

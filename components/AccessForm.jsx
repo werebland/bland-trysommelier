@@ -59,7 +59,70 @@ const PosedContainer = posed.div({
   }
 })
 
-const AccessForm = ({handleAccess, email, handleEmail, name, handleName, accessStatus, handleClear}) => (
+const AccessFormStatus = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+`;
+
+const AccessFormStatusEmoji = styled.i`
+  text-transform: none;
+  font-size: 4rem;
+  margin: 0;
+`;
+
+const AccessFormStatusTitle = styled.h3`
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1f1f1f;
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+`;
+
+const AccessFormStatusSubtitle = styled.span`
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 16px;
+  text-align: center;
+`;
+
+const AccessFormReferral = styled.div`
+  display: inline-flex;
+  padding: 2px;
+  border: 2px solid #1f1f1f;
+  border-radius: 8px;
+  height: 54px;
+`;
+
+const AccessFormReferralCode = styled.span`
+  height: 100%;
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f1f1f;
+`;
+
+const AccessFormReferralCopy = styled.div`
+  width: 48px;
+  height: 100%;
+  background: #1f1f1f;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    fill: #fff;
+  }
+`;
+
+const AccessForm = ({handleAccess, email, handleEmail, name, handleName, accessStatus, firstName, referral, handleClear}) => (
   <StyledPaper elevation={2}>
     <AccessFormContainer onSubmit={(e) => handleAccess(e)}>
       <PoseGroup>
@@ -68,9 +131,26 @@ const AccessForm = ({handleAccess, email, handleEmail, name, handleName, accessS
           <PosedContainer key="0">
             {accessStatus === "success"
               ?
-              <div>
-                You're on our list!
-              </div>
+              <AccessFormStatus>
+                <AccessFormStatusEmoji>👋</AccessFormStatusEmoji>
+                <AccessFormStatusTitle>{firstName}, you're on our list!</AccessFormStatusTitle>
+                <AccessFormStatusSubtitle>
+                  We'll get in touch when you get access.
+                  <br/>
+                  Share your referral link with friends to move up the list.
+                </AccessFormStatusSubtitle>
+                <AccessFormReferral>
+                  <AccessFormReferralCode>
+                    somm.ca/{referral}
+                  </AccessFormReferralCode>
+                  <AccessFormReferralCopy>
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="none" d="M0 0h24v24H0V0z"/>
+                      <path d="M2 5c-.55 0-1 .45-1 1v15c0 1.1.9 2 2 2h15c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1-.45-1-1V6c0-.55-.45-1-1-1zm19-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-1 16H8c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1z"/>
+                    </svg>
+                  </AccessFormReferralCopy>
+                </AccessFormReferral>
+              </AccessFormStatus>
               :
               <div>
                 Whoops! Something went wrong. Here's what we know:

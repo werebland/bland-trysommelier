@@ -2093,7 +2093,7 @@ function (_Document) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
-        href: "https://fonts.googleapis.com/css?family=Montserrat:800|Source+Sans+Pro",
+        href: "https://fonts.googleapis.com/css?family=Montserrat:800|Source+Sans+Pro:400,700",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,

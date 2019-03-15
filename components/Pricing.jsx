@@ -116,7 +116,7 @@ const PricingCardPriceSubtitle = styled.span`
 
 const PricingCardItems = styled.ul`
   padding: 0;
-  margin: 0;
+  margin: 0 0 16px;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -139,6 +139,7 @@ const PricingAlert = styled.span`
   color: #1f1f1f;
   position: relative;
   margin-bottom: 40px;
+  text-align: center;
 
   &:after {
     content: "";
@@ -151,6 +152,12 @@ const PricingAlert = styled.span`
     left: 4px;
     z-index: -1;
   }
+`;
+
+const ContactButton = styled(StyledButton)`
+  background: #fff !important;
+  color: #1f1f1f !important;
+  border: 2px solid #1f1f1f !important;
 `;
 
 const Pricing = ({}) => (
@@ -188,6 +195,11 @@ const Pricing = ({}) => (
                   Single menu
                 </PricingCardItem>
             </PricingCardItems>
+            <Link href="/get-access">
+              <StyledButton>
+                Get early access
+              </StyledButton>
+            </Link>
           </PricingCardContainer>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
@@ -215,12 +227,12 @@ const Pricing = ({}) => (
                   Multiple menus
                 </PricingCardItem>
             </PricingCardItems>
+            <Link href="/get-access">
+              <StyledButton>
+                Get early access
+              </StyledButton>
+            </Link>
           </PricingCardContainer>
-          <Link href="/get-access">
-            <StyledButton>
-              Get early access
-            </StyledButton>
-          </Link>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
           <PricingCardContainer>
@@ -247,6 +259,9 @@ const Pricing = ({}) => (
                   Multiple locations
                 </PricingCardItem>
             </PricingCardItems>
+            <ContactButton>
+              Contact us
+            </ContactButton>
           </PricingCardContainer>
         </Grid>
       </PricingGrid>
