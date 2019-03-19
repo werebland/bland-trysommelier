@@ -8,7 +8,7 @@ const WidgetContainer = styled.div`
   position: fixed;
   ${props => props.position}: ${props => props.position == "left" ? '64px' : '26px'};
   bottom: 16px;
-  z-index: 8;
+  z-index: 88888;
 `;
 
 const WidgetToggle = styled.div`

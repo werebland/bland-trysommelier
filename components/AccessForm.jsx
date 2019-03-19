@@ -135,7 +135,7 @@ const AccessForm = ({handleAccess, email, handleEmail, name, handleName, accessS
                 <AccessFormStatusEmoji>👋</AccessFormStatusEmoji>
                 <AccessFormStatusTitle>{firstName}, you're on our list!</AccessFormStatusTitle>
                 <AccessFormStatusSubtitle>
-                  We'll get in touch when you get access.
+                  We'll be in touch when you get access.
                   <br/>
                   Share your referral link with friends to move up the list.
                 </AccessFormStatusSubtitle>

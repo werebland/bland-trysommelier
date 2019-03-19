@@ -97,8 +97,12 @@ const MenuUploader = ({ files, handleDrop, handleRemove, handleMenuName }) => (
     </Dropzone>
     <MenuUploaderFiles>
       {files.map((file, i) =>
-        <MenuUploaderFile key={file.name} >
-          <StyledTextField variant="outlined" label="Menu name" value={file.name} onChange={(e) => handleMenuName(e.target.value, i)}/>
+        <MenuUploaderFile key={i} >
+          <StyledTextField
+            variant="outlined"
+            label="Menu name"
+            value={file.name}
+            onChange={(e) => handleMenuName(e.target.value, i)}/>
           <MenuUploaderFileRemove onClick={() => handleRemove(i)}>
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path fill="none" d="M0 0h24v24H0V0z"/>

@@ -30,6 +30,7 @@ import {
 
 import AccessForm from '../components/AccessForm'
 import MenuUploader from '../components/MenuUploader'
+import WidgetCustomizer from '../components/WidgetCustomizer'
 
 var storage = firebase.storage();
 var storageRef = storage.ref();
@@ -212,7 +213,13 @@ class Onboard extends Component {
       name: "",
       labelWidth: 0,
       isLoading: true,
-      addressTerm: ''
+      addressTerm: '',
+      widget: {
+        iconColor: '#1f1f1f',
+        backgroundColor: '#fff',
+        position: 'right',
+        icon: 'emoji'
+      }
     }
   }
 
@@ -283,6 +290,7 @@ class Onboard extends Component {
   handleNext = () => {
     const { activeStep } = this.state
     if (activeStep === 2) {
+      console.log('completed');
       this.handleComplete()
     } else {
       this.setState({
@@ -326,7 +334,7 @@ class Onboard extends Component {
     });
   };
 
-  handleMenuName = (value, i) => {
+  handleMenuName(value, i) {
     let { menus } = this.state
     menus[i].name = value
     this.setState({
@@ -380,75 +388,112 @@ class Onboard extends Component {
   };
 
   handleComplete() {
-    this.createRestaurant()
+    // Upload menus, then create restaurant with links to uploaded menus
     this.uploadMenus()
   }
 
-  createRestaurant() {
-    const { restaurant, user, activeStep } = this.state
-    restaurant.owner = user.id
+  uploadMenus() {
+    const { id } = this.state.user
+    const files = this.state.menus
+    console.log(files);
+    Promise.all(
+      // Array of "Promises"
+      files.map(item => this.putStorageItem(item, id))
+    )
+    .then((url) => {
+      console.log(`All success`)
+      console.log(url);
+      this.createRestaurant(url)
+    })
+    .catch((error) => {
+      console.log(`Some failed: `, error.message)
+    });
+  }
+
+  putStorageItem(item, id) {
+    const { file, name } = item
+    // the return value will be a Promise
+    return storageRef.child('menus/' + id + '/' + file.name).put(file)
+    .then((snapshot) => {
+      let menu = {
+        name,
+      }
+      console.log('One success:', item)
+      console.log(snapshot);
+      snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        menu.menuPath = String(downloadURL)
+      })
+      console.log(menu);
+      return menu
+    }).catch((error) => {
+      console.log('One failed:', item, error.message)
+    });
+  }
+
+  createRestaurant(url) {
+    const menus = url
+    const { restaurant, user, activeStep, widget } = this.state
+    const owner = user.id
     console.log(user);
-    const data = restaurant
+    const data = {
+      ...restaurant,
+      owner,
+      menus,
+      widget,
+    }
     console.log(data);
     base.addToCollection('restaurants', data)
       .then(() => {
-
+        console.log('success');
       }).catch(err => {
       //handle error
     });
   }
 
-  uploadMenus() {
-    const { files } = this.state
-    _.forEach(files, function(data) {
-      const { name, file } = data
-      var metadata = {
-        contentType: file.type
-      };
-      var uploadTask = storageRef.child('menus/' + file.name).put(file, metadata);
-      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-        function(snapshot) {
-          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log('Upload is ' + progress + '% done');
-          switch (snapshot.state) {
-            case firebase.storage.TaskState.PAUSED: // or 'paused'
-              console.log('Upload is paused');
-              break;
-            case firebase.storage.TaskState.RUNNING: // or 'running'
-              console.log('Upload is running');
-              break;
-          }
-        }, function(error) {
+  updateUser(url) {
+    const menus = url
+    const { id } = this.state.user
+    const data = {
+      menus
+    }
+    console.log(menus);
+    console.log(data);
+    base.updateDoc('users/' + id, data)
+    .then(() => {
+      console.log('success');
+      }).catch(err => {
+      console.log(err);
+    });
+  }
 
-        // A full list of error codes is available at
-        // https://firebase.google.com/docs/storage/web/handle-errors
-        switch (error.code) {
-          case 'storage/unauthorized':
-            // User doesn't have permission to access the object
-            break;
+  handleWidgetIconColor(value) {
+    let { widget } = this.state
+    widget.iconColor = value
+    this.setState({
+      widget
+    })
+  }
 
-          case 'storage/canceled':
-            // User canceled the upload
-            break;
+  handleWidgetBackgroundColor(value) {
+    let { widget } = this.state
+    widget.backgroundColor = value
+    this.setState({
+      widget
+    })
+  }
 
-          case 'storage/unknown':
-            // Unknown error occurred, inspect error.serverResponse
-            break;
-        }
-      }, function() {
-        // Upload completed successfully, now we can get the download URL
-        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-          console.log('File available at', downloadURL);
-        });
-      });
+  handleWidgetPosition(value) {
+    let { widget } = this.state
+    widget.position = value
+    this.setState({
+      widget
     })
   }
 
   render() {
     const { classes } = this.props;
     const steps = ['Tell us about your restaurant', 'Upload your menus', 'Customize your widget']
-    const { activeStep, restaurant, menus, user, addressTerm } = this.state;
+    const { activeStep, restaurant, menus, user, addressTerm, widget } = this.state;
     const { email, firstName, lastName } = user
     const { restaurantName, location, price, cuisine, address, username } = restaurant
 
@@ -600,7 +645,14 @@ class Onboard extends Component {
                     }
                     {activeStep === 2 &&
                       <OnboardStepperContent key="2" step={2}>
-                        Widget customizer
+                        <WidgetCustomizer
+                          iconColor={widget.iconColor}
+                          backgroundColor={widget.backgroundColor}
+                          position={widget.position}
+                          icon={widget.icon}
+                          handleIconColorChange={(value) => this.handleWidgetIconColor(value)}
+                          handleBackgroundColorChange={(value) => this.handleWidgetBackgroundColor(value)}
+                          handlePositionChange={(value) => this.handleWidgetPosition(value)} />
                       </OnboardStepperContent>
                     }
                   </PoseGroup>

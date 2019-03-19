@@ -20,22 +20,11 @@ import Features from '../components/Features'
 import Pricing from '../components/Pricing'
 import AccessForm from '../components/AccessForm'
 import SommWidget from '../components/SommWidget'
+import Splash from '../components/Splash'
 
 const IndexWrapper = styled.div`
+  width: 100%;
   box-sizing: border-box;
-  border: 10px solid #1f1f1f;
-  overflow-x: hidden;
-
-  &:before {
-    content: "";
-    height: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #1f1f1f;
-    z-index: 999;
-  }
 `;
 
 const StyledPaper = styled(Paper)`
@@ -277,52 +266,7 @@ class Index extends Component {
   render() {
     return (
       <IndexWrapper>
-        <Head>
-          <title>Somm | Your menu's personal assistant</title>
-          <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png"/>
-          <link rel="manifest" href="/static/site.webmanifest"/>
-          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#f94343"/>
-          <link rel="shortcut icon" href="/static/favicon.ico"/>
-          <meta name="msapplication-TileColor" content="#ffffff"/>
-          <meta name="msapplication-config" content="/static/browserconfig.xml"/>
-          <meta name="theme-color" content="#ffffff"/>
-        </Head>
-        <Navbar />
-        <NoSsr>
-          <SommWidget username="xoh" iconColor="#fff" backgroundColor="#f94343" position="right" />
-        </NoSsr>
-        <Hero>
-          <Grid container spacing={16} style={{ zIndex: 5, position: 'relative' }}>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <HeroTitle>
-                Your restaurant deserves
-                <br/>
-                <span>a better menu</span>
-              </HeroTitle>
-              <HeroCopy>
-                Supercharge your restaurant with Somm, a personal assistant for your menu with powerful features and valuable insights.
-              </HeroCopy>
-              <AccessForm
-                handleAccess={(e) => this.handleAccess(e)}
-                email={this.state.email}
-                handleEmail={(email) => this.setState({ email })}
-                name={this.state.name}
-                handleName={(name) => this.setState({ name })}
-                accessStatus={this.state.accessStatus}
-                firstName={this.state.firstName}
-                referral={this.state.referral}
-                handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-              <Demo />
-            </Grid>
-          </Grid>
-          <HeroBackground />
-        </Hero>
-        <Features />
-        <Pricing />
+        <Splash query={this.props.url.query} />
       </IndexWrapper>
 
     );
