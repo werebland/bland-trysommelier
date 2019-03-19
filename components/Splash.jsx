@@ -17,6 +17,7 @@ import Grid from '@material-ui/core/Grid';
 import AccessForm from './AccessForm'
 import SommWidget from './SommWidget'
 import Features from './Features'
+import Explainer from './Explainer'
 
 const SplashWrapper = styled.div`
   width: 100vw;
@@ -306,7 +307,7 @@ class Splash extends Component {
                       <span>a better menu</span>
                     </HeroTitle>
                     <HeroCopy>
-                      Supercharge your restaurant with Somm, a personal assistant for your menu with powerful features and valuable insights.
+                      Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights.
                     </HeroCopy>
                   </RevealContainer>
                   <RevealContainer key="1" delay={600}>
@@ -339,7 +340,7 @@ class Splash extends Component {
               </svg>
             </SplashDemoContainer>
         </SplashGrid>
-        <Features />
+        <Explainer />
       </SplashWrapper>
     );
   }
