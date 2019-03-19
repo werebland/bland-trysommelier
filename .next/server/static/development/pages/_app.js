@@ -1401,7 +1401,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var react_jss_lib_JssProvider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-jss/lib/JssProvider */ "react-jss/lib/JssProvider");
 /* harmony import */ var react_jss_lib_JssProvider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jss_lib_JssProvider__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _src_getPageContext__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../src/getPageContext */ "./src/getPageContext.js");
+/* harmony import */ var _src_getPageContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../src/getPageContext */ "./src/getPageContext.js");
 
 
 
@@ -1428,7 +1428,7 @@ function (_App) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, MyApp);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(MyApp).call(this));
-    _this.pageContext = Object(_src_getPageContext__WEBPACK_IMPORTED_MODULE_13__["default"])();
+    _this.pageContext = Object(_src_getPageContext__WEBPACK_IMPORTED_MODULE_12__["default"])();
     return _this;
   }
 
