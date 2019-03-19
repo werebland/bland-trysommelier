@@ -520,6 +520,7 @@ var Explainer = function Explainer(_ref) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
+    delay: 300,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 142
@@ -1454,8 +1455,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-scroll */ "react-scroll");
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_scroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__);
 
 var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Pricing.jsx";
+
 
 
 
@@ -1517,7 +1521,7 @@ var PricingCardItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.l
 var PricingAlert = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
   displayName: "Pricing__PricingAlert",
   componentId: "cp9je-11"
-})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin-bottom:40px;text-align:center;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
+})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin-bottom:40px;text-align:center;display:flex;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
 var ContactButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(StyledButton).withConfig({
   displayName: "Pricing__ContactButton",
   componentId: "cp9je-12"
@@ -1530,45 +1534,52 @@ var Pricing = function Pricing(_ref) {
     name: "pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 167
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    bottom: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 169
     },
     __self: this
   }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 172
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 173
     },
     __self: this
   }, "Where guac is never extra"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingAlert, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 174
     },
     __self: this
-  }, "Early Access: Unlimited items, All features, No charge."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
+  }, "Early Access: Unlimited items, All features, No charge.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
     container: true,
     spacing: 16,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 176
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1580,78 +1591,78 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 177
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 178
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 179
     },
     __self: this
   }, "Appetizer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 182
     },
     __self: this
   }, "0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 185
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 188
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 189
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 192
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 195
     },
     __self: this
   }, "35 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 198
     },
     __self: this
   }, "Single menu")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 202
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 203
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1663,80 +1674,80 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 209
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 210
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 211
     },
     __self: this
   }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 214
     },
     __self: this
   }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 217
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 220
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 221
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 224
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 227
     },
     __self: this
   }, "100 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 230
     },
     __self: this
   }, "Multiple menus")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 234
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 235
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1748,71 +1759,71 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 241
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 242
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 243
     },
     __self: this
   }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 246
     },
     __self: this
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 249
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
+      lineNumber: 252
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 253
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 256
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 259
     },
     __self: this
   }, "Unlimited dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 262
     },
     __self: this
   }, "Multiple locations")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ContactButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 266
     },
     __self: this
   }, "Contact us"))))));
@@ -2269,39 +2280,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next-server/head */ "next-server/head");
-/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-hotjar */ "react-hotjar");
-/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_hotjar__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var react_facebook_pixel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-facebook-pixel */ "react-facebook-pixel");
-/* harmony import */ var react_facebook_pixel__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_facebook_pixel__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-ga */ "react-ga");
-/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var voucher_code_generator__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! voucher-code-generator */ "voucher-code-generator");
-/* harmony import */ var voucher_code_generator__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(voucher_code_generator__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! firebase/app */ "firebase/app");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../config */ "./config.js");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-pose */ "react-pose");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(react_pose__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @material-ui/core/NoSsr */ "@material-ui/core/NoSsr");
-/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @material-ui/core/Grid */ "@material-ui/core/Grid");
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _AccessForm__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./AccessForm */ "./components/AccessForm.jsx");
-/* harmony import */ var _SommWidget__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./SommWidget */ "./components/SommWidget.jsx");
-/* harmony import */ var _Features__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Features */ "./components/Features.jsx");
-/* harmony import */ var _Explainer__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Explainer */ "./components/Explainer.jsx");
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next-server/head */ "next-server/head");
+/* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-hotjar */ "react-hotjar");
+/* harmony import */ var react_hotjar__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_hotjar__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var react_facebook_pixel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-facebook-pixel */ "react-facebook-pixel");
+/* harmony import */ var react_facebook_pixel__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_facebook_pixel__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var voucher_code_generator__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! voucher-code-generator */ "voucher-code-generator");
+/* harmony import */ var voucher_code_generator__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(voucher_code_generator__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! firebase/app */ "firebase/app");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../config */ "./config.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-reveal/Fade */ "react-reveal/Fade");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @material-ui/core/NoSsr */ "@material-ui/core/NoSsr");
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @material-ui/core/Grid */ "@material-ui/core/Grid");
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _AccessForm__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./AccessForm */ "./components/AccessForm.jsx");
+/* harmony import */ var _SommWidget__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./SommWidget */ "./components/SommWidget.jsx");
+/* harmony import */ var _Pricing__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Pricing */ "./components/Pricing.jsx");
+/* harmony import */ var _Explainer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Explainer */ "./components/Explainer.jsx");
 
 
 
@@ -2328,80 +2337,35 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Splash.jsx";
 
 
 
-var SplashWrapper = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+var SplashWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SplashWrapper",
   componentId: "sc-1e94rkw-0"
 })(["width:100vw;overflow-x:hidden;height:100%;min-height:100vh;box-sizing:border-box;padding-top:80px;@media only screen and (min-width:960px){padding-top:0;}"]);
-var SommLogo = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+var SommLogo = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SommLogo",
   componentId: "sc-1e94rkw-1"
 })(["position:absolute;top:32px;left:32px;width:120px;height:32px;& svg{fill:#f94343;}"]);
-var SplashGrid = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+var SplashGrid = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SplashGrid",
   componentId: "sc-1e94rkw-2"
 })(["display:grid;grid-template-columns:70vw 30vw;@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;}"]);
-var HeroTitle = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
+var HeroTitle = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.h1.withConfig({
   displayName: "Splash__HeroTitle",
   componentId: "sc-1e94rkw-3"
 })(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#1f1f1f;margin:0 0 24px;text-align:center;max-width:528px;box-sizing:border-box;& span{margin-top:8px;text-transform:uppercase;background:#f94343;color:#fff;font-size:3.25rem;padding:16px 8px;box-sizing:border-box;display:block;max-width:528px;box-sizing:border-box;}"]);
-var HeroCopy = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.p.withConfig({
+var HeroCopy = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.p.withConfig({
   displayName: "Splash__HeroCopy",
   componentId: "sc-1e94rkw-4"
 })(["font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.75rem;color:#1f1f1f;padding:0;margin:0 0 24px;max-width:528px;"]);
-var SplashDemoContainer = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+var SplashDemoContainer = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SplashDemoContainer",
   componentId: "sc-1e94rkw-5"
-})(["height:100%;position:relative;display:flex;align-items:center;justify-content:center;& svg{transform:scale(2.8);position:relative;z-index:-1;}@media only screen and (min-width:960px){justify-content:flex-start;}@media only screen and (max-width:959px){width:100vw;}"]);
-var PosedSplashDemo = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: 800
-  },
-  exit: {
-    y: 32,
-    opacity: 0
-  },
-  init: {
-    y: 32,
-    opacity: 0
-  }
-});
-var SplashDemo = styled_components__WEBPACK_IMPORTED_MODULE_10___default()(function (props) {
-  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(PosedSplashDemo, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_7__["default"])({}, props, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 129
-    },
-    __self: this
-  }));
-}).withConfig({
+})(["height:100%;position:relative;display:flex;align-items:center;justify-content:center;& svg{transform:scale(2.3);position:absolute;z-index:-1;}@media only screen and (min-width:960px){justify-content:flex-start;}@media only screen and (max-width:959px){width:100vw;}"]);
+var SplashDemo = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SplashDemo",
   componentId: "sc-1e94rkw-6"
-})(["width:360px;height:600px;background-image:url('static/demo.png');background-size:cover;background-position:center;display:flex;position:absolute;z-index:8;border-radius:8px;box-shadow:0 2px 16px -2px rgba(0,0,0,0.32);"]);
-var RevealWrapper = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
-  enter: {
-    staggerChildren: 300
-  }
-});
-var RevealContainer = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: function delay(props) {
-      return props.delay;
-    }
-  },
-  exit: {
-    y: 32,
-    opacity: 0
-  },
-  init: {
-    y: 32,
-    opacity: 0
-  }
-});
-var SplashForm = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+})(["width:360px;height:600px;background-image:url('static/demo.png');background-size:cover;background-position:center;display:flex;position:relative;z-index:8;border-radius:8px;box-shadow:0 2px 16px -2px rgba(0,0,0,0.32);"]);
+var SplashForm = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Splash__SplashForm",
   componentId: "sc-1e94rkw-7"
 })(["height:100%;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:0}"]);
@@ -2432,11 +2396,11 @@ function (_Component) {
     value: function componentDidMount() {
       var hjid = "1229544";
       var hjsv = "6";
-      react_hotjar__WEBPACK_IMPORTED_MODULE_13__["hotjar"].initialize(hjid, hjsv);
-      react_facebook_pixel__WEBPACK_IMPORTED_MODULE_14___default.a.init('263524987898901');
-      react_facebook_pixel__WEBPACK_IMPORTED_MODULE_14___default.a.pageView();
-      react_ga__WEBPACK_IMPORTED_MODULE_15___default.a.initialize('UA-125819564-2');
-      react_ga__WEBPACK_IMPORTED_MODULE_15___default.a.pageview(window.location.pathname + window.location.search);
+      react_hotjar__WEBPACK_IMPORTED_MODULE_12__["hotjar"].initialize(hjid, hjsv);
+      react_facebook_pixel__WEBPACK_IMPORTED_MODULE_13___default.a.init('263524987898901');
+      react_facebook_pixel__WEBPACK_IMPORTED_MODULE_13___default.a.pageView();
+      react_ga__WEBPACK_IMPORTED_MODULE_14___default.a.initialize('UA-125819564-2');
+      react_ga__WEBPACK_IMPORTED_MODULE_14___default.a.pageview(window.location.pathname + window.location.search);
       var referral = this.props.query.r;
 
       if (referral) {}
@@ -2451,11 +2415,11 @@ function (_Component) {
           email = _this$state.email,
           name = _this$state.name;
 
-      var names = lodash__WEBPACK_IMPORTED_MODULE_11___default.a.split(name, ' ', 2);
+      var names = lodash__WEBPACK_IMPORTED_MODULE_10___default.a.split(name, ' ', 2);
 
       var firstName = names[0];
       var lastName = names[1];
-      var referral = voucher_code_generator__WEBPACK_IMPORTED_MODULE_16___default.a.generate({
+      var referral = voucher_code_generator__WEBPACK_IMPORTED_MODULE_15___default.a.generate({
         length: 8,
         count: 1,
         prefix: 'R-'
@@ -2469,7 +2433,7 @@ function (_Component) {
       var formattedData = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(data);
 
       console.log(formattedData);
-      axios__WEBPACK_IMPORTED_MODULE_12___default()({
+      axios__WEBPACK_IMPORTED_MODULE_11___default()({
         method: 'post',
         url: 'https://wt-2c136a182f9df0f639eceee9aa700a3d-0.sandbox.auth0-extend.com/somm-mailchimp',
         data: formattedData,
@@ -2487,7 +2451,7 @@ function (_Component) {
           status: 'requested'
         });
 
-        _config__WEBPACK_IMPORTED_MODULE_18__["default"].addToCollection('users', user).then(function () {
+        _config__WEBPACK_IMPORTED_MODULE_17__["default"].addToCollection('users', user).then(function () {
           _this2.setState({
             accessStatus: 'success',
             firstName: firstName,
@@ -2508,125 +2472,125 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashWrapper, {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 224
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 263
+          lineNumber: 225
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 226
         },
         __self: this
-      }, "Somm | Your menu's personal assistant"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }, "Somm | Your menu's personal assistant"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/static/apple-touch-icon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 227
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
         href: "/static/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266
+          lineNumber: 228
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
         href: "/static/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 229
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "manifest",
         href: "/static/site.webmanifest",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 230
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "mask-icon",
         href: "/static/safari-pinned-tab.svg",
         color: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 231
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
         rel: "shortcut icon",
         href: "/static/favicon.ico",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 232
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
         name: "msapplication-TileColor",
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 233
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
         name: "msapplication-config",
         content: "/static/browserconfig.xml",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 234
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
         name: "theme-color",
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 235
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_20___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_19___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 275
+          lineNumber: 237
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_SommWidget__WEBPACK_IMPORTED_MODULE_23__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SommWidget__WEBPACK_IMPORTED_MODULE_22__["default"], {
         username: "lfbakery",
         iconColor: "#f94343",
         backgroundColor: "#fff",
         position: "right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 276
+          lineNumber: 238
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SommLogo, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SommLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 278
+          lineNumber: 240
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("svg", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("svg", {
         version: "1.1",
         x: "0px",
         y: "0px",
@@ -2635,54 +2599,54 @@ function (_Component) {
         viewBox: "0 0 120 32.1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 279
+          lineNumber: 241
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 280
+          lineNumber: 242
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 281
+          lineNumber: 243
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
         className: "st0",
         d: "M10.9,5.3C9.4,5.3,8.3,5.8,8.3,7c0,4.1,13,1.8,13,10.7c0,5.1-4.5,7.6-10,7.6c-4.1,0-8.4-1.5-11.4-4l2.5-5.1 c2.5,2.2,6.4,3.7,9,3.7c1.9,0,3.1-0.7,3.1-2c0-4.2-13-1.7-13-10.4C1.6,2.9,5.5,0,11.4,0c3.6,0,7.3,1.1,9.9,2.8l-2.4,5.1 C16.3,6.4,13,5.3,10.9,5.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 282
+          lineNumber: 244
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
         className: "st0",
         d: "M43.1,15.5c0,5.9-4.2,9.8-10.5,9.8c-6.3,0-10.4-3.9-10.4-9.8c0-5.9,4.1-9.8,10.4-9.8 C38.9,5.7,43.1,9.6,43.1,15.5z M28.5,15.5c0,2.9,1.7,4.8,4.1,4.8c2.5,0,4.1-1.9,4.1-4.8c0-2.8-1.7-4.7-4.1-4.7 C30.2,10.8,28.5,12.7,28.5,15.5z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 285
+          lineNumber: 247
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
         className: "st0",
         d: "M76.9,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C74.1,5.7,76.9,8.5,76.9,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 250
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
         className: "st0",
         d: "M111,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C108.2,5.7,111,8.5,111,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 291
+          lineNumber: 253
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("rect", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("rect", {
         x: "9",
         y: "27.1",
         className: "st0",
@@ -2690,79 +2654,57 @@ function (_Component) {
         height: "4.9",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 257
         },
         __self: this
-      })))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashGrid, {
+      })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashGrid, {
         style: {
           minHeight: '100vh'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 261
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashForm, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashForm, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 262
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealWrapper, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18___default.a, {
+        bottom: true,
+        ssrFadeout: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 301
+          lineNumber: 263
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_19__["PoseGroup"], {
-        animateOnMount: true,
-        preEnterPose: "init",
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 302
+          lineNumber: 264
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealContainer, {
-        key: "0",
-        delay: 400,
+      }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 303
+          lineNumber: 266
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(HeroTitle, {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 304
+          lineNumber: 267
         },
         __self: this
-      }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
+      }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 269
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 307
-        },
-        __self: this
-      }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(HeroCopy, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 309
-        },
-        __self: this
-      }, "Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights.")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealContainer, {
-        key: "1",
-        delay: 600,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 313
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_AccessForm__WEBPACK_IMPORTED_MODULE_22__["default"], {
+      }, "Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_AccessForm__WEBPACK_IMPORTED_MODULE_21__["default"], {
         handleAccess: function handleAccess(e) {
           return _this3.handleAccess(e);
         },
@@ -2790,58 +2732,65 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 272
         },
         __self: this
-      }))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashDemoContainer, {
+      }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashDemoContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 284
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_19__["PoseGroup"], {
-        animateOnMount: true,
-        preEnterPose: "init",
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18___default.a, {
+        bottom: true,
+        ssrFadeout: true,
+        delay: 300,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 329
+          lineNumber: 285
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashDemo, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashDemo, {
         key: "3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 330
+          lineNumber: 286
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("svg", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("svg", {
         width: "600",
         height: "600",
         viewBox: "0 0 600 600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 332
+          lineNumber: 288
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
         transform: "translate(300,300)",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 337
+          lineNumber: 293
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
         d: "M108.4,-133.2C124.6,-115.5,111.1,-66.4,128.6,-15.5C146.1,35.4,194.7,87.9,191.1,125.4C187.4,162.9,131.5,185.3,76,202.9C20.5,220.5,-34.5,233.4,-76.9,215.9C-119.2,198.5,-148.8,150.7,-148.8,107.1C-148.8,63.4,-119.2,23.8,-115.6,-24.5C-112,-72.8,-134.4,-129.9,-119.5,-147.7C-104.6,-165.6,-52.3,-144.3,-3.1,-140.6C46.1,-136.9,92.1,-150.8,108.4,-133.2Z",
         fill: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 338
+          lineNumber: 294
         },
         __self: this
-      }))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Explainer__WEBPACK_IMPORTED_MODULE_25__["default"], {
+      }))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Explainer__WEBPACK_IMPORTED_MODULE_24__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 343
+          lineNumber: 299
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Pricing__WEBPACK_IMPORTED_MODULE_23__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 300
         },
         __self: this
       }));
@@ -2849,7 +2798,7 @@ function (_Component) {
   }]);
 
   return Splash;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
 

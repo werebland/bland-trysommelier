@@ -139,7 +139,7 @@ const Explainer = ({}) => (
     </ExplainerBlurb>
     <ExplainerHighlight className="explainer__highlight">
         <ExplainerFeatures className="explainer__features">
-          <Fade bottom>
+          <Fade bottom delay={300}>
             <ExplainerFeature className="explainer__feature">
               <ExplainerFeatureTitle className="explainer__featureTitle">
                 Valuable

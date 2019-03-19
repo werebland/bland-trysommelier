@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link'
 import { Element } from 'react-scroll'
+import Fade from 'react-reveal/Fade'
 
 const PricingWrapper = styled.section`
   width: 100%;
@@ -140,6 +141,7 @@ const PricingAlert = styled.span`
   position: relative;
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
 
   &:after {
     content: "";
@@ -163,12 +165,14 @@ const ContactButton = styled(StyledButton)`
 const Pricing = ({}) => (
   <Element name="pricing">
     <PricingWrapper>
-      <PricingTitle>
-        Pricing
-      </PricingTitle>
-      <br/>
-      <PricingSubtitle>Where guac is never extra</PricingSubtitle>
-      <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
+      <Fade bottom>
+        <PricingTitle>
+          Pricing
+        </PricingTitle>
+        <br/>
+        <PricingSubtitle>Where guac is never extra</PricingSubtitle>
+        <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
+      </Fade>
       <PricingGrid container spacing={16}>
         <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
           <PricingCardContainer>

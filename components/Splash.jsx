@@ -9,14 +9,14 @@ import ReactGA from 'react-ga';
 import voucher_codes from 'voucher-code-generator'
 import firebase from 'firebase/app'
 import base from '../config'
-import posed, {PoseGroup} from 'react-pose'
+import Fade from 'react-reveal/Fade'
 
 import NoSsr from '@material-ui/core/NoSsr';
 import Grid from '@material-ui/core/Grid';
 
 import AccessForm from './AccessForm'
 import SommWidget from './SommWidget'
-import Features from './Features'
+import Pricing from './Pricing'
 import Explainer from './Explainer'
 
 const SplashWrapper = styled.div`
@@ -96,8 +96,8 @@ const SplashDemoContainer = styled.div`
   justify-content: center;
 
   & svg {
-    transform: scale(2.8);
-    position: relative;
+    transform: scale(2.3);
+    position: absolute;
     z-index: -1;
   }
 
@@ -105,61 +105,23 @@ const SplashDemoContainer = styled.div`
     justify-content: flex-start;
   }
 
-    @media only screen and (max-width: 959px) {
-      width: 100vw;
-    }
+  @media only screen and (max-width: 959px) {
+    width: 100vw;
+  }
 `;
 
-const PosedSplashDemo = posed.div({
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: 800,
-  },
-  exit: {
-    y: 32,
-    opacity: 0,
-  },
-  init: {
-    y: 32,
-    opacity: 0,
-  }
-})
-
-const SplashDemo = styled(props => <PosedSplashDemo {...props} />)`
+const SplashDemo = styled.div`
   width: 360px;
   height: 600px;
   background-image: url('static/demo.png');
   background-size: cover;
   background-position: center;
   display: flex;
-  position: absolute;
+  position: relative;
   z-index: 8;
   border-radius: 8px;
   box-shadow: 0 2px 16px -2px rgba(0,0,0,0.32);
 `;
-
-const RevealWrapper = posed.div({
-  enter: {
-    staggerChildren: 300,
-  }
-})
-
-const RevealContainer = posed.div({
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: props => props.delay,
-  },
-  exit: {
-    y: 32,
-    opacity: 0,
-  },
-  init: {
-    y: 32,
-    opacity: 0,
-  }
-})
 
 const SplashForm = styled.div`
   height: 100%;
@@ -298,37 +260,31 @@ class Splash extends Component {
         </SommLogo>
         <SplashGrid style={{minHeight: '100vh'}}>
             <SplashForm>
-              <RevealWrapper>
-                <PoseGroup animateOnMount preEnterPose="init">
-                  <RevealContainer key='0' delay={400}>
-                    <HeroTitle>
-                      Your restaurant deserves
-                      <br/>
-                      <span>a better menu</span>
-                    </HeroTitle>
-                    <HeroCopy>
-                      Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights.
-                    </HeroCopy>
-                  </RevealContainer>
-                  <RevealContainer key="1" delay={600}>
-                    <AccessForm
-                      handleAccess={(e) => this.handleAccess(e)}
-                      email={this.state.email}
-                      handleEmail={(email) => this.setState({ email })}
-                      name={this.state.name}
-                      handleName={(name) => this.setState({ name })}
-                      accessStatus={this.state.accessStatus}
-                      firstName={this.state.firstName}
-                      referral={this.state.referral}
-                      handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
-                  </RevealContainer>
-                </PoseGroup>
-              </RevealWrapper>
+              <Fade bottom ssrFadeout>
+                <HeroTitle>
+                  Your restaurant deserves
+                  <br/>
+                  <span>a better menu</span>
+                </HeroTitle>
+                <HeroCopy>
+                  Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights.
+                </HeroCopy>
+                <AccessForm
+                  handleAccess={(e) => this.handleAccess(e)}
+                  email={this.state.email}
+                  handleEmail={(email) => this.setState({ email })}
+                  name={this.state.name}
+                  handleName={(name) => this.setState({ name })}
+                  accessStatus={this.state.accessStatus}
+                  firstName={this.state.firstName}
+                  referral={this.state.referral}
+                  handleClear={() => this.setState({ accessStatus: "", name: "", email: "" })}/>
+              </Fade>
             </SplashForm>
             <SplashDemoContainer>
-              <PoseGroup animateOnMount preEnterPose="init">
+              <Fade bottom ssrFadeout delay={300}>
                 <SplashDemo key="3"/>
-              </PoseGroup>
+              </Fade>
               <svg
                 width="600"
                 height="600"
@@ -341,6 +297,7 @@ class Splash extends Component {
             </SplashDemoContainer>
         </SplashGrid>
         <Explainer />
+        <Pricing />
       </SplashWrapper>
     );
   }
