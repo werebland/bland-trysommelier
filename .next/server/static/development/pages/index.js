@@ -2109,17 +2109,21 @@ var SommLogo = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.wit
   displayName: "Splash__SommLogo",
   componentId: "sc-1e94rkw-1"
 })(["position:absolute;top:32px;left:32px;width:120px;height:32px;& svg{fill:#f94343;}"]);
+var SplashGrid = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
+  displayName: "Splash__SplashGrid",
+  componentId: "sc-1e94rkw-2"
+})(["display:grid;grid-template-columns:70vw 30vw;@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;}"]);
 var HeroTitle = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h1.withConfig({
   displayName: "Splash__HeroTitle",
-  componentId: "sc-1e94rkw-2"
+  componentId: "sc-1e94rkw-3"
 })(["font-family:'Montserrat',sans-serif;font-size:2.5rem;font-weight:800;color:#1f1f1f;margin:0 0 24px;text-align:center;max-width:528px;box-sizing:border-box;& span{margin-top:8px;text-transform:uppercase;background:#f94343;color:#fff;font-size:3.25rem;padding:16px 8px;box-sizing:border-box;display:block;max-width:528px;box-sizing:border-box;}"]);
 var HeroCopy = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.p.withConfig({
   displayName: "Splash__HeroCopy",
-  componentId: "sc-1e94rkw-3"
+  componentId: "sc-1e94rkw-4"
 })(["font-family:'Source Sans Pro',sans-serif;font-weight:700;font-size:1.75rem;color:#1f1f1f;padding:0;margin:0 0 24px;max-width:528px;"]);
 var SplashDemoContainer = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
   displayName: "Splash__SplashDemoContainer",
-  componentId: "sc-1e94rkw-4"
+  componentId: "sc-1e94rkw-5"
 })(["height:100%;position:relative;display:flex;align-items:center;justify-content:center;& svg{transform:scale(2.8);position:relative;z-index:-1;}@media only screen and (min-width:960px){justify-content:flex-start;}@media only screen and (max-width:959px){width:100vw;}"]);
 var PosedSplashDemo = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
   enter: {
@@ -2140,13 +2144,13 @@ var SplashDemo = styled_components__WEBPACK_IMPORTED_MODULE_10___default()(funct
   return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(PosedSplashDemo, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_7__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 128
     },
     __self: this
   }));
 }).withConfig({
   displayName: "Splash__SplashDemo",
-  componentId: "sc-1e94rkw-5"
+  componentId: "sc-1e94rkw-6"
 })(["width:360px;height:600px;background-image:url('static/demo.png');background-size:cover;background-position:center;display:flex;position:absolute;z-index:8;border-radius:8px;box-shadow:0 2px 16px -2px rgba(0,0,0,0.32);"]);
 var RevealWrapper = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
   enter: {
@@ -2172,7 +2176,7 @@ var RevealContainer = react_pose__WEBPACK_IMPORTED_MODULE_19___default.a.div({
 });
 var SplashForm = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.div.withConfig({
   displayName: "Splash__SplashForm",
-  componentId: "sc-1e94rkw-6"
+  componentId: "sc-1e94rkw-7"
 })(["height:100%;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;@media only screen and (min-width:960px){padding:0}"]);
 
 var Splash =
@@ -2280,19 +2284,19 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 262
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 263
         },
         __self: this
       }, "Somm | Your menu's personal assistant"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2301,7 +2305,7 @@ function (_Component) {
         href: "/static/apple-touch-icon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 264
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2311,7 +2315,7 @@ function (_Component) {
         href: "/static/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 255
+          lineNumber: 265
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2321,7 +2325,7 @@ function (_Component) {
         href: "/static/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 256
+          lineNumber: 266
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2329,7 +2333,7 @@ function (_Component) {
         href: "/static/site.webmanifest",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 257
+          lineNumber: 267
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2338,7 +2342,7 @@ function (_Component) {
         color: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 258
+          lineNumber: 268
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("link", {
@@ -2346,7 +2350,7 @@ function (_Component) {
         href: "/static/favicon.ico",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 259
+          lineNumber: 269
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
@@ -2354,7 +2358,7 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 270
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
@@ -2362,7 +2366,7 @@ function (_Component) {
         content: "/static/browserconfig.xml",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 261
+          lineNumber: 271
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("meta", {
@@ -2370,13 +2374,13 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 272
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_20___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 274
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_SommWidget__WEBPACK_IMPORTED_MODULE_23__["default"], {
@@ -2386,13 +2390,13 @@ function (_Component) {
         position: "right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 275
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SommLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 277
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("svg", {
@@ -2404,19 +2408,19 @@ function (_Component) {
         viewBox: "0 0 120 32.1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 278
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 279
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 280
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
@@ -2424,7 +2428,7 @@ function (_Component) {
         d: "M10.9,5.3C9.4,5.3,8.3,5.8,8.3,7c0,4.1,13,1.8,13,10.7c0,5.1-4.5,7.6-10,7.6c-4.1,0-8.4-1.5-11.4-4l2.5-5.1 c2.5,2.2,6.4,3.7,9,3.7c1.9,0,3.1-0.7,3.1-2c0-4.2-13-1.7-13-10.4C1.6,2.9,5.5,0,11.4,0c3.6,0,7.3,1.1,9.9,2.8l-2.4,5.1 C16.3,6.4,13,5.3,10.9,5.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 281
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
@@ -2432,7 +2436,7 @@ function (_Component) {
         d: "M43.1,15.5c0,5.9-4.2,9.8-10.5,9.8c-6.3,0-10.4-3.9-10.4-9.8c0-5.9,4.1-9.8,10.4-9.8 C38.9,5.7,43.1,9.6,43.1,15.5z M28.5,15.5c0,2.9,1.7,4.8,4.1,4.8c2.5,0,4.1-1.9,4.1-4.8c0-2.8-1.7-4.7-4.1-4.7 C30.2,10.8,28.5,12.7,28.5,15.5z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 276
+          lineNumber: 284
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
@@ -2440,7 +2444,7 @@ function (_Component) {
         d: "M76.9,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C74.1,5.7,76.9,8.5,76.9,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 279
+          lineNumber: 287
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
@@ -2448,51 +2452,39 @@ function (_Component) {
         d: "M111,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C108.2,5.7,111,8.5,111,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 282
+          lineNumber: 290
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("rect", {
         x: "9",
         y: "27.1",
-        class: "st0",
+        className: "st0",
         width: "111",
         height: "4.9",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 294
         },
         __self: this
-      }))), "\0"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21___default.a, {
-        container: true,
+      })))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashGrid, {
         style: {
           minHeight: '100vh'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 291
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21___default.a, {
-        item: true,
-        sm: 12,
-        md: 6,
-        lg: 8,
-        xl: 8,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 298
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashForm, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 299
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 300
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_19__["PoseGroup"], {
@@ -2500,7 +2492,7 @@ function (_Component) {
         preEnterPose: "init",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 301
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealContainer, {
@@ -2508,31 +2500,31 @@ function (_Component) {
         delay: 400,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 296
+          lineNumber: 302
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 297
+          lineNumber: 303
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 305
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 306
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 302
+          lineNumber: 308
         },
         __self: this
       }, "Supercharge your restaurant with Somm, a personal assistant for your menu with powerful features and valuable insights.")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(RevealContainer, {
@@ -2540,7 +2532,7 @@ function (_Component) {
         delay: 600,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 312
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_AccessForm__WEBPACK_IMPORTED_MODULE_22__["default"], {
@@ -2571,24 +2563,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 313
         },
         __self: this
-      })))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_21___default.a, {
-        item: true,
-        sm: 12,
-        md: 6,
-        lg: 4,
-        xl: 4,
+      }))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashDemoContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 323
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashDemoContainer, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 324
+          lineNumber: 327
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_19__["PoseGroup"], {
@@ -2596,14 +2577,14 @@ function (_Component) {
         preEnterPose: "init",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325
+          lineNumber: 328
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(SplashDemo, {
         key: "3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 326
+          lineNumber: 329
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("svg", {
@@ -2612,14 +2593,14 @@ function (_Component) {
         viewBox: "0 0 600 600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 331
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("g", {
         transform: "translate(300,300)",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 333
+          lineNumber: 336
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("path", {
@@ -2627,13 +2608,13 @@ function (_Component) {
         fill: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 334
+          lineNumber: 337
         },
         __self: this
-      })))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Features__WEBPACK_IMPORTED_MODULE_24__["default"], {
+      }))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Features__WEBPACK_IMPORTED_MODULE_24__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 341
+          lineNumber: 342
         },
         __self: this
       }));
