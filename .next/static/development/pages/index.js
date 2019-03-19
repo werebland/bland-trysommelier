@@ -301,7 +301,7 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Explainer.jsx";
 var ExplainerContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section.withConfig({
   displayName: "Explainer__ExplainerContainer",
   componentId: "b8k2sj-0"
-})(["width:100%;max-width:1200px;height:100%;min-height:100vh;display:grid;grid-template-columns:50% 50%;box-sizing:border-box;margin:auto;"]);
+})(["width:100%;max-width:1200px;height:100%;min-height:100vh;display:grid;grid-template-columns:50% 50%;grid-gap:16px;box-sizing:border-box;margin:auto;@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;}"]);
 var ExplainerBlurb = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Explainer__ExplainerBlurb",
   componentId: "b8k2sj-1"
@@ -346,150 +346,150 @@ var Explainer = function Explainer(_ref) {
     className: "explainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 121
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurb, {
     className: "explainer__blurb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurbTitle, {
     className: "explainer__blurbTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 124
     },
     __self: this
   }, "So what even is Somm, anyway?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurbCopy, {
     className: "explainer__blurbCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 127
     },
     __self: this
   }, "Somm is an embeddable widget for your restaurant website. But it is so much more than a few lines of code. Instead of having to sort through pages and comb through PDFs, your guests can use a beautiful app right on your homepage. This lets them find the items they\u2019re looking for, by category, search, or filter, saving you from repetitive phone calls. Every interaction also generates insights for you, allowing you a view into the behaviors of your guests before they even step foot in your restaurant.", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 129
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 130
     },
     __self: this
   }), "In short, Somm is the perfect tool to fuel the growth of your business. ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 131
     },
     __self: this
   }, "Try it free today.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerAccessLink, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 134
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerHighlight, {
     className: "explainer__highlight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 140
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatures, {
     className: "explainer__features",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 141
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 144
     },
     __self: this
   }, "Valuable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 147
     },
     __self: this
   }, "For less than a coffee a day, Somm can provide your diners with a feature-rich and engaging experience while offering your business valuable insights and time-saving simplicity.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 151
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 152
     },
     __self: this
   }, "Dynamic"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 155
     },
     __self: this
   }, "As your menu changes, so does Somm. Add specials, item options, and multiple menus, supercharging your menu to do what it does best: convert potential diners.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 159
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 160
     },
     __self: this
   }, "Insightful"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 163
     },
     __self: this
   }, "See exactly what your diners are interested in like never before. Every item click and share are stored, so you can see what is engaging your diners and what you can focus your attention on."))))));

@@ -10,8 +10,14 @@ const ExplainerContainer = styled.section`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 16px;
   box-sizing: border-box;
   margin: auto;
+
+  @media only screen and (max-width: 959px) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 `;
 
 const ExplainerBlurb = styled.article`
