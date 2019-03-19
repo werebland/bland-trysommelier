@@ -2077,8 +2077,12 @@ function (_Document) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(MyDocument, [{
     key: "render",
     value: function render() {
-      var pageContext = this.props.pageContext;
+      var _this$props = this.props,
+          pageContext = _this$props.pageContext,
+          styleTags = _this$props.styleTags;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("html", {
+        lang: "en",
+        dir: "ltr",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18
@@ -2091,11 +2095,41 @@ function (_Document) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
-        name: "viewport",
-        content: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("noscript", {
+        id: "jss-insertion-point",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }), styleTags, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
+        name: "viewport",
+        content: 'user-scalable=0, initial-scale=1, ' + 'minimum-scale=1, width=device-width, height=device-height',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
+        name: "theme-color",
+        content: pageContext.theme.palette.primary.main,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2103,10 +2137,10 @@ function (_Document) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 37
         },
         __self: this
-      }), this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("body", {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("body", {
         style: {
           padding: 0,
           margin: 0,
@@ -2114,19 +2148,19 @@ function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_9__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_9__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 41
         },
         __self: this
       })));
@@ -2187,7 +2221,7 @@ MyDocument.getInitialProps = function (ctx) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 76
         },
         __self: this
       }));
@@ -2210,7 +2244,7 @@ MyDocument.getInitialProps = function (ctx) {
     styles: react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 97
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("style", {
@@ -2221,7 +2255,7 @@ MyDocument.getInitialProps = function (ctx) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 98
       },
       __self: this
     }), styled_jsx_server__WEBPACK_IMPORTED_MODULE_11___default()() || null)

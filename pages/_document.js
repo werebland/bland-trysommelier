@@ -13,16 +13,28 @@ class MyDocument extends Document {
   }
 
   render () {
-    const { pageContext } = this.props;
+    const { pageContext, styleTags } = this.props;
     return (
-      <html>
+      <html lang="en" dir="ltr">
         <Head>
+          <meta charSet="utf-8" />
+          <noscript id="jss-insertion-point"></noscript>
+          {styleTags}
+          {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
             name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+            content={
+              'user-scalable=0, initial-scale=1, ' +
+              'minimum-scale=1, width=device-width, height=device-height'
+            }
           />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Source+Sans+Pro:400,700" rel="stylesheet" />
-          {this.props.styleTags}
+          {/* PWA primary color */}
+          <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            />
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Source+Sans+Pro:400,700" rel="stylesheet" />
         </Head>
         <body style={{ padding: 0, margin: 0, fontFamily: '"Source Sans Pro", Helvetica, sans-serif'}}>
           <Main />
