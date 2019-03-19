@@ -24,6 +24,7 @@
     "react-facebook-pixel": "^0.1.2",
     "react-ga": "^2.5.7",
     "react-hotjar": "^2.0.0",
+    "react-jss": "^8.6.1",
     "react-no-ssr": "^1.1.0",
     "react-places-autocomplete": "^7.2.1",
     "react-pose": "^4.0.6",
@@ -31,6 +32,7 @@
     "react-step-progress-bar": "^1.0.3",
     "recompose": "^0.30.0",
     "styled-components": "^2.1.0",
+    "styled-jsx": "^3.2.1",
     "vh-check": "^2.0.5",
     "voucher-code-generator": "^1.1.1",
     "webpack": "^4.29.6"

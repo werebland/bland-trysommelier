@@ -200,10 +200,6 @@ class Index extends Component {
     ReactPixel.pageView();
     ReactGA.initialize('UA-125819564-2');
     ReactGA.pageview(window.location.pathname + window.location.search);
-    const referral = this.props.url.query.r
-    if (referral) {
-
-    }
   }
 
   handleAccess(e) {
@@ -266,7 +262,7 @@ class Index extends Component {
   render() {
     return (
       <IndexWrapper>
-        <Splash query={this.props.url.query} />
+        <Splash query={{url: ''}} />
       </IndexWrapper>
 
     );
