@@ -23,9 +23,10 @@ const StyledTextField = styled(TextField)`
 
 const StyledPaper = styled(Paper)`
   max-width: 528px;
-  width: 100%;
+  width: 100% !important;
   border-radius: 8px !important;
   box-shadow: 0 2px 16px -2px rgba(31,31,31,0.32) !important;
+  background: #fff !important;
 `;
 
 const StyledButton = styled(Button)`

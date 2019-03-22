@@ -18,6 +18,8 @@ import AccessForm from './AccessForm'
 import SommWidget from './SommWidget'
 import Pricing from './Pricing'
 import Explainer from './Explainer'
+import Walkthrough from './Walkthrough'
+import Footer from './Footer'
 
 const SplashWrapper = styled.div`
   width: 100vw;
@@ -297,7 +299,9 @@ class Splash extends Component {
             </SplashDemoContainer>
         </SplashGrid>
         <Explainer />
+        <Walkthrough />
         <Pricing />
+        <Footer />
       </SplashWrapper>
     );
   }

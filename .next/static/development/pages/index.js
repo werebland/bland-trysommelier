@@ -33,7 +33,7 @@ var StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["def
 var StyledPaper = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default.a).withConfig({
   displayName: "AccessForm__StyledPaper",
   componentId: "sc-1n3u86u-1"
-})(["max-width:528px;width:100%;border-radius:8px !important;box-shadow:0 2px 16px -2px rgba(31,31,31,0.32) !important;"]);
+})(["max-width:528px;width:100% !important;border-radius:8px !important;box-shadow:0 2px 16px -2px rgba(31,31,31,0.32) !important;background:#fff !important;"]);
 var StyledButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3___default.a).withConfig({
   displayName: "AccessForm__StyledButton",
   componentId: "sc-1n3u86u-2"
@@ -95,7 +95,7 @@ var AccessForm = function AccessForm(_ref) {
     elevation: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormContainer, {
@@ -104,68 +104,68 @@ var AccessForm = function AccessForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_5__["PoseGroup"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   }, accessStatus ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PosedContainer, {
     key: "0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, accessStatus === "success" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatus, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 135
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusEmoji, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, "\uD83D\uDC4B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }, firstName, ", you're on our list!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormStatusSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, "We'll be in touch when you get access.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 140
     },
     __self: this
   }), "Share your referral link with friends to move up the list."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferral, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferralCode, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 144
     },
     __self: this
   }, "somm.ca/", referral), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AccessFormReferralCopy, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
@@ -174,7 +174,7 @@ var AccessForm = function AccessForm(_ref) {
     viewBox: "0 0 24 24",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 148
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -182,26 +182,26 @@ var AccessForm = function AccessForm(_ref) {
     d: "M0 0h24v24H0V0z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 149
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "M2 5c-.55 0-1 .45-1 1v15c0 1.1.9 2 2 2h15c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1-.45-1-1V6c0-.55-.45-1-1-1zm19-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-1 16H8c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 150
     },
     __self: this
   }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 156
     },
     __self: this
   }, "Whoops! Something went wrong. Here's what we know:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 158
     },
     __self: this
   }, accessStatus), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
@@ -211,14 +211,14 @@ var AccessForm = function AccessForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 159
     },
     __self: this
   }, "Try again"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PosedContainer, {
     key: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
@@ -237,7 +237,7 @@ var AccessForm = function AccessForm(_ref) {
     placeholder: "Thomas Keller",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 167
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTextField, {
@@ -256,7 +256,7 @@ var AccessForm = function AccessForm(_ref) {
     placeholder: "tkeller@thefrenchlaundry.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 178
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledButton, {
@@ -265,7 +265,7 @@ var AccessForm = function AccessForm(_ref) {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: this
   }, "Get early access")))));
@@ -1170,6 +1170,122 @@ var Features = function Features(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Features);
+
+/***/ }),
+
+/***/ "./components/Footer.jsx":
+/*!*******************************!*\
+  !*** ./components/Footer.jsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectDestructuringEmpty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectDestructuringEmpty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+
+var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Footer.jsx";
+
+
+var FooterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].footer.withConfig({
+  displayName: "Footer__FooterWrapper",
+  componentId: "sc-1janywv-0"
+})(["width:100%;background:#1f1f1f;color:#fff;padding:24px 120px;box-sizing:border-box;"]);
+var SommLogo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "Footer__SommLogo",
+  componentId: "sc-1janywv-1"
+})(["width:120px;height:32px;& svg{fill:#fff;}"]);
+
+var Footer = function Footer(_ref) {
+  Object(_babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterWrapper, {
+    className: "footer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SommLogo, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
+    version: "1.1",
+    x: "0px",
+    y: "0px",
+    width: "120px",
+    height: "32.1px",
+    viewBox: "0 0 120 32.1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st0",
+    d: "M10.9,5.3C9.4,5.3,8.3,5.8,8.3,7c0,4.1,13,1.8,13,10.7c0,5.1-4.5,7.6-10,7.6c-4.1,0-8.4-1.5-11.4-4l2.5-5.1 c2.5,2.2,6.4,3.7,9,3.7c1.9,0,3.1-0.7,3.1-2c0-4.2-13-1.7-13-10.4C1.6,2.9,5.5,0,11.4,0c3.6,0,7.3,1.1,9.9,2.8l-2.4,5.1 C16.3,6.4,13,5.3,10.9,5.3z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st0",
+    d: "M43.1,15.5c0,5.9-4.2,9.8-10.5,9.8c-6.3,0-10.4-3.9-10.4-9.8c0-5.9,4.1-9.8,10.4-9.8 C38.9,5.7,43.1,9.6,43.1,15.5z M28.5,15.5c0,2.9,1.7,4.8,4.1,4.8c2.5,0,4.1-1.9,4.1-4.8c0-2.8-1.7-4.7-4.1-4.7 C30.2,10.8,28.5,12.7,28.5,15.5z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st0",
+    d: "M76.9,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C74.1,5.7,76.9,8.5,76.9,13z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st0",
+    d: "M111,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C108.2,5.7,111,8.5,111,13z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("rect", {
+    x: "9",
+    y: "27.1",
+    className: "st0",
+    width: "111",
+    height: "4.9",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -2208,6 +2324,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SommWidget__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./SommWidget */ "./components/SommWidget.jsx");
 /* harmony import */ var _Pricing__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Pricing */ "./components/Pricing.jsx");
 /* harmony import */ var _Explainer__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Explainer */ "./components/Explainer.jsx");
+/* harmony import */ var _Walkthrough__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Walkthrough */ "./components/Walkthrough.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Footer */ "./components/Footer.jsx");
 
 
 
@@ -2216,6 +2334,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Splash.jsx";
+
+
 
 
 
@@ -2372,19 +2492,19 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashWrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 226
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 225
+          lineNumber: 227
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 226
+          lineNumber: 228
         },
         __self: this
       }, "Somm | Your menu's personal assistant"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2393,7 +2513,7 @@ function (_Component) {
         href: "/static/apple-touch-icon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 227
+          lineNumber: 229
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2403,7 +2523,7 @@ function (_Component) {
         href: "/static/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 228
+          lineNumber: 230
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2413,7 +2533,7 @@ function (_Component) {
         href: "/static/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 231
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2421,7 +2541,7 @@ function (_Component) {
         href: "/static/site.webmanifest",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 232
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2430,7 +2550,7 @@ function (_Component) {
         color: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 233
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("link", {
@@ -2438,7 +2558,7 @@ function (_Component) {
         href: "/static/favicon.ico",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 234
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
@@ -2446,7 +2566,7 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 235
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
@@ -2454,7 +2574,7 @@ function (_Component) {
         content: "/static/browserconfig.xml",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 236
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
@@ -2462,13 +2582,13 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 237
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_19___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 239
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SommWidget__WEBPACK_IMPORTED_MODULE_22__["default"], {
@@ -2478,13 +2598,13 @@ function (_Component) {
         position: "right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 238
+          lineNumber: 240
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SommLogo, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 242
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("svg", {
@@ -2496,19 +2616,19 @@ function (_Component) {
         viewBox: "0 0 120 32.1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 242
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 243
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 244
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 245
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
@@ -2516,7 +2636,7 @@ function (_Component) {
         d: "M10.9,5.3C9.4,5.3,8.3,5.8,8.3,7c0,4.1,13,1.8,13,10.7c0,5.1-4.5,7.6-10,7.6c-4.1,0-8.4-1.5-11.4-4l2.5-5.1 c2.5,2.2,6.4,3.7,9,3.7c1.9,0,3.1-0.7,3.1-2c0-4.2-13-1.7-13-10.4C1.6,2.9,5.5,0,11.4,0c3.6,0,7.3,1.1,9.9,2.8l-2.4,5.1 C16.3,6.4,13,5.3,10.9,5.3z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 244
+          lineNumber: 246
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
@@ -2524,7 +2644,7 @@ function (_Component) {
         d: "M43.1,15.5c0,5.9-4.2,9.8-10.5,9.8c-6.3,0-10.4-3.9-10.4-9.8c0-5.9,4.1-9.8,10.4-9.8 C38.9,5.7,43.1,9.6,43.1,15.5z M28.5,15.5c0,2.9,1.7,4.8,4.1,4.8c2.5,0,4.1-1.9,4.1-4.8c0-2.8-1.7-4.7-4.1-4.7 C30.2,10.8,28.5,12.7,28.5,15.5z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 247
+          lineNumber: 249
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
@@ -2532,7 +2652,7 @@ function (_Component) {
         d: "M76.9,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C74.1,5.7,76.9,8.5,76.9,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 252
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
@@ -2540,7 +2660,7 @@ function (_Component) {
         d: "M111,13v12h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V14.8c0-2.2-1.2-3.5-3.1-3.5 c-2.2,0-3.6,1.8-3.6,4.3V25h-6.3V5.9h6.3v3.1c1.3-2.2,3.5-3.4,6.2-3.4c3.1,0,5.4,1.6,6.4,4.3c1.2-2.8,3.6-4.3,6.7-4.3 C108.2,5.7,111,8.5,111,13z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 255
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("rect", {
@@ -2551,7 +2671,7 @@ function (_Component) {
         height: "4.9",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 257
+          lineNumber: 259
         },
         __self: this
       })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashGrid, {
@@ -2560,13 +2680,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 261
+          lineNumber: 263
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashForm, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 264
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -2574,31 +2694,31 @@ function (_Component) {
         ssrFadeout: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 263
+          lineNumber: 265
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(HeroTitle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 266
         },
         __self: this
       }, "Your restaurant deserves", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266
+          lineNumber: 268
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 269
         },
         __self: this
       }, "a better menu")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(HeroCopy, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 271
         },
         __self: this
       }, "Supercharge your restaurant website with Somm, where guests engage with your menu and you gain valuable insights."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_AccessForm__WEBPACK_IMPORTED_MODULE_21__["default"], {
@@ -2629,13 +2749,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 274
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashDemoContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 284
+          lineNumber: 286
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -2644,14 +2764,14 @@ function (_Component) {
         delay: 300,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 285
+          lineNumber: 287
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SplashDemo, {
         key: "3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 288
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("svg", {
@@ -2660,14 +2780,14 @@ function (_Component) {
         viewBox: "0 0 600 600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 290
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("g", {
         transform: "translate(300,300)",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("path", {
@@ -2675,19 +2795,31 @@ function (_Component) {
         fill: "#f94343",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 296
         },
         __self: this
       }))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Explainer__WEBPACK_IMPORTED_MODULE_24__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 301
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Walkthrough__WEBPACK_IMPORTED_MODULE_25__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 302
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Pricing__WEBPACK_IMPORTED_MODULE_23__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 303
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_26__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 304
         },
         __self: this
       }));
@@ -2698,6 +2830,201 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
+
+/***/ }),
+
+/***/ "./components/Walkthrough.jsx":
+/*!************************************!*\
+  !*** ./components/Walkthrough.jsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectDestructuringEmpty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectDestructuringEmpty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
+/* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3__);
+
+var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Walkthrough.jsx";
+
+
+
+var WalkthroughContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section.withConfig({
+  displayName: "Walkthrough__WalkthroughContainer",
+  componentId: "sc-1afg5w7-0"
+})(["width:100%;max-width:1000px;height:100%;min-height:100vh;margin:auto;display:flex;flex-flow:column nowrap;align-items:center;.react-reveal{width:100%;}"]);
+var WalkthroughTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.withConfig({
+  displayName: "Walkthrough__WalkthroughTitle",
+  componentId: "sc-1afg5w7-1"
+})(["font-size:2.5rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;margin:0 0 24px;"]);
+var WalkthroughStep = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
+  displayName: "Walkthrough__WalkthroughStep",
+  componentId: "sc-1afg5w7-2"
+})(["width:100%;height:100%;min-height:400px;display:grid;grid-template-columns:", ";grid-gap:64px;margin-bottom:32px;& .walkthrough__stepContent{order:", ";}"], function (props) {
+  return props.alternate ? '60% 40%' : '40% 60%';
+}, function (props) {
+  return props.alternate ? '-1' : '2';
+});
+var WalkthroughStepImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "Walkthrough__WalkthroughStepImage",
+  componentId: "sc-1afg5w7-3"
+})(["background-image:url(", ");background-position:center;background-size:contain;background-repeat:no-repeat;"], function (props) {
+  return props.image;
+});
+var WalkthroughStepContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
+  displayName: "Walkthrough__WalkthroughStepContent",
+  componentId: "sc-1afg5w7-4"
+})(["display:flex;flex-flow:column nowrap;"]);
+var WalkthroughStepContentTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h4.withConfig({
+  displayName: "Walkthrough__WalkthroughStepContentTitle",
+  componentId: "sc-1afg5w7-5"
+})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;margin:0 0 16px;"]);
+var WalkthroughStepContentCopy = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].p.withConfig({
+  displayName: "Walkthrough__WalkthroughStepContentCopy",
+  componentId: "sc-1afg5w7-6"
+})(["font-size:1.25rem;font-weight:400;color:#1f1f1f;font-family:'Source Sans Pro',sans-serif;margin:0 0 16px;padding:0;"]);
+
+var Walkthrough = function Walkthrough(_ref) {
+  Object(_babel_runtime_corejs2_helpers_esm_objectDestructuringEmpty__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughContainer, {
+    className: "walkthrough",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughTitle, {
+    className: "walkthrough__title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, "How Somm works."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    bottom: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
+    className: "walkthrough__step walkthrough__step--1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
+    className: "walkthrough__stepImage",
+    image: "/static/upload.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
+    className: "walkthrough__stepContent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
+    className: "walkthrough__stepContentTitle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Upload"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
+    className: "walkthrough__stepContentCopy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, "We know that your menu changes frequently and that you already have enough on your plate. Leave the heavy lifting to us. We will take your menus and transform them into Somm items that can be viewed and sorted. You can upload any format or provide a link to your menus on your website and we will begin processing them."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
+    alternate: true,
+    className: "walkthrough__step walkthrough__step--2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
+    className: "walkthrough__stepImage",
+    image: "/static/customize.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
+    className: "walkthrough__stepContent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
+    className: "walkthrough__stepContentTitle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, "Customize"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
+    className: "walkthrough__stepContentCopy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, "The beauty of Somm is in its customization. So we need to know as much as possible about your restaurant in order for you to get the most out of Somm. From your location and phone number to your cuisine and any booking or ordering URLs, we want to know it all. Further customize the color, location, and icon of your Somm widget to ensure that it integrates seamlessly with your existing website."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
+    className: "walkthrough__step walkthrough__step--3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
+    className: "walkthrough__stepImage",
+    image: "/static/embed.svg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
+    className: "walkthrough__stepContent",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
+    className: "walkthrough__stepContentTitle",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }, "Integrate"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
+    className: "walkthrough__stepContentCopy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, "Here is where the magic happens. With your menus already uploaded to our database and Somm perfectly customized to fit your needs, all it takes is copy-and-pasting three lines of code onto your website to start using Somm. Diners can start interacting with it instantly, meaning that you can start gaining valuable insights with zero transition time. Of course, we are here to walk you through every step of the process.")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Walkthrough);
 
 /***/ }),
 
