@@ -11,6 +11,8 @@ const WalkthroughContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
 
   .react-reveal {
     width: 100%;
@@ -37,9 +39,19 @@ const WalkthroughStep = styled.article`
   & .walkthrough__stepContent {
     order: ${props => props.alternate ? '-1' : '2'};
   }
+
+  @media only screen and (max-width: 959px) {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & .walkthrough__stepContent {
+      order: 2;
+    }
+  }
 `;
 
 const WalkthroughStepImage = styled.div`
+  min-height: 360px;
   background-image: url(${props => props.image});
   background-position: center;
   background-size: contain;

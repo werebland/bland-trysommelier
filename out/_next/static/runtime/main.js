@@ -8009,7 +8009,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "/Users/Chris/trysomm-mvp/.next");
+      source_map_support_1.rewriteStacktrace(error, "/Users/Chris/somm-landing/.next");
       return error;
     }
   };
@@ -9113,7 +9113,7 @@ function () {
 
                       case 2:
                         return _context3.abrupt("return", new _promise.default(function (resolve) {
-                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(52415).concat("/"));
+                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(49893).concat("/"));
 
                           ws.onopen = function () {
                             return resolve();
@@ -19350,7 +19350,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Chris/trysomm-mvp/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
+module.exports = __webpack_require__(/*! /Users/Chris/somm-landing/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),

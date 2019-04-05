@@ -71,6 +71,12 @@ const WidgetToggle = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  & svg {
+    fill: ${props => props.iconColor};
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 const StyledWidgetToggleIcon = styled.div`
@@ -94,6 +100,11 @@ const StyledTwitterPicker = styled(TwitterPicker)`
   border-radius: 8px !important;
   border: 2px solid #1f1f1f !important;
   position: relative !important;
+  box-sizing: border-box;
+
+  & div:nth-of-type(3) {
+    padding: 15px 8px 0 12px !important;
+  }
 
   ${props => props.disabled &&
     `&:after {
@@ -113,47 +124,32 @@ const StyledTwitterPicker = styled(TwitterPicker)`
 `;
 
 const ColorPickerLabel = styled.span`
-  font-size: 1rem;
+  font-size: .75rem;
   font-weight: 400;
-  color: #1f1f1f;
+  color: #9f9f9f;
   font-family: 'Source Sans Pro', sans-serif;
-  margin-bottom: 8px;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  padding: 0 4px;
+  z-index: 8;
+  background: #fff;
 `;
 
 const WidgetCustomizer = ({ iconColor, handleIconColorChange, backgroundColor, handleBackgroundColorChange, position, handlePositionChange, icon, handleIconChange }) => (
   <WidgetCustomizerContainer>
     <WidgetToggleContainer>
-      <WidgetToggle background={backgroundColor} position={position}>
+      <WidgetToggle background={backgroundColor} iconColor={iconColor} position={position}>
           {icon === "rounded" &&
-            <svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
-                <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                    <g id="Desktop-HD" transform="translate(-1379.000000, -720.000000)">
-                        <g id="Group-10" transform="translate(1054.000000, 90.000000)">
-                            <g id="Group-9" transform="translate(312.000000, 616.000000)">
-                                <g id="round-restaurant_menu-24px" transform="translate(12.000000, 12.000000)">
-                                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                                    <path d="M7.0394622,13.5010047 L10.2283461,10.3121208 L3.25336682,3.34840963 C2.71249606,2.80753886 1.77724035,2.95402469 1.43919612,3.65264944 C0.639158114,5.33160244 0.93212978,7.39367224 2.31811112,8.79092173 L7.0394622,13.5010047 Z M14.6792618,11.4614711 C16.4032874,12.2615092 18.8259377,11.6981021 20.6175721,9.90646768 C22.769787,7.75425276 23.1867082,4.66678213 21.5302915,3.0103654 C19.8851429,1.36521682 16.7976723,1.77086989 14.6341892,3.92308482 C12.8425548,5.71471924 12.2791478,8.13736955 13.0791858,9.86139512 L2.87025003,20.0703309 C2.43079253,20.5097884 2.43079253,21.2196812 2.87025003,21.6591387 C3.30970753,22.0985962 4.01960041,22.0985962 4.45905791,21.6591387 L11.4340372,14.7066957 L18.3977483,21.6704069 C18.8372058,22.1098644 19.5470987,22.1098644 19.9865562,21.6704069 C20.4260137,21.2309494 20.4260137,20.5210565 19.9865562,20.081599 L13.0228451,13.1178879 L14.6792618,11.4614711 Z" id="Shape" fill={iconColor} fillRule="nonzero" />
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0V0z"/>
+              <path d="M8.1 13.34l2.83-2.83-6.19-6.18c-.48-.48-1.31-.35-1.61.27-.71 1.49-.45 3.32.78 4.56l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L4.4 19.17c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 14.41l6.18 6.18c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 13l1.47-1.47z"/>
             </svg>
           }
           {icon === "sharp" &&
-            <svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1">
-                <g id="Page-3" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                    <g id="Desktop-HD" transform="translate(-1379.000000, -720.000000)">
-                        <g id="Group-10" transform="translate(1054.000000, 90.000000)">
-                            <g id="Group-9" transform="translate(312.000000, 616.000000)">
-                                <g id="round-restaurant_menu-24px" transform="translate(12.000000, 12.000000)">
-                                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                                    <path d="M7.0394622,13.5010047 L10.2283461,10.3121208 L3.25336682,3.34840963 C2.71249606,2.80753886 1.77724035,2.95402469 1.43919612,3.65264944 C0.639158114,5.33160244 0.93212978,7.39367224 2.31811112,8.79092173 L7.0394622,13.5010047 Z M14.6792618,11.4614711 C16.4032874,12.2615092 18.8259377,11.6981021 20.6175721,9.90646768 C22.769787,7.75425276 23.1867082,4.66678213 21.5302915,3.0103654 C19.8851429,1.36521682 16.7976723,1.77086989 14.6341892,3.92308482 C12.8425548,5.71471924 12.2791478,8.13736955 13.0791858,9.86139512 L2.87025003,20.0703309 C2.43079253,20.5097884 2.43079253,21.2196812 2.87025003,21.6591387 C3.30970753,22.0985962 4.01960041,22.0985962 4.45905791,21.6591387 L11.4340372,14.7066957 L18.3977483,21.6704069 C18.8372058,22.1098644 19.5470987,22.1098644 19.9865562,21.6704069 C20.4260137,21.2309494 20.4260137,20.5210565 19.9865562,20.081599 L13.0228451,13.1178879 L14.6792618,11.4614711 Z" id="Shape" fill={iconColor} fillRule="nonzero" />
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
+            <svg width="24px" height="24px" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0V0z"/>
+              <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
             </svg>
           }
           {icon === "emoji" &&
@@ -181,8 +177,8 @@ const WidgetCustomizer = ({ iconColor, handleIconColorChange, backgroundColor, h
               />
             }
           >
-            <MenuItem value={'sharp'}>Sharp</MenuItem>
             <MenuItem value={'rounded'}>Rounded</MenuItem>
+            <MenuItem value={'sharp'}>Sharp</MenuItem>
             <MenuItem value={'emoji'}>Emoji</MenuItem>
           </Select>
         </StyledFormControl>
@@ -212,21 +208,23 @@ const WidgetCustomizer = ({ iconColor, handleIconColorChange, backgroundColor, h
         </StyledFormControl>
       </Grid>
       <Grid item sm={12} md={12} lg={6} xl={6}>
-        <FormControl>
+        <StyledFormControl>
           <ColorPickerLabel>
             Icon color
           </ColorPickerLabel>
           <StyledTwitterPicker id="icon-color-picker" color={iconColor} onChange={(color, event) => handleIconColorChange(color.hex)} triangle="hide" disabled={icon === "emoji"}/>
-        </FormControl>
-
+        </StyledFormControl>
       </Grid>
       <Grid item sm={12} md={12} lg={6} xl={6}>
-        <FormControl>
+        <StyledFormControl>
           <ColorPickerLabel>
             Background color
           </ColorPickerLabel>
-          <StyledTwitterPicker color={backgroundColor} onChange={(color, event) => handleBackgroundColorChange(color.hex)} triangle="hide"/>
-        </FormControl>
+          <StyledTwitterPicker
+            color={backgroundColor}
+            onChange={(color, event) => handleBackgroundColorChange(color.hex)}
+            triangle="hide"/>
+        </StyledFormControl>
       </Grid>
     </Grid>
   </WidgetCustomizerContainer>

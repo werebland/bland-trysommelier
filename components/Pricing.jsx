@@ -63,7 +63,6 @@ const PricingGrid = styled(Grid)`
 
 const PricingCardContainer = styled.article`
   width: 100%;
-  border: 2px solid ${props => props.primary ? '#f94343' : '#1f1f1f'};
   border-radius: 8px;
   padding: 16px;
   box-sizing: border-box;
@@ -134,26 +133,15 @@ const PricingCardItem = styled.li`
 `
 
 const PricingAlert = styled.span`
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  color: #1f1f1f;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #9f9f9f;
   position: relative;
   margin-bottom: 40px;
   text-align: center;
   display: flex;
-
-  &:after {
-    content: "";
-    width: 100%;
-    height: 8px;
-    background: #f94343;
-    display: block;
-    position: absolute;
-    bottom: 0px;
-    left: 4px;
-    z-index: -1;
-  }
+  white-space: pre;
 `;
 
 const ContactButton = styled(StyledButton)`
@@ -171,7 +159,7 @@ const Pricing = ({}) => (
         </PricingTitle>
         <br/>
         <PricingSubtitle>Where guac is never extra</PricingSubtitle>
-        <PricingAlert>Early Access: Unlimited items, All features, No charge.</PricingAlert>
+        <PricingAlert><strong>Early Access:</strong> Unlimited items, All features, No charge.</PricingAlert>
       </Fade>
       <PricingGrid container spacing={16}>
         <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>

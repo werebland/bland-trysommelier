@@ -13,6 +13,7 @@ const ExplainerContainer = styled.section`
   grid-gap: 16px;
   box-sizing: border-box;
   margin: auto;
+  padding-top: 194px;
 
   @media only screen and (max-width: 959px) {
     display: flex;

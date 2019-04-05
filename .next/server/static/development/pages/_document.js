@@ -2053,7 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/pages/_document.js";
+var _jsxFileName = "/Users/Chris/somm-landing/pages/_document.js";
 
 
 

@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/Paper/index.js");
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/AccessForm.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/AccessForm.jsx";
 
 
 
@@ -293,7 +293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Explainer.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Explainer.jsx";
 
 
 
@@ -301,7 +301,7 @@ var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Explainer.jsx";
 var ExplainerContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section.withConfig({
   displayName: "Explainer__ExplainerContainer",
   componentId: "b8k2sj-0"
-})(["width:100%;max-width:1200px;height:100%;min-height:100vh;display:grid;grid-template-columns:50% 50%;grid-gap:16px;box-sizing:border-box;margin:auto;@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;}"]);
+})(["width:100%;max-width:1200px;height:100%;min-height:100vh;display:grid;grid-template-columns:50% 50%;grid-gap:16px;box-sizing:border-box;margin:auto;padding-top:194px;@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;}"]);
 var ExplainerBlurb = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Explainer__ExplainerBlurb",
   componentId: "b8k2sj-1"
@@ -346,80 +346,80 @@ var Explainer = function Explainer(_ref) {
     className: "explainer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurb, {
     className: "explainer__blurb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurbTitle, {
     className: "explainer__blurbTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 125
     },
     __self: this
   }, "So what even is Somm, anyway?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerBlurbCopy, {
     className: "explainer__blurbCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, "Somm is an embeddable widget for your restaurant website. But it is so much more than a few lines of code. Instead of having to sort through pages and comb through PDFs, your guests can use a beautiful app right on your homepage. This lets them find the items they\u2019re looking for, by category, search, or filter, saving you from repetitive phone calls. Every interaction also generates insights for you, allowing you a view into the behaviors of your guests before they even step foot in your restaurant.", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 130
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }), "In short, Somm is the perfect tool to fuel the growth of your business. ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, "Try it free today.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerAccessLink, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 135
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerHighlight, {
     className: "explainer__highlight",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatures, {
     className: "explainer__features",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -427,70 +427,70 @@ var Explainer = function Explainer(_ref) {
     delay: 300,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 144
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 145
     },
     __self: this
   }, "Valuable"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 148
     },
     __self: this
   }, "For less than a coffee a day, Somm can provide your diners with a feature-rich and engaging experience while offering your business valuable insights and time-saving simplicity.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 153
     },
     __self: this
   }, "Dynamic"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 156
     },
     __self: this
   }, "As your menu changes, so does Somm. Add specials, item options, and multiple menus, supercharging your menu to do what it does best: convert potential diners.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeature, {
     className: "explainer__feature",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureTitle, {
     className: "explainer__featureTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: this
   }, "Insightful"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ExplainerFeatureCopy, {
     className: "explainer__featureCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 164
     },
     __self: this
   }, "See exactly what your diners are interested in like never before. Every item click and share are stored, so you can see what is engaging your diners and what you can focus your attention on."))))));
@@ -518,7 +518,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-scroll */ "./node_modules/react-scroll/modules/index.js");
 /* harmony import */ var react_scroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_scroll__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Features.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Features.jsx";
 
 
 
@@ -1187,7 +1187,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.es.js");
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Footer.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Footer.jsx";
 
 
 var FooterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].footer.withConfig({
@@ -1313,7 +1313,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_withWidth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/withWidth */ "./node_modules/@material-ui/core/withWidth/index.js");
 /* harmony import */ var _material_ui_core_withWidth__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_withWidth__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Navbar.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Navbar.jsx";
 
 
 
@@ -1475,7 +1475,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Pricing.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Pricing.jsx";
 
 
 
@@ -1506,9 +1506,7 @@ var PricingGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default
 var PricingCardContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Pricing__PricingCardContainer",
   componentId: "cp9je-5"
-})(["width:100%;border:2px solid ", ";border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;background:#fff;box-shadow:", ";margin:0 0 16px;"], function (props) {
-  return props.primary ? '#f94343' : '#1f1f1f';
-}, function (props) {
+})(["width:100%;border-radius:8px;padding:16px;box-sizing:border-box;text-align:center;display:flex;flex-flow:column nowrap;justify-content:flex-start;align-items:center;background:#fff;box-shadow:", ";margin:0 0 16px;"], function (props) {
   return props.primary ? '0 2px 16px -2px rgba(31,31,31,0.32)' : 'none';
 });
 var PricingCardTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h4.withConfig({
@@ -1538,7 +1536,7 @@ var PricingCardItem = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
 var PricingAlert = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span.withConfig({
   displayName: "Pricing__PricingAlert",
   componentId: "cp9je-11"
-})(["font-size:2rem;font-weight:700;font-family:'Montserrat',sans-serif;color:#1f1f1f;position:relative;margin-bottom:40px;text-align:center;display:flex;&:after{content:\"\";width:100%;height:8px;background:#f94343;display:block;position:absolute;bottom:0px;left:4px;z-index:-1;}"]);
+})(["font-size:1.75rem;font-weight:400;font-family:'Source Sans Pro',sans-serif;color:#9f9f9f;position:relative;margin-bottom:40px;text-align:center;display:flex;white-space:pre;"]);
 var ContactButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(StyledButton).withConfig({
   displayName: "Pricing__ContactButton",
   componentId: "cp9je-12"
@@ -1551,52 +1549,58 @@ var Pricing = function Pricing(_ref) {
     name: "pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 154
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 155
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_7___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 156
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 157
     },
     __self: this
   }, "Pricing"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 160
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 161
     },
     __self: this
   }, "Where guac is never extra"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingAlert, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 162
     },
     __self: this
-  }, "Early Access: Unlimited items, All features, No charge.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: this
+  }, "Early Access:"), " Unlimited items, All features, No charge.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingGrid, {
     container: true,
     spacing: 16,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 164
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1608,78 +1612,78 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 165
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 167
     },
     __self: this
   }, "Appetizer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 170
     },
     __self: this
   }, "0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 173
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 176
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 177
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 180
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 183
     },
     __self: this
   }, "35 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 186
     },
     __self: this
   }, "Single menu")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 190
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
+      lineNumber: 191
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1691,80 +1695,80 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 197
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 198
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     primary: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 199
     },
     __self: this
   }, "Entree"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 202
     },
     __self: this
   }, "29"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 205
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 208
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 209
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 212
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 215
     },
     __self: this
   }, "100 dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 218
     },
     __self: this
   }, "Multiple menus")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/get-access",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 222
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 223
     },
     __self: this
   }, "Get early access")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -1776,71 +1780,71 @@ var Pricing = function Pricing(_ref) {
     xl: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 229
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 230
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardTitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 231
     },
     __self: this
   }, "Dessert"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPrice, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246
+      lineNumber: 234
     },
     __self: this
   }, "Contact"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardPriceSubtitle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 237
     },
     __self: this
   }, "monthly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItems, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 240
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 241
     },
     __self: this
   }, "Complimentary setup"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 244
     },
     __self: this
   }, "Minimal code integration"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 247
     },
     __self: this
   }, "Unlimited dishes"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PricingCardItem, {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 250
     },
     __self: this
   }, "Multiple locations")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ContactButton, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 254
     },
     __self: this
   }, "Contact us"))))));
@@ -1879,7 +1883,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/SommWidget.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/SommWidget.jsx";
 
 
 
@@ -2333,7 +2337,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Splash.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Splash.jsx";
 
 
 
@@ -2849,14 +2853,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-reveal/Fade */ "./node_modules/react-reveal/Fade.js");
 /* harmony import */ var react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/components/Walkthrough.jsx";
+var _jsxFileName = "/Users/Chris/somm-landing/components/Walkthrough.jsx";
 
 
 
 var WalkthroughContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].section.withConfig({
   displayName: "Walkthrough__WalkthroughContainer",
   componentId: "sc-1afg5w7-0"
-})(["width:100%;max-width:1000px;height:100%;min-height:100vh;margin:auto;display:flex;flex-flow:column nowrap;align-items:center;.react-reveal{width:100%;}"]);
+})(["width:100%;max-width:1000px;height:100%;min-height:100vh;margin:auto;display:flex;flex-flow:column nowrap;align-items:center;padding:16px;box-sizing:border-box;.react-reveal{width:100%;}"]);
 var WalkthroughTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3.withConfig({
   displayName: "Walkthrough__WalkthroughTitle",
   componentId: "sc-1afg5w7-1"
@@ -2864,7 +2868,7 @@ var WalkthroughTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"]
 var WalkthroughStep = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].article.withConfig({
   displayName: "Walkthrough__WalkthroughStep",
   componentId: "sc-1afg5w7-2"
-})(["width:100%;height:100%;min-height:400px;display:grid;grid-template-columns:", ";grid-gap:64px;margin-bottom:32px;& .walkthrough__stepContent{order:", ";}"], function (props) {
+})(["width:100%;height:100%;min-height:400px;display:grid;grid-template-columns:", ";grid-gap:64px;margin-bottom:32px;& .walkthrough__stepContent{order:", ";}@media only screen and (max-width:959px){display:flex;flex-flow:column nowrap;& .walkthrough__stepContent{order:2;}}"], function (props) {
   return props.alternate ? '60% 40%' : '40% 60%';
 }, function (props) {
   return props.alternate ? '-1' : '2';
@@ -2872,7 +2876,7 @@ var WalkthroughStep = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].
 var WalkthroughStepImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "Walkthrough__WalkthroughStepImage",
   componentId: "sc-1afg5w7-3"
-})(["background-image:url(", ");background-position:center;background-size:contain;background-repeat:no-repeat;"], function (props) {
+})(["min-height:360px;background-image:url(", ");background-position:center;background-size:contain;background-repeat:no-repeat;"], function (props) {
   return props.image;
 });
 var WalkthroughStepContent = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
@@ -2895,28 +2899,28 @@ var Walkthrough = function Walkthrough(_ref) {
     className: "walkthrough",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughTitle, {
     className: "walkthrough__title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 85
     },
     __self: this
   }, "How Somm works."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_reveal_Fade__WEBPACK_IMPORTED_MODULE_3___default.a, {
     bottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
     className: "walkthrough__step walkthrough__step--1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
@@ -2924,28 +2928,28 @@ var Walkthrough = function Walkthrough(_ref) {
     image: "/static/upload.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 90
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
     className: "walkthrough__stepContent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 91
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
     className: "walkthrough__stepContentTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 92
     },
     __self: this
   }, "Upload"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
     className: "walkthrough__stepContentCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 95
     },
     __self: this
   }, "We know that your menu changes frequently and that you already have enough on your plate. Leave the heavy lifting to us. We will take your menus and transform them into Somm items that can be viewed and sorted. You can upload any format or provide a link to your menus on your website and we will begin processing them."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
@@ -2953,7 +2957,7 @@ var Walkthrough = function Walkthrough(_ref) {
     className: "walkthrough__step walkthrough__step--2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 100
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
@@ -2961,35 +2965,35 @@ var Walkthrough = function Walkthrough(_ref) {
     image: "/static/customize.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 101
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
     className: "walkthrough__stepContent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
     className: "walkthrough__stepContentTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 103
     },
     __self: this
   }, "Customize"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
     className: "walkthrough__stepContentCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 106
     },
     __self: this
   }, "The beauty of Somm is in its customization. So we need to know as much as possible about your restaurant in order for you to get the most out of Somm. From your location and phone number to your cuisine and any booking or ordering URLs, we want to know it all. Further customize the color, location, and icon of your Somm widget to ensure that it integrates seamlessly with your existing website."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStep, {
     className: "walkthrough__step walkthrough__step--3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 111
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepImage, {
@@ -2997,28 +3001,28 @@ var Walkthrough = function Walkthrough(_ref) {
     image: "/static/embed.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 112
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContent, {
     className: "walkthrough__stepContent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 113
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentTitle, {
     className: "walkthrough__stepContentTitle",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 114
     },
     __self: this
   }, "Integrate"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WalkthroughStepContentCopy, {
     className: "walkthrough__stepContentCopy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 117
     },
     __self: this
   }, "Here is where the magic happens. With your menus already uploaded to our database and Somm perfectly customized to fit your needs, all it takes is copy-and-pasting three lines of code onto your website to start using Somm. Diners can start interacting with it instantly, meaning that you can start gaining valuable insights with zero transition time. Of course, we are here to walk you through every step of the process.")))));
@@ -77167,10 +77171,10 @@ module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Findex.js!./":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Findex.js ***!
-  \**************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Fsomm-landing%2Fpages%2Findex.js!./":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Fsomm-landing%2Fpages%2Findex.js ***!
+  \***************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -101028,7 +101032,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/Chris/trysomm-mvp/pages/index.js";
+var _jsxFileName = "/Users/Chris/somm-landing/pages/index.js";
 
 
 
@@ -101137,13 +101141,13 @@ function (_Component) {
 /***/ }),
 
 /***/ 1:
-/*!******************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Findex.js ***!
-  \******************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FChris%2Fsomm-landing%2Fpages%2Findex.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Ftrysomm-mvp%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FChris%2Fsomm-landing%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2FChris%2Fsomm-landing%2Fpages%2Findex.js!./");
 
 
 /***/ }),

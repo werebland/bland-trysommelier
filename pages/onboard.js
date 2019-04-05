@@ -39,9 +39,22 @@ var menusRef = storageRef.child('menus')
 const StyledButton = styled(Button)`
   text-transform: none !important;
   border-radius: 8px !important;
-  background: ${props => props.variant === "contained" ? '#54a0ff' : 'transparent'} !important;
   box-shadow: ${props => props.variant === "contained" ? '0 2px 16px -2px rgba(31,31,31,0.32)' : 'none'} !important;
-  color: ${props => props.variant === "contained" ? '#fff' : '#1f1f1f'} !important;
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'} !important;
+
+  ${props => props.disabled
+    ?
+    `
+    background: #9f9f9f !important;
+    color: #fff !important;
+    `
+    :
+    `
+    background: ${props.variant === "contained" ? '#54a0ff' : 'transparent'} !important;
+    color: ${props.variant === "contained" ? '#fff' : '#1f1f1f'} !important;
+    `
+  };
+
 `;
 
 const StyledTextField = styled(TextField)`
@@ -218,8 +231,9 @@ class Onboard extends Component {
         iconColor: '#1f1f1f',
         backgroundColor: '#fff',
         position: 'right',
-        icon: 'emoji'
-      }
+        icon: 'rounded'
+      },
+      isOnboard: false,
     }
   }
 
@@ -451,19 +465,34 @@ class Onboard extends Component {
   }
 
   updateUser(url) {
-    const menus = url
     const { id } = this.state.user
     const data = {
-      menus
+      isOnboard: true,
     }
-    console.log(menus);
     console.log(data);
     base.updateDoc('users/' + id, data)
     .then(() => {
       console.log('success');
+      this.setState({
+        isOnboard: true,
+        activeStep: this.state.activeStep + 1
+      })
       }).catch(err => {
       console.log(err);
+      this.setState({
+        isOnboard: false,
+        activeStep: this.state.activeStep + 1
+      })
     });
+  }
+
+  handleWidgetIcon(value) {
+    console.log(value);
+    let { widget } = this.state
+    widget.icon = value
+    this.setState({
+      widget
+    })
   }
 
   handleWidgetIconColor(value) {
@@ -650,9 +679,28 @@ class Onboard extends Component {
                           backgroundColor={widget.backgroundColor}
                           position={widget.position}
                           icon={widget.icon}
+                          handleIconChange={(e) => this.handleWidgetIcon(e.target.value)}
                           handleIconColorChange={(value) => this.handleWidgetIconColor(value)}
                           handleBackgroundColorChange={(value) => this.handleWidgetBackgroundColor(value)}
-                          handlePositionChange={(value) => this.handleWidgetPosition(value)} />
+                          handlePositionChange={(e) => this.handleWidgetPosition(e.target.value)} />
+                      </OnboardStepperContent>
+                    }
+                    {activeStep === 3 &&
+                      <OnboardStepperContent key="3" step={3}>
+                        {this.state.isOnboard
+                          ?
+                          <div>
+                            Success!
+                            <br/>
+                            We'll be in touch with your finalized Somm widget and to get a few more details from you.
+                          </div>
+                          :
+                          <div>
+                            Whoops! Something went wrong.
+                            <br/>
+                            We're investigating things on our end and will be in touch at {email} with your next steps.
+                          </div>
+                        }
                       </OnboardStepperContent>
                     }
                   </PoseGroup>
@@ -662,17 +710,32 @@ class Onboard extends Component {
                         Back
                       </StyledButton>
                     }
-                    <StyledButton
-                      variant="contained"
-                      onClick={this.handleNext}
-                      size="large">
-                      {activeStep === 2
-                        ?
-                        "Finish"
-                        :
-                        "Next"
-                      }
-                    </StyledButton>
+                    {this.state.activeStep === 0 &&
+                      <StyledButton
+                        disabled={price === ""}
+                        variant="contained"
+                        onClick={this.handleNext}
+                        size="large">
+                        Next
+                      </StyledButton>
+                    }
+                    {this.state.activeStep === 1 &&
+                      <StyledButton
+                        disabled={this.state.menus.length === 0}
+                        variant="contained"
+                        onClick={this.handleNext}
+                        size="large">
+                        Upload
+                      </StyledButton>
+                    }
+                    {this.state.activeStep === 2 &&
+                      <StyledButton
+                        variant="contained"
+                        onClick={this.handleNext}
+                        size="large">
+                        Finish
+                      </StyledButton>
+                    }
                   </StepperButtons>
                 </OnboardStepper>
               </OnboardContent>
